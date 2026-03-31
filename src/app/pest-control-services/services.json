@@ -1,0 +1,74 @@
+[
+    {
+        "service": "Cockroach Control",
+        "link": "cockroach-pest-control",
+        "image": "/Images/bugs/cockroach_control.png",
+        "text": "Eliminate cockroaches from every corner with our advanced gel bait and spray treatments. We ensure long-lasting protection for a cleaner, healthier environment."
+    },
+    {
+        "service": "Bed bugs Control",
+        "link": "bedbug-pest-control",
+        "image": "/Images/bugs/bedBug_control.png",
+        "text": "Say goodbye to sleepless nights with our heat and chemical bed bug treatments. We target hidden eggs and adults for complete eradication and comfort."
+    },
+    {
+        "service": "Termite Control",
+        "link": "termite-pest-control",
+        "image": "/Images/bugs/termite_control.png",
+        "text": "Protect your home and furniture with our effective anti-termite solutions. We use safe and proven methods to prevent structural damage and costly repairs."
+    },
+    {
+        "service": "Mosquito Control",
+        "link": "mosquito-pest-control",
+        "image": "/Images/bugs/mosquito_control.png",
+        "text": "Keep your surroundings mosquito-free with our eco-friendly fogging and larvicidal treatments. We help reduce disease risk while maintaining environmental safety."
+    },
+    {
+        "service": "Flies Control",
+        "link": "flies-pest-control",
+        "image": "/Images/bugs/flies_control1.png",
+        "text": "Eliminate houseflies and fruit flies with our hygienic fly management program. We focus on sanitation, breeding control, and quick removal techniques."
+    },
+    {
+        "service": "Rodent Control",
+        "link": "rodent-pest-control",
+        "image": "/Images/bugs/rodent_control1.png",
+        "text": "Stop rodents from invading your space with our humane and effective solutions. We block entry points, remove infestations, and prevent future recurrence."
+    },
+    {
+        "service": "Bird Control",
+        "link": "bird-pest-control",
+        "image": "/Images/bugs/bird_control.png",
+        "text": "Prevent bird-related damage with our safe and ethical bird-proofing systems. We install nets and spikes to protect your property without harming wildlife."
+    },
+    {
+        "service": "Ant Control",
+        "link": "ant-pest-control",
+        "image": "/Images/bugs/ant_control.png",
+        "text": "Keep ants away from your kitchen and workspace with our targeted gel and spray treatments. We remove colonies from the root to stop them from coming back."
+    },
+    {
+        "service": "Residential Control",
+        "link": "residential-pest-control",
+        "image": "/Images/bugs/resident_control.png",
+        "text": "Ensure a pest-free home with our complete household pest management plan. We provide safe, family-friendly treatments tailored to your living space."
+    },
+    {
+        "service": "Commercial Control",
+        "link": "commercial-pest-control",
+        "image": "/Images/bugs/commercial_control1.png",
+        "text": "Protect your business with our customized pest control programs for offices and industries. We maintain hygiene and compliance to safeguard your brand reputation."
+    },
+    {
+        "service": "Herbal Pest Control",
+        "link": "herbal-pest-control",
+        "image": "/Images/bugs/herbal_control.png",
+        "text": "Choose natural protection with our non-toxic herbal pest control solutions. Safe for children, pets, and the environment—yet tough on pests."
+    },
+    {
+        "service": "Fumigation Control",
+        "link": "fumigation-services",
+        "image": "/Images/bugs/fumigation_control.png",
+        "text": "Our fumigation services ensure total disinfection for stored goods and large spaces. We provide certified, effective gas treatment for maximum pest elimination."
+    }
+]
