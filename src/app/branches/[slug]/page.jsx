@@ -10,9 +10,9 @@ export async function generateStaticParams() {
   return Object.keys(branches).map((slug) => ({ slug }));
 }
 
-const { slug } = await params;
 
-export async function generateMetadata() {
+export async function generateMetadata({params}) {
+  const { slug } = params;
   const page = await getPageData(slug);
   return {
     title: page?.metaTitle || slug,
@@ -21,7 +21,7 @@ export async function generateMetadata() {
 }
 
 export default async function BranchPage({ params }) {
-  
+  const { slug } = params;
   const branch = branches[slug];
 
   if (!branch) {
