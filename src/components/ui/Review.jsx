@@ -30,7 +30,8 @@ export default function Review() {
     },
     {
       name: "Deeptesh Ghosh",
-      review: "Really happy with the prompt and professional services provided by Mr Soumen Das and his team. Kudos to team Orion. Keep up the good work.",
+      review:
+        "Really happy with the prompt and professional services provided by Mr Soumen Das and his team. Kudos to team Orion. Keep up the good work.",
     },
     {
       name: "Madhukar Upadhyay",
@@ -81,3 +82,47 @@ export default function Review() {
     </div>
   );
 }
+
+<div className="w-[90%] md:w-full mx-auto mt-20">
+  <div className="md:flex justify-between items-end gap-10 md:w-[80%] mx-auto">
+    <div className="flex-1 min-w-0 flex flex-col gap-8 pb-4">
+      <div className="flex flex-col gap-3">
+        <h3 className="text-2xl font-bold text-[#2F3293]">
+          PAN INDIA SERVICES
+        </h3>
+        <p className="whitespace-normal break-words text-lg">
+          Orion Pest Solutions Private Limited provides a range of pest control
+          services in more than 72 locations in India including Nepal and
+          Bhutan.
+        </p>
+      </div>
+      <div className="flex flex-col gap-3">
+        <h3 className="text-2xl font-bold text-[#2F3293]">
+          GUARANTEED RESULTS
+        </h3>
+        <p className="text-lg whitespace-normal break-words">
+          With our indepth experience over 27 plus years, we continue to enhance
+          our operational excellence, safety, capability, customer service and
+          innovations.
+        </p>
+      </div>
+      <div className="flex flex-col gap-3">
+        <h3 className="text-2xl font-bold text-[#2F3293]">
+          COST EFFECTIVE SOLUTIONS
+        </h3>
+        <p className="text-lg whitespace-normal break-words">
+          Orion Pest Solutions Private Limited provides a range of pest control
+          services in more than 72 locations in India including Nepal and
+          Bhutan.
+        </p>
+      </div>
+    </div>
+    <div>
+    <img
+      src='https://res.cloudinary.com/dstlumjlw/image/upload/v1770893893/img1_flrbu6.png'
+      alt='img1'
+      className='w-[300px] h-[350px] object-cover'
+    />
+  </div>
+  </div>
+</div>

@@ -9,38 +9,38 @@ import { getPageData } from "@/lib/getPageData";
 const certifictions = [
   {
     id: 1,
-    image: "/Images/certifications/img1.png",
+    image: "https://res.cloudinary.com/dstlumjlw/image/upload/v1770893988/img4_jixnpk.png",
   },
   {
     id: 2,
-    image: "/Images/certifications/img2.png",
+    image: "https://res.cloudinary.com/dstlumjlw/image/upload/v1770893988/img3_gpjgns.png",
   },
   {
     id: 3,
-    image: "/Images/certifications/img3.png",
+    image: "https://res.cloudinary.com/dstlumjlw/image/upload/v1770893987/img2_kx7drk.png",
   },
   {
     id: 4,
-    image: "/Images/certifications/img4.png",
+    image: "https://res.cloudinary.com/dstlumjlw/image/upload/v1770893987/img1_xo6lsw.png",
   },
 ];
 
 const clients = [
-  "/Images/clients/img6.jpg",
-  "/Images/clients/img73.png",
-  "/Images/clients/img3.png",
-  "/Images/clients/img4.png",
-  "/Images/clients/img5.png",
-  "/Images/clients/img6.png",
-  "/Images/clients/img7.webp",
-  "/Images/clients/img8.jpg",
-  "/Images/clients/img9.png",
-  "/Images/clients/img10.webp",
-  "/Images/clients/img11.png",
-  "/Images/clients/img12.png",
-  "/Images/clients/img13.png",
-  "/Images/clients/img14.png",
-  "/Images/clients/img15.png",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894048/img7_m0rsfl.webp",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894047/img6_f1ypc6.jpg",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894050/img8_oa67dw.jpg",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894051/img10_nhwgta.webp",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894052/img11_tsyjhr.png",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894131/img73_tizcd3.png",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894109/img55_kdnu1q.webp",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894048/img6_e55i2r.png",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894045/img4_tmpavf.png",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894046/img5_sau6fx.jpg",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894051/img9_hk2dj1.png",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894056/img15_q3nedu.png",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894055/img13_yqq4fs.png",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894055/img14_yw3d4l.png",
+  "https://res.cloudinary.com/dstlumjlw/image/upload/v1770894044/img3_gha5qo.png",
 ];
 
 const homeServices = [
@@ -86,8 +86,8 @@ const whyChooseUs = [
 export async function generateMetadata() {
   const page = await getPageData("home");
   return {
-    title: page?.metaTitle || "Home",
-    description: page?.metaDescription || "",
+    title: page?.metaTitle || "Pest Control Services Near You | Trusted Pest Control Company in India",
+    description: page?.metaDescription || "Looking for reliable pest control services near you? Orion Pest offers safe, effective pest control solutions for homes and businesses across India. Book today.",
   };
 }
 
@@ -95,7 +95,7 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      <PageData segment={"home"}>
+      {/* <PageData segment={"home"}> */}
         <>
           <div className="w-[95%] md:w-[80%] mx-auto">
             <h1 className="text-[#2F3293] text-2xl md:text-4xl lg:text-5xl font-bold font-sans mx-auto text-center mt-20">
@@ -117,17 +117,15 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col lg:flex-row gap-10 items-center bg-[#FEF202] rounded-3xl mt-10 w-full overflow-hidden relative">
-              {/* IMAGE SECTION */}
               <div className="homepage_image relative w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] xl:h-[600px] rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none ">
-                <Image
-                  src="/Images/img3.png"
+                <img
+                  src="https://res.cloudinary.com/dstlumjlw/image/upload/v1770893894/img3_pp9ild.png"
                   fill
                   alt="image"
                   className="object-cover"
                 />
               </div>
 
-              {/* TEXT SECTION */}
               <div className="w-full lg:w-1/2 font-bold text-[#2F3293] flex flex-col gap-8 items-start justify-center pl-10 lg:pl-0 pr-10 py-10">
                 <p className="text-justify text-md">
                   Are you tired of dealing with cockroaches, termites, bed bugs,
@@ -152,14 +150,14 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-row items-center gap-4 md:gap-8 justify-center mx-auto">
-                  <Link
+                  <a
                     className="bg-[#2F3293] rounded-xl text-white px-3 sm:px-8 py-3 cursor-pointer"
                     href="tel:1800 419 8181"
                   >
                     Call Now
-                  </Link>
+                  </a>
 
-                  <Link
+                  <a
                     className="relative overflow-hidden rounded-xl px-3 sm:px-8 py-3 text-white transition-all duration-500 group border-2
                border-[#2F3293] cursor-pointer bg-[#2F3293]"
                     href={"contact"}
@@ -167,7 +165,7 @@ export default function Home() {
                     <span className="relative z-10 text-white">
                       Get a quote
                     </span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -240,7 +238,7 @@ export default function Home() {
           {/* Grid area */}
           <div className="w-[90%] md:w-full mx-auto mt-20">
             <div className="md:flex justify-between items-center gap-4 md:w-[60%] mx-auto">
-              {/* left */}
+
               <div className="flex-1 min-w-0 flex flex-col gap-8">
                 <div className="flex flex-col gap-3">
                   <h3 className="text-2xl font-bold text-[#2F3293]">
@@ -273,14 +271,13 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <Image
-                src="/Images/img1.png"
+              <div className="h-[550px] w-[300px] relative">
+              <img
+                src="https://res.cloudinary.com/dstlumjlw/image/upload/v1770893893/img1_flrbu6.png"
                 alt="img1"
-                width={300}
-                height={300}
-                className="mx-auto hidden lg:block"
-              />
-              {/* </div> */}
+                fill
+                className="object-cover"
+              /></div>
             </div>
           </div>
 
@@ -379,7 +376,7 @@ export default function Home() {
                     className="w-[90px] h-[90px] md:w-[120px] md:h-[120px] relative"
                     key={image.id}
                   >
-                    <Image
+                    <img
                       src={image?.image}
                       alt="img1"
                       fill
@@ -398,7 +395,7 @@ export default function Home() {
                       className="w-24 h-20 md:w-32 md:h-20 relative mx-auto"
                       key={index}
                     >
-                      <Image
+                      <img
                         src={client}
                         fill
                         alt={`img${index}`}
@@ -415,7 +412,7 @@ export default function Home() {
             </div>
           </div>
         </>
-      </PageData>
+      {/* </PageData> */}
     </div>
   );
 }
