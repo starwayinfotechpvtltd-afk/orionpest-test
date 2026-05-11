@@ -6,6 +6,8 @@ import "./globals.css";
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer";
 import { DataProvider } from "@/context/DataContext";
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 
 const geistSans = Geist({
@@ -24,6 +26,9 @@ export const metadata = {
   icons: {
     icon: "/logo.png",
   },
+  verification: {
+    google: "dy0_-iTpw2WKxPf9-1bifr671L2BZLrp9_aYNfVpUDg",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -34,6 +39,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+    <GoogleAnalytics gaId="G-LZ821J5CSF" />
         <DataProvider>
           <Header />
           <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start bg-white text-black">
