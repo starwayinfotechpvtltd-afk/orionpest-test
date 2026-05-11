@@ -117,8 +117,8 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col lg:flex-row gap-10 items-center bg-[#FEF202] rounded-3xl mt-10 w-full overflow-hidden relative">
-              <div className="homepage_image relative w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] xl:h-[600px] rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none ">
-                <img
+              <div className="homepage_image relative w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[620px] xl:h-[560px] 2xl:h-[500px] rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none ">
+                <Image
                   src="https://res.cloudinary.com/dstlumjlw/image/upload/v1770893894/img3_pp9ild.png"
                   fill
                   alt="image"
@@ -395,11 +395,11 @@ export default function Home() {
                       className="w-24 h-20 md:w-32 md:h-20 relative mx-auto"
                       key={index}
                     >
-                      <img
+                      <Image
                         src={client}
                         fill
                         alt={`img${index}`}
-                        className="transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 rounded-2xl bg-white md:object-cover"
+                        className="transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 rounded-2xl bg-white object-cover"
                         key={index}
                         style={{
                           boxShadow: "rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px",
