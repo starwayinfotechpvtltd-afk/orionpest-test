@@ -40,6 +40,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
+const CMS_URL = process.env.NEXT_PUBLIC_CMS_API_URL;
 
 const DataContext = createContext();
 
@@ -51,7 +52,7 @@ export const DataProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          "https://orion-pest-cms.vercel.app/api/pages"
+          CMS_URL
         );
 
         if (!res.ok) {

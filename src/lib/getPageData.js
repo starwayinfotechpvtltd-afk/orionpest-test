@@ -4,7 +4,7 @@ const CMS_URL = process.env.NEXT_PUBLIC_CMS_API_URL;
 
 export const getPageData = cache(async (slug) => {
   try {
-    const res = await fetch(`https://orion-pest-cms.vercel.app/api/pages/${slug}`, {
+    const res = await fetch(`${CMS_URL}/${slug}`, {
       next: { revalidate: 60 },
     });
     if (!res.ok) return null;
