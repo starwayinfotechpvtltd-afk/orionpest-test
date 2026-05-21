@@ -14,10 +14,8 @@
 //       try {
 //         const res = await fetch(`https://orion-pest-cms.vercel.app/api/pages`);
 //         const result = await res.json();
-//         console.log(result)
 //         setData(result.pages);
 //       } catch (error) {
-//         console.error("Error fetching data:", error);
 //       } finally {
 //         setLoading(false);
 //       }
@@ -60,11 +58,9 @@ export const DataProvider = ({ children }) => {
         }
 
         const result = await res.json();
-        console.log("API result:", result);
 
         setData(result.pages);
       } catch (error) {
-        console.error("Error fetching data:", error);
       } finally {
         setLoading(false);
       }

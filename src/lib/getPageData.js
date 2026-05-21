@@ -9,10 +9,8 @@ export const getPageData = cache(async (slug) => {
     });
     if (!res.ok) return null;
     const data = await res.json();
-    console.log(data)
     return data.page || null;
   } catch (error) {
-    console.error("Failed to fetch page data:", error);
     return null;
   }
 });

@@ -5,7 +5,6 @@ export async function GenerateMetaData(slug) {
     const { data, loading } = useData();
     
       const currentPage = data?.find((page) => page.slug === segment);
-      console.log(currentPage)
   try {
     return {
       title: currentPage.metaTitle || "",

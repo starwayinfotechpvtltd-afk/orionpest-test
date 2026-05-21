@@ -25,9 +25,7 @@ const boxes = [
   },
 ];
 
-console.log(services);
 const [, ...restServices] = services;
-console.log(restServices);
 export default function page() {
   return (
     <div className="w-full pb-80">

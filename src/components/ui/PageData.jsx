@@ -8,10 +8,7 @@ export default function PageData({ segment, children }) {
 
   //if (loading) return <div>Loading...</div>;
 
-  console.log(data)
-  console.log(segment)
   const currentPage = data?.find((page) => page.slug === segment);
-  console.log(currentPage)
 
   if (!currentPage) return children;
 

@@ -26,7 +26,6 @@ export default function Form() {
     });
 
     const data = await res.json();
-    console.log(data);
     setLoading(false);
 
     if (data.success) {

@@ -8,7 +8,6 @@ export async function POST(req) {
     const body = await req.json();
     const { name, email, phone, service, message } = body;
 
-    console.log(body)
 
     // Validate required fields
     if (!name || !email || !phone) {
@@ -55,7 +54,6 @@ export async function POST(req) {
     return NextResponse.json({ success: true });
 
   } catch (error) {
-    console.error("Google Sheets Error FULL:", error);
     return NextResponse.json(
       { success: false, error: error.message },
       { status: 500 }

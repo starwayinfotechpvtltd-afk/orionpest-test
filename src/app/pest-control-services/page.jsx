@@ -29,9 +29,7 @@ const boxes = [
 ];
 
 
-console.log(services);
 const [, ...restServices] = services;
-console.log(restServices);
 
 export async function generateMetadata() {
   const page = await getPageData("service");

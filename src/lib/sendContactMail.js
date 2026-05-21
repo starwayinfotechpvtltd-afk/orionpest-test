@@ -13,9 +13,7 @@ export const sendMail = async ({ name, email, phone, service }) => {
 
   try {
     await transporter.verify();
-    console.log("SMTP Connected Successfully");
   } catch (err) {
-    console.error("SMTP Verify Failed:", err);
   }
 
   const mailOptions = {
@@ -52,9 +50,7 @@ export const sendMail = async ({ name, email, phone, service }) => {
 
 //   try {
 //     await transporter.verify();
-//     console.log("SMTP Connected Successfully");
 //   } catch (err) {
-//     console.error("SMTP Verify Failed:", err);
 //   }
 
 //   const mailOptions = {
@@ -73,5 +69,4 @@ export const sendMail = async ({ name, email, phone, service }) => {
 //   };
 
 //   const info = await transporter.sendMail(mailOptions);
-//   console.log("Email Sent:", info.messageId);
 // };

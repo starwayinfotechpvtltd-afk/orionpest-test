@@ -28,7 +28,6 @@ export default async function BranchPage({ params }) {
     return <p className="text-center mt-10">Branch not found</p>;
   }
 
-  console.log(slug)
 
   return (
     <div className="w-full">
