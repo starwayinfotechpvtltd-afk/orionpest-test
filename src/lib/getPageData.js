@@ -1,6 +1,6 @@
 import { cache } from "react";
 
-const CMS_URL = process.env.NEXT_PUBLIC_CMS_API_URL;
+const CMS_URL = process.env.CMS_API_URL;
 
 export const getPageData = cache(async (slug) => {
   try {
