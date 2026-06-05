@@ -16,11 +16,11 @@ export default function Header() {
 
   return (
     <header
-      className="w-full"
-      style={{
-        boxShadow:
-          "rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px",
-      }}
+      className="w-full sticky top-0 z-50"
+      // style={{
+      //   boxShadow:
+      //     "rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px",
+      // }}
     >
       <div className="bg-[#2f3293] w-full  p-4">
         <div className="w[60%] flex flex-col gap-1 md:flex-row justify-around items-center">
