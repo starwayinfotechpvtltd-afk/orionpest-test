@@ -663,7 +663,7 @@ export default function page() {
                   src={image?.image}
                   alt="img1"
                   fill
-                  className="transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
+                  className="transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 object-cover"
                 />
               </div>
             ))}

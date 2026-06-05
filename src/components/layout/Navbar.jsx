@@ -134,7 +134,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" onClick={() => setActiveTab("/")}>
-            <Image src="/logo.png" alt="logo" width={100} height={100} />
+          <div className="w-[100px] h-[100px] relative">
+            <Image src="/logo.png" alt="logo" fill className="object-contain"/>
+            </div>
           </Link>
 
           {/* Navigation */}
