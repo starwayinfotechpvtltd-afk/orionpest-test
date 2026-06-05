@@ -2,24 +2,24 @@ import nodemailer from "nodemailer";
 
 export const sendMail = async ({ name, phone, location, service }) => {
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
     secure: true,
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
     },
-  })
+  });
 
   try {
     await transporter.verify();
-  } catch (err) {
-  }
+  } catch (err) {}
 
+  console.log("Send user", process.env.EMAIL_USER);
   const mailOptions = {
-    from: `"Leads Orion Pest Control" <${process.env.SEND_USER}>`,
-    to: process.env.OWNER_EMAIL,
-    subject: `New Contact Form Submission ${name} ${new Date().toLocaleDateString('en-GB').replaceAll('/', '-')} - Orion Pest`,
+    from: `"Leads Orion Pest Control" <${process.env.EMAIL_USER}>`,
+    to: process.env.OWNER_EMAIL.split(","),
+    subject: `New Contact Form Submission ${name} ${new Date().toLocaleDateString("en-GB").replaceAll("/", "-")} - Orion Pest`,
     html: `
       <h2>New Lead Received</h2>
       <p><strong>Name:</strong> ${name}</p>
@@ -31,4 +31,9 @@ export const sendMail = async ({ name, phone, location, service }) => {
   };
 
   const info = await transporter.sendMail(mailOptions);
+
+  console.log("Message ID:", info.messageId);
+  console.log("Accepted:", info.accepted);
+  console.log("Rejected:", info.rejected);
+  console.log("Response:", info.response);
 };
