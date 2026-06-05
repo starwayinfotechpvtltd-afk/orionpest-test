@@ -40,3 +40,9 @@ export const sendMail = async ({ name, phone, location, service }) => {
   console.log("Rejected:", info.rejected);
   console.log("Response:", info.response);
 };
+
+
+
+
+
+
