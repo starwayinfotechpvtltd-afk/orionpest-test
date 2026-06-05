@@ -659,7 +659,7 @@ export default function page() {
                 className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] relative"
                 key={image.id}
               >
-                <img
+                <Image
                   src={image?.image}
                   alt="img1"
                   fill
