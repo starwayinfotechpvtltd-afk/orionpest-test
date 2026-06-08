@@ -81,22 +81,142 @@ export const sendMail = async ({
     console.log("Owner:", process.env.OWNER_EMAIL);
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: `"Orion Pest Control" <${process.env.EMAIL_USER}>`,
+
       to: process.env.OWNER_EMAIL,
+      cc: process.env.BACKUP_EMAIL,
 
-      subject: `New Lead - ${name} | Orion Pest Control`,
+      replyTo: process.env.EMAIL_USER,
 
-      text: `
-NEW LEAD RECEIVED
+      subject: `🐞 New Lead - ${service} | ${name}`,
 
-Name: ${name}
-Phone: ${phone}
-Location: ${location}
-Service: ${service}
+      html: `
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
 
-Submitted:
-${new Date().toLocaleString()}
-      `,
+  <body style="margin:0;padding:0;background:#f4f7f9;font-family:Arial,sans-serif;">
+
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f7f9;padding:30px 0;">
+      <tr>
+        <td align="center">
+
+          <table width="650" cellpadding="0" cellspacing="0"
+            style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,.08);">
+
+            <!-- Header -->
+            <tr>
+              <td
+                style="background:#0f766e;padding:25px;text-align:center;color:#ffffff;">
+                <h1 style="margin:0;font-size:28px;">
+                  Orion Pest Control
+                </h1>
+
+                <p style="margin-top:8px;font-size:14px;">
+                  New Website Lead Received
+                </p>
+              </td>
+            </tr>
+
+            <!-- Body -->
+            <tr>
+              <td style="padding:30px;">
+
+                <h2 style="margin-top:0;color:#0f766e;">
+                  Lead Information
+                </h2>
+
+                <table width="100%" cellpadding="0" cellspacing="0">
+
+                  <tr>
+                    <td style="padding:12px;border-bottom:1px solid #eee;width:180px;">
+                      <strong>Name</strong>
+                    </td>
+
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      ${name}
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      <strong>Phone Number</strong>
+                    </td>
+
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      ${phone}
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      <strong>Postcode / Area</strong>
+                    </td>
+
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      ${location}
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      <strong>Requested Service</strong>
+                    </td>
+
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      ${service}
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      <strong>Submitted On</strong>
+                    </td>
+
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      ${new Date().toLocaleString("en-GB")}
+                    </td>
+                  </tr>
+
+                </table>
+
+                <div
+                  style="margin-top:25px;padding:18px;background:#ecfdf5;border-left:4px solid #10b981;border-radius:6px;">
+
+                  <strong>Action Required:</strong>
+                  Please contact this lead as soon as possible.
+
+                </div>
+
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td
+                style="background:#f8fafc;padding:20px;text-align:center;font-size:13px;color:#64748b;">
+
+                Orion Pest Control Website Lead Notification
+
+                <br><br>
+
+                Generated automatically from
+                https://orionpest.com
+
+              </td>
+            </tr>
+
+          </table>
+
+        </td>
+      </tr>
+    </table>
+
+  </body>
+  </html>
+  `,
     };
 
     console.log("\n==============================");
@@ -135,7 +255,3 @@ ${new Date().toLocaleString()}
     };
   }
 };
-
-
-
-
