@@ -23,7 +23,7 @@ import { RiBubbleChartFill } from "react-icons/ri";
 import { TbBrandBlackberry } from "react-icons/tb";
 import { FaCircleCheck, FaMagnifyingGlass } from "react-icons/fa6";
 import { BiSolidRightArrowAlt } from "react-icons/bi";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import ImageSlider from "@/components/ui/ImageSlider";
 
@@ -286,8 +286,7 @@ export default function page() {
         style={{
           backgroundImage: "url('/Images/bugs/cockroach_heading.png')",
           backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          // backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat"
         }}
         className="relative w-full bg-center"
       >
@@ -472,7 +471,7 @@ export default function page() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 items-center justify-between gap-5 2xl:gap-10 mt-10">
           {signs.map((item, index) => (
             <div
-              className="p-5 2xl:p-10 shadow-lg rounded-xl flex flex-col justify-between items-center gap-5 w-full h-56"
+              className="p-5 2xl:p-10 shadow-lg rounded-xl flex flex-col justify-between items-center gap-5 w-full h-32 md:h-48 xl:h-56"
               key={index}
             >
               <div className="p-5 bg-[#FFE977] border border-[#FED739] rounded-full w-18 h-18 flex justify-center items-center text-4xl">

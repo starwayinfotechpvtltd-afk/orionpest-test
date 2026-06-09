@@ -2,9 +2,9 @@ import nodemailer from "nodemailer";
 
 export const sendMail = async ({ name, email, phone, postcode, type, message }) => {
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT),
+    secure: Number(process.env.SMTP_PORT) === 465,
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
@@ -17,7 +17,7 @@ export const sendMail = async ({ name, email, phone, postcode, type, message }) 
   }
 
   const mailOptions = {
-    from: `"Leads Orion Pest Control" <${process.env.SEND_USER}>`,
+    from: `"Leads Orion Pest Control" <${process.env.EMAIL_USER}>`,
     to: process.env.OWNER_EMAIL,
     replyTo: email,
     subject: `New Contact Form Submission ${name} ${new Date().toLocaleDateString('en-GB').replaceAll('/', '-')} - Orion Pest`,

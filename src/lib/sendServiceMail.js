@@ -3,37 +3,58 @@ import nodemailer from "nodemailer";
 export const sendMail = async ({ name, phone, location, service }) => {
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
-    port: process.env.SMTP_PORT,
-    secure: true,
+    port: Number(process.env.SMTP_PORT),
+    secure: Number(process.env.SMTP_PORT) === 465,
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
     },
+    logger: true,
+  debug: true,
   });
 
   try {
     await transporter.verify();
-  } catch (err) {}
+    console.log("SMTP verified");
+  } catch (err) {
+    console.error("SMTP verify error:", err);
+  }
 
   console.log("Send user", process.env.EMAIL_USER);
   const mailOptions = {
-    from: `"Leads Orion Pest Control" <${process.env.EMAIL_USER}>`,
-    to: process.env.OWNER_EMAIL.split(","),
-    subject: `New Contact Form Submission ${name} ${new Date().toLocaleDateString("en-GB").replaceAll("/", "-")} - Orion Pest`,
-    html: `
-      <h2>New Lead Received</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Phone:</strong> ${phone}</p>
-      <p><strong>Postcode:</strong> ${location}</p>
-      <p><strong>Type:</strong> ${service}</p>
-      <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
-    `,
-  };
+  from: `"Leads Orion Pest Control" <online@orionpest.com>`,
+  to: "starwayinfotechpvtltd@gmail.com",
+  replyTo: "online@orionpest.com",
+  subject: "Test Email",
+  text: `
+Name: ${name}
+Phone: ${phone}
+Postcode: ${location}
+Type: ${service}
+`,
+  html: `
+<h2>New Lead Received</h2>
+<p><strong>Name:</strong> ${name}</p>
+<p><strong>Phone:</strong> ${phone}</p>
+`,
+};
 
-  const info = await transporter.sendMail(mailOptions);
+  const info = await transporter.sendMail({
+  ...mailOptions,
+  headers: {
+    "X-Mailer": "Nodemailer",
+  },
+});
 
+  console.log(JSON.stringify(info, null, 2));
   console.log("Message ID:", info.messageId);
   console.log("Accepted:", info.accepted);
   console.log("Rejected:", info.rejected);
   console.log("Response:", info.response);
 };
+
+
+
+
+
+
