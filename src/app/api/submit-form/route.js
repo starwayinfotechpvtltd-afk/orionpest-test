@@ -27,45 +27,47 @@ export async function POST(req) {
     }
 
     const sheets = await getSheetsClient();
-    console.log("Sheets", sheets)
 
-    await sheets.spreadsheets.values.append({
-      spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: "Sheet2!A:G",
-      valueInputOption: "RAW",
-      insertDataOption: "INSERT_ROWS",
-      requestBody: {
-        values: [
-          [
-            name.trim(),
-            email.trim(),
-            cleanedPhone,
-            postcode,
-            type,
-            message,
-            new Date().toISOString(),
-          ],
-        ],
-      },
-    });
-
-    console.log("Data added in google sheet");
-
-    try {
-      await sendMail({
-        name,
-        email,
-        phone: cleanedPhone,
+await sheets.spreadsheets.values.append({
+  spreadsheetId: process.env.GOOGLE_SHEET_ID,
+  range: "Sheet2!A:G",
+  valueInputOption: "RAW",
+  insertDataOption: "INSERT_ROWS",
+  requestBody: {
+    values: [
+      [
+        name.trim(),
+        email.trim(),
+        cleanedPhone,
         postcode,
         type,
         message,
-      });
-    } catch (mailError) {
-      console.error("Email failed:", mailError);
-    }
-    console.log("Mail send successfully");
+        new Date().toLocaleString("en-GB"),
+      ],
+    ],
+  },
+});
 
-    return NextResponse.json({ success: true });
+console.log("Data added in Google Sheet");
+
+const mailResult = await sendMail({
+  name,
+  email,
+  phone: cleanedPhone,
+  postcode,
+  type,
+  message,
+});
+
+console.log(
+  "Mail Result:",
+  JSON.stringify(mailResult, null, 2)
+);
+
+return NextResponse.json({
+  success: true,
+  mailResult,
+});
   } catch (error) {
     return NextResponse.json(
       { success: false, error: error.message },

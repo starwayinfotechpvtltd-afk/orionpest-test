@@ -83,39 +83,42 @@ export const sendMail = async ({
   message,
 }) => {
   try {
+    console.log("Creating SMTP transporter");
+
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
       secure: Number(process.env.SMTP_PORT) === 465,
-
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
-
       logger: true,
       debug: true,
     });
 
     await transporter.verify();
 
+    console.log("SMTP VERIFIED");
+
     const ownerMailOptions = {
       from: `"Orion Pest Control" <${process.env.EMAIL_USER}>`,
       to: process.env.OWNER_EMAIL,
       cc: process.env.BACKUP_EMAIL,
       replyTo: email,
-      subject: `New Contact Form Submission ${name} - ${new Date()
-        .toLocaleDateString("en-GB")
-        .replaceAll("/", "-")}`,
+      subject: `New Contact Form Submission - ${name}`,
       html: `
-    <h2>New Lead Received</h2>
-    <p><strong>Name:</strong> ${name}</p>
-    <p><strong>Email:</strong> ${email}</p>
-    <p><strong>Phone:</strong> ${phone}</p>
-    <p><strong>Postcode:</strong> ${postcode}</p>
-    <p><strong>Type:</strong> ${type}</p>
-    <p><strong>Message:</strong> ${message}</p>
-  `,
+        <h2>New Contact Form Submission</h2>
+
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Postcode:</strong> ${postcode}</p>
+        <p><strong>Type:</strong> ${type}</p>
+        <p><strong>Message:</strong> ${message}</p>
+
+        <p><strong>Date:</strong> ${new Date().toLocaleString("en-GB")}</p>
+      `,
     };
 
     const userMailOptions = {
@@ -123,32 +126,47 @@ export const sendMail = async ({
       to: email,
       subject: "Thank you for contacting Orion Pest Control",
       html: `
-    <h2>Thank You, ${name}!</h2>
+        <h2>Thank You, ${name}</h2>
 
-    <p>We have received your enquiry and our team will get back to you shortly.</p>
+        <p>We have received your enquiry.</p>
 
-    <h3>Your Submission</h3>
-    <p><strong>Phone:</strong> ${phone}</p>
-    <p><strong>Postcode:</strong> ${postcode}</p> 
-    <p><strong>Service Type:</strong> ${type}</p>
-    <p><strong>Message:</strong> ${message}</p>
+        <p>Our team will contact you shortly.</p>
 
-    <br>
+        <hr>
 
-    <p>Regards,</p>
-    <p><strong>Orion Pest Control</strong></p>
-  `,
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Postcode:</strong> ${postcode}</p>
+        <p><strong>Service Type:</strong> ${type}</p>
+      `,
     };
 
-    const ownerInfo = await transporter.sendMail(ownerMailOptions);
-    const userInfo = await transporter.sendMail(userMailOptions);
+    console.log("Sending owner email");
+
+    const ownerInfo =
+      await transporter.sendMail(ownerMailOptions);
+
+    console.log("Owner email sent");
+
+    console.log("Sending customer email");
+
+    const userInfo =
+      await transporter.sendMail(userMailOptions);
+
+    console.log("Customer email sent");
 
     return {
       success: true,
-      owner: ownerInfo,
-      user: userInfo,
+      ownerInfo,
+      userInfo,
     };
   } catch (error) {
-    return error;
+    console.error("EMAIL ERROR");
+    console.error(error);
+
+    return {
+      success: false,
+      error: error.message,
+      stack: error.stack,
+    };
   }
 };
