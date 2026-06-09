@@ -1,9 +1,11 @@
 import { google } from "googleapis";
 
 export async function getSheetsClient() {
-  const privateKey = process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n").replace(/^"/, "")
-  .replace(/"$/, "");
-  console.log(process.env.GOOGLE_PRIVATE_KEY?.slice(0, 50));
+  const privateKey = process.env.GOOGLE_PRIVATE_KEY
+  .replace(/\\n/g, "\n")
+  .trim();
+  console.log(privateKey.slice(0, 100));
+  console.log(privateKey.slice(-100));
 
   const auth = new google.auth.JWT({
     email: process.env.GOOGLE_CLIENT_EMAIL,

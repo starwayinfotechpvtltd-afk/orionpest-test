@@ -30,7 +30,7 @@ export async function POST(req) {
 
 await sheets.spreadsheets.values.append({
   spreadsheetId: process.env.GOOGLE_SHEET_ID,
-  range: "Sheet2!A:G",
+  range: "Orion Pest Leads!A:G",
   valueInputOption: "RAW",
   insertDataOption: "INSERT_ROWS",
   requestBody: {
