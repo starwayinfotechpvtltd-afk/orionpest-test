@@ -43,32 +43,13 @@
 
 import nodemailer from "nodemailer";
 
-<<<<<<< HEAD
-export const sendMail = async ({ name, phone, location, service }) => {
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT),
-    secure: Number(process.env.SMTP_PORT) === 465,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-    logger: true,
-  debug: true,
-  });
-
-=======
 export const sendMail = async ({
   name,
   phone,
   location,
   service,
 }) => {
->>>>>>> ec343ab7ef583512f35b7c43e85f5c10b04f5829
   try {
-    console.log("\n==============================");
-    console.log("CREATING SMTP TRANSPORT");
-    console.log("==============================");
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -84,49 +65,8 @@ export const sendMail = async ({
       debug: true,
     });
 
-    console.log("\n==============================");
-    console.log("VERIFYING SMTP");
-    console.log("==============================");
 
     await transporter.verify();
-<<<<<<< HEAD
-    console.log("SMTP verified");
-  } catch (err) {
-    console.error("SMTP verify error:", err);
-  }
-
-  console.log("Send user", process.env.EMAIL_USER);
-  const mailOptions = {
-  from: `"Leads Orion Pest Control" <online@orionpest.com>`,
-  to: "starwayinfotechpvtltd@gmail.com",
-  replyTo: "online@orionpest.com",
-  subject: "Test Email",
-  text: `
-Name: ${name}
-Phone: ${phone}
-Postcode: ${location}
-Type: ${service}
-`,
-  html: `
-<h2>New Lead Received</h2>
-<p><strong>Name:</strong> ${name}</p>
-<p><strong>Phone:</strong> ${phone}</p>
-`,
-};
-
-  const info = await transporter.sendMail({
-  ...mailOptions,
-  headers: {
-    "X-Mailer": "Nodemailer",
-  },
-});
-
-  console.log(JSON.stringify(info, null, 2));
-  console.log("Message ID:", info.messageId);
-  console.log("Accepted:", info.accepted);
-  console.log("Rejected:", info.rejected);
-  console.log("Response:", info.response);
-=======
 
     console.log("SMTP VERIFIED");
     console.log("Host:", process.env.SMTP_HOST);
@@ -273,32 +213,16 @@ Type: ${service}
   `,
     };
 
-    console.log("\n==============================");
-    console.log("MAIL OPTIONS");
-    console.log("==============================");
     console.log(JSON.stringify(mailOptions, null, 2));
 
     const info = await transporter.sendMail(mailOptions);
 
-    console.log("\n==============================");
-    console.log("EMAIL SENT");
-    console.log("==============================");
-    console.log("Message ID:", info.messageId);
-    console.log("Envelope:", info.envelope);
-    console.log("Accepted:", info.accepted);
-    console.log("Rejected:", info.rejected);
-    console.log("Pending:", info.pending);
-    console.log("Response:", info.response);
-    console.log("Message Size:", info.messageSize);
 
     return {
       success: true,
       info,
     };
   } catch (error) {
-    console.log("\n==============================");
-    console.log("EMAIL ERROR");
-    console.log("==============================");
 
     console.error(error);
 
@@ -308,7 +232,6 @@ Type: ${service}
       stack: error.stack,
     };
   }
->>>>>>> ec343ab7ef583512f35b7c43e85f5c10b04f5829
 };
 
 

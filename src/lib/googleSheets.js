@@ -1,7 +1,9 @@
 import { google } from "googleapis";
 
 export async function getSheetsClient() {
-  const privateKey = process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n");
+  const privateKey = process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n").replace(/^"/, "")
+  .replace(/"$/, "");
+  console.log(process.env.GOOGLE_PRIVATE_KEY?.slice(0, 50));
 
   const auth = new google.auth.JWT({
     email: process.env.GOOGLE_CLIENT_EMAIL,
@@ -9,7 +11,7 @@ export async function getSheetsClient() {
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
 
-  auth.gap = 5 * 60;
+  // auth.gap = 5 * 60;
 
   await auth.authorize();
 

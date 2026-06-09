@@ -47,6 +47,7 @@ export default function Form() {
       <input
         type="text"
         placeholder="Name"
+        value={form.name}
         className="py-2 px-5 w-full bg-white mb-3 rounded-3xl"
         style={{
           boxShadow:
@@ -59,6 +60,7 @@ export default function Form() {
       <input
         type="email"
         placeholder="Email"
+        value={form.email}
         className="py-2 px-5 w-full bg-white mb-3 rounded-3xl"
         style={{
           boxShadow:
@@ -73,6 +75,7 @@ export default function Form() {
           <input
             type="number"
             placeholder="Telephone"
+            value={form.phone}
             className="py-2 px-5 w-full bg-white rounded-3xl"
             style={{
               boxShadow:
@@ -91,6 +94,7 @@ export default function Form() {
           <input
             type="number"
             placeholder="Postcode"
+            value={form.postcode}
             className="py-2 px-5 w-full bg-white rounded-3xl"
             style={{
               boxShadow:
@@ -138,6 +142,7 @@ export default function Form() {
       <textarea
         name="inquiry"
         className="bg-white w-full rounded-xl mt-3 min-h-[120px] p-3"
+        value={form.message}
         style={{
           boxShadow:
             "rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset",
