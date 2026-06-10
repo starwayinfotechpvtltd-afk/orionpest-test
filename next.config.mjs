@@ -26,6 +26,20 @@ const nextConfig = {
         destination: "/contact",
         permanent: true,
       },
+      
+      // Contact
+      {
+        source: "/about-us",
+        destination: "/about",
+        permanent: true,
+      },
+
+      // Contact
+      {
+        source: "/locations",
+        destination: "/branches",
+        permanent: true,
+      },
 
       // Fumigation
       {
