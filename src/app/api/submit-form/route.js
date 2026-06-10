@@ -26,27 +26,27 @@ export async function POST(req) {
       );
     }
 
-    const sheets = await getSheetsClient();
+//     const sheets = await getSheetsClient();
 
-await sheets.spreadsheets.values.append({
-  spreadsheetId: process.env.GOOGLE_SHEET_ID,
-  range: "Orion Pest Leads!A:G",
-  valueInputOption: "RAW",
-  insertDataOption: "INSERT_ROWS",
-  requestBody: {
-    values: [
-      [
-        name.trim(),
-        email.trim(),
-        cleanedPhone,
-        postcode,
-        type,
-        message,
-        new Date().toLocaleString("en-GB"),
-      ],
-    ],
-  },
-});
+// await sheets.spreadsheets.values.append({
+//   spreadsheetId: process.env.GOOGLE_SHEET_ID,
+//   range: "Orion Pest Leads!A:G",
+//   valueInputOption: "RAW",
+//   insertDataOption: "INSERT_ROWS",
+//   requestBody: {
+//     values: [
+//       [
+//         name.trim(),
+//         email.trim(),
+//         cleanedPhone,
+//         postcode,
+//         type,
+//         message,
+//         new Date().toLocaleString("en-GB"),
+//       ],
+//     ],
+//   },
+// });
 
 console.log("Data added in Google Sheet");
 
