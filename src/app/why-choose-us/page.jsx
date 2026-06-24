@@ -1,5 +1,5 @@
 import React from "react";
-import Review from "@/components/ui/Review";
+import Review from "@/components/ui/Testimonials";
 
 export default function WhyChooseUs(){
     return(

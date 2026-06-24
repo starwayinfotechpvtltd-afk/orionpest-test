@@ -136,28 +136,28 @@ export const sendMail = async ({
               </p>
 
               <table width="100%" cellpadding="10" cellspacing="0" style="border-collapse:collapse;">
-                <tr style="background:#f8fafc;">
+                <tr style="background:#f8fafc;font-size:14px;">
                   <td style="font-weight:bold;width:150px;">Name</td>
                   <td>${name}</td>
                 </tr>
                 <tr>
-                  <td style="font-weight:bold;">Email</td>
+                  <td style="font-weight:bold;font-size:14px;">Email</td>
                   <td>${email}</td>
                 </tr>
-                <tr style="background:#f8fafc;">
+                <tr style="background:#f8fafc;font-size:14px;">
                   <td style="font-weight:bold;">Phone</td>
                   <td>${phone}</td>
                 </tr>
                 <tr>
-                  <td style="font-weight:bold;">Postcode</td>
+                  <td style="font-weight:bold;font-size:14px;">Postcode</td>
                   <td>${postcode}</td>
                 </tr>
-                <tr style="background:#f8fafc;">
+                <tr style="background:#f8fafc;font-size:14px;">
                   <td style="font-weight:bold;">Type</td>
                   <td>${type}</td>
                 </tr>
                 <tr>
-                  <td style="font-weight:bold;vertical-align:top;">Message</td>
+                  <td style="font-weight:bold;vertical-align:top;font-size:14px;">Message</td>
                   <td style="white-space:pre-wrap;">${message}</td>
                 </tr>
               </table>

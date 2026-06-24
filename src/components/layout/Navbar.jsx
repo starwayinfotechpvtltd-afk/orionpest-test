@@ -130,7 +130,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-white">
-      <div className="max-w-[80%] mx-auto px-4 lg:px-8">
+      <div className="max-w-[80%] mx-auto px-4 lg:px-0">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" onClick={() => setActiveTab("/")}>
@@ -145,7 +145,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[13px] font-medium text-gray-700 hover:text-[#042990] transition-colors"
+                className="text-[16px] font-medium text-gray-700 hover:text-[#042990] transition-colors"
               >
                 {link.name}
               </Link>

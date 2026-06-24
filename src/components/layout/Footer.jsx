@@ -150,7 +150,7 @@ export default function Footer() {
           </div>
 
           <Link className="bg-[#FFD400] text-[#042990] font-bold px-8 py-3 rounded-md flex items-center gap-2 hover:bg-yellow-400 transition" 
-          href={"#"}>
+          href={"/contact"}>
             BOOK FREE INSPECTION
             <FiArrowRight size={20} />
           </Link>

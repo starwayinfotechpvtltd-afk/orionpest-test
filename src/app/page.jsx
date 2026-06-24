@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Review from "@/components/ui/Review";
+import Review from "@/components/ui/Testimonials";
 import Form from "@/components/ui/SubmitForm";
 import PageData from "@/components/ui/PageData";
 import { getPageData } from "@/lib/getPageData";
