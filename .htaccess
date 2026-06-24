@@ -3,6 +3,9 @@ RewriteEngine On
 # Send blog routes to WordPress
 RewriteRule ^blog/(.*)$ https://www.orionpest.com/blog/$1 [R=301,L]
 
+RewriteCond %{HTTP_HOST} ^orionpest\.com$ [NC]
+RewriteRule ^(.*)$ https://www.orionpest.com/$1 [L,R=301]
+
 # Handle Next.js static routing
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
