@@ -219,6 +219,15 @@ import Link from "next/link";
 import TestimonialsSection from "@/components/ui/Testimonials";
 import FAQSection from "@/components/ui/FAQ";
 import Form from "@/components/ui/Form";
+
+export async function generateMetadata() {
+  const page = await getPageData("cockroach-control");
+  return {
+    title: page?.metaTitle || "Cockroach Control",
+    description: page?.metaDescription || "",
+  };
+}
+
 export default function page() {
   const locations = [
     {
