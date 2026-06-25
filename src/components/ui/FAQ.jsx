@@ -4,9 +4,6 @@ import { useState } from "react";
 import {
   Plus,
   Minus,
-  Phone,
-  CalendarDays,
-  ShieldCheck,
 } from "lucide-react";
 
 const faqs = [
@@ -48,7 +45,7 @@ const faqs = [
   },
 ];
 
-export default function FAQSection() {
+export default function FAQSection({image}) {
   const [active, setActive] = useState("01");
 
   return (
@@ -66,7 +63,7 @@ export default function FAQSection() {
       {/* Cockroach Image */}
       <div className="absolute right-0 top-0 hidden lg:block bg-[#F2F7FE] rounded-bl-full pl-5 pb-5">
         <img
-          src="/Images/bugs/cockroach8.png"
+          src={image}
           alt="Cockroach"
           className="w-56 object-contain opacity-90"
         />
