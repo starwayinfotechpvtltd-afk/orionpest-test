@@ -44,6 +44,13 @@ export default function Form() {
 
       if (data.success) {
         console.log("Data saved successfully");
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          establishment: "",
+          message: "",
+        });
       }
     } catch (error) {
       console.log("Something error", error);
