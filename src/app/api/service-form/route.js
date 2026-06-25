@@ -62,10 +62,11 @@ export async function POST(req) {
     const body = await req.json();
 
     const {
-      name,
+      fullName,
+      email,
       phone,
-      location,
-      service,
+      establishment,
+      message
     } = body;
 
     console.log("\n==============================");
@@ -73,11 +74,11 @@ export async function POST(req) {
     console.log("==============================");
     console.log(body);
 
-    if (!name || !phone) {
+    if (!fullName || !phone || !email) {
       return NextResponse.json(
         {
           success: false,
-          error: "Name and phone are required",
+          error: "Name, email and phone are required",
         },
         { status: 400 }
       );
@@ -103,10 +104,11 @@ export async function POST(req) {
     console.log("==============================");
 
     const mailResult = await sendMail({
-      name,
+      fullName,
+      email,
       phone: cleanedPhone,
-      location,
-      service,
+      establishment,
+      message,
     });
 
     console.log("\n==============================");

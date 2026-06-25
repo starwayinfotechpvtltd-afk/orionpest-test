@@ -135,7 +135,7 @@ export default function Footer() {
       <div className="bg-[#042990] text-white">
         <div className="max-w-[85%] mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
+            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center p-5">
               <span className="text-[#042990] text-2xl">🎧</span>
             </div>
 
@@ -149,7 +149,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <Link className="bg-[#FFD400] text-[#042990] font-bold px-8 py-3 rounded-md flex items-center gap-2 hover:bg-yellow-400 transition" 
+          <Link className="bg-[#FFD400] text-[#042990] text-md text-nowrap font-bold px-8 py-3 rounded-md flex items-center gap-2 hover:bg-yellow-400 transition" 
           href={"/contact"}>
             BOOK FREE INSPECTION
             <FiArrowRight size={20} />

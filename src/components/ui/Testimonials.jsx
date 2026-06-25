@@ -184,7 +184,25 @@ const reviews = [
 export default function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
 
-  const visibleCards = 3;
+  const [visibleCards, setVisibleCards] = useState(3);
+
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      if (window.innerWidth < 768) {
+        setVisibleCards(1);
+      } else if (window.innerWidth < 1024) {
+        setVisibleCards(2);
+      } else {
+        setVisibleCards(3);
+      }
+    };
+
+    updateVisibleCards();
+
+    window.addEventListener("resize", updateVisibleCards);
+
+    return () => window.removeEventListener("resize", updateVisibleCards);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -196,7 +214,7 @@ export default function TestimonialsSection() {
 
   const nextSlide = () => {
     setCurrent((prev) =>
-      prev + visibleCards >= reviews.length ? 0 : prev + 1,
+      prev >= reviews.length - visibleCards ? 0 : prev + 1,
     );
   };
 
@@ -205,6 +223,12 @@ export default function TestimonialsSection() {
       prev === 0 ? reviews.length - visibleCards : prev - 1,
     );
   };
+
+  useEffect(() => {
+    if (current > reviews.length - visibleCards) {
+      setCurrent(0);
+    }
+  }, [visibleCards]);
 
   return (
     <section className="relative py-12 sm:py-16 md:py-24 bg-[#F8FAFF] overflow-hidden">
@@ -215,7 +239,7 @@ export default function TestimonialsSection() {
             Testimonials
           </p>
 
-          <h2 className="mt-4 text-3xl sm:text-4xl md:text-6xl font-bold text-[#2F3293] leading-tight">
+          <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
             Trusted by Thousands.
             <br />
             <span className="text-[#0094DA]">Cockroach-Free,</span>{" "}
@@ -256,7 +280,12 @@ export default function TestimonialsSection() {
             {reviews.map((item, index) => (
               <div
                 key={index}
-                className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2 sm:p-3"
+                className={`
+  flex-shrink-0 p-2 sm:p-3
+  w-full
+  md:w-1/2
+  lg:w-1/3
+`}
               >
                 <TestimonialCard {...item} />
               </div>

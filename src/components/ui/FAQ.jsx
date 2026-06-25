@@ -54,7 +54,7 @@ export default function FAQSection() {
   return (
     <section className="relative overflow-hidden">
       {/* Decorative Dots */}
-      <div className="absolute left-10 top-0 grid grid-cols-5 gap-3 opacity-40">
+      <div className="absolute left-0 md:left-10 top-0 grid grid-cols-5 gap-3 opacity-40">
         {[...Array(25)].map((_, i) => (
           <span
             key={i}
@@ -72,7 +72,7 @@ export default function FAQSection() {
         />
       </div>    
 
-      <div className="mx-auto max-w-7xl px-6 py-10">
+      <div className="mx-auto max-w-7xl px-6 py-12 mt-10">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
 
@@ -80,7 +80,7 @@ export default function FAQSection() {
             Frequently Asked Questions
           </h2>
 
-          <div className="mx-auto mt-5 h-1 w-80 rounded-full bg-yellow-400" />
+          <div className="mx-auto mt-5 h-1 w-60 md:w-80 rounded-full bg-yellow-400" />
 
           <p className="mt-6 text-lg text-gray-600">
             Find answers to common questions about our
@@ -113,21 +113,21 @@ function FAQItem({
 
   return (
     <div
-      className={`rounded-2xl border transition-all duration-300 ${
+      className={`rounded-2xl border transition-all duration-300 py-5 ${
         isOpen
           ? "border-blue-200 bg-[#F9FAFE] shadow-md"
           : "border-slate-200 bg-white"
       }`}
-    >
+     >
       <button
         onClick={() =>
           setActive(isOpen ? "" : faq.id)
         }
-        className="flex w-full items-center justify-between p-6 text-left"
+        className="flex w-full items-center justify-between px-6 text-left"
       >
         <div className="flex items-center gap-4">
           <div
-            className={`flex h-12 w-12 items-center justify-center rounded-full font-semibold ${
+            className={`flex h-12 w-12 p-5 items-center justify-center rounded-full font-semibold ${
               isOpen
                 ? "bg-blue-600 text-white"
                 : "border border-blue-200 text-blue-600"
@@ -154,7 +154,7 @@ function FAQItem({
             ? "max-h-40 px-6 pb-6"
             : "max-h-0"
         }`}
-      >
+       >
         <div className="ml-16 text-gray-600 leading-7">
           {faq.answer}
         </div>

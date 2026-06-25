@@ -26,7 +26,7 @@
 //     html: `
 //       <h2>New Lead Received</h2>
 //       <p><strong>Name:</strong> ${name}</p>
-//       <p><strong>Phone:</strong> ${phone}</p> 
+//       <p><strong>Phone:</strong> ${phone}</p>
 //       <p><strong>Postcode:</strong> ${location}</p>
 //       <p><strong>Type:</strong> ${service}</p>
 //       <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
@@ -44,13 +44,13 @@
 import nodemailer from "nodemailer";
 
 export const sendMail = async ({
-  name,
+  fullName,
+  email,
   phone,
-  location,
-  service,
+  establishment,
+  message,
 }) => {
   try {
-
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
@@ -64,7 +64,6 @@ export const sendMail = async ({
       logger: true,
       debug: true,
     });
-
 
     await transporter.verify();
 
@@ -82,7 +81,7 @@ export const sendMail = async ({
 
       replyTo: process.env.EMAIL_USER,
 
-      subject: `🐞 New Lead - ${service} | ${name}`,
+      subject: `🐞 New Lead - ${establishment} | ${fullName}`,
 
       html: `
   <!DOCTYPE html>
@@ -130,7 +129,17 @@ export const sendMail = async ({
                     </td>
 
                     <td style="padding:12px;border-bottom:1px solid #eee;">
-                      ${name}
+                      ${fullName}
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      <strong>Email</strong>
+                    </td>
+
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      ${email}
                     </td>
                   </tr>
 
@@ -146,21 +155,21 @@ export const sendMail = async ({
 
                   <tr>
                     <td style="padding:12px;border-bottom:1px solid #eee;">
-                      <strong>Postcode / Area</strong>
+                      <strong>Establishment</strong>
                     </td>
 
                     <td style="padding:12px;border-bottom:1px solid #eee;">
-                      ${location}
+                      ${establishment}
                     </td>
                   </tr>
 
                   <tr>
                     <td style="padding:12px;border-bottom:1px solid #eee;">
-                      <strong>Requested Service</strong>
+                      <strong>Message</strong>
                     </td>
 
                     <td style="padding:12px;border-bottom:1px solid #eee;">
-                      ${service}
+                      ${message}
                     </td>
                   </tr>
 
@@ -217,13 +226,11 @@ export const sendMail = async ({
 
     const info = await transporter.sendMail(mailOptions);
 
-
     return {
       success: true,
       info,
     };
   } catch (error) {
-
     console.error(error);
 
     return {
@@ -233,9 +240,3 @@ export const sendMail = async ({
     };
   }
 };
-
-
-
-
-
-

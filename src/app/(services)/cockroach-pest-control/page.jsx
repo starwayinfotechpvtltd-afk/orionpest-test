@@ -193,7 +193,7 @@
 //   );
 // }
 
-"use client";
+
 import Image from "next/image";
 import {
   ShieldCheck,
@@ -219,6 +219,7 @@ import Link from "next/link";
 import TestimonialsSection from "@/components/ui/Testimonials";
 import FAQSection from "@/components/ui/FAQ";
 import Form from "@/components/ui/Form";
+import { getPageData } from "@/lib/getPageData";
 
 export async function generateMetadata() {
   const page = await getPageData("cockroach-control");
@@ -241,6 +242,7 @@ export default function page() {
     {
       icon: "/Images/icon/icon1.png",
       title: "Residential",
+      active: true,
     },
     {
       icon: "/Images/icon/icon7.png",
@@ -249,7 +251,6 @@ export default function page() {
     {
       icon: "/Images/icon/icon5.png",
       title: "Warehouses",
-      active: true,
     },
   ];
 
@@ -301,7 +302,7 @@ export default function page() {
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[5rem]">
+              <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
                 Say Goodbye to
                 <br />
                 <span className="text-[#1095D9]">Cockroaches</span>
@@ -318,7 +319,7 @@ export default function page() {
               </p>
 
               {/* Features */}
-              <div className="mt-8 flex flex-wrap gap-4 sm:gap-6">
+              <div className="mt-8 grid grid-cols-2 md:grid-cols-3 justify-between items-center gap-3">
                 <Feature
                   icon={<ShieldCheck size={30} />}
                   title="Safe for Family & Pets"
@@ -334,7 +335,7 @@ export default function page() {
               </div>
 
               {/* Buttons */}
-              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <div className="mt-10 flex flex-col xl:flex-row gap-4">
                 <Link className="w-full sm:w-auto justify-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 sm:px-8 py-4 rounded-xl transition flex items-center gap-2 text-sm sm:text-base cursor-pointer" href="/contact">
                   BOOK FREE INSPECTION
                   <ArrowRight size={18} />
@@ -350,8 +351,8 @@ export default function page() {
             {/* Right Image Container */}
             <div className="flex justify-center order-1 lg:order-2 overflow-visible py-8 lg:py-0">
               {/* Circle Background scaled responsively */}
-              <div className="relative w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] xl:w-[700px] xl:h-[700px] rounded-full bg-linear-90 from-white via-[#FEC42A]/50 to-[#FEC42A]">
-                <div className="relative -left-10 z-[1px] h-[85%] w-[88%] rounded-full mx-auto mt-[7%]">
+              <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] xl:w-[570px] xl:h-[570px] 2xl:w-[700px] 2xl:h-[700px] rounded-full bg-linear-90 from-white via-[#FEC42A]/50 to-[#FEC42A]">
+                <div className="relative -left-7 2xl:-left-10 z-[1px] h-[85%] w-[88%] rounded-full mx-auto mt-[7%]">
                   <Image
                     src="/Images/bugs/bg.png"
                     alt="Cockroach Pest Control"
@@ -360,7 +361,7 @@ export default function page() {
                   />
                 </div>
                 {/* Image Card Overlap scaled to container layout */}
-                <div className="absolute w-[105%] h-[105%] -top-[8%] -left-[15%] z-[10px]">
+                <div className="absolute w-[105%] h-[105%] -top-[16%] -left-[20%] sm:-left-[32%] z-[10px]">
                   <Image
                     src="/Images/bugs/cockroach6.png"
                     alt="Cockroach Pest Control"
@@ -370,7 +371,7 @@ export default function page() {
                 </div>
 
                 {/* Badge repositioned neatly for smaller displays */}
-                <div className="absolute -right-4 top-4 sm:right-4 sm:top-10 lg:right-10 lg:top-20 bg-white rounded-2xl sm:rounded-3xl shadow-xl p-3 sm:p-6 w-32 sm:w-48 flex flex-col justify-center items-center">
+                <div className="absolute -right-4 top-4 sm:right-4 sm:top-10 lg:right-0 lg:top-0 xl:right-10 xl:top-20 bg-white rounded-2xl sm:rounded-3xl shadow-xl p-3 sm:p-6 w-32 sm:w-48 flex flex-col justify-center items-center">
                   <div className="w-8 h-8 sm:w-14 sm:h-14 rounded-full flex items-center justify-center mb-2 sm:mb-4">
                     <ShieldCheck className="text-yellow-500 w-6 h-6 sm:w-12 sm:h-12" />
                   </div>
@@ -387,8 +388,8 @@ export default function page() {
           </div>
 
           {/* Bottom Stats Grid */}
-          <div className="mt-12 lg:-mt-5 bg-white rounded-2xl border-[#F6F6F8] border shadow-sm relative">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-[#F6F6F8]">
+          <div className="mt-10 2xl:-mt-5 bg-white rounded-2xl border-[#F6F6F8] border shadow-sm relative">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-[#F6F6F8]">
               <Stat
                 icon={<Users size={35} />}
                 title="50+ Years"
@@ -420,10 +421,10 @@ export default function page() {
 
       {/* Advanced Control Section */}
       <section className="relative overflow-hidden bg-white">
-        <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-0 py-16 flex flex-col lg:flex-row items-center gap-12">
+        <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-0 py-5 flex flex-col lg:flex-row items-center gap-12">
           {/* Left section */}
           <div className="w-full lg:w-[50%]">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#36388D] w-full leading-tight">
+            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
               Advanced Cockroach Control for
               <span className="text-[#1095D9]"> Homes & Businesses</span>
             </h2>
@@ -452,14 +453,14 @@ export default function page() {
                 color="#000"
               />
             </div>
-            <Link className="w-90 justify-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 sm:px-8 py-4 rounded-xl transition flex items-center gap-2 text-sm sm:text-base cursor-pointer mt-10" href="/contact">
+            <Link className="w-68 md:w-90 justify-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 sm:px-8 py-4 rounded-xl transition flex items-center gap-2 text-sm sm:text-base cursor-pointer mt-10  mx-auto" href="/contact">
                   BOOK FREE INSPECTION
                   <ArrowRight size={18} />
                 </Link>
           </div>
           {/* Right section */}
           <div className="w-full lg:w-[50%] flex justify-center relative">
-            <div className="relative h-[300px] sm:h-[450px] md:h-[550px] lg:h-[650px] w-full max-w-2xl">
+            <div className="relative h-[330px] sm:h-[450px] md:h-[450px] 2xl:h-[650px] w-full max-w-2xl">
               <Image
                 src="/Images/bugs/cockroach7.png"
                 alt="cockroach"
@@ -467,7 +468,7 @@ export default function page() {
                 className="object-cover rounded-2xl"
               />
               {/* Badge Overlay */}
-              <div className="absolute -right-4 top-4 sm:right-4 sm:top-10 lg:right-10 lg:top-20 bg-white rounded-2xl sm:rounded-3xl shadow-xl p-3 sm:p-6 w-32 sm:w-48 flex flex-col justify-center items-center">
+              <div className="absolute -right-4 top-4 sm:right-4 sm:top-10 lg:right-0 lg:top-0 xl:right-10 xl:top-20 bg-white rounded-2xl sm:rounded-3xl shadow-xl p-3 sm:p-6 w-32 sm:w-48 flex flex-col justify-center items-center">
                 <div className="w-8 h-8 sm:w-14 sm:h-14 rounded-full flex items-center justify-center mb-2 sm:mb-4">
                   <ShieldCheck className="text-yellow-500 w-6 h-6 sm:w-12 sm:h-12" />
                 </div>
@@ -500,7 +501,7 @@ export default function page() {
           </div>
           {/* Right section content */}
           <div className="w-full lg:w-[48%] order-1 lg:order-2">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#36388D] w-full leading-tight">
+            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
               Complete Protection for
               <span className="text-[#1095D9]"> Every Corner</span>
             </h2>
@@ -529,7 +530,7 @@ export default function page() {
                 color="#fff"
               />
             </div>
-            <Link className="w-90 justify-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 sm:px-8 py-4 rounded-xl transition flex items-center gap-2 text-sm sm:text-base cursor-pointer mt-10" href="/contact">
+            <Link className="w-68 md:w-90 justify-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 sm:px-8 py-4 rounded-xl transition flex items-center gap-2 text-sm sm:text-base cursor-pointer mt-10 mx-auto" href="/contact">
                   BOOK FREE INSPECTION
                   <ArrowRight size={18} />
                 </Link>
@@ -548,7 +549,7 @@ export default function page() {
               Complete Cockroach Control
             </span>
 
-            <h2 className="mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem]">
+            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
               Complete Cockroach Control
               <br />
               <span className="text-[#0094DA]">at Every Place.</span>
@@ -562,7 +563,7 @@ export default function page() {
           </div>
 
           {/* Main Content Dial Diagram Layout */}
-          <div className="relative mt-20 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 xl:gap-20">
+          <div className="relative mt-3 md:mt-20 flex flex-col lg:flex-row items-center justify-center lg:gap-16 xl:gap-20">
             {/* Left Features */}
             <div className="space-y-8 md:space-y-10 w-full sm:max-w-md lg:w-72 order-2 lg:order-1">
               <InfoCard
@@ -579,12 +580,12 @@ export default function page() {
 
             {/* Center Circle Ring Group */}
             <div className="relative flex justify-center items-center order-1 lg:order-2 my-6 lg:my-0 scale-75 sm:scale-100">
-              <div className="absolute w-[340px] h-[340px] sm:w-[430px] sm:h-[430px] rounded-full border-[10px] sm:border-[14px] border-[#2F3293]" />
-              <div className="absolute w-[300px] h-[300px] sm:w-[390px] sm:h-[390px] rounded-full border-[6px] sm:border-[8px] border-blue-200" />
-              <div className="absolute top-4 sm:top-6 left-2 w-3 h-3 bg-yellow-400 rounded-full" />
-              <div className="absolute top-4 sm:top-6 right-2 w-3 h-3 bg-yellow-400 rounded-full" />
+              <div className="absolute w-[400px] h-[400px] sm:w-[430px] sm:h-[430px] lg:w-[460px] lg:h-[460px] rounded-full border-[10px] sm:border-[14px] border-[#2F3293]" />
+              <div className="absolute w-[370px] h-[370px] sm:w-[390px] sm:h-[390px] lg:w-[420px] lg:h-[420px] rounded-full border-[6px] sm:border-[8px] border-blue-200" />
+              <div className="absolute top-12 sm:top-3 left-2 w-3 h-3 bg-yellow-400 rounded-full" />
+              <div className="absolute top-12   sm:top-3 right-2 w-3 h-3 bg-yellow-400 rounded-full" />
 
-              <div className="relative w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] rounded-full overflow-hidden shadow-2xl border-[6px] sm:border-[10px] border-white">
+              <div className="relative w-[350px] h-[350px] sm:w-[340px] sm:h-[340px] lg:w-[380px] lg:h-[380px] rounded-full overflow-hidden shadow-2xl border-[6px] sm:border-[10px] border-white">
                 <Image
                   src="/Images/icon/icon4.webp"
                   alt="House"
@@ -598,7 +599,7 @@ export default function page() {
                   src="/Images/icon/icon3.png"
                   alt="icon"
                   fill
-                  className="object-cover"
+                  className="object-cover z-[2]"
                 />
               </div>
             </div>
@@ -619,7 +620,7 @@ export default function page() {
           </div>
 
           {/* Location Cards Component List Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 bg-[#F5F7FB] relative mt-10 lg:-mt-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6 bg-[#F5F7FB] relative mt-10 lg:-mt-5">
             {locations.map((item, index) => (
               <div
                 key={index}
@@ -652,7 +653,7 @@ export default function page() {
         <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto px-4 sm:px-6">
           {/* Heading */}
           <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2F3293] leading-tight">
+            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
               Preferred by{" "}
               <span className="text-[#0094DA]">Homes & Businesses</span> Across
               India
@@ -668,9 +669,9 @@ export default function page() {
                   <Image
                     src={logo}
                     alt="brand"
-                    width={120}
-                    height={50}
-                    className="object-contain transition opacity-80 hover:opacity-100"
+                    width={150}
+                    height={80}
+                    className="object-contain transition"
                   />
                 </div>
               ))}
@@ -721,10 +722,10 @@ export default function page() {
 
       {/* Child Safe Environment Highlight Grid */}
       <section className="relative overflow-hidden bg-white py-12 lg:py-0">
-        <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 mt-10">
           {/* Left section image element wrapper */}
-          <div className="w-full lg:w-[48%] flex justify-center relative order-2 lg:order-1">
-            <div className="relative h-[280px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full max-w-xl">
+          <div className="w-full lg:w-[50%] flex justify-center relative order-2 lg:order-1">
+            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full">
               <Image
                 src="/Images/home2.png"
                 alt="cockroach"
@@ -735,7 +736,7 @@ export default function page() {
           </div>
           {/* Right section typography card context content layout details stack */}
           <div className="w-full lg:w-[48%] order-1 lg:order-2">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#36388D] w-full leading-tight">
+            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
               Child Safe
               <span className="text-[#1095D9]"> Cockroach Control,</span>
               Complete Peace of Mind.
@@ -748,7 +749,7 @@ export default function page() {
             <p className="text-base sm:text-lg max-w-xl mt-4 font-semibold text-gray-800">
               Safe for your little ones. Tough on cockroaches.
             </p>
-            <div className="bg-[#F3F6FC] rounded-2xl p-4 sm:p-6 lg:px-10 flex flex-col sm:flex-row justify-between items-center gap-6 mt-6">
+            <div className="bg-[#F3F6FC] rounded-2xl p-4 sm:p-6 lg:px-10 hidden xl:flex flex-col sm:flex-row justify-between items-center gap-6 mt-6">
               <span className="shrink-0">
                 <ShieldCheck color="#195ED3" size={50} />
               </span>
@@ -772,9 +773,31 @@ export default function page() {
           </div>
         </div>
 
+        <div className="bg-[#F3F6FC] rounded-2xl p-4 sm:p-6 lg:px-10 flex flex-col sm:flex-row justify-between items-center gap-6 max-w-[80%] mx-auto lg:hidden">
+              <span className="shrink-0">
+                <ShieldCheck color="#195ED3" size={50} />
+              </span>
+              <div className="space-y-1 text-center sm:text-left">
+                <p className="text-[#36388D] text-base sm:text-2xl font-semibold leading-tight">
+                  SAFE FOR CHILDREN. <br /> SAFE FOR HOMES.
+                </p>
+                <p className="text-sm lg:text-md text-gray-600">
+                  Powerful protection you can trust.
+                </p>
+              </div>
+              <div className="relative w-52 h-32 shrink-0">
+                <Image
+                  src="/Images/children.png"
+                  alt="children"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
+
         {/* Extended Stats Matrix Bar Layout */}
         <div className="mt-12 bg-white rounded-2xl border-[#F6F6F8] border shadow-sm max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto relative z-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-y sm:divide-y-0 md:divide-x divide-[#F6F6F8]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 divide-y sm:divide-y-0 md:divide-x divide-[#F6F6F8]">
             <Stat
               icon={<Leaf size={35} />}
               title="Non-toxic & Low Odor"
@@ -808,7 +831,7 @@ export default function page() {
       </section>
 
       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
-      <section className="bg-[#FCFCFD] pb-16 md:pb-20 pt-12">
+      <section className="bg-[#FCFCFD] pb-16 md:pb-20 mt-20">
         <FAQSection />
         <div className="mt-10 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
           <SupportCard
@@ -849,7 +872,7 @@ export default function page() {
                 <span className="text-yellow-500">Touch</span>
               </p>
 
-              <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#2F3293]">
+              <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
                 We're Here to
                 <br />
                 <span className="text-[#0095DA]">Help You Stay</span>
@@ -991,11 +1014,11 @@ function FeatureCard({ item, index }) {
     >
       <div className="flex gap-4">
         <div>
-          <h3 className="text-xl font-bold text-[#09185E] w-64">
+          <h3 className="text-md md:text-xl font-bold text-[#09185E] w-52 md:w-64">
             {item.heading}
           </h3>
 
-          <p className="mt-4 text-gray-600 w-[230px] text-sm">{item.desc}</p>
+          <p className="mt-4 text-gray-600 w-40 md:w-[230px] text-sm">{item.desc}</p>
         </div>
       </div>
 
@@ -1009,7 +1032,7 @@ function FeatureCard({ item, index }) {
         </span>
       </Link>
 
-      <div className="absolute lg:-right-0 lg:-bottom-10 -right-16 -bottom-10">
+      <div className="absolute 2xl:-right-0 2xl:-bottom-10 -right-10 -bottom-10">
         <Image src={item.image} alt="Cockroach" width={180} height={180} />
       </div>
     </div>
@@ -1020,7 +1043,7 @@ function ContactInfo({ icon, title, value, bg, link }) {
   return (
     <div className="flex items-start gap-5">
       <div
-        className={`flex h-14 w-14 items-center justify-center rounded-full text-white ${bg}`}
+        className={`flex p-4 h-14 w-14 items-center justify-center rounded-full text-white ${bg}`}
       >
         {icon}
       </div>
