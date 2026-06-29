@@ -1,13 +1,17 @@
-
-
-export default function Stat({ icon, title, subtitle, bgColor, color }) {
+export default function Stat({
+  title,
+  subtitle,
+  icon: Icon,
+  bgColor,
+  color,
+}) {
   return (
     <div className="p-6 flex items-center gap-4">
       <div
         className={`p-4 rounded-full`}
         style={{ backgroundColor: bgColor, color: color }}
       >
-        {icon}
+        <Icon className="w-5 h-5 text-yellow-500" />
       </div>
 
       <div>

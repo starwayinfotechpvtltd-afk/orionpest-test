@@ -181,7 +181,7 @@ const reviews = [
   },
 ];
 
-export default function TestimonialsSection() {
+export default function TestimonialsSection({heading, desc}) {
   const [current, setCurrent] = useState(0);
 
   const [visibleCards, setVisibleCards] = useState(3);
@@ -239,16 +239,10 @@ export default function TestimonialsSection() {
             Testimonials
           </p>
 
-          <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-            Trusted by Thousands.
-            <br />
-            <span className="text-[#0094DA]">Cockroach-Free,</span>{" "}
-            <span className="text-[#2F3293]">Every Time.</span>
-          </h2>
+          {heading}
           <div className="w-full max-w-[20rem] h-1 bg-yellow-400 rounded-full mx-auto mt-5" />
           <p className="text-base sm:text-lg md:text-xl text-center mx-auto max-w-2xl mt-6 md:mt-10 text-gray-600">
-            See what our satisfied customers have to say about our effective
-            cockroach control services.
+            {desc}
           </p>
         </div>
 

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import FeatureCard from './ui/FeatureCard';
 
 
-export default function BrandSection({image}) {
+export default function BrandSection({heading, cards}) {
 
     const logos = [
     "/Images/clients/tcs.png",
@@ -15,36 +15,12 @@ export default function BrandSection({image}) {
     "/Images/clients/hpgas.png",
   ];
 
-  const card = [
-    {
-      heading: "Complete Cockroach Control for Every Space",
-      desc: "Advanced treatment to eliminate cockroaches from every corner.",
-      bgColor: "#FFF6DE",
-      image: image,
-    },
-    {
-      heading: "Expert Inspection & Smart Solutions",
-      desc: "Detailed inspection and targeted methods for lasting results.",
-      bgColor: "#EEF4FF",
-      image: "/Images/icon/vector2.png",
-    },
-    {
-      heading: "Long-Lasting Protection You Can Rely On",
-      desc: "Safe, eco-friendly & effective protection for your peace of mind.",
-      bgColor: "#FFF1F2",
-      image: "/Images/icon/vector3.png",
-    },
-  ];
   return (
     <section className="relative overflow-hidden bg-white py-16 md:py-20">
         <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto px-4 sm:px-6">
           {/* Heading */}
           <div className="text-center">
-            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-              Preferred by{" "}
-              <span className="text-[#0094DA]">Homes & Businesses</span> Across
-              India
-            </h2>
+            {heading}
             <div className="w-24 sm:w-48 h-1 bg-yellow-400 rounded-full mx-auto mt-4" />
           </div>
 
@@ -69,7 +45,7 @@ export default function BrandSection({image}) {
 
           {/* Feature Grid Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 relative z-10">
-            {card.map((item, index) => (
+            {cards.map((item, index) => (
               <div key={index}>
                 <FeatureCard item={item} />
               </div>

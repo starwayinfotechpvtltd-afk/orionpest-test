@@ -16,7 +16,45 @@ import Stat from "./ui/Stat";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HeroSection({image}) {
+export default function HeroSection({
+  image,
+  topbadge,
+  heading,
+  subHeading,
+  desc,
+  stats,
+  imageStyle,
+}) {
+  const stat = [
+    {
+      icon: Users,
+      title: "26+ Years",
+      subtitle: "of Expertise",
+      bgColor: "#FCF8EC",
+      color: "#FDC700",
+    },
+    {
+      icon: Building2,
+      title: "Serving 5K Homes",
+      subtitle: "& Businesses",
+      bgColor: "#FCF8EC",
+      color: "#FDC700",
+    },
+    {
+      icon: MapPin,
+      title: "Pan India",
+      subtitle: "Service Network",
+      bgColor: "#FCF8EC",
+      color: "#FDC700",
+    },
+    {
+      icon: Headphones,
+      title: "24×7 Expert",
+      subtitle: "Support",
+      bgColor: "#FCF8EC",
+      color: "#FDC700",
+    },
+  ];
   return (
     <section className="relative overflow-hidden bg-linear-30 from-white to-[#F4F6F9]">
       <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-0 py-12 md:py-16 lg:py-20">
@@ -29,40 +67,28 @@ export default function HeroSection({image}) {
                 <ShieldCheck className="w-4 h-4 text-white" />
               </div>
               <span className="font-semibold text-gray-700 tracking-wide text-sm sm:text-base">
-                COCKROACH PEST CONTROL
+                {topbadge}
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
-              Say Goodbye to
-              <br />
-              <span className="text-[#1095D9]">Cockroaches</span>
-            </h1>
+            {heading}
 
             <p className="mt-4 md:mt-6 text-lg sm:text-xl text-gray-600 font-medium">
-              Safe. Effective. Long-Lasting Protection.
+              {subHeading}
             </p>
 
             <p className="mt-4 text-gray-500 max-w-xl leading-relaxed text-base sm:text-lg md:text-xl">
-              Over five decades expert pest control trusted by millions of homes
-              and businesses across India. Our proven methods ensure a clean,
-              healthy and roach-free environment.
+              {desc}
             </p>
 
             {/* Features */}
             <div className="mt-8 grid grid-cols-2 md:grid-cols-3 justify-between items-center gap-3">
-              <Feature
-                icon={<ShieldCheck size={30} />}
-                title="Safe for Family & Pets"
-              />
-              <Feature
-                icon={<FlaskConical size={30} />}
-                title="Odourless Treatment"
-              />
-              <Feature
-                icon={<BadgeCheck size={30} />}
-                title="Government Approved"
-              />
+              {stats.map((item, index) => (
+                <div key={index}>
+                  <Feature title={item} index={index} />
+                  {/* icon={<ShieldCheck size={30} />} */}
+                </div>
+              ))}
             </div>
 
             {/* Buttons */}
@@ -98,12 +124,12 @@ export default function HeroSection({image}) {
                 />
               </div>
               {/* Image Card Overlap scaled to container layout */}
-              <div className="absolute w-[105%] h-[105%] -top-[16%] -left-[20%] sm:-left-[32%] z-[10px]">
+              <div className={imageStyle}>
                 <Image
                   src={image}
                   alt="Cockroach Pest Control"
                   fill
-                  className="object-contain drop-shadow-2xl"
+                  className="object-contain drop-shadow-2xl rounded-full"
                 />
               </div>
 
@@ -125,32 +151,19 @@ export default function HeroSection({image}) {
         </div>
 
         {/* Bottom Stats Grid */}
-        <div className="mt-10 2xl:-mt-5 bg-white rounded-2xl border-[#F6F6F8] border shadow-sm relative">
+        <div className="mt-10  bg-white rounded-2xl border-[#F6F6F8] border shadow-sm relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-[#F6F6F8]">
-            <Stat
-              icon={<Users size={35} />}
-              title="50+ Years"
-              subtitle="of Expertise"
-              color="#FDC700"
-            />
-            <Stat
-              icon={<Building2 size={35} />}
-              title="Serving 1M+ Homes"
-              subtitle="& Businesses"
-              color="#FDC700"
-            />
-            <Stat
-              icon={<MapPin size={35} />}
-              title="Pan India"
-              subtitle="Service Network"
-              color="#FDC700"
-            />
-            <Stat
-              icon={<Headphones size={35} />}
-              title="24×7 Expert"
-              subtitle="Support"
-              color="#FDC700"
-            />
+            {stat.map((item, index) => (
+              <div key={index}>
+                <Stat
+                  icon={item.icon}
+                  title={item.title}
+                  subtitle={item.subtitle}
+                  bgColor={item.bgColor}
+                  color={item.color}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

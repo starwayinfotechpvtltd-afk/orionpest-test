@@ -193,8 +193,11 @@
 //   );
 // }
 
+
+
+
 import Image from "next/image";
-import { ShieldCheck, Phone, MapPin, CalendarDays, Mail } from "lucide-react";
+import { ShieldCheck, Phone, MapPin, CalendarDays, Mail, Shield, Leaf, House } from "lucide-react";
 import TestimonialsSection from "@/components/ui/Testimonials";
 import FAQSection from "@/components/ui/FAQ";
 import Form from "@/components/ui/Form";
@@ -216,33 +219,239 @@ export async function generateMetadata() {
   };
 }
 
+const list1 = [
+  "Kills Cockroaches at the Source",
+  "Safe for Family, Pets & Environment.",
+  "Long-Lasting Protection",
+];
+
+const list2 = [
+  "Targets Hidden Breeding Spots.",
+  "Prevents Re-infection.",
+  "Ideal for Homes, Offices, Restaurants & Commercial Spaces.",
+];
+
+const leftFeature = [
+  {
+    heading: "Target Hidden Breeding Spots",
+    desc: "We eliminate cockroaches where they hide and breed.",
+  },
+  {
+    heading: "Prevents Re-Infection",
+    desc: "Advance treatment methods ensure longer protection.",
+  },
+];
+
+const rightFeature = [
+  {
+    heading: "Safe & Eco-Friendly",
+    desc: "Non-toxic, odorless and safe for your family and pets.",
+  },
+  {
+    heading: "Long-Lasting Protection",
+    desc: "Our treatment provide residential protection for lasting peace of mind.",
+  },
+];
+
+const cards = [
+  {
+    heading: "Complete Cockroach Control for Every Space",
+    desc: "Advance treatment to eliminate cockroaches from every corner.",
+    image: "/Images/services/cockroach5.png",
+    bgColor: "#FFF6DE",
+  },
+  {
+    heading: "Expert Inspection & Smart Solutions",
+    desc: "Detailed inspection and targeted methods for lasting results.",
+    image: "/Images/icon/vector2.png",
+    bgColor: "#EEF4FF",
+  },
+  {
+    heading: "Long-lasting Protection You Can Rely On",
+    desc: "Safe, eco-friendly & effective protection for your peace of mind.",
+    image: "/Images/icon/vector3.png",
+    bgColor: "#FFF1F2",
+  },
+];
+
+const childSafeStats = [
+  {
+    title: "Non-Toxic & Low Odor",
+    desc: "Safe treatments for your family and friends.",
+    bgColor: "#DEE9FC",
+    color: "#2F3293",
+    icon : ShieldCheck
+  },
+  {
+    title: "Drop & Trageted Action",
+    desc: "Reaches hidden areas and eliminates at the source.",
+    bgColor: "#DEE9FC",
+    color: "#2F3293",
+    icon: Shield
+  },
+  {
+    title: "Long-Lasting Protection",
+    desc: "Keeps your home protected from re-infection.",
+    bgColor: "#DEE9FC",
+    color: "#2F3293",
+    icon: Leaf
+  },
+  {
+    title: "Trusted by Thousands",
+    desc: "Reliable servive for a cleaner, healthier tomorrow.",
+    bgColor: "#DEE9FC",
+    color: "#2F3293",
+    icon: House
+  },
+];
+
+const faqs = [
+  {
+    id: "01",
+    question: "How do you eliminate cockroaches?",
+    answer:
+      "We use a combination of advanced, safe, and targeted treatment methods that eliminate cockroaches at the source and prevent future infestations.",
+  },
+  {
+    id: "02",
+    question: "How long does the treatment take?",
+    answer:
+      "Most residential treatments take between 30–90 minutes depending on the infestation level and property size.",
+  },
+  {
+    id: "03",
+    question: "How long does the protection last?",
+    answer:
+      "Our treatments provide long-lasting protection and can remain effective for several months with proper maintenance.",
+  },
+  {
+    id: "04",
+    question: "Is the treatment safe for my family and pets?",
+    answer:
+      "Yes. We use approved, low-toxicity products that are safe when used according to professional guidelines.",
+  },
+  {
+    id: "05",
+    question: "Do you provide services for commercial spaces?",
+    answer:
+      "Absolutely. We serve offices, hotels, warehouses, restaurants, factories and other commercial properties.",
+  },
+  {
+    id: "06",
+    question: "How can I book a service?",
+    answer:
+      "You can call our support team or submit an online inspection request through our website.",
+  },
+];
+
 export default function page() {
   return (
     <div className="w-full">
       {/* Hero Section */}
 
-      <HeroSection image="/Images/bugs/cockroach6.png"/>
+      <HeroSection
+        image="/Images/services/cockroach.png"
+        topbadge="COCKROACH PEST CONTROL"
+        heading={
+          <>
+            <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
+              Say Goodbye to
+              <br />
+              <span className="text-[#1095D9]">Cockroaches</span>
+            </h1>
+          </>
+        }
+        subHeading="Safe. Effective. Long-Lasting Protection."
+        desc="Our five decades expert pest control trusted by millions for home and business accross India. Our proven methods ensure a clean, healthy and cockroach-free environment."
+        stats={["Safe for Family & Pests", "Odourless Treatment", "Government Approved"]}
+        imageStyle="absolute w-[105%] h-[105%] -top-[16%] -left-[20%] sm:-left-[32%] z-[10px]"
+      />
       {/* Advanced Control Section */}
-      <AdvanceControl image="/Images/bugs/cockroach7.png"/>
+      <AdvanceControl
+        image="/Images/services/cockroach2.png"
+        heading={
+          <>
+            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+              Advanced Cockroach Control for
+              <span className="text-[#1095D9]"> Homes & Businesses</span>
+            </h2>
+          </>
+        }
+        desc="Our expert solutions eliminate cockroaches at the source  and keep your space hygienic. Safe & healthy. Long-lasting protection you can trust."
+        list={list1}
+      />
 
       {/* Complete Protection Section */}
-      <CompleteProtection />
+      <CompleteProtection
+      heading={
+          <>
+            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+              Complete Protection for
+              <span className="text-[#1095D9]"> Every Corner</span>
+            </h2>
+          </>
+        }
+        desc="Cockroaches hide in places you can't see. Our targeted treatment reaches deep into hiding spots to ensure a cockroach-free environment."
+        list={list2}
+        image="/Images/services/home.png"
+      />
 
       {/* Diagram Features Info Section */}
-      <Diagram />
+      <Diagram  
+        topbadge="COMPLETE COCKROACH CONTROL"
+        heading={
+          <>
+          <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+            Complete Cockroach Control
+            <br />
+            <span className="text-[#0094DA]">at Every Place.</span>
+          </h2>
+          </>
+        }
+        desc="We provide end-to-end cockroach control solutions tailored for every environment. Safe, effective and long-lasting protection you can trust."
+        leftFeature={leftFeature}
+        rightFeature={rightFeature}
+      />
 
       {/* Brand Logos / Cards Grid Section */}
-      <BrandSection image="/Images/icon/vector1.png"/>
+      <BrandSection heading={
+        <>
+        <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+              Preferred by{" "}
+              <span className="text-[#0094DA]">Homes & Businesses</span> Across
+              India
+            </h2>
+        </>
+      } cards={cards} />
 
       {/* Testimonials Section Component */}
-      <TestimonialsSection />
+      <TestimonialsSection
+        heading={
+          <>
+          <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+            Trusted by Thousands.
+            <br />
+            <span className="text-[#0094DA]">Cockroch Control,</span>{" "}
+            <span className="text-[#2F3293]">Every Time.</span>
+          </h2>
+          </>
+        }
+        desc="See what our satisfied customers have to say about our effective cockroach control services."
+      />
 
       {/* Child Safe Environment Highlight Grid */}
-      <ChildSafeSection image="/Images/children.png"/>
+      <ChildSafeSection
+        image1="/Images/services/cockroach6.png"
+        image2="/Images/services/cockroach7.png"
+        name="Cockroach"
+        tagline="Safe for your little ones. Tough on cockroaches."
+        desc="We use advanced, low-odor and non-toxic treatments that eliminate cockroaches effectively without harming your children, pets or the environment."
+        childSafeStats={childSafeStats}
+      />
 
       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
       <section className="bg-[#FCFCFD] pb-16 md:pb-20 mt-20">
-        <FAQSection image="/Images/bugs/cockroach8.png"/>
+        <FAQSection image="/Images/services/cockroach3.png" faqs={faqs} name={"cockroach"}/>
         <div className="mt-10 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
           <SupportCard
             icon={<Phone size={26} />}
@@ -288,12 +497,11 @@ export default function page() {
                 <br />
                 <span className="text-[#0095DA]">Help You Stay</span>
                 <br />
-                <span className="text-[#2F3293]">Cockroach-Free.</span>
+                <span className="text-[#2F3293]">Termite-Free.</span>
               </h2>
 
-              <p className="mt-4 max-w-md text-base sm:text-lg leading-relaxed text-gray-600">
-                Have questions or need a service? Fill out the form and our
-                expert team will get back to you shortly.
+              <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
+                Protect your property before termites cause costly structural damage. Book a professional termite inspection with our certified experts today.
               </p>
 
               {/* Contact Info Row Components Column Base List Block */}
@@ -339,7 +547,7 @@ export default function page() {
           >
             <div className="absolute left-32 top-5 w-52 h-52">
               <Image
-                src="/Images/bugs/cockroach9.png"
+                src="/Images/services/cockroach4.png"
                 alt="Cockroach"
                 fill
                 className="object-contain"

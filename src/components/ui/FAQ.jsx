@@ -6,46 +6,9 @@ import {
   Minus,
 } from "lucide-react";
 
-const faqs = [
-  {
-    id: "01",
-    question: "How do you eliminate cockroaches?",
-    answer:
-      "We use a combination of advanced, safe, and targeted treatment methods that eliminate cockroaches at the source and prevent future infestations.",
-  },
-  {
-    id: "02",
-    question: "How long does the treatment take?",
-    answer:
-      "Most residential treatments take between 30–90 minutes depending on the infestation level and property size.",
-  },
-  {
-    id: "03",
-    question: "How long does the protection last?",
-    answer:
-      "Our treatments provide long-lasting protection and can remain effective for several months with proper maintenance.",
-  },
-  {
-    id: "04",
-    question: "Is the treatment safe for my family and pets?",
-    answer:
-      "Yes. We use approved, low-toxicity products that are safe when used according to professional guidelines.",
-  },
-  {
-    id: "05",
-    question: "Do you provide services for commercial spaces?",
-    answer:
-      "Absolutely. We serve offices, hotels, warehouses, restaurants, factories and other commercial properties.",
-  },
-  {
-    id: "06",
-    question: "How can I book a service?",
-    answer:
-      "You can call our support team or submit an online inspection request through our website.",
-  },
-];
 
-export default function FAQSection({image}) {
+
+export default function FAQSection({image, faqs, name}) {
   const [active, setActive] = useState("01");
 
   return (
@@ -64,7 +27,7 @@ export default function FAQSection({image}) {
       <div className="absolute right-0 top-0 hidden lg:block bg-[#F2F7FE] rounded-bl-full pl-5 pb-5">
         <img
           src={image}
-          alt="Cockroach"
+          alt={name}
           className="w-56 object-contain opacity-90"
         />
       </div>    
@@ -81,7 +44,7 @@ export default function FAQSection({image}) {
 
           <p className="mt-6 text-lg text-gray-600">
             Find answers to common questions about our
-            cockroach control services.
+            {name} control services.
           </p>
         </div>
 

@@ -10,43 +10,30 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-export default function AdvanceControl({image}) {
+export default function AdvanceControl({ image, heading, desc, list }) {
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-0 py-5 flex flex-col lg:flex-row items-center gap-12">
         {/* Left section */}
         <div className="w-full lg:w-[50%]">
-          <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
-            Advanced Cockroach Control for
-            <span className="text-[#1095D9]"> Homes & Businesses</span>
-          </h2>
+          {heading}
           <p className="text-base sm:text-lg max-w-xl mt-6 text-gray-600">
-            Our expert solutions eliminate cockroaches at the source and keep
-            your spaces hygienic, safe and healthy. Long-lasting protection you
-            can trust.
+            {desc}
           </p>
           <div className="mt-8 space-y-2">
-            <List
-              icon={<Crosshair size={25} />}
-              title="Kills Cockroaches at the Source"
-              bgColor="#FDD608"
-              color="#000"
-            />
-            <List
-              icon={<BadgeCheck size={25} />}
-              title="Safe for Family, Pets & Environment"
-              bgColor="#FDD608"
-              color="#000"
-            />
-            <List
-              icon={<Clock3 size={25} />}
-              title="Long-Lasting Protection"
-              bgColor="#FDD608"
-              color="#000"
-            />
+            {list.map((item, index) => (
+              <div key={index}>
+                <List
+                  title={item}
+                  index={index}
+                  bgColor="#FDD608"
+                  color="#000"
+                />
+              </div>
+            ))}
           </div>
           <Link
-            className="w-68 md:w-90 justify-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 sm:px-8 py-4 rounded-xl transition flex items-center gap-2 text-sm sm:text-base cursor-pointer mt-10  mx-auto"
+            className="w-68 md:w-90 justify-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 sm:px-8 py-4 rounded-xl transition flex items-center gap-2 text-sm sm:text-base cursor-pointer mt-10  mx-auto md:mx-0"
             href="/contact"
           >
             BOOK FREE INSPECTION
@@ -55,12 +42,12 @@ export default function AdvanceControl({image}) {
         </div>
         {/* Right section */}
         <div className="w-full lg:w-[50%] flex justify-center relative">
-          <div className="relative h-[330px] sm:h-[450px] md:h-[450px] 2xl:h-[650px] w-full max-w-2xl">
+          <div className="relative h-[330px] sm:h-[450px] md:h-[450px] 2xl:h-[600px] w-full">
             <Image
               src={image}
               alt="cockroach"
               fill
-              className="object-cover rounded-2xl"
+              className="object-contain rounded-2xl"
             />
             {/* Badge Overlay */}
             <div className="absolute -right-4 top-4 sm:right-4 sm:top-10 lg:right-0 lg:top-0 xl:right-10 xl:top-20 bg-white rounded-2xl sm:rounded-3xl shadow-xl p-3 sm:p-6 w-32 sm:w-48 flex flex-col justify-center items-center">
