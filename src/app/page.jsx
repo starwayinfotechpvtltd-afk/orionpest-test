@@ -1933,7 +1933,7 @@ export default function page() {
                 key={index}
                 className="border border-gray-300 rounded-3xl p-4 hover:shadow-xl transition"
               >
-                <div className="bg-[#2F3293] text-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto md:mx-0">
+                <div className="bg-[#2F3293] text-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto">
                   {item.icon}
                 </div>
 
@@ -2431,12 +2431,13 @@ export default function page() {
                   </div>
                 </div>
               ))}
-              <div className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer bg-[#12308F] flex justify-center items-center gap-2 text-xl font-bold text-white">
+              <Link className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer bg-[#12308F] flex justify-center items-center gap-2 text-xl font-bold text-white"
+              href={"/branches"}>
                 <h2>
                   View All <br /> Locations
                 </h2>
                 <ArrowRight size={25} />
-              </div>
+              </Link>
             </div>
           </div>
         </div>

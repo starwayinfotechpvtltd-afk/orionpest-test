@@ -257,11 +257,11 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href="tel:18002126969"
+                  href="tel:18004198181"
                   className="flex items-center gap-2 hover:text-[#042990]"
                 >
                   <MdOutlinePhone className="text-[#042990]" />
-                  1800 212 696969
+                  1800 419 8181
                 </a>
               </li>
 
