@@ -1474,10 +1474,9 @@ import {
   UsersRound,
   MapPin,
   Headset,
-  Award,
-  Bug,
-  ChevronDown,
   Mail,
+  Star,
+  Sprout
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -1500,7 +1499,7 @@ export default function page() {
     },
     {
       icon: <UsersRound />,
-      heading: "1Million+",
+      heading: "10K+",
       subHeading: "Happy Customers",
     },
     {
@@ -1513,21 +1512,21 @@ export default function page() {
   // About Us
   const features = [
     {
-      icon: <Bug size={40} />,
+      icon: <Star size={40} />,
       title: "Trust & Experience Focused",
       description:
-        "With years of hands-on experience, SafePest delivers reliable pest control service.",
+        "With years of hands-on experience, Orion Pest delivers reliable pest control service.",
       active: false,
     },
     {
-      icon: <ShieldCheck size={40} />,
+      icon: <UsersRound size={40} />,
       title: "Customer-Centric",
       description:
-        "At SafePest, your safety and comfort come first. We tailor every pest control plan.",
+        "At Orion Pest, your safety and comfort come first. We tailor every pest control plan.",
       active: true,
     },
     {
-      icon: <Award size={40} />,
+      icon: <Sprout size={40} />,
       title: "Eco & Safety Focused",
       description:
         "We use environmentally responsible and safe eco-products suitable for families.",
@@ -1537,19 +1536,19 @@ export default function page() {
 
   const stats = [
     {
-      number: "6K+",
+      number: "10K+",
       title: "Happy Customers",
     },
     {
-      number: "10+",
+      number: "27+",
       title: "Years Experience",
     },
     {
-      number: "100%",
+      number: "98%",
       title: "Satisfaction",
     },
     {
-      number: "98%",
+      number: "99%",
       title: "Success Rate",
     },
   ];
@@ -1606,30 +1605,37 @@ export default function page() {
     {
       title: "Cockroach\nControl",
       image: "/Images/services/cockroach.png",
+      link: "/cockroach-pest-control",
     },
     {
       title: "Termite\nControl",
       image: "/Images/services/termite.png",
+      link: "/termite-pest-control",
     },
     {
       title: "Bed Bug\nControl",
       image: "/Images/services/bedbug.png",
+      link: "/bedbug-pest-control",
     },
     {
       title: "Rodent\nControl",
       image: "/Images/services/rodent.png",
+      link: "/rodent-pest-control",
     },
     {
       title: "Mosquito\nControl",
       image: "/Images/services/mosquito.png",
+      link: "/mosquito-pest-control",
     },
     {
       title: "Ant\nControl",
       image: "/Images/services/ant.png",
+      link: "/ant-pest-control",
     },
     {
       title: "Bird\nControl",
       image: "/Images/services/bird.png",
+      link: "/bird-pest-control",
     },
   ];
 
@@ -1637,20 +1643,20 @@ export default function page() {
 
   const cards1 = [
     {
-      heading: "Complete Bed Bug Elimination",
-      desc: "Professional treatments that eliminate bed bugs from every hiding place.",
-      image: "/Images/services/bedbug3.png",
+      heading: "GUARANTEED RESULTS",
+      desc: "With our indepth experience over 27 plus years, we continue to enhance our operational excellence, safety, capability, customer service and innovations.",
+      image: "/Images/services/cockroach5.png",
       bgColor: "#FFF6DE",
     },
     {
-      heading: "Expert Inspection & Treatment",
-      desc: "Accurate inspection followed by customized treatment plans for complete control.",
+      heading: "PAN INDIA PEST CONTROL SERVICES",
+      desc: " Orion Pest Solutions Private Limited offers pest control services across 72+ locations in India, Nepal, and Bhutan, ensuring safe and reliable solutions.  ",
       image: "/Images/icon/vector2.png",
       bgColor: "#EEF4FF",
     },
     {
-      heading: "Long-Term Bed Bug Protection",
-      desc: "Prevent future infestations with professional monitoring and preventive solutions.",
+      heading: "COST EFFECTIVE SOLUTIONS",
+      desc: "Orion Pest Solutions Private Limited provides a range of pest control services in more than 72 locations in India including Nepal and Bhutan.",
       image: "/Images/icon/vector3.png",
       bgColor: "#FFF1F2",
     },
@@ -1681,6 +1687,10 @@ export default function page() {
   // Cities section
   const cities = [
     {
+      name: "Kolkata",
+      image: "/Images/kolkata.webp",
+    },
+    {
       name: "Delhi",
       image: "/Images/delhi.jpg",
     },
@@ -1696,13 +1706,30 @@ export default function page() {
       name: "Chennai",
       image: "/Images/chennai.jpg",
     },
+  ];
+
+  // Process
+  const process = [
     {
-      name: "Hyderabad",
-      image: "/Images/hydrabad.jpg",
+      id: "01",
+      title: "Inspection",
+      description:
+        "Our experts carefully assess your property to identify pests and their entry points.",
+      image: "/Images/inspection.png"
     },
     {
-      name: "Kolkata",
-      image: "/Images/kolkata.webp",
+      id: "02",
+      title: "Planning",
+      description:
+        "We create a customized pest control plan tailored to your home or business needs.",
+      image: "/Images/planning.png"
+    },
+    {
+      id: "03",
+      title: "Treatment",
+      description:
+        "Safe, eco-friendly solutions are applied for lasting protection and a pest-free environment.",
+      image: "/Images/treatment.png"
     },
   ];
 
@@ -1732,15 +1759,18 @@ export default function page() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
-                Safe, Effective & Reliable Pest Control Solutions
-                <br />
-                <span className="text-[#1095D9]">Across India</span>
+                Largest Indian Owned
+                <span className="text-[#1095D9]">
+                  {" "}
+                  Pan India Pest Control Company{" "}
+                </span>
               </h1>
 
               <p className="mt-4 md:mt-6 text-lg sm:text-xl text-gray-600 font-medium">
-                27+ years of experience of delivering safe, eco-friendly and
-                government approved pest control services for Homes, Offices &
-                Industries in 72+ locations.
+                Established in 1998, we are constantly pushing the envelope with
+                innovations in the niche industry. Today, we take pride in
+                identifying ourselves as the pioneers of the pest management
+                industry.
               </p>
 
               <p className="mt-4 text-gray-500 max-w-xl leading-relaxed text-base sm:text-lg md:text-xl"></p>
@@ -1795,7 +1825,7 @@ export default function page() {
         </div>
       </section>
       {/* Bottom Stats Grid */}
-      <div className="-mt-10 bg-white rounded-2xl border-[#F6F6F8] border shadow-sm relative max-w-[80%] mx-auto">
+      <div className="lg:-mt-10 mt-0 bg-white rounded-2xl border-[#F6F6F8] border shadow-sm relative max-w-[80%] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-y-8 xl:gap-y-0 xl:divide-x divide-[#F6F6F8]/30 bg-[#0D2391] rounded-2xl py-8 xl:py-10 items-center">
           <div className="flex items-start gap-5 px-5 lg:px-8">
             <div className="rounded-full p-3 bg-[#FECE18] shrink-0">
@@ -1842,7 +1872,7 @@ export default function page() {
               <UsersRound size={24} color="#0D2391" />
             </div>
             <div className="space-y-0.5">
-              <p className="text-white text-xl font-bold">25,000+</p>
+              <p className="text-white text-xl font-bold">2,500+</p>
               <p className="text-white text-sm">Business Served</p>
             </div>
           </div>
@@ -1861,7 +1891,7 @@ export default function page() {
       </div>
 
       {/* About Us section */}
-      <section className="bg-white py-16 md:py-20 relative overflow-hidden">
+      <section className="bg-white pt-10 md:py-20 relative overflow-hidden">
         <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-0">
           {/* Top */}
 
@@ -1901,9 +1931,9 @@ export default function page() {
             {features.map((item, index) => (
               <div
                 key={index}
-                className="border border-gray-300 rounded-3xl p-6 hover:shadow-xl transition"
+                className="border border-gray-300 rounded-3xl p-4 hover:shadow-xl transition"
               >
-                <div className="bg-[#2F3293] text-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center">
+                <div className="bg-[#2F3293] text-white w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto md:mx-0">
                   {item.icon}
                 </div>
 
@@ -1926,7 +1956,7 @@ export default function page() {
 
           {/* Stats */}
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 lg:gap-y-0 mt-16 sm:mt-20">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 lg:gap-y-0 mt-6 lg:mt-16 sm:mt-20">
             {stats.map((item, index) => (
               <div
                 key={index}
@@ -1950,7 +1980,7 @@ export default function page() {
       </section>
 
       {/* Diagram */}
-      <section className="relative overflow-hidden bg-[#F5F7FB] py-16 md:py-24">
+      <section className="relative overflow-hidden bg-[#F5F7FB] py-10 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#ffffff_0%,#f5f7fb_60%)]" />
 
         <div className="relative mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-0 w-full">
@@ -1961,7 +1991,7 @@ export default function page() {
             </span>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-6 sm:mt-10">
-              Complete Bed Bug Control
+              Complete Pest Control
               <br className="hidden sm:block" />
               <span className="text-[#0094DA]"> at Every Place.</span>
             </h2>
@@ -1974,9 +2004,9 @@ export default function page() {
           </div>
 
           {/* Main Content Dial Diagram Layout */}
-          <div className="relative mt-12 md:mt-20 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12 xl:gap-20">
+          <div className="relative mt-0 md:mt-20 flex flex-col lg:flex-row items-center justify-center gap-0 lg:gap-12 xl:gap-20 w-full">
             {/* Left Features */}
-            <div className="space-y-6 md:space-y-10 w-full sm:max-w-md lg:w-72 order-2 lg:order-1">
+            <div className="space-y-6 md:space-y-10 w-full sm:max-w-md lg:max-w-[33%] order-2 lg:order-1">
               {leftFeature.map((item, index) => (
                 <div key={index}>
                   <InfoCard
@@ -1989,7 +2019,7 @@ export default function page() {
             </div>
 
             {/* Center Circle Ring Group */}
-            <div className="relative flex justify-center items-center order-1 lg:order-2 my-6 lg:my-0 scale-75 sm:scale-90 lg:scale-90 xl:scale-100">
+            <div className="relative flex justify-center items-center order-1 lg:order-2 my-6 lg:my-0 scale-75 sm:scale-90 lg:scale-90 xl:scale-100 lg:max-w-[33%]">
               <div className="absolute w-[400px] h-[400px] sm:w-[430px] sm:h-[430px] lg:w-[460px] lg:h-[460px] rounded-full border-[10px] sm:border-[14px] border-[#2F3293]" />
               <div className="absolute w-[370px] h-[370px] sm:w-[390px] sm:h-[390px] lg:w-[420px] lg:h-[420px] rounded-full border-[6px] sm:border-[8px] border-blue-200" />
               <div className="absolute top-12 sm:top-8 left-2 w-3 h-3 bg-yellow-400 rounded-full" />
@@ -2003,19 +2033,10 @@ export default function page() {
                   className="object-cover"
                 />
               </div>
-
-              <div className="absolute z-[2] -bottom-5 w-28 sm:w-36 h-28 sm:h-36">
-                <Image
-                  src="/Images/icon/icon3.png"
-                  alt="icon"
-                  fill
-                  className="object-cover z-[2]"
-                />
-              </div>
             </div>
 
             {/* Right Features */}
-            <div className="space-y-6 md:space-y-10 w-full sm:max-w-md lg:w-72 order-3">
+            <div className="space-y-6 md:space-y-10 w-full sm:max-w-md lg:max-w-[33%] order-3">
               {rightFeature.map((item, index) => (
                 <div key={index}>
                   <InfoCard
@@ -2029,36 +2050,46 @@ export default function page() {
           </div>
 
           {/* Location Cards Component List Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 bg-[#F5F7FB] relative mt-16 lg:mt-10 z-10">
-            {locations.map((item, index) => (
-              <div
-                key={index}
-                className={`bg-white rounded-2xl p-4 sm:p-6 lg:p-8 text-center shadow-md hover:shadow-xl transition-all duration-300 border ${
-                  item.active
-                    ? "border-blue-600 lg:scale-105"
-                    : "border-gray-100"
-                }`}
-              >
-                <div className="relative w-16 h-16 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mx-auto rounded-full bg-blue-50 flex items-center justify-center">
-                  <Image
-                    src={item.icon}
-                    alt={`${item.icon}/${index}`}
-                    fill
-                    className="object-cover rounded-full p-2 lg:p-0"
-                  />
+          <div className="relative w-full">
+            <div className="absolute 2xl:left-[45.3%] lg:left-[43.8%] lg:-top-24 z-[2] w-28 sm:w-36 h-28 sm:h-36 hidden lg:block">
+              <Image
+                src="/Images/icon/icon3.png"
+                alt="icon"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 bg-[#F5F7FB] relative mt-10 lg:-mt-2">
+              {locations.map((item, index) => (
+                <div
+                  key={index}
+                  className={`bg-white rounded-2xl p-4 sm:p-6 lg:p-8 text-center shadow-md hover:shadow-xl transition-all duration-300 border ${
+                    item.active
+                      ? "border-blue-600 lg:scale-105"
+                      : "border-gray-100"
+                  }`}
+                >
+                  <div className="relative w-32 h-32 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mx-auto rounded-full bg-blue-50 flex items-center justify-center">
+                    <Image
+                      src={item.icon}
+                      alt={`${item.icon}/${index}`}
+                      fill
+                      className="object-cover rounded-full p-2 lg:p-0"
+                    />
+                  </div>
+                  <h3 className="mt-4 sm:mt-5 text-base sm:text-lg lg:text-xl font-semibold text-[#07155F]">
+                    {item.title}
+                  </h3>
+                  <div className="mt-2 sm:mt-3 w-10 sm:w-12 h-1 bg-yellow-400 mx-auto rounded-full" />
                 </div>
-                <h3 className="mt-4 sm:mt-5 text-base sm:text-lg lg:text-xl font-semibold text-[#07155F]">
-                  {item.title}
-                </h3>
-                <div className="mt-2 sm:mt-3 w-10 sm:w-12 h-1 bg-yellow-400 mx-auto rounded-full" />
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Services */}
-      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+      <section className="py-16 md:py-16 bg-white relative overflow-hidden">
         <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-0">
           <div className="grid lg:grid-cols-[2fr_1fr] gap-12 lg:gap-8 xl:gap-12">
             {/* LEFT */}
@@ -2085,9 +2116,10 @@ export default function page() {
 
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 mt-8">
                 {services.map((service, index) => (
-                  <div
+                  <Link
                     key={index}
                     className="group bg-white rounded-2xl border border-gray-200 hover:border-yellow-400 hover:shadow-xl transition-all duration-300 p-3 cursor-pointer flex flex-col justify-between"
+                    href={service.link}
                   >
                     <div className="flex justify-center">
                       <Image
@@ -2105,17 +2137,18 @@ export default function page() {
                       </h3>
                       <div className="mt-2 w-16 sm:w-20 h-1 rounded bg-yellow-400 mx-auto"></div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
                 {/* Button */}
 
-                <button
+                <Link
                   className="bg-[#102B83] hover:bg-[#0b2165] text-white p-4 sm:p-5 rounded-xl font-semibold flex flex-col sm:flex-row items-center justify-center gap-2 transition 
                  h-full w-full cursor-pointer text-lg sm:text-xl text-center"
+                  href={"/pest-control-services"}
                 >
                   View All Services
                   <ArrowRight size={24} className="sm:w-8 sm:h-8" />
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -2145,7 +2178,7 @@ export default function page() {
       />
 
       {/* About Us */}
-      <section className="relative overflow-hidden bg-gradient-to-t from-yellow-100/80 via-[#F5FEFF] to-transparent py-16 sm:py-24 ">
+      <section className="relative overflow-hidden bg-gradient-to-t from-yellow-100/80 via-[#F5FEFF] to-transparent py-16 pb-20 lg:pt-0">
         {/* Decorative Bugs */}
 
         <Image
@@ -2201,7 +2234,7 @@ export default function page() {
               </h2>
 
               <p className="mt-6 sm:mt-8 text-gray-600 text-base sm:text-lg leading-relaxed sm:leading-9">
-                At Pest Control, we believe every home and workplace deserves to
+                At Orion Pest Control, we believe every home and workplace deserves to
                 be safe, clean, and pest-free. With years of expertise in pest
                 management, our certified team delivers eco-friendly solutions
                 that protect your family, property, and peace of mind.
@@ -2244,12 +2277,77 @@ export default function page() {
         </div>
       </section>
 
+      {/* Process */}
+      <section className="relative bg-white py-20 overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#ffffff,#fafafa,#ffffff)]"></div>
+
+        {/* Decorative Insect */}
+        <img
+          src="/images/bee.png"
+          alt=""
+          className="hidden lg:block absolute right-10 top-8 w-20"
+        />
+
+        <div className="relative max-w-7xl mx-auto px-6">
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <div className="flex justify-center items-center gap-3 mb-4">
+              <span className="font-semibold text-gray-700 text-lg">
+                Our Process
+              </span>
+
+              <div className="w-12 h-[3px] bg-yellow-400 rounded-full"></div>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#102B83]">
+              Our 3 Step Easy Process
+            </h2>
+          </div>
+
+          {/* Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {process.map((item) => (
+              <div key={item.id} className="text-center group">
+                {/* Circle */}
+                <div className="relative mx-auto mb-10 w-72 h-72 rounded-full border-[3px] border-yellow-400 flex items-center justify-center transition-all duration-300 group-hover:scale-105">
+                  {/* Number Badge */}
+                  <div className="absolute left-0 top-4 -translate-x-1/3 bg-[#1C2BB8] text-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-3xl shadow-lg">
+                    {item.id}
+                  </div>
+                  <div className="h-90 w-90 relative">
+                  <Image 
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-contain"
+                  />
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-3xl font-bold text-gray-900">
+                  {item.title}
+                </h3>
+
+                <div className="w-14 h-1 bg-yellow-400 rounded-full mx-auto my-5"></div>
+
+                {/* Description */}
+                <p className="text-gray-600 text-lg leading-8 max-w-sm mx-auto">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Cities Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-white overflow-hidden relative">
+      <section className="py-16 md:py-20 lg:py-16 bg-white overflow-hidden relative">
         <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-0">
           {/* Badge */}
 
-          <div className="inline-flex items-center rounded-full bg-yellow-100 px-4 py-1.5 sm:px-5 sm:py-2">
+          <div className="flex items-center justify-center mx-auto rounded-full bg-yellow-100 px-4 py-1.5 sm:px-5 sm:py-2 w-fit">
             <span className="text-[#12308F] font-semibold text-xs sm:text-sm uppercase tracking-wide">
               PAN INDIA SERVICE
             </span>
@@ -2257,11 +2355,11 @@ export default function page() {
 
           {/* Heading */}
 
-          <h2 className="mt-4 sm:mt-5 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#12308F] leading-tight">
+          <h2 className="mt-4 sm:mt-5 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#12308F] leading-tight text-center">
             Pest Control Services Across India
           </h2>
 
-          <p className="mt-4 sm:mt-5 max-w-2xl text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8">
+          <p className="mt-4 sm:mt-5 max-w-full text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 text-center">
             We provide safe, effective, and eco-friendly pest control solutions
             in
             <span className="font-semibold text-[#12308F]">
@@ -2333,6 +2431,12 @@ export default function page() {
                   </div>
                 </div>
               ))}
+              <div className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer bg-[#12308F] flex justify-center items-center gap-2 text-xl font-bold text-white">
+                <h2>
+                  View All <br /> Locations
+                </h2>
+                <ArrowRight size={25} />
+              </div>
             </div>
           </div>
         </div>

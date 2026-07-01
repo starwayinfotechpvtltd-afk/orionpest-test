@@ -206,7 +206,7 @@ export default function TestimonialsSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, [current]);

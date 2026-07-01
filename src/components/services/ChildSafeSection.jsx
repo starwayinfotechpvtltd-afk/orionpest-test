@@ -5,7 +5,7 @@ import Stat from "./ui/Stat";
 
 export default function ChildSafeSection({
   image1="/Images/services/cockroach6.png",
-  image2="/Images/services/cockroach7.png",
+  image2,
   name,
   tagline,
   desc,
@@ -78,7 +78,7 @@ export default function ChildSafeSection({
               </p>
             </div>
             <div className="relative w-52 h-32 shrink-0">
-              <Image src={image2} alt={name?name:"cockroach"} fill className="object-contain" />
+              <Image src={image2? image2:"/Images/services/cockroach7.png"} alt={name?name:"cockroach"} fill className="object-contain" />
             </div>
           </div>
         </div>

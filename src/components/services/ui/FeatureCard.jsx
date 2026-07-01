@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function FeatureCard({ item, index }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-3xl p-8 shadow-md hover:-translate-y-2 transition-all duration-300`}
+      className={`relative overflow-hidden rounded-3xl p-8 shadow-md hover:-translate-y-2 transition-all duration-300 h-full`}
       key={index}
       style={{
         backgroundColor: item.bgColor,

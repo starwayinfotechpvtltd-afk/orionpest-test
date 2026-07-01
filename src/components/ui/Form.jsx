@@ -22,6 +22,7 @@ export default function Form({
     service: "",
     message: "",
   });
+  const [isLoading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,6 +39,7 @@ export default function Form({
     console.log(formData);
 
     try {
+      setLoading(true);
       const response = await fetch("/api/service-form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -55,8 +57,10 @@ export default function Form({
           service: "",
           message: "",
         });
+        setLoading(false);
       }
     } catch (error) {
+      setLoading(false);
       console.log("Something error", error);
     }
   };
@@ -69,7 +73,7 @@ export default function Form({
         {header}
       </h3>
 
-      <div className="mt-4 h-1 w-20 rounded-full bg-yellow-400" />
+      <div className="mt-4 h-1 w-32 rounded-full bg-yellow-400" />
 
       <form onSubmit={handleSubmit} className="mt-10">
         <div className="grid gap-6 md:grid-cols-2">
@@ -78,7 +82,7 @@ export default function Form({
             color={color}
             required
             icon={<User size={18} />}
-            placeholder="Enter your full name"
+            placeholder="Full Name"
             name="fullName"
             value={formData.fullName}
             onChange={handleChange}
@@ -89,7 +93,7 @@ export default function Form({
             color={color}
             required
             icon={<Mail size={18} />}
-            placeholder="Enter your email address"
+            placeholder="Email Address"
             type="email"
             name="email"
             value={formData.email}
@@ -101,7 +105,7 @@ export default function Form({
             color={color}
             required
             icon={<Phone size={18} />}
-            placeholder="Enter your phone number"
+            placeholder="Phone Number"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
@@ -146,18 +150,53 @@ export default function Form({
         {/* Submit */}
         <button
           type="submit"
-          className="mt-8 flex w-full items-center justify-center gap-3 rounded-xl bg-blue-700 py-4 font-semibold text-white transition hover:bg-blue-800 cursor-pointer"
+          disabled={isLoading}
+          className={`mt-8 flex w-full items-center justify-center gap-3 rounded-xl py-4 font-semibold transition bg-[#FDC700] ${
+            isLoading
+              ? "cursor-not-allowed opacity-70"
+              : "cursor-pointer hover:bg-[#f0bc00]"
+          }`}
+          style={{
+            
+            color: bgColor === "#102B83" ? "#000" : "#fff",
+          }}
         >
-          SUBMIT ENQUIRY
-          <ArrowRight size={18} />
+          {isLoading ? (
+            <>
+              <svg
+                className="h-5 w-5 animate-spin"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                ></path>
+              </svg>
+              Submitting...
+            </>
+          ) : (
+            <>
+              SUBMIT ENQUIRY
+              <ArrowRight size={18} />
+            </>
+          )}
         </button>
 
         {/* Security Note */}
         <div className="mt-6 flex items-center gap-3 text-sm">
           <ShieldCheck size={18} color={color} />
-          <p
-            style={{ color: bgColor == "#102B83" ? "white" : "#102B83" }}
-          >
+          <p style={{ color: bgColor == "#102B83" ? "white" : "#102B83" }}>
             Your information is safe with us. We respect your privacy.
           </p>
         </div>
@@ -223,6 +262,7 @@ function SelectField({ name, color, value, onChange }) {
     "Commercial Control",
     "Herbal Pest Control",
     "Fumigation Control",
+    "Other - Please Specify",
   ];
   return (
     <div>

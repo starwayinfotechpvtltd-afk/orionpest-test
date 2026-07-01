@@ -13,6 +13,23 @@ export default function BrandSection({heading, cards=[]}) {
     "/Images/clients/nykaa.png",
     "/Images/clients/visa.png",
     "/Images/clients/hpgas.png",
+    "/Images/clients/img7.webp",
+    "/Images/clients/img9.png",
+    "/Images/clients/img11.png",
+    "/Images/clients/img14.png",
+    "/Images/clients/img48.jpg",
+    "/Images/clients/img56.png",
+    "/Images/clients/img73.png",
+    "/Images/clients/img6.png",
+    "/Images/clients/img5.png",
+    "/Images/clients/img29.png",
+    "/Images/clients/img10.webp",
+    "/Images/clients/img46.png",
+    "/Images/clients/img59.png",
+    "/Images/clients/img60.png",
+    "/Images/clients/img38.png",
+    "/Images/clients/img18.webp",
+    "/Images/clients/img70.png",
   ];
 
   return (
@@ -25,28 +42,31 @@ export default function BrandSection({heading, cards=[]}) {
           </div>
 
           {/* Logos Responsive Flex/Grid Grid */}
-          <div className="mt-12 md:mt-14">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 sm:gap-8 items-center">
-              {logos.map((logo, index) => (
-                <div key={index} className="flex justify-center">
-                  <Image
-                    src={logo}
-                    alt="brand"
-                    width={150}
-                    height={80}
-                    className="object-contain transition"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className="mt-12 md:mt-14 overflow-hidden">
+  <div className="flex w-max animate-logo-slider">
+    {[...logos, ...logos].map((logo, index) => (
+      <div
+        key={index}
+        className="flex items-center justify-center mx-6 sm:mx-8 lg:mx-10 flex-shrink-0"
+      >
+        <Image
+          src={logo}
+          alt={`brand-${index}`}
+          width={150}
+          height={80}
+          className="object-contain"
+        />
+      </div>
+    ))}
+  </div>
+</div>
 
           <div className="h-px bg-gray-200 mt-12" />
 
           {/* Feature Grid Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 relative z-10">
             {cards.map((item, index) => (
-              <div key={index}>
+              <div key={index} className='max-h-[300px]'>
                 <FeatureCard item={item} />
               </div>
             ))}
