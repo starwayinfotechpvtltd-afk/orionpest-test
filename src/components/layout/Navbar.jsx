@@ -161,7 +161,7 @@ export default function Navbar() {
             <div className="flex flex-col leading-tight">
               <span className="text-[11px] text-gray-500">Call Now</span>
               <span className="font-bold text-[#042990] text-sm">
-                1800 212 696969
+                1800 419 8181
               </span>
             </div>
           </a>

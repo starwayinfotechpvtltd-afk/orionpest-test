@@ -2,8 +2,6 @@ import React from "react";
 
 import {
   ShieldCheck,
-  FlaskConical,
-  BadgeCheck,
   Phone,
   Users,
   Building2,

@@ -7,8 +7,46 @@ import {
 } from "lucide-react";
 
 
+const faq = [
+  {
+    id: "01",
+    question: "How do I know if my home has ants?",
+    answer:
+      "Common signs include mud tubes, hollow-sounding wood, discarded wings, damaged wooden furniture, and unexplained cracks. Schedule a professional inspection for confirmation.",
+  },
+  {
+    id: "02",
+    question: "How long does extermination treatment take?",
+    answer:
+      "Most extermination extermination treatments are completed within a few hours, depending on the size of the property and the severity of infestation.",
+  },
+  {
+    id: "03",
+    question: "Is extermination treatment safe for children and pets?",
+    answer:
+      "Yes. Orion uses government-approved extermination treatment solutions that are safe when applied by certified professionals.",
+  },
+  {
+    id: "04",
+    question: "How long does extermination protection last?",
+    answer:
+      "Our treatments provide long-term protection, and preventive maintenance can significantly extend effectiveness.",
+  },
+  {
+    id: "05",
+    question: "Do you provide extermination warranties?",
+    answer:
+      "Yes. Selected extermination treatment plans include service warranties for additional peace of mind.",
+  },
+  {
+    id: "06",
+    question: "How much does extermination treatment cost?",
+    answer:
+      "The cost depends on property size, infestation level, and treatment type. Contact us for a free site inspection and personalized quotation.",
+  },
+];
 
-export default function FAQSection({image, faqs, name}) {
+export default function FAQSection({image="/Images/services/cockroach.png", faqs, name="Cockroach"}) {
   const [active, setActive] = useState("01");
 
   return (
@@ -50,7 +88,7 @@ export default function FAQSection({image, faqs, name}) {
 
         {/* FAQ Grid */}
         <div className="mt-16 grid gap-6 lg:grid-cols-2">
-          {faqs.map((faq) => (
+          {(faqs?faqs:faq).map((faq) => (
             <FAQItem
               key={faq.id}
               faq={faq}

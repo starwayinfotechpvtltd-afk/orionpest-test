@@ -4,20 +4,52 @@ import Image from "next/image";
 import Stat from "./ui/Stat";
 
 export default function ChildSafeSection({
-  image1,
-  image2,
+  image1="/Images/services/cockroach6.png",
+  image2="/Images/services/cockroach7.png",
   name,
   tagline,
   desc,
   childSafeStats,
 }) {
+
+  const childSafe = [
+  {
+    title: "Non-Toxic Solutions",
+    desc: "Safe treatment options for indoor living spaces.",
+    bgColor: "#DEE9FC",
+    color: "#2F3293",
+    icon : ShieldCheck
+  },
+  {
+    title: "Deep Crack Treatment",
+    desc: "Targets hidden bed bugs inside furniture and walls.",
+    bgColor: "#DEE9FC",
+    color: "#2F3293",
+    icon: Shield
+  },
+  {
+    title: "Long-Lasting Results",
+    desc: "Extended protection against recurring infestations.",
+    bgColor: "#DEE9FC",
+    color: "#2F3293",
+    icon: Leaf
+  },
+  {
+    title: "Trusted Since 1970",
+    desc: "India's trusted pest management experts.",
+    bgColor: "#DEE9FC",
+    color: "#2F3293",
+    icon: House
+  },
+];
+
   return (
     <section className="relative overflow-hidden bg-white py-12 lg:py-0">
       <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 mt-10">
         {/* Left section image element wrapper */}
         <div className="w-full lg:w-[50%] flex justify-center relative order-2 lg:order-1">
           <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full">
-            <Image src={image1} alt={name} fill className="object-contain" />
+            <Image src={image1} alt={name?name:"cockroach"} fill className="object-contain" />
           </div>
         </div>
         {/* Right section typography card context content layout details stack */}
@@ -46,7 +78,7 @@ export default function ChildSafeSection({
               </p>
             </div>
             <div className="relative w-52 h-32 shrink-0">
-              <Image src={image2} alt={name} fill className="object-contain" />
+              <Image src={image2} alt={name?name:"cockroach"} fill className="object-contain" />
             </div>
           </div>
         </div>
@@ -77,7 +109,7 @@ export default function ChildSafeSection({
       {/* Extended Stats Matrix Bar Layout */}
       <div className="mt-12 bg-white rounded-2xl border-[#F6F6F8] border shadow-sm max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 divide-y sm:divide-y-0 md:divide-x divide-[#F6F6F8]">
-          {childSafeStats.map((item, index) => (
+          {(childSafeStats?childSafeStats:childSafe).map((item, index) => (
             <div key={index}>
               <Stat
                 icon={item.icon}

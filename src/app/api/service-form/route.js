@@ -65,7 +65,7 @@ export async function POST(req) {
       fullName,
       email,
       phone,
-      establishment,
+      service,
       message
     } = body;
 
@@ -107,7 +107,7 @@ export async function POST(req) {
       fullName,
       email,
       phone: cleanedPhone,
-      establishment,
+      service,
       message,
     });
 

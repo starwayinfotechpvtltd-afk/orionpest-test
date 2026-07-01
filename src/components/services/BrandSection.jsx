@@ -3,7 +3,7 @@ import Image from 'next/image';
 import FeatureCard from './ui/FeatureCard';
 
 
-export default function BrandSection({heading, cards}) {
+export default function BrandSection({heading, cards=[]}) {
 
     const logos = [
     "/Images/clients/tcs.png",

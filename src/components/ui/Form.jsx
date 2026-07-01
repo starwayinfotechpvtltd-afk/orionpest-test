@@ -10,12 +10,16 @@ import {
   ChevronDown,
   ArrowRight,
 } from "lucide-react";
-export default function Form() {
+export default function Form({
+  bgColor = "#fff",
+  header = "Send Us a Message",
+  color = "#081A5C",
+}) {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
-    establishment: "",
+    service: "",
     message: "",
   });
 
@@ -48,7 +52,7 @@ export default function Form() {
           fullName: "",
           email: "",
           phone: "",
-          establishment: "",
+          service: "",
           message: "",
         });
       }
@@ -57,8 +61,13 @@ export default function Form() {
     }
   };
   return (
-    <div className="rounded-[32px] border border-slate-100 bg-white p-8 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.08)] z-[2]">
-      <h3 className="text-4xl font-bold text-[#081A5C]">Send Us a Message</h3>
+    <div
+      className="rounded-[32px] border border-slate-100 p-8 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.08)] z-[2]"
+      style={{ backgroundColor: bgColor }}
+    >
+      <h3 className="text-4xl font-bold" style={{ color: color }}>
+        {header}
+      </h3>
 
       <div className="mt-4 h-1 w-20 rounded-full bg-yellow-400" />
 
@@ -66,6 +75,8 @@ export default function Form() {
         <div className="grid gap-6 md:grid-cols-2">
           <InputField
             label="Full Name"
+            color={color}
+            required
             icon={<User size={18} />}
             placeholder="Enter your full name"
             name="fullName"
@@ -75,6 +86,8 @@ export default function Form() {
 
           <InputField
             label="Email Address"
+            color={color}
+            required
             icon={<Mail size={18} />}
             placeholder="Enter your email address"
             type="email"
@@ -85,6 +98,8 @@ export default function Form() {
 
           <InputField
             label="Phone Number"
+            color={color}
+            required
             icon={<Phone size={18} />}
             placeholder="Enter your phone number"
             name="phone"
@@ -93,15 +108,17 @@ export default function Form() {
           />
 
           <SelectField
-            name="establishment"
-            value={formData.establishment}
+            name="service"
+            color={color}
+            required
+            value={formData.service}
             onChange={handleChange}
           />
         </div>
 
         {/* Message */}
         <div className="mt-6">
-          <label className="mb-3 block font-medium text-[#081A5C]">
+          <label className="mb-3 block font-medium" style={{ color: color }}>
             Message
           </label>
 
@@ -117,7 +134,11 @@ export default function Form() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Tell us about your requirement..."
-              className="w-full rounded-xl border border-slate-200 pl-12 pr-4 pt-4 text-gray-700 outline-none transition focus:border-blue-500"
+              className={`w-full rounded-xl border border-slate-200 pl-12 pr-4 pt-4 text-gray-700 outline-none transition focus:border-blue-500 ${
+                color == "#fff"
+                  ? "placeholder:text-white"
+                  : "placeholder:text-[#132C98]"
+              } ${color == "#fff" ? "text-white" : "text-[#132C98]"}`}
             />
           </div>
         </div>
@@ -125,16 +146,20 @@ export default function Form() {
         {/* Submit */}
         <button
           type="submit"
-          className="mt-8 flex w-full items-center justify-center gap-3 rounded-xl bg-blue-700 py-4 font-semibold text-white transition hover:bg-blue-800"
+          className="mt-8 flex w-full items-center justify-center gap-3 rounded-xl bg-blue-700 py-4 font-semibold text-white transition hover:bg-blue-800 cursor-pointer"
         >
           SUBMIT ENQUIRY
           <ArrowRight size={18} />
         </button>
 
         {/* Security Note */}
-        <div className="mt-6 flex items-center gap-3 text-sm text-gray-500">
-          <ShieldCheck size={18} className="text-blue-600" />
-          Your information is safe with us. We respect your privacy.
+        <div className="mt-6 flex items-center gap-3 text-sm">
+          <ShieldCheck size={18} color={color} />
+          <p
+            style={{ color: bgColor == "#102B83" ? "white" : "#102B83" }}
+          >
+            Your information is safe with us. We respect your privacy.
+          </p>
         </div>
       </form>
     </div>
@@ -144,6 +169,8 @@ export default function Form() {
 
 function InputField({
   label,
+  color,
+  required,
   icon,
   placeholder,
   type = "text",
@@ -153,7 +180,9 @@ function InputField({
 }) {
   return (
     <div>
-      <label className="mb-3 block font-medium text-[#081A5C]">{label}</label>
+      <label className="mb-3 block font-medium" style={{ color: color }}>
+        {label}
+      </label>
 
       <div className="relative">
         <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
@@ -163,10 +192,15 @@ function InputField({
         <input
           type={type}
           name={name}
+          required
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          className="h-14 w-full rounded-xl border border-slate-200 pl-12 pr-4 outline-none transition focus:border-blue-500"
+          className={`h-14 w-full rounded-xl border border-slate-200 pl-12 pr-4 outline-none transition focus:border-blue-500 ${
+            color == "#fff"
+              ? "placeholder:text-white"
+              : "placeholder:text-[#132C98]"
+          } ${color == "#fff" ? "text-white" : "text-[#132C98]"}`}
         />
       </div>
     </div>
@@ -175,11 +209,25 @@ function InputField({
 
 /* Select */
 
-function SelectField({ name, value, onChange }) {
+function SelectField({ name, color, value, onChange }) {
+  const services = [
+    "Cockroach Control",
+    "Bed bugs Control",
+    "Termite Control",
+    "Mosquito Control",
+    "Flies Control",
+    "Rodent Control",
+    "Bird Control",
+    "Ant Control",
+    "Residential Control",
+    "Commercial Control",
+    "Herbal Pest Control",
+    "Fumigation Control",
+  ];
   return (
     <div>
-      <label className="mb-3 block font-medium text-[#081A5C]">
-        Type of establishment
+      <label className="mb-3 block font-medium" style={{ color: color }}>
+        Select Your Service
       </label>
 
       <div className="relative">
@@ -187,11 +235,25 @@ function SelectField({ name, value, onChange }) {
           name={name}
           value={value}
           onChange={onChange}
+          required
           className="h-14 w-full appearance-none rounded-xl border border-slate-200 px-4 outline-none focus:border-blue-500"
+          style={{ color: color }}
         >
-          <option value="">Choose type</option>
-          <option value="Residential">Residential</option>
-          <option value="Commercial">Commercial</option>
+          <option
+            value=""
+            style={{ color: color == "#fff" ? "#132C98" : color }}
+          >
+            Select Service
+          </option>
+          {services.map((service, index) => (
+            <option
+              value={service}
+              style={{ color: color == "#fff" ? "#132C98" : color }}
+              key={index}
+            >
+              {service}
+            </option>
+          ))}
         </select>
 
         <ChevronDown

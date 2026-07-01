@@ -1,5 +1,4 @@
 import React from "react";
-import { Shield, Target, Leaf, CalendarDays } from "lucide-react";
 import InfoCard from "./ui/InfoCard";
 import Image from "next/image";
 

@@ -47,7 +47,7 @@ export const sendMail = async ({
   fullName,
   email,
   phone,
-  establishment,
+  service,
   message,
 }) => {
   try {
@@ -81,7 +81,7 @@ export const sendMail = async ({
 
       replyTo: process.env.EMAIL_USER,
 
-      subject: `🐞 New Lead - ${establishment} | ${fullName}`,
+      subject: `🐞 New Lead - ${service} | ${fullName}`,
 
       html: `
   <!DOCTYPE html>
@@ -155,11 +155,11 @@ export const sendMail = async ({
 
                   <tr>
                     <td style="padding:12px;border-bottom:1px solid #eee;">
-                      <strong>Establishment</strong>
+                      <strong>Service</strong>
                     </td>
 
                     <td style="padding:12px;border-bottom:1px solid #eee;">
-                      ${establishment}
+                      ${service}
                     </td>
                   </tr>
 
