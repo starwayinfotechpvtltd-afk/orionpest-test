@@ -8,7 +8,7 @@ export default function InfoCard({ index, title, description }) {
 
   return (
     <div className="flex gap-4 items-start">
-      <div className="w-20 h-16 rounded-full border border-[#2F3293] flex items-center justify-center p-1">
+      <div className="w-20 h-18 rounded-full border border-[#2F3293] flex items-center justify-center p-1">
         <div className="w-14 h-14 rounded-full bg-[#2F3293] shadow-md flex items-center justify-center text-white shrink-0">
           <Icon className="w-8 h-8 text-yellow-400" />
         </div>

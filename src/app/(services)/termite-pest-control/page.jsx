@@ -195,7 +195,7 @@ import {
   Leaf,
   House,
 } from "lucide-react";
-import TestimonialsSection from "@/components/ui/Testimonials";
+import TestimonialsSection from "@/components/services/ui/Testimonials";
 import FAQSection from "@/components/ui/FAQ";
 import Form from "@/components/ui/Form";
 import { getPageData } from "@/lib/getPageData";
@@ -296,7 +296,7 @@ const childSafeStats = [
     icon: Leaf,
   },
   {
-    title: "Trusted Since 1970",
+    title: "Trusted Since 1998",
     desc: "India's trusted termite specialists.",
     bgColor: "#DEE9FC",
     color: "#2F3293",

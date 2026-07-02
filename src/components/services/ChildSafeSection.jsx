@@ -35,7 +35,7 @@ export default function ChildSafeSection({
     icon: Leaf
   },
   {
-    title: "Trusted Since 1970",
+    title: "Trusted Since 1998",
     desc: "India's trusted pest management experts.",
     bgColor: "#DEE9FC",
     color: "#2F3293",

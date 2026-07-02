@@ -1476,7 +1476,9 @@ import {
   Headset,
   Mail,
   Star,
-  Sprout
+  Sprout,
+  CalendarDays,
+  Info,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -1639,29 +1641,6 @@ export default function page() {
     },
   ];
 
-  // Brand section
-
-  const cards1 = [
-    {
-      heading: "GUARANTEED RESULTS",
-      desc: "With our indepth experience over 27 plus years, we continue to enhance our operational excellence, safety, capability, customer service and innovations.",
-      image: "/Images/services/cockroach5.png",
-      bgColor: "#FFF6DE",
-    },
-    {
-      heading: "PAN INDIA PEST CONTROL SERVICES",
-      desc: " Orion Pest Solutions Private Limited offers pest control services across 72+ locations in India, Nepal, and Bhutan, ensuring safe and reliable solutions.  ",
-      image: "/Images/icon/vector2.png",
-      bgColor: "#EEF4FF",
-    },
-    {
-      heading: "COST EFFECTIVE SOLUTIONS",
-      desc: "Orion Pest Solutions Private Limited provides a range of pest control services in more than 72 locations in India including Nepal and Bhutan.",
-      image: "/Images/icon/vector3.png",
-      bgColor: "#FFF1F2",
-    },
-  ];
-
   // About Us
   const cards2 = [
     {
@@ -1715,21 +1694,21 @@ export default function page() {
       title: "Inspection",
       description:
         "Our experts carefully assess your property to identify pests and their entry points.",
-      image: "/Images/inspection.png"
+      image: "/Images/inspection.png",
     },
     {
       id: "02",
       title: "Planning",
       description:
         "We create a customized pest control plan tailored to your home or business needs.",
-      image: "/Images/planning.png"
+      image: "/Images/planning.png",
     },
     {
       id: "03",
       title: "Treatment",
       description:
         "Safe, eco-friendly solutions are applied for lasting protection and a pest-free environment.",
-      image: "/Images/treatment.png"
+      image: "/Images/treatment.png",
     },
   ];
 
@@ -1895,8 +1874,7 @@ export default function page() {
         <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-0">
           {/* Top */}
 
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 xl:gap-32 items-start">
-            {/* Left */}
+          {/* <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 xl:gap-32 items-start">
 
             <div>
               <button className="inline-flex items-center gap-3 border rounded-full px-6 py-3 text-gray-800 font-medium hover:bg-gray-50 transition text-nowrap">
@@ -1906,8 +1884,6 @@ export default function page() {
                 About Us
               </button>
             </div>
-
-            {/* Right */}
 
             <div className="flex-1">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-black">
@@ -1923,11 +1899,11 @@ export default function page() {
                 <ArrowRight />
               </Link>
             </div>
-          </div>
+          </div> */}
 
           {/* Cards */}
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-16 sm:mt-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-16 sm:mt-0">
             {features.map((item, index) => (
               <div
                 key={index}
@@ -2174,8 +2150,82 @@ export default function page() {
             </h2>
           </>
         }
-        cards={cards1}
       />
+
+      <section className="relative overflow-hidden py-20">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-left bg-no-repeat"
+          style={{
+            backgroundImage: "url('/Images/bg.webp')",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat"
+          }}
+        />
+
+        {/* White Gradient Overlay */}
+        <div className="absolute inset-0" style={{
+    background:
+      "linear-gradient(90deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.15) 40%,  rgba(255,255,255,0.95) 70%, #fff 100%)",
+  }}></div>
+
+        <div className="relative max-w-[80%] mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Empty */}
+            <div></div>
+
+            {/* Right Content */}
+            <div className="max-w-xl lg:ml-auto">
+              <h2 className="text-4xl md:text-5xl xl:text-5xl font-bold leading-tight text-[#312EA5]">
+                Your Reliable Partner in
+                <br />
+                <span className="text-[#0094DC]">Pest Management</span>
+                <br />
+                Solutions
+              </h2>
+
+              {/* Underline */}
+              <div className="w-20 h-1 bg-[#312EA5] rounded-full my-8"></div>
+
+              <p className="text-md text-gray-700 leading-7">
+                We are your reliable partner providing safe, effective, and
+                long-lasting pest control solutions. As the leading local
+                experts, our team takes a science-backed approach, treating
+                every infestation with precision to protect your home, health,
+                and business.
+              </p>
+
+              <p className="text-md text-gray-700 leading-7">
+                With over 27+ years of experience, we understand local pest
+                behaviors and seasonal patterns, delivering customized solutions
+                that keep your property protected year-round.
+              </p>
+
+              <h4 className="font-bold text-2xl text-[#312EA5] mt-5">
+                Ready to keep your space pest-free?
+              </h4>
+
+              <div className="flex flex-wrap gap-5 mt-5">
+                <Link
+                  href="/contact"
+                  className="bg-[#312EA5] text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3 hover:bg-[#26218e] duration-300"
+                >
+                  <CalendarDays size={20} />
+                  Book Appointment
+                </Link>
+
+                <Link
+                  href="/services"
+                  className="border-2 border-[#312EA5] text-[#312EA5] px-8 py-4 rounded-xl font-semibold flex items-center gap-3 hover:bg-[#312EA5] hover:text-white duration-300"
+                >
+                  <Info size={20} />
+                  Our Services
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* About Us */}
       <section className="relative overflow-hidden bg-gradient-to-t from-yellow-100/80 via-[#F5FEFF] to-transparent py-16 pb-20 lg:pt-0">
@@ -2234,10 +2284,11 @@ export default function page() {
               </h2>
 
               <p className="mt-6 sm:mt-8 text-gray-600 text-base sm:text-lg leading-relaxed sm:leading-9">
-                At Orion Pest Control, we believe every home and workplace deserves to
-                be safe, clean, and pest-free. With years of expertise in pest
-                management, our certified team delivers eco-friendly solutions
-                that protect your family, property, and peace of mind.
+                At Orion Pest Control, we believe every home and workplace
+                deserves to be safe, clean, and pest-free. With years of
+                expertise in pest management, our certified team delivers
+                eco-friendly solutions that protect your family, property, and
+                peace of mind.
               </p>
 
               <p className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg leading-relaxed sm:leading-9">
@@ -2316,12 +2367,12 @@ export default function page() {
                     {item.id}
                   </div>
                   <div className="h-90 w-90 relative">
-                  <Image 
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-contain"
-                  />
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-contain"
+                    />
                   </div>
                 </div>
 
@@ -2431,8 +2482,10 @@ export default function page() {
                   </div>
                 </div>
               ))}
-              <Link className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer bg-[#12308F] flex justify-center items-center gap-2 text-xl font-bold text-white"
-              href={"/branches"}>
+              <Link
+                className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer bg-[#12308F] flex justify-center items-center gap-2 text-xl font-bold text-white"
+                href={"/branches"}
+              >
                 <h2>
                   View All <br /> Locations
                 </h2>
@@ -2444,7 +2497,13 @@ export default function page() {
       </section>
 
       {/* Child safe section */}
-      <ChildSafeSection />
+      <ChildSafeSection
+        name="Pest"
+        tagline="Child Safe Bed Bug Control, Peaceful Sleep Guaranteed.
+
+"
+        desc="Our professionally applied bed bug treatments eliminate infestations while keeping your family, children, pets, and indoor environment safe. Sleep comfortably knowing your home is protected."
+      />
 
       {/* FAQ section */}
       <FAQSection />

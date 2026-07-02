@@ -267,11 +267,11 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="mailto:info@orionpest.com"
+                  href="mailto:sales@orionpest.com"
                   className="flex items-center gap-2 hover:text-[#042990]"
                 >
                   <MdEmail className="text-[#042990]" />
-                  info@orionpest.com
+                  sales@orionpest.com
                 </a>
               </li>
 

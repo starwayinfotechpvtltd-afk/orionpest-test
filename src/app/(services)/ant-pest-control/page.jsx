@@ -200,7 +200,7 @@ import {
   Leaf,
   House,
 } from "lucide-react";
-import TestimonialsSection from "@/components/ui/Testimonials";
+import TestimonialsSection from "@/components/services/ui/Testimonials";
 import FAQSection from "@/components/ui/FAQ";
 import Form from "@/components/ui/Form";
 import { getPageData } from "@/lib/getPageData";
@@ -301,7 +301,7 @@ const childSafeStats = [
     icon: Leaf,
   },
   {
-    title: "Trusted Since 1970",
+    title: "Trusted Since 1998",
     desc: "India's trusted ant specialists.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
@@ -461,7 +461,8 @@ export default function page() {
             icon={<Phone size={26} />}
             title="Need Immediate Assistance?"
             text="Call us now for quick support"
-            highlight="1800 212 696969"
+            highlight="1800 419 8181"
+            link="1800 419 8181"
           />
           <SupportCard
             icon={<CalendarDays size={26} />}

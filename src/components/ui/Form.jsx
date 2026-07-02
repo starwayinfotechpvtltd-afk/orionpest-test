@@ -73,7 +73,7 @@ export default function Form({
         {header}
       </h3>
 
-      <div className="mt-4 h-1 w-32 rounded-full bg-yellow-400" />
+      <div className="mt-4 h-1 w-52 rounded-full bg-yellow-400" />
 
       <form onSubmit={handleSubmit} className="mt-10">
         <div className="grid gap-6 md:grid-cols-2">

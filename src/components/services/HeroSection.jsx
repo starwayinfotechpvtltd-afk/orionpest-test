@@ -140,7 +140,7 @@ export default function HeroSection({
                   India's Most Trusted Pest Control Brand
                 </p>
                 <span className="text-yellow-500 font-bold text-xs sm:text-base mt-1 sm:mt-2">
-                  Since 1970
+                  Since 1998
                 </span>
                 <div className="w-12 sm:w-20 h-[2px] sm:h-[3px] bg-yellow-500 mt-1 sm:mt-2 rounded-2xl"></div>
               </div>

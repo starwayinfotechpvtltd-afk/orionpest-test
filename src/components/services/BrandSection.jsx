@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import FeatureCard from "./ui/FeatureCard";
 
-export default function BrandSection({ heading, cards = [] }) {
+export default function BrandSection({ heading, cards }) {
   const logos = [
     "/Images/clients/tcs.png",
     "/Images/clients/birla.png",
@@ -30,13 +30,34 @@ export default function BrandSection({ heading, cards = [] }) {
     "/Images/clients/img70.png",
   ];
 
+  const cards1 = [
+    {
+      heading: "GUARANTEED RESULTS",
+      desc: "With our indepth experience over 27 plus years, we continue to enhance our operational excellence, safety, capability, customer service and innovations.",
+      image: "/Images/services/cockroach5.png",
+      bgColor: "#FFF6DE",
+    },
+    {
+      heading: "PAN INDIA PEST CONTROL SERVICES",
+      desc: " Orion Pest Solutions Private Limited offers pest control services across 72+ locations in India, Nepal, and Bhutan, ensuring safe and reliable solutions.  ",
+      image: "/Images/icon/vector2.png",
+      bgColor: "#EEF4FF",
+    },
+    {
+      heading: "COST EFFECTIVE SOLUTIONS",
+      desc: "Orion Pest Solutions Private Limited provides a range of pest control services in more than 72 locations in India including Nepal and Bhutan.",
+      image: "/Images/icon/vector3.png",
+      bgColor: "#FFF1F2",
+    },
+  ];
+
   return (
     <section className="relative overflow-hidden bg-white py-16 md:py-20">
       <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center">
           {heading}
-          <div className="w-24 sm:w-48 h-1 bg-yellow-400 rounded-full mx-auto mt-4" />
+          <div className="w-24 sm:w-90 h-1 bg-yellow-400 rounded-full mx-auto mt-4" />
         </div>
 
         {/* Logos Responsive Flex/Grid Grid */}
@@ -63,7 +84,7 @@ export default function BrandSection({ heading, cards = [] }) {
 
         {/* Feature Grid Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 relative z-10">
-          {cards.map((item, index) => (
+          {(cards?cards:cards1).map((item, index) => (
             <div key={index} className="max-h-[300px]">
               <FeatureCard item={item} />
             </div>
