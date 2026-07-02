@@ -2159,15 +2159,38 @@ export default function page() {
           style={{
             backgroundImage: "url('/Images/bg.webp')",
             backgroundSize: "cover",
-            backgroundRepeat: "no-repeat"
+            backgroundRepeat: "no-repeat",
           }}
         />
 
         {/* White Gradient Overlay */}
-        <div className="absolute inset-0" style={{
-    background:
-      "linear-gradient(90deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.15) 40%,  rgba(255,255,255,0.95) 70%, #fff 100%)",
-  }}></div>
+        {/* <div
+          className="absolute inset-0 bg-white md:bg-white/10"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.15) 40%,  rgba(255,255,255,0.95) 70%, #fff 100%)",
+          }}
+        ></div> */}
+
+         {/* Background */}
+  <div
+    className="absolute inset-0 bg-cover bg-left bg-no-repeat"
+    style={{
+      backgroundImage: "url('/Images/bg.webp')",
+    }}
+  />
+
+  {/* Mobile Overlay */}
+  <div className="absolute inset-0 bg-white/80 md:hidden"></div>
+
+  {/* Desktop Gradient */}
+  <div
+    className="absolute inset-0 hidden md:block"
+    style={{
+      background:
+        "linear-gradient(90deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.15) 40%,  rgba(255,255,255,0.95) 70%, #fff 100%)",
+    }}
+  />
 
         <div className="relative max-w-[80%] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

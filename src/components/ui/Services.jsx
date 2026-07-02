@@ -108,7 +108,7 @@ export default function Services() {
 
                 <Link
                   href={service.link}
-                  className="mt-8 inline-flex w-fit px-8 py-4 border border-gray-300 rounded-xl font-semibold hover:bg-[#2C2AA5] hover:text-white hover:border-[#2C2AA5] duration-300"
+                  className="mt-8 inline-flex w-fit px-8 py-4 rounded-xl font-semibold hover:bg-yellow-600 hover:text-white hover:border-[#2C2AA5] duration-300 bg-yellow-500"
                 >
                   Read More ↗
                 </Link>
