@@ -1515,23 +1515,23 @@ export default function page() {
   const features = [
     {
       icon: <Star size={40} />,
-      title: "Trust & Experience Focused",
+      title: "Nationwide Pest Control",
       description:
-        "With years of hands-on experience, Orion Pest delivers reliable pest control service.",
+        "Our pest control services in India are designed for homes, offices, restaurants, factories, schools, and commercial spaces with solutions that fit different pest problems.",
       active: false,
     },
     {
       icon: <UsersRound size={40} />,
-      title: "Customer-Centric",
+      title: "Local Solutions That Work",
       description:
-        "At Orion Pest, your safety and comfort come first. We tailor every pest control plan.",
+        "Every city has different pest activity. Whether you need Pest Control Kolkata or services in another location, our treatments are planned according to local conditions.",
       active: true,
     },
     {
       icon: <Sprout size={40} />,
-      title: "Eco & Safety Focused",
+      title: "Cleaner Spaces, Better Living",
       description:
-        "We use environmentally responsible and safe eco-products suitable for families.",
+        "From termites and cockroaches to rodents and mosquitoes, we provide practical pest solutions that help keep your property cleaner throughout the year.",
       active: false,
     },
   ];
@@ -1582,23 +1582,23 @@ export default function page() {
 
   const leftFeature = [
     {
-      heading: "Find Hidden Infestations",
-      desc: "Our experts inspect mattresses, furniture, wall cracks, and upholstery to locate even the smallest bed bug colonies.",
+      heading: "Find Where Pests Start",
+      desc: "We inspect entry points, cracks, storage spaces, kitchens, furniture, and hidden areas where pests usually breed before starting treatment.",
     },
     {
-      heading: "Prevent Re-Infestation",
-      desc: "Our advanced treatment methods destroy bed bugs at every life stage, including eggs, preventing future outbreaks.",
+      heading: "Treat the Complete Cycle",
+      desc: "Instead of treating only visible pests, we target eggs, nests, and breeding spots to reduce future infestations.",
     },
   ];
 
   const rightFeature = [
     {
-      heading: "Safe & Effective Treatment",
-      desc: "Professional solutions designed to eliminate bed bugs while remaining safe for families and pets.",
+      heading: "Suitable for Every Property",
+      desc: "Our treatments are planned according to your property type so homes, offices, restaurants, and industries receive the right solution.",
     },
     {
-      heading: "Long-Lasting Protection",
-      desc: "Comprehensive treatments that reduce the risk of bed bugs returning.",
+      heading: "Reduce Future Pest Problems",
+      desc: "With proper treatment and preventive recommendations, your property stays protected for a longer period.",
     },
   ];
 
@@ -1967,15 +1967,13 @@ export default function page() {
             </span>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-6 sm:mt-10">
-              Complete Pest Control
+              Pest Control Services
               <br className="hidden sm:block" />
-              <span className="text-[#0094DA]"> at Every Place.</span>
+              <span className="text-[#0094DA]"> for Every Property in India.</span>
             </h2>
 
             <p className="mt-4 text-gray-600 text-sm sm:text-base lg:text-lg">
-              Whether it's your home, hotel, hostel, apartment, hospital, or
-              commercial property, our specialized bed bug treatment ensures
-              complete protection and restful sleep.
+              Whether it's a home, apartment, restaurant, warehouse, office, hospital, school, or commercial building, our pest control services in India help protect every type of property from common pest problems. We focus on identifying the source, treating affected areas, and reducing the chances of pests returning.
             </p>
           </div>
 
@@ -2080,12 +2078,11 @@ export default function page() {
               {/* Heading */}
 
               <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#102B83] leading-tight">
-                Pest Control for Every Need
+                Complete Pest Solutions for Homes & Businesses
               </h2>
 
               <p className="mt-3 max-w-2xl text-base sm:text-lg text-gray-600 leading-relaxed sm:leading-8">
-                From crawling insects to rodents and birds, we provide complete
-                protection for your home, office, and commercial spaces.
+                Looking for a pest control company in India? We provide treatment for the most common pest problems across residential and commercial properties using proven methods for every infestation.
               </p>
 
               {/* Services */}
@@ -2199,18 +2196,16 @@ export default function page() {
 
             {/* Right Content */}
             <div className="max-w-xl lg:ml-auto">
-              <h2 className="text-4xl md:text-5xl xl:text-5xl font-bold leading-tight text-[#312EA5]">
-                Your Reliable Partner in
+              <h3 className="text-4xl md:text-5xl xl:text-5xl font-bold leading-tight text-[#312EA5]">
+                Simple Pest Solutions 
                 <br />
-                <span className="text-[#0094DC]">Pest Management</span>
-                <br />
-                Solutions
-              </h2>
+                <span className="text-[#0094DC]">That Solve Real Problems</span>
+              </h3>
 
               {/* Underline */}
               <div className="w-20 h-1 bg-[#312EA5] rounded-full my-8"></div>
-
-              <p className="text-md text-gray-700 leading-7">
+ 
+              <p className="text-md text-gray-700 leading-7 mb-4">
                 We are your reliable partner providing safe, effective, and
                 long-lasting pest control solutions. As the leading local
                 experts, our team takes a science-backed approach, treating
@@ -2219,6 +2214,7 @@ export default function page() {
               </p>
 
               <p className="text-md text-gray-700 leading-7">
+                
                 With over 27+ years of experience, we understand local pest
                 behaviors and seasonal patterns, delivering customized solutions
                 that keep your property protected year-round.
