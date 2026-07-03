@@ -44,8 +44,8 @@ export default function ChildSafeSection({
 ];
 
   return (
-    <section className="relative overflow-hidden bg-white py-12 lg:py-0">
-      <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 mt-10">
+    <section className="relative overflow-hidden bg-white pb-12 md:pt-10">
+      <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* Left section image element wrapper */}
         <div className="w-full lg:w-[50%] flex justify-center relative order-2 lg:order-1">
           <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full">

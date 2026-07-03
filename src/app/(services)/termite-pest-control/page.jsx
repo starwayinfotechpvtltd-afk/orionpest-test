@@ -440,7 +440,7 @@ export default function page() {
 
       {/* Child Safe Environment Highlight Grid */}
       <ChildSafeSection
-        image1="/Images/services/bedbug4.png"
+        image1="/Images/services/termite7.png"
         image2="/Images/services/termite4.png"
         name="Termite"
         tagline="Safe for your little ones. Tough on termites."

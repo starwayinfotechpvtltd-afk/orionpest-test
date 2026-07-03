@@ -190,7 +190,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-[#FFF300] to-[#FEBA00] relative mt-16 md:mt-24 border-t-8 border-[#2F3293] pt-12 md:pt-20 pb-60 md:pb-80">
+          <div className="bg-gradient-to-br from-[#FFF300] to-[#FEBA00] relative mt-16 md:mt-24 border-t-8 border-[#2F3293] pt-12 md:pt-20">
             <div className="w-[90%] sm:w-[80%] md:w-[60%] mx-auto">
               <h3 className="text-[#2F3293] text-2xl md:text-4xl font-bold text-center">
                 OUR SCORE

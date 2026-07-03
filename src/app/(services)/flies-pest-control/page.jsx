@@ -378,7 +378,7 @@ export default function page() {
       />
       {/* Advanced Control Section */}
       <AdvanceControl
-        image="/Images/services/mosquito2.png"
+        image="/Images/services/flies6.png"
        heading={
           <>
             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">

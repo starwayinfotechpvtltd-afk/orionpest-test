@@ -426,9 +426,9 @@ export default function page() {
 
       {/* Child Safe Environment Highlight Grid */}
       <ChildSafeSection
-        image1="/Images/services/bedbug4.png"
+        image1="/Images/services/bedbug6.png"
         image2="/Images/services/bedbug5.png"
-        name="Bed Bug "
+        name="Bed Bug"
         tagline="Child Safe Bed Bug Control, Peaceful Sleep Guaranteed."
         desc="Our professionally applied bed bug treatments eliminate infestations while keeping your family, children, pets, and indoor environment safe. Sleep comfortably knowing your home is protected."
         childSafeStats={childSafeStats}

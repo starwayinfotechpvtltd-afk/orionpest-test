@@ -109,17 +109,17 @@ export default function Footer() {
   const quickLinks = [
     { name: "About Us", href: "/about-us" },
     { name: "Our Services", href: "/services" },
-    { name: "Our Process", href: "/our-process" },
-    { name: "Knowledge Center", href: "/blog" },
+    { name: "Locations", href: "/branches" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact Us", href: "/contact-us" },
   ];
 
   const services = [
-    { name: "Cockroach Control", href: "/services/cockroach-control" },
-    { name: "Termite Control", href: "/services/termite-control" },
-    { name: "Bed Bug Control", href: "/services/bed-bug-control" },
-    { name: "Bird Control", href: "/services/bird-control" },
-    { name: "All Pest Control Services", href: "/services" },
+    { name: "Cockroach Control", href: "/cockroach-pest-control" },
+    { name: "Termite Control", href: "/termite-pest-control" },
+    { name: "Bed Bug Control", href: "/bedbug-pest-control" },
+    { name: "Bird Control", href: "/bird-pest-control/" },
+    { name: "All Pest Control Services", href: "/pest-control-services/" },
   ];
 
   const locations = [

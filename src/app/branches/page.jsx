@@ -236,7 +236,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="w-full bg-gradient-to-b from-[#FFF300] to-[#FEBA00] relative px-4 rounded-tl-4xl rounded-tr-4xl pt-10 -top-20 pb-40 md:pb-60">
+        <div className="w-full bg-gradient-to-b from-[#FFF300] to-[#FEBA00] relative px-4 rounded-tl-4xl rounded-tr-4xl pt-10 -top-20 pb-20">
           <h3 className="text-[#2F3293] text-2xl sm:text-3xl lg:text-4xl text-center font-bold">
             NEPAL/BHUTAN
           </h3>
