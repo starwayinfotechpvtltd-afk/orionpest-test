@@ -91,7 +91,6 @@ export default function Form({
           <InputField
             label="Email Address"
             color={color}
-            required
             icon={<Mail size={18} />}
             placeholder="Email Address"
             type="email"
@@ -157,7 +156,6 @@ export default function Form({
               : "cursor-pointer hover:bg-[#f0bc00]"
           }`}
           style={{
-            
             color: bgColor === "#102B83" ? "#000" : "#fff",
           }}
         >
@@ -219,8 +217,9 @@ function InputField({
 }) {
   return (
     <div>
-      <label className="mb-3 block font-medium" style={{ color: color }}>
+      <label className="mb-3 block font-medium" style={{ color }}>
         {label}
+        {required && <span className="ml-1 text-red-500">*</span>}
       </label>
 
       <div className="relative">
@@ -231,7 +230,7 @@ function InputField({
         <input
           type={type}
           name={name}
-          required
+          required={required}
           value={value}
           onChange={onChange}
           placeholder={placeholder}
@@ -248,7 +247,7 @@ function InputField({
 
 /* Select */
 
-function SelectField({ name, color, value, onChange }) {
+function SelectField({ name, color, value, onChange, required  }) {
   const services = [
     "Cockroach Control",
     "Bed bugs Control",
@@ -266,16 +265,17 @@ function SelectField({ name, color, value, onChange }) {
   ];
   return (
     <div>
-      <label className="mb-3 block font-medium" style={{ color: color }}>
-        Select Your Service
-      </label>
+      <label className="mb-3 block font-medium" style={{ color }}>
+  Select Your Service
+  {required && <span className="ml-1 text-red-500">*</span>}
+</label>
 
       <div className="relative">
         <select
           name={name}
           value={value}
           onChange={onChange}
-          required
+           required={required}
           className="h-14 w-full appearance-none rounded-xl border border-slate-200 px-4 outline-none focus:border-blue-500"
           style={{ color: color }}
         >

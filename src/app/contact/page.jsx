@@ -14,7 +14,7 @@ export async function generateMetadata() {
 
 export default function page() {
   return (
-    <div className="flex flex-col justify-center items-center py-20 px-4 md:px-0 pb-80 w-[80%] mx-auto">
+    <div className="flex flex-col justify-center items-center py-20 px-4 md:px-0 w-[80%] mx-auto">
       <div className="grid md:grid-cols-3 grid-cols-1 gap-10">
         <div
           className="bg-gradient-to-b from-[#282CC4] to-[#00023A] rounded-3xl px-6 py-10 sm:px-5 lg:px-8 text-white

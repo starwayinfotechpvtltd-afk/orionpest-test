@@ -115,11 +115,18 @@
 
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaPhoneAlt } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
@@ -129,42 +136,134 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="bg-white">
+    <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-[80%] mx-auto px-4 lg:px-0">
+
         <div className="flex items-center justify-between h-20">
+
           {/* Logo */}
-          <Link href="/" onClick={() => setActiveTab("/")}>
-          <div className="w-[100px] h-[100px] relative">
-            <Image src="/logo.png" alt="logo" fill className="object-contain"/>
+          <Link href="/">
+            <div className="relative w-[90px] h-[90px]">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                fill
+                className="object-contain"
+              />
             </div>
           </Link>
 
-          {/* Navigation */}
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[16px] font-medium text-gray-700 hover:text-[#042990] transition-colors"
+                className="font-medium text-gray-700 hover:text-[#042990] transition"
               >
                 {link.name}
               </Link>
             ))}
           </nav>
 
-          {/* Contact */}
-          <a href="tel:18002126969" className="flex items-center gap-3">
+          {/* Desktop Contact */}
+          <a
+            href="tel:18004198181"
+            className="hidden lg:flex items-center gap-3"
+          >
             <div className="w-10 h-10 rounded-full bg-[#042990] flex items-center justify-center">
               <FaPhoneAlt className="text-white text-sm" />
             </div>
 
-            <div className="flex flex-col leading-tight">
-              <span className="text-[11px] text-gray-500">Call Now</span>
-              <span className="font-bold text-[#042990] text-sm">
+            <div>
+              <p className="text-xs text-gray-500">Call Now</p>
+              <p className="font-bold text-[#042990]">
                 1800 419 8181
-              </span>
+              </p>
             </div>
           </a>
+
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setIsOpen(true)}
+            className="lg:hidden text-2xl text-[#042990]"
+          >
+            <FaBars />
+          </button>
+        </div>
+      </div>
+
+      {/* Overlay */}
+      <div
+        className={`fixed inset-0 bg-black/50 transition-opacity duration-300 z-40 ${
+          isOpen
+            ? "opacity-100 visible"
+            : "opacity-0 invisible"
+        }`}
+        onClick={() => setIsOpen(false)}
+      />
+
+      {/* Mobile Drawer */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[300px] bg-white shadow-2xl z-50 transition-transform duration-300 ${
+          isOpen
+            ? "translate-x-0"
+            : "translate-x-full"
+        }`}
+      >
+        {/* Header */}
+        <div className="flex justify-between items-center p-5 border-b">
+
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={70}
+            height={70}
+          />
+
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-2xl"
+          >
+            <FaTimes />
+          </button>
+
+        </div>
+
+        {/* Links */}
+        <nav className="flex flex-col p-6 gap-6">
+
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="text-lg font-medium text-gray-700 hover:text-[#042990]"
+            >
+              {link.name}
+            </Link>
+          ))}
+
+        </nav>
+
+        {/* Contact */}
+        <div className="absolute bottom-10 left-6 right-6">
+
+          <a
+            href="tel:18004198181"
+            className="flex items-center gap-3 p-4 rounded-xl bg-[#042990] text-white"
+          >
+            <FaPhoneAlt />
+
+            <div>
+              <p className="text-xs opacity-80">Call Now</p>
+              <p className="font-bold">
+                1800 419 8181
+              </p>
+            </div>
+
+          </a>
+
         </div>
       </div>
     </header>

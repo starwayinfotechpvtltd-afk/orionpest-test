@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function FeatureCard({ item, index }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-3xl p-8 shadow-md hover:-translate-y-2 transition-all duration-300 h-full`}
+      className={`relative overflow-hidden rounded-3xl p-8 shadow-md hover:-translate-y-2 transition-all duration-300 h-full flex flex-col justify-between`}
       key={index}
       style={{
         backgroundColor: item.bgColor,
@@ -26,7 +26,7 @@ export default function FeatureCard({ item, index }) {
       </div>
 
       <Link
-        className="mt-8 flex cursor-pointer items-center gap-3 font-semibold text-[#09185E]"
+        className="mt-2 flex cursor-pointer items-center gap-3 font-semibold text-[#09185E]"
         href="/contact"
       >
         Learn More

@@ -1914,9 +1914,8 @@ export default function page() {
                 </div>
 
                 <div
-                  className={`mt-6 sm:mt-8 rounded-2xl p-6 ${
-                    item.active ? "bg-yellow-100" : "bg-indigo-50"
-                  }`}
+                  className={`mt-6 sm:mt-8 rounded-2xl p-6 ${item.active ? "bg-yellow-100" : "bg-indigo-50"
+                    }`}
                 >
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                     {item.title}
@@ -1936,11 +1935,10 @@ export default function page() {
             {stats.map((item, index) => (
               <div
                 key={index}
-                className={`text-center py-4 sm:py-6 ${
-                  index !== stats.length - 1
+                className={`text-center py-4 sm:py-6 ${index !== stats.length - 1
                     ? "lg:border-r-2 border-yellow-400"
                     : ""
-                }`}
+                  }`}
               >
                 <h2 className="text-4xl sm:text-5xl xl:text-6xl font-black">
                   {item.number}
@@ -2012,7 +2010,7 @@ export default function page() {
             </div>
 
             {/* Right Features */}
-            <div className="space-y-6 md:space-y-10 w-full sm:max-w-md lg:max-w-[33%] order-3">
+            <div className="space-y-6 md:space-y-10 w-full sm:max-w-md lg:max-w-[33%] order-3 mt-8 md:mt-0">
               {rightFeature.map((item, index) => (
                 <div key={index}>
                   <InfoCard
@@ -2039,11 +2037,10 @@ export default function page() {
               {locations.map((item, index) => (
                 <div
                   key={index}
-                  className={`bg-white rounded-2xl p-4 sm:p-6 lg:p-8 text-center shadow-md hover:shadow-xl transition-all duration-300 border ${
-                    item.active
+                  className={`bg-white rounded-2xl p-4 sm:p-6 lg:p-8 text-center shadow-md hover:shadow-xl transition-all duration-300 border ${item.active
                       ? "border-blue-600 lg:scale-105"
                       : "border-gray-100"
-                  }`}
+                    }`}
                 >
                   <div className="relative w-32 h-32 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mx-auto rounded-full bg-blue-50 flex items-center justify-center">
                     <Image
@@ -2053,10 +2050,10 @@ export default function page() {
                       className="object-cover rounded-full p-2 lg:p-0"
                     />
                   </div>
-                  <h3 className="mt-4 sm:mt-5 text-base sm:text-lg lg:text-xl font-semibold text-[#07155F]">
+                  <h3 className="mt-4 sm:mt-5 text-lg lg:text-xl font-semibold text-[#07155F]">
                     {item.title}
                   </h3>
-                  <div className="mt-2 sm:mt-3 w-10 sm:w-12 h-1 bg-yellow-400 mx-auto rounded-full" />
+                  <div className="mt-2 sm:mt-3 w-20 sm:w-12 h-1 bg-yellow-400 mx-auto rounded-full" />
                 </div>
               ))}
             </div>
@@ -2152,7 +2149,7 @@ export default function page() {
         }
       />
 
-      <section className="relative overflow-hidden py-20">
+      <section className="relative overflow-hidden py-16">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-left bg-no-repeat"
@@ -2172,28 +2169,28 @@ export default function page() {
           }}
         ></div> */}
 
-         {/* Background */}
-  <div
-    className="absolute inset-0 bg-cover bg-left bg-no-repeat"
-    style={{
-      backgroundImage: "url('/Images/bg.webp')",
-    }}
-  />
+        {/* Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-left bg-no-repeat"
+          style={{
+            backgroundImage: "url('/Images/bg.webp')",
+          }}
+        />
 
-  {/* Mobile Overlay */}
-  <div className="absolute inset-0 bg-white/80 md:hidden"></div>
+        {/* Mobile Overlay */}
+        <div className="absolute inset-0 bg-white/80 md:hidden"></div>
 
-  {/* Desktop Gradient */}
-  <div
-    className="absolute inset-0 hidden md:block"
-    style={{
-      background:
-        "linear-gradient(90deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.15) 40%,  rgba(255,255,255,0.95) 70%, #fff 100%)",
-    }}
-  />
+        {/* Desktop Gradient */}
+        <div
+          className="absolute inset-0 hidden md:block"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.15) 40%,  rgba(255,255,255,0.95) 70%, #fff 100%)",
+          }}
+        />
 
         <div className="relative max-w-[80%] mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 md:gap-16 items-center">
             {/* Left Empty */}
             <div></div>
 
@@ -2532,7 +2529,7 @@ export default function page() {
       <FAQSection />
 
       <section
-        className="relative overflow-hidden bg-[#FEFEFE] py-16 md:py-24"
+        className="relative overflow-hidden bg-[#FEFEFE] py-10 md:py-16"
         style={{
           background: "url('/Images/CTA_background.webp')",
           backgroundSize: "cover",
