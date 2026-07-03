@@ -1645,21 +1645,21 @@ export default function page() {
   const cards2 = [
     {
       number: "01",
-      title: "Protect your spaces",
+      title: "Residential Protection",
       description:
-        "We safeguard your home, office, or commercial property with safe and effective treatments designed to eliminate pests and prevent them from coming back.",
+        "Keep kitchens, bedrooms, living areas, and storage spaces free from common household pests with treatments designed for everyday living.",
     },
     {
       number: "02",
-      title: "Promote Healthy Living",
+      title: "Commercial Pest Control",
       description:
-        "We use eco-friendly and pet-safe solutions that protect your loved ones while making the space you live in healthier.",
+        "Reduce pest activity in offices, restaurants, warehouses, retail stores, and factories with planned pest management services.",
     },
     {
       number: "03",
-      title: "Build Trust",
+      title: "Prevent Future Infestations",
       description:
-        "Our service includes transparent pricing and guaranteed results which builds lasting relationships with our customers.",
+        "Regular inspections and preventive treatments help reduce recurring pest problems throughout the year.",
     },
   ];
 
@@ -1936,8 +1936,8 @@ export default function page() {
               <div
                 key={index}
                 className={`text-center py-4 sm:py-6 ${index !== stats.length - 1
-                    ? "lg:border-r-2 border-yellow-400"
-                    : ""
+                  ? "lg:border-r-2 border-yellow-400"
+                  : ""
                   }`}
               >
                 <h2 className="text-4xl sm:text-5xl xl:text-6xl font-black">
@@ -1967,7 +1967,7 @@ export default function page() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-6 sm:mt-10">
               Pest Control Services
               <br className="hidden sm:block" />
-              <span className="text-[#0094DA]"> for Every Property in India.</span>
+              <span className="text-[#0094DA]"> For Every Property in India</span>
             </h2>
 
             <p className="mt-4 text-gray-600 text-sm sm:text-base lg:text-lg">
@@ -2036,8 +2036,8 @@ export default function page() {
                 <div
                   key={index}
                   className={`bg-white rounded-2xl p-4 sm:p-6 lg:p-8 text-center shadow-md hover:shadow-xl transition-all duration-300 border ${item.active
-                      ? "border-blue-600 lg:scale-105"
-                      : "border-gray-100"
+                    ? "border-blue-600 lg:scale-105"
+                    : "border-gray-100"
                     }`}
                 >
                   <div className="relative w-32 h-32 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mx-auto rounded-full bg-blue-50 flex items-center justify-center">
@@ -2062,7 +2062,7 @@ export default function page() {
       {/* Services */}
       <section className="py-16 md:py-16 bg-white relative overflow-hidden">
         <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-0">
-          <div className="grid lg:grid-cols-[2fr_1fr] gap-12 lg:gap-8 xl:gap-12">
+          <div className="grid lg:grid-cols-[2fr_1fr] gap-12 lg:gap-8 xl:gap-12 items-center ">
             {/* LEFT */}
 
             <div>
@@ -2074,9 +2074,9 @@ export default function page() {
 
               {/* Heading */}
 
-              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#102B83] leading-tight">
+              <h3 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#102B83] leading-tight">
                 Complete Pest Solutions for Homes & Businesses
-              </h2>
+              </h3>
 
               <p className="mt-3 max-w-2xl text-base sm:text-lg text-gray-600 leading-relaxed sm:leading-8">
                 Looking for a pest control company in India? We provide treatment for the most common pest problems across residential and commercial properties using proven methods for every infestation.
@@ -2182,7 +2182,7 @@ export default function page() {
           className="absolute inset-0 hidden md:block"
           style={{
             background:
-              "linear-gradient(90deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.15) 40%,  rgba(255,255,255,0.95) 70%, #fff 100%)",
+              "linear-gradient(90deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.15) 30%,  rgba(255,255,255,0.95) 60%, #fff 100%)",
           }}
         />
 
@@ -2194,24 +2194,20 @@ export default function page() {
             {/* Right Content */}
             <div className="max-w-xl lg:ml-auto">
               <h3 className="text-4xl md:text-5xl xl:text-5xl font-bold leading-tight text-[#312EA5]">
-                Simple Pest Solutions 
+                Simple Pest Solutions
                 <br />
                 <span className="text-[#0094DC]">That Solve Real Problems</span>
+                <br />
               </h3>
 
               {/* Underline */}
-              <div className="w-20 h-1 bg-[#312EA5] rounded-full my-8"></div>
- 
-              <p className="text-md text-gray-700 leading-7 mb-4">
-                We are your reliable partner providing safe, effective, and
-                long-lasting pest control solutions. As the leading local
-                experts, our team takes a science-backed approach, treating
-                every infestation with precision to protect your home, health,
-                and business.
+              <div className="w-25 h-1 bg-[#312EA5] rounded-full my-5"></div>
+
+              <p className="text-md text-gray-800 leading-7">
+                Pests can damage furniture, contaminate food, weaken structures, and create an unhealthy environment. Our pest solutions are designed to control existing infestations while helping reduce future pest activity. Whether you need Pest Control Kolkata or services in other cities, we offer treatments for both homes and businesses.
               </p>
 
-              <p className="text-md text-gray-700 leading-7">
-                
+              <p className="text-md text-gray-800 leading-7 mt-5">
                 With over 27+ years of experience, we understand local pest
                 behaviors and seasonal patterns, delivering customized solutions
                 that keep your property protected year-round.
@@ -2287,30 +2283,24 @@ export default function page() {
             <div>
               <div className="flex items-center gap-4">
                 <span className="text-[#17329C] font-semibold text-base sm:text-lg">
-                  About Us
+                  Who We Are?
                 </span>
 
                 <span className="w-10 h-[3px] rounded-full bg-yellow-400" />
               </div>
 
-              <h2 className="mt-4 sm:mt-6 text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-900">
-                Keeping Your Spaces
+              <h3 className="mt-4 sm:mt-6 text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-900">
+                Helping Homes & Businesses Stay
                 <br className="hidden sm:block" />
-                Healthy and Pest-Free
-              </h2>
+                 Pest Free
+              </h3>
 
               <p className="mt-6 sm:mt-8 text-gray-600 text-base sm:text-lg leading-relaxed sm:leading-9">
-                At Orion Pest Control, we believe every home and workplace
-                deserves to be safe, clean, and pest-free. With years of
-                expertise in pest management, our certified team delivers
-                eco-friendly solutions that protect your family, property, and
-                peace of mind.
+                We provide pest control services in India for residential, commercial, and industrial properties. Every treatment starts with understanding the pest problem, identifying affected areas, and choosing the right method based on the infestation.
               </p>
 
               <p className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg leading-relaxed sm:leading-9">
-                We specialize in eliminating everything from common household
-                pests to rodents and mosquitoes, ensuring long-lasting
-                protection and peace of mind.
+                From termites damaging wooden structures to cockroaches, mosquitoes, rodents, ants, and bed bugs, we offer complete pest solutions that help protect homes, offices, warehouses, restaurants, hospitals, and educational institutions.
               </p>
             </div>
           </div>
@@ -2410,7 +2400,7 @@ export default function page() {
       </section>
 
       {/* Cities Section */}
-      <section className="py-16 md:py-20 lg:py-16 bg-white overflow-hidden relative">
+      <section className="pt-0 pb-10 md:py-20 lg:py-16 bg-white overflow-hidden relative">
         <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-0">
           {/* Badge */}
 
@@ -2422,16 +2412,15 @@ export default function page() {
 
           {/* Heading */}
 
-          <h2 className="mt-4 sm:mt-5 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#12308F] leading-tight text-center">
+          <h4 className="mt-4 sm:mt-5 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#12308F] leading-tight text-center">
             Pest Control Services Across India
-          </h2>
+          </h4>
 
-          <p className="mt-4 sm:mt-5 max-w-full text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 text-center">
-            We provide safe, effective, and eco-friendly pest control solutions
-            in
+          <p className="mt-4 sm:mt-5 mx-auto lg:w-[60%] text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 text-center">
+            Our pest control services in India are available across major cities for residential and commercial properties. From Pest Control Kolkata to Delhi, Mumbai, Bengaluru, Chennai, and more, 
             <span className="font-semibold text-[#12308F]">
               {" "}
-              all major cities across India.
+              we deliver practical pest solutions based on local pest problems.
             </span>
           </p>
 
@@ -2515,10 +2504,18 @@ export default function page() {
       {/* Child safe section */}
       <ChildSafeSection
         name="Pest"
-        tagline="Child Safe Bed Bug Control, Peaceful Sleep Guaranteed.
+        tagline="Clean Homes. Fewer Pests. More Peace of Mind.
 
 "
-        desc="Our professionally applied bed bug treatments eliminate infestations while keeping your family, children, pets, and indoor environment safe. Sleep comfortably knowing your home is protected."
+        // desc="Our treatments are planned to control pests while allowing families to return to their normal routine as quickly as possible. We use suitable treatment methods for different property types, making our pest control services in India a practical choice for homes with children and pets."
+        desc = {
+          <>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
+              Our treatments are planned to control pests while allowing families to return to their normal routine as quickly as possible. We use suitable treatment methods for different property types, making our pest control services in India a practical choice for homes with children and pets.
+            </p>
+            <br />
+          </>
+        }
       />
 
       {/* FAQ section */}

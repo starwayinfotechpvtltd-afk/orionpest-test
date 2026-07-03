@@ -21,8 +21,8 @@ export default function ChildSafeSection({
     icon : ShieldCheck
   },
   {
-    title: "Deep Crack Treatment",
-    desc: "Targets hidden bed bugs inside furniture and walls.",
+    title: "Available Across India",
+    desc: "Complete pest solutions for residential and commercial properties across India's major cities.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Shield
@@ -54,15 +54,16 @@ export default function ChildSafeSection({
         </div>
         {/* Right section typography card context content layout details stack */}
         <div className="w-full lg:w-[48%] order-1 lg:order-2">
-          <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
-            Child Safe
-            <span className="text-[#1095D9]"> {name} Control,</span>
-            Complete Peace of Mind.
-          </h2>
-          <p className="text-base sm:text-lg max-w-xl mt-4 text-gray-600">
+          <h4 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+            Family-Friendly 
+            <span className="text-[#1095D9]"> {name} Control, </span>
+            For Everyday Living.
+          </h4>
+          {/* <p className="text-base sm:text-lg max-w-xl mt-4 text-gray-600">
             {desc}
-          </p>
-          <p className="text-base sm:text-lg max-w-xl mt-4 font-semibold text-gray-800">
+          </p> */}
+          {desc}
+          <p className="text-base sm:text-lg max-w-xl mt-1 font-semibold text-gray-800">
             {tagline}
           </p>
           <div className="bg-[#F3F6FC] rounded-2xl p-4 sm:p-6 lg:px-10 hidden xl:flex flex-col sm:flex-row justify-between items-center gap-6 mt-6">
