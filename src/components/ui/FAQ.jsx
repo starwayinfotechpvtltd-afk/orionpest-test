@@ -10,43 +10,43 @@ import {
 const faq = [
   {
     id: "01",
-    question: "How do I know if my home has ants?",
+    question: "Do I need to leave my home during the treatment?",
     answer:
-      "Common signs include mud tubes, hollow-sounding wood, discarded wings, damaged wooden furniture, and unexplained cracks. Schedule a professional inspection for confirmation.",
+      "It depends on the type of treatment. Some services allow you to stay home, while others may require you to leave for a few hours. Your technician will explain everything before work begins.",
   },
   {
     id: "02",
-    question: "How long does extermination treatment take?",
+    question: "Is your treatment safe for children, elderly family members, and pets?",
     answer:
-      "Most extermination extermination treatments are completed within a few hours, depending on the size of the property and the severity of infestation.",
+      "We use approved pest control products and follow application guidelines carefully. Before treatment, we'll let you know any temporary precautions that should be followed for maximum safety.",
   },
   {
     id: "03",
-    question: "Is extermination treatment safe for children and pets?",
+    question: "Will my kitchen utensils and food need to be covered?",
     answer:
-      "Yes. Orion uses government-approved extermination treatment solutions that are safe when applied by certified professionals.",
+      "For certain treatments, yes. We provide simple preparation instructions before your appointment so your food and kitchen items remain protected.",
   },
   {
     id: "04",
-    question: "How long does extermination protection last?",
+    question: "How long does it take to completely eliminate the infestation?",
     answer:
-      "Our treatments provide long-term protection, and preventive maintenance can significantly extend effectiveness.",
+      "The timeline depends on the pest. Cockroaches may reduce significantly within days, while termites and bed bugs often require multiple visits or monitoring for complete control.",
   },
   {
     id: "05",
-    question: "Do you provide extermination warranties?",
+    question: "Do restaurants and food businesses require more frequent pest control?",
     answer:
-      "Yes. Selected extermination treatment plans include service warranties for additional peace of mind.",
+      "Yes. Businesses that handle food generally benefit from scheduled preventive treatments because even a minor infestation can affect hygiene, customer trust, and compliance.",
   },
   {
     id: "06",
-    question: "How much does extermination treatment cost?",
+    question: "How quickly can someone come for an inspection?",
     answer:
-      "The cost depends on property size, infestation level, and treatment type. Contact us for a free site inspection and personalized quotation.",
+      "We understand that pest issues can't always wait. Depending on your location and availability, we aim to schedule inspections as quickly as possible.",
   },
 ];
 
-export default function FAQSection({image="/Images/services/cockroach.png", faqs, name="Cockroach"}) {
+export default function FAQSection({image="/Images/services/cockroach.png", faqs, name=" Pest"}) {
   const [active, setActive] = useState("01");
 
   return (
@@ -81,8 +81,8 @@ export default function FAQSection({image="/Images/services/cockroach.png", faqs
           <div className="mx-auto mt-5 h-1 w-60 md:w-80 rounded-full bg-yellow-400" />
 
           <p className="mt-6 text-lg text-gray-600">
-            Find answers to common questions about our
-            {name} control services.
+            Find answers to common questions about our 
+             {name}  control services.
           </p>
         </div>
 

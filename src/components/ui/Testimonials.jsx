@@ -130,7 +130,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Quote, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { FaStar } from "react-icons/fa";
+import { FaQuoteLeft } from "react-icons/fa6";
 
 const reviews = [
   {
@@ -139,9 +142,9 @@ const reviews = [
       "Surya Narayan Pandey and Biswajit Majumder are very friendly and very sincere in their work. I am very much satisfied with their behavior.",
   },
   {
-    name: "Sandy V",
+    name: "A Pal",
     review:
-      "Orion Pest solutions team is professional, they have excellent product knowledge and problem understanding skills. An experienced team, know how to handle the issues and suggest possible preventive measures. Services beyond expectations. Keep it up Orion team. Thank you",
+      "I booked wasp extermination service as there was a wasp hive inside the ac vent in my flat. They came on time and removed the hive in just 20 - 30 min. Really satisfied with their service.",
   },
   {
     name: "Abhisek Juneja",
@@ -230,31 +233,51 @@ export default function TestimonialsSection() {
   }, [visibleCards]);
 
   return (
-    <section className="relative overflow-hidden w-full"
-    style={{
-      backgroundImage: "url(/Images/testimonial-bg.png)",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat"
-    }}>
-
-      <div className="max-w-[80%] mx-auto px-5 py-28 lg:flex items-center gap-10">
+    <section
+      className="relative overflow-hidden w-full"
+      style={{
+        backgroundImage: "url(/Images/testimonial-bg.png)",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="max-w-[80%] mx-auto px-5 py-28 xl:flex items-center gap-10">
         {/* LEFT */}
 
-        <div className="text-white md:w-[20%] w-[100%]">
+        <div className="text-white xl:w-[30%] w-[100%]">
           <span className="inline-flex items-center gap-2 border border-yellow-400 rounded-full px-5 py-2 text-yellow-400 font-semibold">
             Testimonials
           </span>
 
-          <h2 className="text-5xl font-bold mt-8 leading-tight">
-            What Our
-            <br />
-            Customers Say
+          <h2 className="text-4xl font-bold mt-8 leading-tight">
+            What Our Customers Say?
           </h2>
 
-          <button className="mt-10 bg-yellow-400 hover:bg-yellow-500 text-[#132C98] font-semibold rounded-xl px-8 py-4 flex items-center gap-3 transition">
+          {/* <button className="mt-10 bg-yellow-400 hover:bg-yellow-500 text-[#132C98] font-semibold rounded-xl px-8 py-4 flex items-center gap-3 transition">
             More Reviews
             <ArrowRight size={18} />
-          </button>
+          </button> */}
+          <div className="flex items-center mt-6">
+            <Image
+              src="/Images/google.png"
+              alt="google"
+              height={80}
+              width={160}
+              className="pr-10"
+            />
+            <div className="w-[1px] h-[50px] bg-gray-300 border border-gray-300"></div>
+            <div className="pl-10 flex items-center gap-5">
+              <p className="text-xl font-bold">4.9</p>
+              <div className="flex items-center gap-0.5">
+                {[1, 2, 3, 4, 5].map((index) => (
+                  <div key={index}>
+                    <FaStar color="#FBBF24" size={20} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <p className="mt-5">Based on 1200+ reviews</p>
 
           {/* Arrows Container */}
           <div className="flex gap-3 mt-8 relative z-10">
@@ -276,7 +299,7 @@ export default function TestimonialsSection() {
 
         {/* RIGHT */}
 
-        <div className="md:w-[80%] w-[100%]">
+        <div className="xl:w-[70%] w-[100%]">
           {/* Cards Carousel Viewport */}
           <div className="overflow-hidden mt-6 sm:mt-10">
             <div
@@ -304,14 +327,23 @@ export default function TestimonialsSection() {
 function TestimonialCard({ name, review }) {
   return (
     <div className="bg-white rounded-3xl p-8 border border-gray-100 h-full transition flex flex-col justify-between">
-      <div className="flex justify-between">
-        <div className="w-12 h-12 rounded-full bg-yellow-50 flex items-center justify-center">
-          <Quote className="text-yellow-500" />
+      <div className="flex flex-col items-start justify-between w-full h-full">
+        <div className="flex gap-5">
+          <div className="w-12 h-12 rounded-full bg-yellow-50 flex items-center justify-center">
+            <FaQuoteLeft className="text-yellow-500" size={20}/>
+          </div>
+          <p className="mt-6 text-gray-600">{review}</p>
         </div>
+          <div className="flex justify-between items-center w-full">
+            <h4 className="font-semibold text-[#081A5C] mt-2">~ {name}</h4>
+            <Image
+              src="/Images/google-icon.webp"
+              alt="google-icon"
+              height={30}
+              width={30}
+            />
+          </div>
       </div>
-
-      <p className="mt-6 text-gray-600">{review}</p>
-      <h4 className="font-semibold text-[#081A5C] mt-2">~ {name}</h4>
     </div>
   );
 }

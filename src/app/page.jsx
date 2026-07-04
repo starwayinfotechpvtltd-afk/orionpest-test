@@ -1465,6 +1465,8 @@
 //   );
 // }
 
+
+"use client"
 import React from "react";
 import {
   ShieldCheck,
@@ -1479,6 +1481,12 @@ import {
   Sprout,
   CalendarDays,
   Info,
+  BadgeCheck,
+  Leaf,
+  Clock3,
+  Shield,
+  SearchCheck,
+  ClipboardList
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -1491,8 +1499,11 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 import FAQSection from "@/components/ui/FAQ";
 import ContactInfo from "@/components/services/ui/ContactInfo";
 import Form from "@/components/ui/Form";
+import { useRouter } from "next/navigation";
 
 export default function page() {
+
+  const router=useRouter()
   const stat = [
     {
       icon: <Calendar />,
@@ -1668,47 +1679,89 @@ export default function page() {
     {
       name: "Kolkata",
       image: "/Images/kolkata.webp",
+      link: "#"
     },
     {
       name: "Delhi",
       image: "/Images/delhi.jpg",
+      link: "/branches/delhi"
     },
     {
       name: "Mumbai",
       image: "/Images/mumbai.jpg",
+      link: "/branches/mumbai"
     },
     {
       name: "Bengaluru",
       image: "/Images/bengalore.jpg",
+      link: "/branches/bangalore"
     },
     {
       name: "Chennai",
       image: "/Images/chennai.jpg",
+      link: "/branches/chennai"
     },
   ];
 
   // Process
   const process = [
+  {
+    number: "01",
+    image: "/Images/inspection.png",
+    title: "Inspection",
+    description:
+      "We inspect your property to identify pest type, extent of infestation and root causes.",
+  },
+  {
+    number: "02",
+    image: "/Images/planning.png",
+    title: "Treatment Planning",
+    description:
+      "Our experts create a customized treatment plan using the best method for your needs.",
+  },
+  {
+    number: "03",
+    image: "/Images/treatment.png",
+    title: "Professional Treatment",
+    description:
+      "We apply advanced, safe and effective treatment to eliminate pests from the source.",
+  },
+  {
+    number: "04",
+    image: "/Images/badgecheck.png",
+    title: "Follow-up & Prevention",
+    description:
+      "We provide follow-up support and prevention tips for long-term protection.",
+  },
+];
+
+  const certification = [
+    "/Images/certifications/img1.png",
+    "/Images/certifications/img2.png",
+    "/Images/certifications/img3.png",
+    "/Images/certifications/img4.png",
+  ];
+
+  const whyChoose = [
     {
-      id: "01",
-      title: "Inspection",
-      description:
-        "Our experts carefully assess your property to identify pests and their entry points.",
-      image: "/Images/inspection.png",
+      icon: BadgeCheck,
+      title: "Certified Professionals",
+      description: "Trained, background-verified and experienced experts.",
     },
     {
-      id: "02",
-      title: "Planning",
-      description:
-        "We create a customized pest control plan tailored to your home or business needs.",
-      image: "/Images/planning.png",
+      icon: Leaf,
+      title: "Safe & Eco-Friendly Treatments",
+      description: "Low-odor, non-toxic and safe for kids & pets.",
     },
     {
-      id: "03",
-      title: "Treatment",
-      description:
-        "Safe, eco-friendly solutions are applied for lasting protection and a pest-free environment.",
-      image: "/Images/treatment.png",
+      icon: Clock3,
+      title: "Quick Response & Same-Day Service",
+      description: "Fast response with flexible scheduling.",
+    },
+    {
+      icon: MapPin,
+      title: "Pan India Network",
+      description: "72 cities with local support teams.",
     },
   ];
 
@@ -1724,7 +1777,7 @@ export default function page() {
         }}
       >
         <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-0 py-12 md:py-16 lg:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center justify-between">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 lg:gap-8 items-center justify-between">
             {/* Left Content */}
             <div className="w-full">
               {/* Logo */}
@@ -1796,7 +1849,7 @@ export default function page() {
               </div>
             </div>
             <div className="w-full flex items-end justify-end">
-              <div className="lg:w-[80%] w-[100%]">
+              <div className="xl:w-[80%] w-[100%]">
                 <Form />
               </div>
             </div>
@@ -1903,7 +1956,7 @@ export default function page() {
 
           {/* Cards */}
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-16 sm:mt-0">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-5 sm:mt-0">
             {features.map((item, index) => (
               <div
                 key={index}
@@ -1914,8 +1967,9 @@ export default function page() {
                 </div>
 
                 <div
-                  className={`mt-6 sm:mt-8 rounded-2xl p-6 ${item.active ? "bg-yellow-100" : "bg-indigo-50"
-                    }`}
+                  className={`mt-6 sm:mt-8 rounded-2xl p-6 ${
+                    item.active ? "bg-yellow-100" : "bg-indigo-50"
+                  }`}
                 >
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                     {item.title}
@@ -1935,10 +1989,11 @@ export default function page() {
             {stats.map((item, index) => (
               <div
                 key={index}
-                className={`text-center py-4 sm:py-6 ${index !== stats.length - 1
-                  ? "lg:border-r-2 border-yellow-400"
-                  : ""
-                  }`}
+                className={`text-center py-4 sm:py-6 ${
+                  index !== stats.length - 1
+                    ? "lg:border-r-2 border-yellow-400"
+                    : ""
+                }`}
               >
                 <h2 className="text-4xl sm:text-5xl xl:text-6xl font-black">
                   {item.number}
@@ -1967,18 +2022,25 @@ export default function page() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-6 sm:mt-10">
               Pest Control Services
               <br className="hidden sm:block" />
-              <span className="text-[#0094DA]"> For Every Property in India</span>
+              <span className="text-[#0094DA]">
+                {" "}
+                For Every Property in India
+              </span>
             </h2>
 
             <p className="mt-4 text-gray-600 text-sm sm:text-base lg:text-lg">
-              Whether it's a home, apartment, restaurant, warehouse, office, hospital, school, or commercial building, our pest control services in India help protect every type of property from common pest problems. We focus on identifying the source, treating affected areas, and reducing the chances of pests returning.
+              Whether it's a home, apartment, restaurant, warehouse, office,
+              hospital, school, or commercial building, our pest control
+              services in India help protect every type of property from common
+              pest problems. We focus on identifying the source, treating
+              affected areas, and reducing the chances of pests returning.
             </p>
           </div>
 
           {/* Main Content Dial Diagram Layout */}
-          <div className="relative mt-0 md:mt-20 flex flex-col lg:flex-row items-center justify-center gap-0 lg:gap-12 xl:gap-20 w-full">
+          <div className="relative mt-0 md:mt-20 flex flex-col xl:flex-row items-center justify-center gap-0 lg:gap-12 xl:gap-20 w-full">
             {/* Left Features */}
-            <div className="space-y-6 md:space-y-10 w-full sm:max-w-md lg:max-w-[33%] order-2 lg:order-1">
+            <div className="space-y-6 md:space-y-10 w-full sm:max-w-md xl:max-w-[33%] order-2 xl:order-1">
               {leftFeature.map((item, index) => (
                 <div key={index}>
                   <InfoCard
@@ -1991,13 +2053,13 @@ export default function page() {
             </div>
 
             {/* Center Circle Ring Group */}
-            <div className="relative flex justify-center items-center order-1 lg:order-2 my-6 lg:my-0 scale-75 sm:scale-90 lg:scale-90 xl:scale-100 lg:max-w-[33%]">
+            <div className="relative flex justify-center items-center order-1 lg:order-2 my-3 lg:my-0 scale-75 sm:scale-90 lg:scale-90 xl:scale-100 lg:max-w-[33%]">
               <div className="absolute w-[400px] h-[400px] sm:w-[430px] sm:h-[430px] lg:w-[460px] lg:h-[460px] rounded-full border-[10px] sm:border-[14px] border-[#2F3293]" />
               <div className="absolute w-[370px] h-[370px] sm:w-[390px] sm:h-[390px] lg:w-[420px] lg:h-[420px] rounded-full border-[6px] sm:border-[8px] border-blue-200" />
               <div className="absolute top-12 sm:top-8 left-2 w-3 h-3 bg-yellow-400 rounded-full" />
               <div className="absolute top-12 sm:top-8 right-2 w-3 h-3 bg-yellow-400 rounded-full" />
 
-              <div className="relative w-[350px] h-[350px] sm:w-[340px] sm:h-[340px] lg:w-[380px] lg:h-[380px] rounded-full overflow-hidden shadow-2xl border-[6px] sm:border-[10px] border-white">
+              <div className="relative w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] xl:w-[380px] xl:h-[380px] rounded-full overflow-hidden shadow-2xl border-[6px] sm:border-[10px] border-white">
                 <Image
                   src="/Images/icon/icon4.webp"
                   alt="House"
@@ -2008,7 +2070,7 @@ export default function page() {
             </div>
 
             {/* Right Features */}
-            <div className="space-y-6 md:space-y-10 w-full sm:max-w-md lg:max-w-[33%] order-3 mt-8 md:mt-0">
+            <div className="space-y-6 md:space-y-10 w-full sm:max-w-md xl:max-w-[33%] order-3 mt-8 md:mt-0">
               {rightFeature.map((item, index) => (
                 <div key={index}>
                   <InfoCard
@@ -2023,7 +2085,7 @@ export default function page() {
 
           {/* Location Cards Component List Grid */}
           <div className="relative w-full">
-            <div className="absolute 2xl:left-[45.3%] lg:left-[43.8%] lg:-top-24 z-[2] w-28 sm:w-36 h-28 sm:h-36 hidden lg:block">
+            <div className="absolute 2xl:left-[45.3%] lg:left-[43.8%] lg:-top-24 z-[2] w-28 sm:w-36 h-28 sm:h-36 hidden xl:block">
               <Image
                 src="/Images/icon/icon3.png"
                 alt="icon"
@@ -2031,14 +2093,15 @@ export default function page() {
                 className="object-contain"
               />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 bg-[#F5F7FB] relative mt-10 lg:-mt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 bg-[#F5F7FB] relative mt-10 xl:-mt-2">
               {locations.map((item, index) => (
                 <div
                   key={index}
-                  className={`bg-white rounded-2xl p-4 sm:p-6 lg:p-8 text-center shadow-md hover:shadow-xl transition-all duration-300 border ${item.active
-                    ? "border-blue-600 lg:scale-105"
-                    : "border-gray-100"
-                    }`}
+                  className={`bg-white rounded-2xl p-4 sm:p-6 lg:p-8 text-center shadow-md hover:shadow-xl transition-all duration-300 border ${
+                    item.active
+                      ? "border-blue-600 lg:scale-105"
+                      : "border-gray-100"
+                  }`}
                 >
                   <div className="relative w-32 h-32 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mx-auto rounded-full bg-blue-50 flex items-center justify-center">
                     <Image
@@ -2062,7 +2125,7 @@ export default function page() {
       {/* Services */}
       <section className="py-16 md:py-16 bg-white relative overflow-hidden">
         <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-0">
-          <div className="grid lg:grid-cols-[2fr_1fr] gap-12 lg:gap-8 xl:gap-12 items-center ">
+          <div className="grid xl:grid-cols-[2fr_1fr] gap-12 lg:gap-8 xl:gap-12 items-center ">
             {/* LEFT */}
 
             <div>
@@ -2079,7 +2142,10 @@ export default function page() {
               </h3>
 
               <p className="mt-3 max-w-2xl text-base sm:text-lg text-gray-600 leading-relaxed sm:leading-8">
-                Looking for a pest control company in India? We provide treatment for the most common pest problems across residential and commercial properties using proven methods for every infestation.
+                Looking for a pest control company in India? We provide
+                treatment for the most common pest problems across residential
+                and commercial properties using proven methods for every
+                infestation.
               </p>
 
               {/* Services */}
@@ -2146,101 +2212,8 @@ export default function page() {
         }
       />
 
-      <section className="relative overflow-hidden py-16">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-left bg-no-repeat"
-          style={{
-            backgroundImage: "url('/Images/bg.webp')",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
-
-        {/* White Gradient Overlay */}
-        {/* <div
-          className="absolute inset-0 bg-white md:bg-white/10"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.15) 40%,  rgba(255,255,255,0.95) 70%, #fff 100%)",
-          }}
-        ></div> */}
-
-        {/* Background */}
-        <div
-          className="absolute inset-0 bg-cover bg-left bg-no-repeat"
-          style={{
-            backgroundImage: "url('/Images/bg.webp')",
-          }}
-        />
-
-        {/* Mobile Overlay */}
-        <div className="absolute inset-0 bg-white/80 md:hidden"></div>
-
-        {/* Desktop Gradient */}
-        <div
-          className="absolute inset-0 hidden md:block"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.15) 30%,  rgba(255,255,255,0.95) 60%, #fff 100%)",
-          }}
-        />
-
-        <div className="relative max-w-[80%] mx-auto px-6">
-          <div className="grid lg:grid-cols-2 md:gap-16 items-center">
-            {/* Left Empty */}
-            <div></div>
-
-            {/* Right Content */}
-            <div className="max-w-xl lg:ml-auto">
-              <h3 className="text-4xl md:text-5xl xl:text-5xl font-bold leading-tight text-[#312EA5]">
-                Simple Pest Solutions
-                <br />
-                <span className="text-[#0094DC]">That Solve Real Problems</span>
-                <br />
-              </h3>
-
-              {/* Underline */}
-              <div className="w-25 h-1 bg-[#312EA5] rounded-full my-5"></div>
-
-              <p className="text-md text-gray-800 leading-7">
-                Pests can damage furniture, contaminate food, weaken structures, and create an unhealthy environment. Our pest solutions are designed to control existing infestations while helping reduce future pest activity. Whether you need Pest Control Kolkata or services in other cities, we offer treatments for both homes and businesses.
-              </p>
-
-              <p className="text-md text-gray-800 leading-7 mt-5">
-                With over 27+ years of experience, we understand local pest
-                behaviors and seasonal patterns, delivering customized solutions
-                that keep your property protected year-round.
-              </p>
-
-              <h4 className="font-bold text-2xl text-[#312EA5] mt-5">
-                Ready to keep your space pest-free?
-              </h4>
-
-              <div className="flex flex-wrap gap-5 mt-5">
-                <Link
-                  href="/contact"
-                  className="bg-[#312EA5] text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-3 hover:bg-[#26218e] duration-300"
-                >
-                  <CalendarDays size={20} />
-                  Book Appointment
-                </Link>
-
-                <Link
-                  href="/services"
-                  className="border-2 border-[#312EA5] text-[#312EA5] px-8 py-4 rounded-xl font-semibold flex items-center gap-3 hover:bg-[#312EA5] hover:text-white duration-300"
-                >
-                  <Info size={20} />
-                  Our Services
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* About Us */}
-      <section className="relative overflow-hidden bg-gradient-to-t from-yellow-100/80 via-[#F5FEFF] to-transparent py-16 pb-20 lg:pt-0">
+      <section className="relative overflow-hidden bg-gradient-to-t from-yellow-100/80 via-[#F5FEFF] to-transparent py-16 pb-20 xl:pt-0">
         {/* Decorative Bugs */}
 
         <Image
@@ -2292,22 +2265,28 @@ export default function page() {
               <h3 className="mt-4 sm:mt-6 text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-900">
                 Helping Homes & Businesses Stay
                 <br className="hidden sm:block" />
-                 Pest Free
+                Pest Free
               </h3>
 
               <p className="mt-6 sm:mt-8 text-gray-600 text-base sm:text-lg leading-relaxed sm:leading-9">
-                We provide pest control services in India for residential, commercial, and industrial properties. Every treatment starts with understanding the pest problem, identifying affected areas, and choosing the right method based on the infestation.
+                We provide pest control services in India for residential,
+                commercial, and industrial properties. Every treatment starts
+                with understanding the pest problem, identifying affected areas,
+                and choosing the right method based on the infestation.
               </p>
 
               <p className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg leading-relaxed sm:leading-9">
-                From termites damaging wooden structures to cockroaches, mosquitoes, rodents, ants, and bed bugs, we offer complete pest solutions that help protect homes, offices, warehouses, restaurants, hospitals, and educational institutions.
+                From termites damaging wooden structures to cockroaches,
+                mosquitoes, rodents, ants, and bed bugs, we offer complete pest
+                solutions that help protect homes, offices, warehouses,
+                restaurants, hospitals, and educational institutions.
               </p>
             </div>
           </div>
 
           {/* Feature Cards */}
 
-          <div className="relative mt-12 lg:-mt-24 xl:-mt-32 lg:ml-auto lg:w-[85%] xl:w-auto xl:ml-[300px] z-10">
+          <div className="relative mt-12 xl:-mt-24 xl:-mt-32 lg:ml-auto xl:w-[85%] xl:w-auto xl:ml-[300px] z-10">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
               {cards2.map((item) => (
                 <div
@@ -2334,73 +2313,158 @@ export default function page() {
         </div>
       </section>
 
-      {/* Process */}
-      <section className="relative bg-white py-20 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#ffffff,#fafafa,#ffffff)]"></div>
-
-        {/* Decorative Insect */}
-        <img
-          src="/images/bee.png"
-          alt=""
-          className="hidden lg:block absolute right-10 top-8 w-20"
-        />
-
-        <div className="relative max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <div className="text-center mb-16">
-            <div className="flex justify-center items-center gap-3 mb-4">
-              <span className="font-semibold text-gray-700 text-lg">
-                Our Process
-              </span>
-
-              <div className="w-12 h-[3px] bg-yellow-400 rounded-full"></div>
+      {/* Why choose */}
+      <section className="overflow-visible bg-gradient-to-r from-[#031a35] via-[#07254c] to-[#031a35]">
+        <div className="relative mx-auto max-w-[90%] px-6 py-10">
+          <div className="flex flex-col md:flex-row items-center gap-10 ">
+            {/* Left Image */}
+            <div className="w-[25%] hidden xl:block">
+              <div className="absolute -top-[60px] flex justify-center lg:justify-start ">
+                <Image
+                  src="/Images/man2.png"
+                  alt="Pest Control Expert"
+                  height={300}
+                  width={250}
+                  className="object-contain"
+                />
+              </div>
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#102B83]">
-              Our 3 Step Easy Process
-            </h2>
-          </div>
+            {/* Center Content */}
+            <div className="w-full md:w-[50%] lg:w-[35%]">
+              <span className="text-sm font-semibold uppercase tracking-widest text-[#d8b46c]">
+                Why Choose Orion Pest
+              </span>
 
-          {/* Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {process.map((item) => (
-              <div key={item.id} className="text-center group">
-                {/* Circle */}
-                <div className="relative mx-auto mb-10 w-72 h-72 rounded-full border-[3px] border-yellow-400 flex items-center justify-center transition-all duration-300 group-hover:scale-105">
-                  {/* Number Badge */}
-                  <div className="absolute left-0 top-4 -translate-x-1/3 bg-[#1C2BB8] text-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-3xl shadow-lg">
-                    {item.id}
+              <h4 className="mt-3 text-3xl font-bold leading-tight text-white md:text-4xl">
+                Helping Homes & Businesses Stay Pest Free
+              </h4>
+
+              <p className="mt-5 text-base leading-8 text-gray-300">
+                With over 27+ years of experience, Orion Pest is a trusted name
+                in pest management. Our expert team uses advanced techniques and
+                safe chemicals to deliver long-lasting protection for homes and
+                businesses.
+              </p>
+            </div>
+
+            {/* Features */}
+            <div className="grid gap-6 lg:grid-cols-2 w-full md:w-[50%] lg:w-[65%] xl:w-[40%]">
+              {whyChoose.map((item, index) => {
+                const Icon = item.icon;
+
+                return (
+                  <div key={index} className="flex gap-4">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white">
+                      <Icon
+                        className="h-7 w-7 text-[#c89a2b]"
+                        strokeWidth={2}
+                      />
+                    </div>
+
+                    <div>
+                      <h4 className="text-lg font-semibold text-white">
+                        {item.title}
+                      </h4>
+
+                      <p className="mt-1 text-sm leading-6 text-gray-300">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="h-90 w-90 relative">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-3xl font-bold text-gray-900">
-                  {item.title}
-                </h3>
-
-                <div className="w-14 h-1 bg-yellow-400 rounded-full mx-auto my-5"></div>
-
-                {/* Description */}
-                <p className="text-gray-600 text-lg leading-8 max-w-sm mx-auto">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
+      {/* Process */}
+      <section className="bg-white py-20">
+
+      <div className="mx-auto max-w-7xl px-6">
+
+        {/* Heading */}
+
+        <div className="mb-16 text-center">
+
+          <p className="text-sm font-semibold uppercase tracking-[3px] text-[#F4A62A]">
+            OUR PROCESS
+          </p>
+
+          <h2 className="mt-2 text-4xl font-bold text-[#123B90] md:text-4xl">
+            Our 4 Step Easy Process
+          </h2>
+
+        </div>
+
+        {/* Steps */}
+
+        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
+
+          {process.map((item, index) => {
+
+            return (
+              <div
+                key={index}
+                className="relative"
+              >
+                {/* Number Circle */}
+
+                <div className="absolute -top-4 left-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-[#123B90] text-sm font-bold text-white shadow-lg">
+                  {item.number}
+                </div>
+
+                {/* Card */}
+
+                <div className="group relative rounded-3xl border border-gray-200 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+                  {/* Icon */}
+
+                  <div className="mx-auto mb-6 flex h-48 w-48 items-center justify-center rounded-full bg-[#FFF8EB]">
+
+                    <div className="flex h-44 w-44 items-center justify-center rounded-full bg-white shadow">
+
+                      <Image src={item.image} alt={item.title} height={250} width={250} className="object-contain"/>
+
+                    </div>
+
+                  </div>
+
+                  {/* Title */}
+
+                  <h3 className="mb-3 text-lg font-bold text-gray-900">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+
+                  <p className="text-sm leading-7 text-gray-500">
+                    {item.description}
+                  </p>
+
+                </div>
+
+                {/* Dashed Line */}
+
+                {index !== process.length - 1 && (
+                  <div className="absolute left-full top-1/2 hidden w-16 -translate-y-1/2 xl:block">
+
+                    <div className="border-t-2 border-dashed border-[#D6DCEC]" />
+
+                  </div>
+                )}
+
+              </div>
+            );
+          })}
+        </div>
+
+      </div>
+
+    </section>
 
       {/* Cities Section */}
-      <section className="pt-0 pb-10 md:py-20 lg:py-16 bg-white overflow-hidden relative">
+      <section className="pt-0 pb-10 md:py-5 bg-white overflow-hidden relative">
         <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-0">
           {/* Badge */}
 
@@ -2417,10 +2481,10 @@ export default function page() {
           </h4>
 
           <p className="mt-4 sm:mt-5 mx-auto lg:w-[60%] text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 text-center">
-            Our pest control services in India are available across major cities for residential and commercial properties. From Pest Control Kolkata to Delhi, Mumbai, Bengaluru, Chennai, and more, 
+            We provide fast and reliable pest control services across all major cities in India. Where ever you are,
             <span className="font-semibold text-[#12308F]">
               {" "}
-              we deliver practical pest solutions based on local pest problems.
+              our experts are just a call away.
             </span>
           </p>
 
@@ -2434,6 +2498,7 @@ export default function page() {
                 <div
                   key={city.name}
                   className="min-w-[240px] sm:min-w-[280px] snap-center rounded-2xl overflow-hidden shadow-lg bg-white border group shrink-0"
+                  onClick={()=> router.push(city.link)}
                 >
                   <div className="relative h-64 sm:h-80 overflow-hidden">
                     <Image
@@ -2456,6 +2521,15 @@ export default function page() {
                   </div>
                 </div>
               ))}
+              <Link
+                className="rounded-2xl shadow-lg cursor-pointer bg-[#12308F] flex justify-center items-center gap-2 text-xl font-bold text-white min-w-[240px] sm:min-w-[280px] snap-center overflow-hidden border group shrink-0"
+                href={"/branches"}
+              >
+                <h2>
+                  View All <br /> Locations
+                </h2>
+                <ArrowRight size={25} />
+              </Link>
             </div>
 
             {/* Desktop */}
@@ -2465,6 +2539,7 @@ export default function page() {
                 <div
                   key={city.name}
                   className="rounded-2xl overflow-hidden shadow-lg border group cursor-pointer"
+                  onClick={()=> router.push(city.link)}
                 >
                   <div className="relative h-[280px] xl:h-[330px] overflow-hidden">
                     <Image
@@ -2505,24 +2580,48 @@ export default function page() {
       <ChildSafeSection
         name="Pest"
         tagline="Clean Homes. Fewer Pests. More Peace of Mind.
-
 "
         // desc="Our treatments are planned to control pests while allowing families to return to their normal routine as quickly as possible. We use suitable treatment methods for different property types, making our pest control services in India a practical choice for homes with children and pets."
-        desc = {
+        desc={
           <>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
-              Our treatments are planned to control pests while allowing families to return to their normal routine as quickly as possible. We use suitable treatment methods for different property types, making our pest control services in India a practical choice for homes with children and pets.
+              Our treatments are planned to control pests while allowing
+              families to return to their normal routine as quickly as possible.
+              We use suitable treatment methods for different property types,
+              making our pest control services in India a practical choice for
+              homes with children and pets.
             </p>
             <br />
           </>
         }
       />
 
+      {/* Certifications */}
+      <section className="w-full py-10 bg-[#042990] p-10">
+        <div className="max-w-[80%] mx-auto">
+          <h2 className="mt-3 sm:mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-[#2F3293] break-words text-center text-white">
+            Membership & Certification
+          </h2>
+          <div className="flex flex-wrap justify-center items-center gap-10 mt-10">
+            {certification.map((item, index) => (
+              <div className="relative h-44 w-44" key={index}>
+                <Image
+                  src={item}
+                  alt={`image${index}`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ section */}
       <FAQSection />
 
       <section
-        className="relative overflow-hidden bg-[#FEFEFE] py-10 md:py-16"
+        className="relative overflow-hidden bg-[#FEFEFE] py-0 pb-10 md:py-16"
         style={{
           background: "url('/Images/CTA_background.webp')",
           backgroundSize: "cover",
@@ -2530,7 +2629,7 @@ export default function page() {
         }}
       >
         <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-0 w-full relative z-[2]">
-          <div className="grid gap-10 lg:gap-12 lg:grid-cols-2 items-start">
+          <div className="grid gap-10 lg:gap-12 xl:grid-cols-2 items-start">
             {/* LEFT SIDE CONTENT SECTION */}
             <div>
               <p className="font-semibold uppercase tracking-widest text-sm sm:text-base">
@@ -2583,26 +2682,7 @@ export default function page() {
             </div>
           </div>
         </div>
-        {/* Bottom Decorative Circle Vector Element Shape Component Mock Container */}
-        <div className="absolute -bottom-12 -left-32 hidden xl:block overflow-hidden pointer-events-none">
-          <div
-            className="relative overflow-hidden border-4 border-yellow-400 w-[450px] h-[230px] rounded-t-full"
-            style={{
-              background: "url('/Images/bugs/bg.png')",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
-            <div className="absolute left-32 top-5 w-52 h-52">
-              <Image
-                src="/Images/services/ant.png"
-                alt="Ant"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
-        </div>
+        
       </section>
     </div>
   );

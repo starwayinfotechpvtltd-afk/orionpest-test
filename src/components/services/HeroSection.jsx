@@ -110,7 +110,7 @@ export default function HeroSection({
           </div>
 
           {/* Right Image Container */}
-          <div className="flex justify-center order-1 lg:order-2 overflow-visible py-8 lg:py-0">
+          <div className="flex justify-center order-1 lg:order-2 overflow-visible py-2 lg:py-0">
             {/* Circle Background scaled responsively */}
             <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] xl:w-[570px] xl:h-[570px] 2xl:w-[700px] 2xl:h-[700px] rounded-full bg-linear-90 from-white via-[#FEC42A]/50 to-[#FEC42A]">
               <div className="relative -left-7 2xl:-left-10 z-[1px] h-[85%] w-[88%] rounded-full mx-auto mt-[7%]">

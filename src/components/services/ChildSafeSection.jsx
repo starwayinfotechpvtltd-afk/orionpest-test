@@ -5,7 +5,7 @@ import Stat from "./ui/Stat";
 
 export default function ChildSafeSection({
   image1="/Images/services/cockroach6.png",
-  image2,
+  image2="/Images/services/bedbug5.png",
   name,
   tagline,
   desc,
@@ -45,7 +45,7 @@ export default function ChildSafeSection({
 
   return (
     <section className="relative overflow-hidden bg-white pb-12 md:pt-10">
-      <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 pt-5">
         {/* Left section image element wrapper */}
         <div className="w-full lg:w-[50%] flex justify-center relative order-2 lg:order-1">
           <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full">
@@ -79,13 +79,13 @@ export default function ChildSafeSection({
               </p>
             </div>
             <div className="relative w-52 h-32 shrink-0">
-              <Image src={image2? image2:"/Images/services/cockroach7.png"} alt={name?name:"cockroach"} fill className="object-contain" />
+              <Image src={image2} alt={name?name:"cockroach"} fill className="object-contain" />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-[#F3F6FC] rounded-2xl p-4 sm:p-6 lg:px-10 flex flex-col sm:flex-row justify-between items-center gap-6 max-w-[80%] mx-auto lg:hidden">
+      <div className="bg-[#F3F6FC] rounded-2xl p-4 sm:p-6 lg:px-10 flex flex-col sm:flex-row justify-between items-center gap-6 max-w-[80%] mx-auto lg:hidden mt-8 md:mt-0">
         <span className="shrink-0">
           <ShieldCheck color="#195ED3" size={50} />
         </span>
@@ -97,9 +97,9 @@ export default function ChildSafeSection({
             Powerful protection you can trust.
           </p>
         </div>
-        <div className="relative w-52 h-32 shrink-0">
+        <div className="relative w-60 h-32 shrink-0">
           <Image
-            src="/Images/children.png"
+            src={image2}
             alt="children"
             fill
             className="object-contain"

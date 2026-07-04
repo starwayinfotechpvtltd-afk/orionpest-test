@@ -83,7 +83,7 @@ export default function BrandSection({ heading, cards }) {
         <div className="h-px bg-gray-200 mt-12" />
 
         {/* Feature Grid Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-6 sm:gap-8 mt-12 relative z-10">
           {(cards?cards:cards1).map((item, index) => (
             <div key={index} className="max-h-[300px]">
               <FeatureCard item={item} />

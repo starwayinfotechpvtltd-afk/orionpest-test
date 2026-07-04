@@ -445,7 +445,14 @@ export default function page() {
         image2="/Images/services/cockroach7.png"
         name="Cockroach"
         tagline="Safe for your little ones. Tough on cockroaches."
-        desc="We use advanced, low-odor and non-toxic treatments that eliminate cockroaches effectively without harming your children, pets or the environment."
+        desc={
+          <>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
+              We use advanced, low-odor and non-toxic treatments that eliminate cockroaches effectively without harming your children, pets or the environment.
+            </p>
+            <br />
+          </>
+        }
         childSafeStats={childSafeStats}
       />
 
@@ -476,7 +483,7 @@ export default function page() {
 
       {/* Interactive Contact Form Matrix Content Group Grid Footer Element */}
       <section
-        className="relative overflow-hidden bg-[#FEFEFE] py-16 md:py-24"
+        className="relative overflow-hidden bg-[#FEFEFE] py-10 md:py-24"
         style={{
           background: "url('/Images/CTA_background.webp')",
           backgroundSize: "cover",

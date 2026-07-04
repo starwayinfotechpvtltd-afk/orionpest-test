@@ -33,7 +33,7 @@ export default function Diagram({
     },
   ];
   return (
-    <section className="relative overflow-hidden bg-[#F5F7FB] py-16 md:py-24">
+    <section className="relative overflow-hidden bg-[#F5F7FB] py-10 md:py-24">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#ffffff_0%,#f5f7fb_60%)]" />
 
       <div className="relative mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 lg:px-8 w-full">

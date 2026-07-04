@@ -306,7 +306,14 @@ export default function page() {
         image2="/Images/services/ant4.png"
         name="Pest Removal"
         tagline="Safe for your little ones. Tough on ants."
-        desc="Our eco-friendly pest removal treatments provide maximum protection while remaining safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety."
+        desc={
+          <>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
+              Our eco-friendly pest removal treatments provide maximum protection while remaining safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety.
+            </p>
+            <br />
+          </>
+        }
         childSafeStats={childSafeStats}
       />
 

@@ -73,7 +73,7 @@ export default function page() {
         </div>
 
         {/* Boxes area */}
-        <div className="w-[90%] sm:w-[80%] md:w-[60%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6 mt-16">
+        <div className="w-[90%] sm:w-[80%] md:w-[60%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6 mt-10">
           {boxes.map((box) => (
             <Link href={`/${box.link}`} key={box.id}>
               <div className="bg-gradient-to-b from-[#282CC4] to-[#00023A] rounded-3xl px-6 py-10 sm:px-3 lg:px-10 group h-full flex flex-col justify-between">
@@ -98,7 +98,7 @@ export default function page() {
         </div>
 
         {/* Services section */}
-        <div className="w-[90%] sm:w-[80%] mx-auto mt-16 md:mt-20">
+        <div className="w-[90%] sm:w-[80%] mx-auto mt-12 md:mt-20">
           <h2 className="text-center text-3xl font-bold text-[#2F3293]">
             We Always Provide The Best Service
           </h2>

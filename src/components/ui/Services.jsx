@@ -75,13 +75,13 @@ export default function Services() {
   const router = useRouter();
 
   return (
-    <section className="py-5">
+    <section className="pt-3 md:py-5">
       <div className="max-w-full mx-auto px-6">
-        <div className="border-b border-gray-300 my-12"></div>
+        <div className="border-b border-gray-300 my-5 md:my-12"></div>
 
         {/* Cards */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 gap-y-16 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 gap-y-10 md:gap-y-16 items-stretch pt-3">
           {services.map((service, index) => (
             <div key={index} className="group flex flex-col h-full">
               {/* Image */}
@@ -97,9 +97,9 @@ export default function Services() {
               </div>
 
               {/* Content */}
-              <div className="pt-6 flex flex-col flex-1">
+              <div className="pt-5 md:pt-6 flex flex-col flex-1">
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 min-h-[64px] flex items-start">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2 md:mb-4 h-auto md:min-h-[64px] flex items-start">
                     {service.service}
                   </h3>
 
@@ -108,7 +108,7 @@ export default function Services() {
 
                 <Link
                   href={service.link}
-                  className="mt-8 inline-flex w-fit px-8 py-4 rounded-xl font-semibold hover:bg-yellow-600 hover:text-white hover:border-[#2C2AA5] duration-300 bg-yellow-500"
+                  className="mt-4 md:mt-8 inline-flex w-fit px-8 py-4 rounded-xl font-semibold hover:bg-yellow-600 hover:text-white hover:border-[#2C2AA5] duration-300 bg-yellow-500"
                 >
                   Read More ↗
                 </Link>

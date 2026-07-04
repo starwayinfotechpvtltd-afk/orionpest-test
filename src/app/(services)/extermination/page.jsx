@@ -310,14 +310,21 @@ export default function page() {
         image2="/Images/services/ant4.png"
         name="Extermination"
         tagline="Safe for your little ones. Tough on ants."
-        desc="Our eco-friendly extermination treatments provide maximum protection while remaining safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety."
+        desc={
+          <>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
+              Our eco-friendly extermination treatments provide maximum protection while remaining safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety.
+            </p>
+            <br />
+          </>
+        }
         childSafeStats={childSafeStats}
       />
 
       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
-      <section className="bg-[#FCFCFD] pb-16 md:pb-20 mt-20">
+      <section className="bg-[#FCFCFD] pb-16 md:pb-20">
         <FAQSection image="/Images/services/cockroach3.png" faqs={faqs} />
-        <div className="mt-10 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
           <SupportCard
             icon={<Phone size={26} />}
             title="Need Immediate Assistance?"
@@ -341,7 +348,7 @@ export default function page() {
 
       {/* Interactive Contact Form Matrix Content Group Grid Footer Element */}
       <section
-        className="relative overflow-hidden bg-[#FEFEFE] py-16 md:py-24"
+        className="relative overflow-hidden bg-[#FEFEFE] py-10 md:py-24"
         style={{
           background: "url('/Images/CTA_background.webp')",
           backgroundSize: "cover",

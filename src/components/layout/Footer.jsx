@@ -123,11 +123,16 @@ export default function Footer() {
   ];
 
   const locations = [
-    { name: "Delhi", href: "/locations/delhi" },
-    { name: "Mumbai", href: "/locations/mumbai" },
-    { name: "Bangalore", href: "/locations/bangalore" },
-    { name: "Hyderabad", href: "/locations/hyderabad" },
-    { name: "All Locations", href: "/locations" },
+    { name: "Delhi", href: "/branches/delhi" },
+    { name: "Mumbai", href: "/branches/mumbai" },
+    { name: "Bangalore", href: "/branches/bangalore" },
+    { name: "Hyderabad", href: "/branches/hyderabad" },
+    { name: "Bhubaneswar", href: "/branches/bhubaneswar" },
+    { name: "Chennai", href: "/branches/chennai" },
+    { name: "Pune", href: "/branches/pune" },
+    { name: "Guwahati", href: "/branches/guwahati" },
+    { name: "Puducherry", href: "/branches/puducherry" },
+    { name: "All Locations", href: "/branches" },
   ];
   return (
     <footer>
@@ -234,7 +239,7 @@ export default function Footer() {
               Locations
             </h4>
 
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm grid grid-cols-1 xl:grid-cols-2">
               {locations.map((location) => (
                 <li key={location.href}>
                   <Link
