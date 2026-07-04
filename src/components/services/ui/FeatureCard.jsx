@@ -19,7 +19,7 @@ export default function FeatureCard({ item, index }) {
             {item.heading}
           </h3>
 
-          <p className="mt-4 text-gray-600 md:w-[400px] lg:w-[500px] xl:w-[230px] text-sm lg:text-lg xl:text-sm">
+          <p className="mt-4 text-gray-700 md:w-[400px] lg:w-[500px] xl:w-[230px] text-sm lg:text-lg xl:text-sm">
             {item.desc}
           </p>
         </div>

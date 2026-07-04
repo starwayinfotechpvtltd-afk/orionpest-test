@@ -298,9 +298,9 @@ export default function Footer() {
             <p>© 2026 Orion Pest Solutions Pvt. Ltd. All Rights Reserved.</p>
 
             <div className="flex gap-4">
-              <a href="#">Privacy Policy</a>
-              <span>|</span>
-              <a href="#">Terms & Conditions</a>
+              <a href="/privacy-policy">Privacy Policy</a>
+              {/* <span>|</span>
+              <a href="#">Terms & Conditions</a> */}
             </div>
           </div>
         </div>

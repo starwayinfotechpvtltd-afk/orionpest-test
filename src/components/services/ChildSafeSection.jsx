@@ -54,11 +54,11 @@ export default function ChildSafeSection({
         </div>
         {/* Right section typography card context content layout details stack */}
         <div className="w-full lg:w-[48%] order-1 lg:order-2">
-          <h4 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+          <h3 className="text-3xl sm:text-5xl font-bold text-[#36388D] w-full leading-tight">
             Family-Friendly 
             <span className="text-[#1095D9]"> {name} Control, </span>
             For Everyday Living.
-          </h4>
+          </h3>
           {/* <p className="text-base sm:text-lg max-w-xl mt-4 text-gray-600">
             {desc}
           </p> */}

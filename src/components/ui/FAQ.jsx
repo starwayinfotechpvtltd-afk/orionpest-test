@@ -74,7 +74,7 @@ export default function FAQSection({image="/Images/services/cockroach.png", faqs
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-[#081A5C]">
+          <h2 className="mt-4 text-3xl md:text-5xl font-bold text-[#081A5C]">
             Frequently Asked Questions
           </h2>
 

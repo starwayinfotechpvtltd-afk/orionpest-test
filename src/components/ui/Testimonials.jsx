@@ -245,19 +245,19 @@ export default function TestimonialsSection() {
         {/* LEFT */}
 
         <div className="text-white xl:w-[30%] w-[100%]">
-          <span className="inline-flex items-center gap-2 border border-yellow-400 rounded-full px-5 py-2 text-yellow-400 font-semibold">
+          <span className="flex items-center gap-2 border border-yellow-400 rounded-full px-5 py-2 text-yellow-400 font-semibold mx-auto md:mx-0 w-fit">
             Testimonials
           </span>
 
-          <h2 className="text-4xl font-bold mt-8 leading-tight">
+          <h3 className="text-3xl text-center md:text-start font-bold mt-8 leading-tight">
             What Our Customers Say?
-          </h2>
+          </h3>
 
           {/* <button className="mt-10 bg-yellow-400 hover:bg-yellow-500 text-[#132C98] font-semibold rounded-xl px-8 py-4 flex items-center gap-3 transition">
             More Reviews
             <ArrowRight size={18} />
           </button> */}
-          <div className="flex items-center mt-6">
+          <div className="flex flex-col sm:flex-row items-center mt-6">
             <Image
               src="/Images/google.png"
               alt="google"
@@ -265,9 +265,9 @@ export default function TestimonialsSection() {
               width={160}
               className="pr-10"
             />
-            <div className="w-[1px] h-[50px] bg-gray-300 border border-gray-300"></div>
-            <div className="pl-10 flex items-center gap-5">
-              <p className="text-xl font-bold">4.9</p>
+            <div className="w-[1px] h-[50px] bg-gray-300 border border-gray-300 hidden sm:block"></div>
+            <div className="pl-0 sm:pl-10 flex items-center gap-5 mt-5 sm:mt-0 justify-center w-full">
+              <p className="text-xl font-bold">4.8</p>
               <div className="flex items-center gap-0.5">
                 {[1, 2, 3, 4, 5].map((index) => (
                   <div key={index}>
@@ -277,10 +277,10 @@ export default function TestimonialsSection() {
               </div>
             </div>
           </div>
-          <p className="mt-5">Based on 1200+ reviews</p>
+          <p className="mt-5 text-center sm:text-start">Based on 1200+ reviews</p>
 
           {/* Arrows Container */}
-          <div className="flex gap-3 mt-8 relative z-10">
+          <div className="flex gap-3 mt-8 relative z-10 items-center justify-center sm:justify-start">
             <button
               onClick={prevSlide}
               className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg hover:bg-yellow-400 transition cursor-pointer flex items-center justify-center border border-gray-100 text-[#132C98]"

@@ -1528,7 +1528,7 @@ export default function page() {
       icon: <Star size={40} />,
       title: "Nationwide Pest Control",
       description:
-        "Our pest control services in India are designed for homes, offices, restaurants, factories, schools, and commercial spaces with solutions that fit different pest problems.",
+        "Our pest control services in India are designed for homes, offices, restaurants, schools, and commercial spaces with solutions that fit different pest problems.",
       active: false,
     },
     {
@@ -1649,6 +1649,16 @@ export default function page() {
       title: "Bird\nControl",
       image: "/Images/services/bird.png",
       link: "/bird-pest-control",
+    },
+    {
+      title: "Flies\nControl",
+      image: "/Images/services/flies.png",
+      link: "/flies-pest-control",
+    },
+    {
+      title: "Fumigation \nControl",
+      image: "/Images/services/fumigation9.png",
+      link: "/fumigation-services",
     },
   ];
 
@@ -1790,7 +1800,7 @@ export default function page() {
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
+              <h1 className="text-[34px] sm:text-5xl xl:text-6xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
                 Largest Indian Owned
                 <span className="text-[#1095D9]">
                   {" "}
@@ -1798,7 +1808,7 @@ export default function page() {
                 </span>
               </h1>
 
-              <p className="mt-4 md:mt-6 text-lg sm:text-xl text-gray-600 font-medium">
+              <p className="mt-4 md:mt-6 text-lg sm:text-xl text-gray-700 font-medium">
                 Established in 1998, we are constantly pushing the envelope with
                 innovations in the niche industry. Today, we take pride in
                 identifying ourselves as the pioneers of the pest management
@@ -1975,7 +1985,7 @@ export default function page() {
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-600 mt-4 leading-7 text-sm sm:text-base">
+                  <p className="text-gray-700 mt-4 leading-7 text-sm sm:text-base">
                     {item.description}
                   </p>
                 </div>
@@ -1985,7 +1995,7 @@ export default function page() {
 
           {/* Stats */}
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 lg:gap-y-0 mt-6 lg:mt-16 sm:mt-20">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-5 md:gap-y-10 lg:gap-y-0 mt-6 lg:mt-16 sm:mt-20">
             {stats.map((item, index) => (
               <div
                 key={index}
@@ -2019,7 +2029,7 @@ export default function page() {
               COMPLETE COCKROACH CONTROL
             </span>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-6 sm:mt-10">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[54px] font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-6 sm:mt-10">
               Pest Control Services
               <br className="hidden sm:block" />
               <span className="text-[#0094DA]">
@@ -2028,7 +2038,7 @@ export default function page() {
               </span>
             </h2>
 
-            <p className="mt-4 text-gray-600 text-sm sm:text-base lg:text-lg">
+            <p className="mt-4 text-gray-700 text-lg">
               Whether it's a home, apartment, restaurant, warehouse, office,
               hospital, school, or commercial building, our pest control
               services in India help protect every type of property from common
@@ -2125,23 +2135,20 @@ export default function page() {
       {/* Services */}
       <section className="py-16 md:py-16 bg-white relative overflow-hidden">
         <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-0">
-          <div className="grid xl:grid-cols-[2fr_1fr] gap-12 lg:gap-8 xl:gap-12 items-center ">
-            {/* LEFT */}
+          <div className="">
 
-            <div>
-              {/* Badge */}
-
-              <span className="inline-block rounded-full bg-yellow-100 text-[#102B83] px-4 py-1.5 sm:px-5 sm:py-2 text-xs sm:text-sm font-bold uppercase tracking-wide">
+              <span className="block rounded-full w-fit bg-yellow-100 text-[#102B83] px-4 py-1.5 sm:px-5 sm:py-2 text-xs sm:text-sm font-bold uppercase tracking-wide mx-auto">
                 Our Services
               </span>
 
               {/* Heading */}
 
-              <h3 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#102B83] leading-tight">
+              <h3 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#102B83] leading-tight text-center">
                 Complete Pest Solutions for Homes & Businesses
               </h3>
+              <div className="w-24 sm:w-90 h-1 bg-yellow-400 rounded-full mx-auto mt-4" />
 
-              <p className="mt-3 max-w-2xl text-base sm:text-lg text-gray-600 leading-relaxed sm:leading-8">
+              <p className="mt-3 max-w-3xl text-lg text-gray-700 leading-relaxed sm:leading-8 text-center mx-auto">
                 Looking for a pest control company in India? We provide
                 treatment for the most common pest problems across residential
                 and commercial properties using proven methods for every
@@ -2150,7 +2157,7 @@ export default function page() {
 
               {/* Services */}
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 mt-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 mt-8">
                 {services.map((service, index) => (
                   <Link
                     key={index}
@@ -2188,12 +2195,7 @@ export default function page() {
               </div>
             </div>
 
-            {/* RIGHT */}
 
-            <div className="w-full">
-              <Form bgColor="#102B83" header="Get a Free Quote" color="#fff" />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -2203,11 +2205,11 @@ export default function page() {
       <BrandSection
         heading={
           <>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+            <h3 className="text-3xl sm:text-4xl font-bold text-[#2F3293] leading-tight">
               Preferred by{" "}
               <span className="text-[#0094DA]">Homes & Businesses</span> Across
               India
-            </h2>
+            </h3>
           </>
         }
       />
@@ -2262,13 +2264,13 @@ export default function page() {
                 <span className="w-10 h-[3px] rounded-full bg-yellow-400" />
               </div>
 
-              <h3 className="mt-4 sm:mt-6 text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-900">
+              <h3 className="mt-4 sm:mt-6 text-4xl font-bold leading-tight text-gray-900">
                 Helping Homes & Businesses Stay
                 <br className="hidden sm:block" />
                 Pest Free
               </h3>
 
-              <p className="mt-6 sm:mt-8 text-gray-600 text-base sm:text-lg leading-relaxed sm:leading-9">
+              <p className="mt-6 sm:mt-8 text-gray-700 text-base sm:text-lg leading-relaxed sm:leading-9">
                 We provide pest control services in India for residential,
                 commercial, and industrial properties. Every treatment starts
                 with understanding the pest problem, identifying affected areas,
@@ -2303,7 +2305,7 @@ export default function page() {
                     {item.title}
                   </h4>
 
-                  <p className="mt-4 sm:mt-5 text-gray-600 leading-relaxed sm:leading-8 text-sm sm:text-base">
+                  <p className="mt-4 sm:mt-5 text-gray-700 leading-relaxed sm:leading-8 text-sm sm:text-base">
                     {item.description}
                   </p>
                 </div>
@@ -2584,7 +2586,7 @@ export default function page() {
         // desc="Our treatments are planned to control pests while allowing families to return to their normal routine as quickly as possible. We use suitable treatment methods for different property types, making our pest control services in India a practical choice for homes with children and pets."
         desc={
           <>
-            <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
+            <p className="text-gray-600 text-lg leading-6 sm:leading-8 mt-4">
               Our treatments are planned to control pests while allowing
               families to return to their normal routine as quickly as possible.
               We use suitable treatment methods for different property types,
@@ -2645,12 +2647,12 @@ export default function page() {
                 <span className="text-[#2F3293]">Extermination-Free.</span>
               </h2>
 
-              <p className="mt-4 sm:mt-5 max-w-lg text-sm sm:text-base lg:text-lg leading-relaxed text-gray-600">
+              <p className="mt-4 sm:mt-5 max-w-lg text-lg leading-relaxed text-gray-600">
                 Protect your property before ants cause costly structural
                 damage. Book a professional extermination inspection with our
                 certified experts today.
               </p>
-
+ 
               {/* Contact Info Row Components Column Base List Block */}
               <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-8">
                 <ContactInfo

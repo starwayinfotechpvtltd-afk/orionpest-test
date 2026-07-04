@@ -17,7 +17,7 @@ export default function InfoCard({ index, title, description }) {
       <div>
         <h4 className="font-bold text-[#07155F] mb-2 text-xl">{title}</h4>
 
-        <p className="text-gray-600 leading-relaxed text-lg">{description}</p>
+        <p className="text-gray-700 leading-relaxed text-lg">{description}</p>
       </div>
     </div>
   );

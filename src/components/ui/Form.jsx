@@ -25,13 +25,18 @@ export default function Form({
   const [isLoading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+  const { name } = e.target;
+  let { value } = e.target;
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  if (name === "phone") {
+    value = value.replace(/\D/g, "").slice(0, 10);
+  }
+
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -82,7 +87,7 @@ export default function Form({
             color={color}
             required
             icon={<User size={18} />}
-            placeholder="Full Name"
+            placeholder="Enter Full Name"
             name="fullName"
             value={formData.fullName}
             onChange={handleChange}
@@ -92,7 +97,7 @@ export default function Form({
             label="Email Address"
             color={color}
             icon={<Mail size={18} />}
-            placeholder="Email Address"
+            placeholder="Enter Email Address"
             type="email"
             name="email"
             value={formData.email}
@@ -104,8 +109,9 @@ export default function Form({
             color={color}
             required
             icon={<Phone size={18} />}
-            placeholder="Phone Number"
+            placeholder="Enter Phone Number"
             name="phone"
+            type="tel"
             value={formData.phone}
             onChange={handleChange}
           />
@@ -140,7 +146,7 @@ export default function Form({
               className={`w-full rounded-xl border border-slate-200 pl-12 pr-4 pt-4 text-gray-700 outline-none transition focus:border-blue-500 ${
                 color == "#fff"
                   ? "placeholder:text-white"
-                  : "placeholder:text-[#132C98]"
+                  : "placeholder:text-gray-500"
               } ${color == "#fff" ? "text-white" : "text-[#132C98]"}`}
             />
           </div>
@@ -215,6 +221,8 @@ function InputField({
   value,
   onChange,
 }) {
+
+  
   return (
     <div>
       <label className="mb-3 block font-medium" style={{ color }}>
@@ -228,16 +236,18 @@ function InputField({
         </span>
 
         <input
-          type={type}
+          type={name === "phone" ? "tel" : type}
           name={name}
           required={required}
           value={value}
           onChange={onChange}
           placeholder={placeholder}
+          maxLength={name === "phone" ? 10 : undefined}
+          inputMode={name === "phone" ? "numeric" : undefined}
           className={`h-14 w-full rounded-xl border border-slate-200 pl-12 pr-4 outline-none transition focus:border-blue-500 ${
             color == "#fff"
               ? "placeholder:text-white"
-              : "placeholder:text-[#132C98]"
+              : "placeholder:text-gray-500"
           } ${color == "#fff" ? "text-white" : "text-[#132C98]"}`}
         />
       </div>

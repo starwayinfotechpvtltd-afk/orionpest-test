@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import { DataProvider } from "@/context/DataContext";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,6 +57,7 @@ export default function RootLayout({ children }) {
           <Header />
           <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start bg-white text-black">
             {children}
+            <WhatsAppButton />
           </main>
           <Footer />
         </DataProvider>
