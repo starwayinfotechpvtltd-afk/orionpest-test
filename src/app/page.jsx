@@ -1479,14 +1479,9 @@ import {
   Mail,
   Star,
   Sprout,
-  CalendarDays,
-  Info,
   BadgeCheck,
   Leaf,
   Clock3,
-  Shield,
-  SearchCheck,
-  ClipboardList
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
