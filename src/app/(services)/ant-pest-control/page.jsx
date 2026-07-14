@@ -591,7 +591,6 @@
 
 // Asad added this from here
 
-
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -620,63 +619,63 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("ant-control");
   return {
-    title: page?.metaTitle || "Ant Pest Control Service | Expert Ant Exterminators",
-    description: page?.metaDescription || "Looking for the best Ant Pest Control Service? With 27+ years of experience and 5K+ businesses served, we offer permanent ant pest control solutions.",
+    title: page?.metaTitle || "Ant Pest Control Service | Professional Ant Treatment",
+    description: page?.metaDescription || "Looking for a reliable Ant Pest Control Service? With 27+ years of experience and 5K+ businesses served, we offer professional ant control solutions.",
   };
 }
 
 const list1 = [
   "Targeted Ant Baiting Systems",
   "Perimeter Barrier Treatment",
-  "Deep Nest Eradication Solutions",
+  "Deep Nest Removal Solutions",
   "Crack & Crevice Sealing",
 ];
 
 const list2 = [
   "In-Depth Property Analysis",
   "Tailored Ant Removal Plan",
-  "Advanced Ant Exterminator Methods",
+  "Professional Ant Management",
   "Continuous Monitoring & Support",
 ];
 
 const leftFeature = [
   {
     heading: "Locate Hidden Nests",
-    desc: "Our specialists track ant trails to find and eliminate the root colony before it expands.",
+    desc: "Our specialists track ant trails to find and treat the root colony before it expands.",
   },
   {
     heading: "Stop Property Damage",
-    desc: "Shield your food, wiring, and wooden structures with our proven professional ant removal strategies.",
+    desc: "Protect your food, wiring, and wooden structures with our proven ant prevention strategies.",
   },
 ];
 
 const rightFeature = [
   {
-    heading: "Environmentally Safe",
-    desc: "We utilize eco-conscious formulations that guarantee maximum safety for kids and pets.",
+    heading: "Environmentally Conscious",
+    desc: "We utilize eco-friendly formulations that prioritize safety for kids and pets.",
   },
   {
-    heading: "Durable Protection",
-    desc: "Enjoy extended peace of mind with our highly effective and enduring anti-ant treatments.",
+    heading: "Reliable Protection",
+    desc: "Enjoy peace of mind with our highly effective and enduring anti-ant treatments.",
   },
 ];
 
 const cards = [
   {
-    heading: "Complete Ant Eradication",
-    desc: "Total elimination of foraging ants and their hidden colonies using the best ant control treatment.",
+    heading: "Effective Ant Control",
+    desc: "Thorough management of foraging ants and their hidden colonies using proven methods.",
     image: "/Images/services/ant2.png",
     bgColor: "#FFF6DE",
   },
   {
     heading: "Expert Property Inspection",
-    desc: "Thorough assessment to identify entry points followed by highly customized treatments.",
+    desc: "Detailed assessment to identify entry points followed by customized treatments.",
     image: "/Images/icon/vector2.png",
     bgColor: "#EEF4FF",
   },
   {
     heading: "Sustained Indoor Safety",
-    desc: "Keep your living spaces hygienic and perfectly secure from recurring ant invasions.",
+    desc: "Keep your living spaces hygienic and secure from recurring ant issues.",
     image: "/Images/icon/vector3.png",
     bgColor: "#FFF1F2",
   },
@@ -691,15 +690,15 @@ const childSafeStats = [
     icon: ShieldCheck,
   },
   {
-    title: "Root Colony Destruction",
-    desc: "Targets the queen to stop ant reproduction completely.",
+    title: "Root Colony Treatment",
+    desc: "Targets the queen to manage ant populations effectively.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Shield,
   },
   {
-    title: "Enduring Effectiveness",
-    desc: "Robust barriers against any subsequent ant intrusions.",
+    title: "Lasting Results",
+    desc: "Reliable barriers against subsequent ant activity.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Leaf,
@@ -724,25 +723,25 @@ const faqs = [
     id: "02",
     question: "How long does the ant treatment procedure take?",
     answer:
-      "Most residential ant control sessions are swiftly completed within a couple of hours, varying slightly based on property dimensions and infestation severity.",
+      "Most residential ant control sessions are completed within a couple of hours, varying slightly based on property dimensions and infestation severity.",
   },
   {
     id: "03",
     question: "Is your Ant Pest Control Service safe for my family?",
     answer:
-      "Absolutely. Orion utilizes highly regulated, eco-friendly ant treatments that ensure maximum safety for your children and pets when applied by our experts.",
+      "Yes. Orion utilizes regulated, eco-friendly ant treatments that prioritize safety for your children and pets when applied by our experts.",
   },
   {
     id: "04",
     question: "How long will the anti-ant protection remain effective?",
     answer:
-      "Our targeted treatments deliver enduring defense. Routine maintenance and basic sanitation can further extend this protective barrier for months.",
+      "Our targeted treatments deliver lasting defense. Routine maintenance and basic sanitation can further extend this protective barrier for months.",
   },
   {
     id: "05",
     question: "Do you offer any warranty on your ant control service?",
     answer:
-      "Yes. Our comprehensive ant pest control packages include dedicated service warranties, providing you with absolute assurance and peace of mind.",
+      "Yes. Our comprehensive ant pest control packages include service warranties, providing you with assurance and peace of mind.",
   },
   {
     id: "06",
@@ -759,12 +758,12 @@ export default function page() {
 
       <HeroSection
         image="/Images/services/ant.png"
-        topbadge="EXPERT ANT PEST CONTROL SERVICE"
+        topbadge="PROFESSIONAL ANT PEST CONTROL SERVICE"
         heading={
           <>
             {/* H1 #1 (The Only H1) */}
             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
-              Eradicate Intrusive
+              Say Goodbye to
               <br />
               <span className="text-[#1095D9]">Ants</span>
             </h1>
@@ -773,11 +772,11 @@ export default function page() {
         subHeading="Reliable, Eco-Friendly & Lasting Defense."
         desc={
           <>
-            Keep your property completely free from persistent ant invasions with Orion Pest Control. As a highly trusted{" "}
+            Keep your property free from persistent ant issues with Orion Pest Control. As a highly trusted{" "}
             <Link href="https://www.orionpest.com/" className="text-blue-600 hover:underline font-semibold">
               Pest control company in India
             </Link>
-            , our specialized Ant Pest Control Service is designed to eradicate active colonies and ensure long-term defense. Started in 1998, we bring over 27+ years of expertise and have successfully served 5K+ Businesses.
+            , our specialized Ant Pest Control Service is designed to treat active colonies and ensure long-term defense. Started in 1998, we bring over 27+ years of expertise and have successfully served 5K+ Businesses.
           </>
         }
         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
@@ -791,18 +790,18 @@ export default function page() {
           <>
             {/* H2 #1 */}
             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
-              Premier Ant Pest Control Service for
+              Reliable Ant Pest Control Service for
               <span className="text-[#1095D9]"> Homes & Businesses</span>
             </h2>
           </>
         }
         desc={
           <>
-            Ants relentlessly invade kitchens and weaken structural areas over time. Our certified exterminators utilize state-of-the-art detection tools and proven{" "}
+            Ants often find their way into kitchens and can weaken structural areas over time. Our certified technicians utilize modern detection tools and proven{" "}
             <Link href="https://www.orionpest.com/" className="text-blue-600 hover:underline font-semibold">
               Pest control solutions
             </Link>{" "}
-            to destroy ant colonies at their source, offering the best ant control treatment available to prevent future infestations.
+            to manage ant colonies at their source, offering effective ant control treatments to help prevent future issues.
           </>
         }
         list={list1}
@@ -814,18 +813,18 @@ export default function page() {
           <>
             {/* H3 #1 */}
             <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
-              Absolute Protection for
-              <span className="text-[#1095D9]"> Every Corner</span>
+              Complete Protection for
+              <span className="text-[#1095D9]"> Your Property</span>
             </h3>
           </>
         }
         desc={
           <>
-            Our meticulous professional ant removal methodology secures every vulnerable segment of your premises. For homeowners, our customized{" "}
+            Our detailed professional ant removal methodology secures the vulnerable segments of your premises. For homeowners, our customized{" "}
             <Link href="https://www.orionpest.com/residential-pest-control/" className="text-blue-600 hover:underline font-semibold">
               Residential pest control services
             </Link>{" "}
-            deliver comprehensive safety and a formidable defense against recurring ant colonies.
+            deliver safety and a solid defense against recurring ant colonies.
           </>
         }
         list={list2}
@@ -834,24 +833,24 @@ export default function page() {
 
       {/* Diagram Features Info Section */}
       <Diagram
-        topbadge="TOTAL INDOOR & OUTDOOR DEFENSE"
+        topbadge="INDOOR & OUTDOOR DEFENSE"
         heading={
           <>
             {/* H3 #2 */}
             <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
-              Flawless Ant Eradication
+              Comprehensive Ant Treatment
               <br />
-              <span className="text-[#0094DA]">at Every Place.</span>
+              <span className="text-[#0094DA]">for Every Space.</span>
             </h3>
           </>
         }
         desc={
           <>
-            Whether it’s a residence, restaurant, warehouse, or corporate office, our top-tier Ant Pest Control Service guarantees your environment remains thoroughly protected. As a pioneer of{" "}
+            Whether it’s a residence, restaurant, warehouse, or office, our Ant Pest Control Service helps ensure your environment remains protected. As an established provider of{" "}
             <Link href="https://www.orionpest.com/" className="text-blue-600 hover:underline font-semibold">
               Pest Control in India
             </Link>
-            , we ensure stealthy ant invasions are stopped completely in their tracks.
+            , we focus on stopping ant invasions effectively and safely.
           </>
         }
         leftFeature={leftFeature}
@@ -864,8 +863,8 @@ export default function page() {
           <>
             {/* H3 #3 */}
             <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-              The Preferred Choice of{" "}
-              <span className="text-[#0094DA]">Homes & Businesses</span> Nationwide
+              Trusted by{" "}
+              <span className="text-[#0094DA]">Homes & Businesses</span> Across India
             </h3>
           </>
         }
@@ -878,14 +877,14 @@ export default function page() {
           <>
             {/* H3 #4 */}
             <h3 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-              Relied Upon by Thousands.
+              Trusted by Thousands for
               <br />
-              <span className="text-[#0094DA]">Ant Protection,</span>{" "}
-              <span className="text-[#2F3293]">Every Single Time.</span>
+              <span className="text-[#0094DA]">Reliable Ant</span>{" "}
+              <span className="text-[#2F3293]">Protection.</span>
             </h3>
           </>
         }
-        desc="Discover why over 5K+ businesses and countless homeowners choose our premier Ant Pest Control Service for unparalleled reliability and outstanding results."
+        desc="Discover why over 5K+ businesses and countless homeowners choose our Ant Pest Control Service for dependable and consistent results."
       />
 
       {/* Child Safe Environment Highlight Grid */}
@@ -893,11 +892,11 @@ export default function page() {
         image1="/Images/services/ant3.png"
         image2="/Images/services/ant4.png"
         name="Ant"
-        tagline="Gentle on your loved ones. Ruthless on ants."
+        tagline="Safe for your family. Tough on ants."
         desc={
           <>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
-              Our sustainable Ant Pest Control Service delivers superior protection while maintaining a completely safe environment for your children, pets, and plants. Backed by 27+ years of industry excellence, experience total peace of mind without sacrificing effectiveness.
+              Our sustainable Ant Pest Control Service delivers effective protection while maintaining a safe environment for your children, pets, and plants. Backed by 27+ years of experience, enjoy peace of mind with a professional approach to pest management.
             </p>
             <br />
           </>
@@ -951,7 +950,7 @@ export default function page() {
 
               {/* H2 #2 */}
               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
-                We're Ready to
+                We're Here to
                 <br />
                 <span className="text-[#0095DA]">Help You Stay</span>
                 <br />
@@ -959,7 +958,7 @@ export default function page() {
               </h2>
 
               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
-                Safeguard your space before ants contaminate your food or cause property damage. Schedule an expert Ant Pest Control Service with our highly certified specialists right away.
+                Safeguard your space before ants contaminate your food or cause property damage. Schedule a professional Ant Pest Control Service with our experienced specialists today.
               </p>
 
               {/* Contact Info Row Components Column Base List Block */}
