@@ -185,7 +185,404 @@
 
 
 
+
+
+
+
+// Debkanta added these
+
+// import Image from "next/image";
+// import { ShieldCheck, Phone, MapPin, CalendarDays, Mail, Shield, Leaf, House } from "lucide-react";
+// import TestimonialsSection from "@/components/services/ui/Testimonials";
+// import FAQSection from "@/components/ui/FAQ";
+// import Form from "@/components/ui/Form";
+// import { getPageData } from "@/lib/getPageData";
+// import HeroSection from "@/components/services/HeroSection";
+// import SupportCard from "@/components/services/ui/SupportCard";
+// import ContactInfo from "@/components/services/ui/ContactInfo";
+// import AdvanceControl from "@/components/services/AdvanceControl";
+// import CompleteProtection from "@/components/services/CompleteProtection";
+// import Diagram from "@/components/services/Diagram";
+// import BrandSection from "@/components/services/BrandSection";
+// import ChildSafeSection from "@/components/services/ChildSafeSection";
+
+// export async function generateMetadata() {
+//   const page = await getPageData("bird-control");
+//   return {
+//     title: page?.metaTitle || "Bird Control",
+//     description: page?.metaDescription || "",
+//   };
+// }
+
+// const list1 = [
+//   "Pre-Construction Treatment",
+//   "Post-Construction Treatment",
+//   "Wood Protection Solutions",
+//   "Soil & Foundation Treatment",
+// ];
+
+// const list2 = [
+//   "Detailed Property Inspection",
+//   "Customized Treatment Plan",
+//   "Advanced Anti-Bird Solutions",
+//   "Long-Term Monitoring & Warranty",
+// ];
+
+// const leftFeature = [
+//   {
+//     heading: "Target Hidden Colonies",
+//     desc: "Advanced detection identifies bird activity before major structural damage occurs.",
+//   },
+//   {
+//     heading: "Prevent Future Damage",
+//     desc: "Protect your investment with long-lasting bird prevention treatments.",
+//   },
+// ];
+
+// const rightFeature = [
+//   {
+//     heading: "Safe & Eco-Friendly",
+//     desc: "Environmentally responsible solutions that are safe for families and pets.",
+//   },
+//   {
+//     heading: "Long-Lasting Protection",
+//     desc: "Professional-grade treatments with extended protection against re-infestation.",
+//   },
+// ];
+
+// const cards = [
+//   {
+//     heading: "Comprehensive Bird Protection",
+//     desc: "Complete structural protection with advanced anti-bird technology.",
+//     image: "/Images/services/bird3.png",
+//     bgColor: "#FFF6DE",
+//   },
+//   {
+//     heading: "Expert Inspection & Treatment",
+//     desc: "Professional inspection followed by customized treatment solutions.",
+//     image: "/Images/icon/vector2.png",
+//     bgColor: "#EEF4FF",
+//   },
+//   {
+//     heading: "Long-Term Structural Safety",
+//     desc: "Protect your property from costly bird damage with preventive care.",
+//     image: "/Images/icon/vector3.png",
+//     bgColor: "#FFF1F2",
+//   },
+// ];
+
+// const childSafeStats = [
+//   {
+//     title: "Non-Toxic Solutions",
+//     desc: "Safe treatment methods for indoor environments.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon : ShieldCheck
+//   },
+//   {
+//     title: "Deep Foundation Protection",
+//     desc: "Stops birds at the source.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Shield
+//   },
+//   {
+//     title: "Long-Lasting Results",
+//     desc: "Extended protection against future infestations.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Leaf
+//   },
+//   {
+//     title: "Trusted Since 1998",
+//     desc: "India's trusted bird specialists.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: House
+//   },
+// ];
+
+// const faqs = [
+//   {
+//     id: "01",
+//     question: "How do I know if my home has birds?",
+//     answer:
+//       "Common signs include mud tubes, hollow-sounding wood, discarded wings, damaged wooden furniture, and unexplained cracks. Schedule a professional inspection for confirmation.",
+//   },
+//   {
+//     id: "02",
+//     question: "How long does bird treatment take?",
+//     answer:
+//       "Most residential bird treatments are completed within a few hours, depending on the size of the property and the severity of infestation.",
+//   },
+//   {
+//     id: "03",
+//     question: "Is bird treatment safe for children and pets?",
+//     answer:
+//       "Yes. Orion uses government-approved bird treatment solutions that are safe when applied by certified professionals.",
+//   },
+//   {
+//     id: "04",
+//     question: "How long does bird protection last?",
+//     answer:
+//       "Our treatments provide long-term protection, and preventive maintenance can significantly extend effectiveness.",
+//   },
+//   {
+//     id: "05",
+//     question: "Do you provide bird warranties?",
+//     answer:
+//       "Yes. Selected bird treatment plans include service warranties for additional peace of mind.",
+//   },
+//   {
+//     id: "06",
+//     question: "How much does bird treatment cost?",
+//     answer:
+//       "The cost depends on property size, infestation level, and treatment type. Contact us for a free site inspection and personalized quotation.",
+//   },
+// ];
+
+// export default function page() {
+//   return (
+//     <div className="w-full">
+//       {/* Hero Section */}
+
+//       <HeroSection
+//         image="/Images/services/bird.png"
+//         topbadge="BIRD PEST CONTROL SERVICES"
+//         heading={
+//           <>
+//             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
+//               Say Goodbye to
+//               <br />
+//               <span className="text-[#1095D9]">Birds</span>
+//             </h1>
+//           </>
+//         }
+//         subHeading="Safe. Effective. Long-Lasting Protection."
+//         desc="Protect your home from hidden bird damage with Orion Pest Control. Our advanced bird treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and commercial properties. Safe, effective, and trusted since 1970."
+//         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
+//         imageStyle="absolute w-[80%] h-[80%] top-[0%] -left-[20%] sm:left-[0%] z-[10px]"
+//       />
+//       {/* Advanced Control Section */}
+//       <AdvanceControl
+//         image="/Images/services/bird2.png"
+//         heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Advanced Bird Control for
+//               <span className="text-[#1095D9]"> Homes & Businesses</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Birds silently weaken wooden structures before visible damage appears. Our experienced technicians use modern detection methods and proven treatment techniques to eliminate birds from the source while preventing future infestations."
+//         list={list1}
+//       />
+
+//       {/* Complete Protection Section */}
+//       <CompleteProtection
+//       heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Complete Protection for
+//               <span className="text-[#1095D9]"> Every Corner</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Our comprehensive bird control process protects every vulnerable area of your property, ensuring complete structural safety and long-lasting defense against birds."
+//         list={list2}
+//         image="/Images/services/home.png"
+//       />
+
+//       {/* Diagram Features Info Section */}
+//       <Diagram
+//         topbadge="COMPLETE STRUCTURAL PROTECTION"
+//         heading={
+//           <>
+//           <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+//             Complete Bird Control
+//             <br />
+//             <span className="text-[#0094DA]">at Every Place.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="Whether it's a home, office, warehouse, hotel, or commercial building, our specialized bird treatment keeps every property protected against hidden bird attacks."
+//         leftFeature={leftFeature}
+//         rightFeature={rightFeature}
+//       />
+
+//       {/* Brand Logos / Cards Grid Section */}
+//       <BrandSection heading={
+//         <>
+//         <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//               Preferred by{" "}
+//               <span className="text-[#0094DA]">Homes & Businesses</span> Across
+//               India
+//             </h2>
+//         </>
+//       } cards={cards} />
+
+//       {/* Testimonials Section Component */}
+//       <TestimonialsSection
+//         heading={
+//           <>
+//           <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//             Trusted by Thousands.
+//             <br />
+//             <span className="text-[#0094DA]">Bird Control,</span>{" "}
+//             <span className="text-[#2F3293]">Every Time.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="See why homeowners, businesses, and builders trust Orion Pest Control for dependable bird protection and exceptional service."
+//       />
+
+//       {/* Child Safe Environment Highlight Grid */}
+//       <ChildSafeSection
+//         image1="/Images/services/bird3.png"
+//         image2="/Images/services/bird4.png"
+//         name="Bird"
+//         tagline="Safe for your little ones. Tough on birds."
+//         desc={
+//           <>
+//             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
+//               Our eco-friendly bird treatments provide maximum protection while remaining safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety.
+//             </p>
+//             <br />
+//           </>
+//         }
+//         childSafeStats={childSafeStats}
+//       />
+
+//       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
+//       <section className="bg-[#FCFCFD] pb-16 md:pb-20">
+//         <FAQSection image="/Images/services/bird.png" faqs={faqs}/>
+//         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+//           <SupportCard
+//             icon={<Phone size={26} />}
+//             title="Need Immediate Assistance?"
+//             text="Call us now for quick support"
+//             highlight="1800 212 696969"
+//           />
+//           <SupportCard
+//             icon={<CalendarDays size={26} />}
+//             title="Schedule an Inspection"
+//             text="Book a professional inspection"
+//             highlight="At your convenience"
+//           />
+//           <SupportCard
+//             icon={<ShieldCheck size={26} />}
+//             title="Safe. Effective. Reliable."
+//             text="Trusted by thousands of homes"
+//             highlight="Across India"
+//           />
+//         </div>
+//       </section>
+
+//       {/* Interactive Contact Form Matrix Content Group Grid Footer Element */}
+//       <section
+//         className="relative overflow-hidden bg-[#FEFEFE] py-10 md:py-24"
+//         style={{
+//           background: "url('/Images/CTA_background.webp')",
+//           backgroundSize: "cover",
+//           backgroundRepeat: "no-repeat",
+//         }}
+//       >
+//         <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 w-full relative z-[2]">
+//           <div className="grid gap-12 lg:grid-cols-2 items-start">
+//             {/* LEFT SIDE CONTENT SECTION */}
+//             <div>
+//               <p className="font-semibold uppercase tracking-widest text-smsm:text-base">
+//                 <span className="text-blue-600">Get In</span>{" "}
+//                 <span className="text-yellow-500">Touch</span>
+//               </p>
+
+//               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
+//                 We're Here to
+//                 <br />
+//                 <span className="text-[#0095DA]">Help You Stay</span>
+//                 <br />
+//                 <span className="text-[#2F3293]">Bird-Free.</span>
+//               </h2>
+
+//               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
+//                 Protect your property before birds cause costly structural damage. Book a professional bird inspection with our certified experts today.
+//               </p>
+
+//               {/* Contact Info Row Components Column Base List Block */}
+//               <div className="mt-10 space-y-6 sm:space-y-8">
+//                 <ContactInfo
+//                   icon={<Phone size={24} />}
+//                   title="CALL US"
+//                   link="1800 419 8181"
+//                   value="1800 419 8181"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<Mail size={24} />}
+//                   title="EMAIL US"
+//                   link="sales@orionpest.com"
+//                   value="sales@orionpest.com"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<MapPin size={24} />}
+//                   title="OUR HEAD OFFICE"
+//                   value="200W,S P Mukherjee Road, Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
+//                   bg="bg-yellow-400"
+//                 />
+//               </div>
+//             </div>
+
+//             {/* RIGHT SIDE FORM COMPONENT BLOCK */}
+//             <div className="w-full">
+//               <Form />
+//             </div>
+//           </div>
+//         </div>
+//         {/* Bottom Decorative Circle Vector Element Shape Component Mock Container */}
+//         <div className="absolute -bottom-12 -left-32 hidden xl:block overflow-hidden">
+//           <div
+//             className="relative overflow-hidden border-4 border-yellow-400 w-[450px] h-[230px] rounded-t-full"
+//             style={{
+//               background: "url('/Images/bugs/bg.png')",
+//               backgroundSize: "cover",
+//               backgroundRepeat: "no-repeat",
+//             }}
+//           >
+//             <div className="absolute left-32 top-5 w-52 h-52">
+//               <Image
+//                 src="/Images/services/bird.png"
+//                 alt="Cockroach"
+//                 fill
+//                 className="object-contain"
+//               />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Asad Added These
+
+
+
 import Image from "next/image";
+import Link from "next/link";
 import { ShieldCheck, Phone, MapPin, CalendarDays, Mail, Shield, Leaf, House } from "lucide-react";
 import TestimonialsSection from "@/components/services/ui/Testimonials";
 import FAQSection from "@/components/ui/FAQ";
@@ -203,63 +600,63 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("bird-control");
   return {
-    title: page?.metaTitle || "Bird Control",
-    description: page?.metaDescription || "",
+    title: page?.metaTitle || "Professional Bird Control Service | Orion Pest",
+    description: page?.metaDescription || "Looking for reliable Bird Control? With 27+ years of experience and 5K+ businesses served, we offer professional, humane bird netting and deterrent solutions.",
   };
 }
 
 const list1 = [
-  "Pre-Construction Treatment",
-  "Post-Construction Treatment",
-  "Wood Protection Solutions",
-  "Soil & Foundation Treatment",
+  "Bird Netting & Spikes",
+  "Balcony & Window Protection",
+  "Commercial Bird Management",
+  "Humane Deterrent Solutions",
 ];
 
 const list2 = [
-  "Detailed Property Inspection",
-  "Customized Treatment Plan",
-  "Advanced Anti-Bird Solutions",
-  "Long-Term Monitoring & Warranty",
+  "Thorough Property Inspection",
+  "Customized Bird Deterrent Plan",
+  "Professional Installation Methods",
+  "Continuous Monitoring & Support",
 ];
 
 const leftFeature = [
   {
-    heading: "Target Hidden Colonies",
-    desc: "Advanced detection identifies bird activity before major structural damage occurs.",
+    heading: "Identify Nesting Zones",
+    desc: "Our experts inspect balconies, roofs, and ledges to locate bird roosting and nesting areas before they become an issue.",
   },
   {
-    heading: "Prevent Future Damage",
-    desc: "Protect your investment with long-lasting bird prevention treatments.",
+    heading: "Prevent Property Damage",
+    desc: "Protect your building exterior and health from corrosive bird droppings with our proven bird management strategies.",
   },
 ];
 
 const rightFeature = [
   {
-    heading: "Safe & Eco-Friendly",
-    desc: "Environmentally responsible solutions that are safe for families and pets.",
+    heading: "Humane & Safe",
+    desc: "We utilize eco-friendly, non-lethal deterrents that prioritize the safety of your family and the birds.",
   },
   {
-    heading: "Long-Lasting Protection",
-    desc: "Professional-grade treatments with extended protection against re-infestation.",
+    heading: "Reliable Protection",
+    desc: "Enjoy peace of mind with our highly effective and enduring bird netting and spike installations.",
   },
 ];
 
 const cards = [
   {
-    heading: "Comprehensive Bird Protection",
-    desc: "Complete structural protection with advanced anti-bird technology.",
+    heading: "Effective Bird Management",
+    desc: "Professional solutions that safely deter birds from common roosting places.",
     image: "/Images/services/bird3.png",
     bgColor: "#FFF6DE",
   },
   {
-    heading: "Expert Inspection & Treatment",
-    desc: "Professional inspection followed by customized treatment solutions.",
+    heading: "Expert Property Inspection",
+    desc: "Detailed assessment to identify vulnerable areas followed by customized deterrent installations.",
     image: "/Images/icon/vector2.png",
     bgColor: "#EEF4FF",
   },
   {
-    heading: "Long-Term Structural Safety",
-    desc: "Protect your property from costly bird damage with preventive care.",
+    heading: "Sustained Property Cleanliness",
+    desc: "Keep your living spaces hygienic and secure from recurring bird nesting and droppings.",
     image: "/Images/icon/vector3.png",
     bgColor: "#FFF1F2",
   },
@@ -267,29 +664,29 @@ const cards = [
 
 const childSafeStats = [
   {
-    title: "Non-Toxic Solutions",
-    desc: "Safe treatment methods for indoor environments.",
+    title: "Humane Deterrents",
+    desc: "Safe, non-toxic methods ideal for residential environments.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
-    icon : ShieldCheck
+    icon: ShieldCheck
   },
   {
-    title: "Deep Foundation Protection",
-    desc: "Stops birds at the source.",
+    title: "Balcony & Roof Protection",
+    desc: "Targeted installations to keep birds safely away from key areas.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Shield
   },
   {
-    title: "Long-Lasting Results",
-    desc: "Extended protection against future infestations.",
+    title: "Lasting Results",
+    desc: "Durable, weather-resistant materials for enduring bird prevention.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Leaf
   },
   {
-    title: "Trusted Since 1998",
-    desc: "India's trusted bird specialists.",
+    title: "27+ Years of Trust",
+    desc: "Serving 5K+ businesses since 1998 with proven success.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: House
@@ -299,39 +696,39 @@ const childSafeStats = [
 const faqs = [
   {
     id: "01",
-    question: "How do I know if my home has birds?",
+    question: "How do I know if I need bird control?",
     answer:
-      "Common signs include mud tubes, hollow-sounding wood, discarded wings, damaged wooden furniture, and unexplained cracks. Schedule a professional inspection for confirmation.",
+      "Signs include excessive bird droppings, nesting materials on balconies, persistent bird noises, and property damage around roofs or AC units.",
   },
   {
     id: "02",
-    question: "How long does bird treatment take?",
+    question: "How long does bird netting installation take?",
     answer:
-      "Most residential bird treatments are completed within a few hours, depending on the size of the property and the severity of infestation.",
+      "Most residential installations are completed within a few hours, depending on the area's size and accessibility.",
   },
   {
     id: "03",
-    question: "Is bird treatment safe for children and pets?",
+    question: "Is bird control safe and humane?",
     answer:
-      "Yes. Orion uses government-approved bird treatment solutions that are safe when applied by certified professionals.",
+      "Yes. Orion Pest Control uses humane, non-lethal methods like high-quality netting and blunt spikes that safely deter birds without harming them.",
   },
   {
     id: "04",
-    question: "How long does bird protection last?",
+    question: "How long do bird nets and deterrents last?",
     answer:
-      "Our treatments provide long-term protection, and preventive maintenance can significantly extend effectiveness.",
+      "Our treatments and installations utilize high-quality, weather-resistant materials designed to provide long-term protection for years.",
   },
   {
     id: "05",
-    question: "Do you provide bird warranties?",
+    question: "Do you provide installation warranties?",
     answer:
-      "Yes. Selected bird treatment plans include service warranties for additional peace of mind.",
+      "Yes. Selected bird control services include installation warranties to give you absolute peace of mind.",
   },
   {
     id: "06",
-    question: "How much does bird treatment cost?",
+    question: "How much does bird control cost?",
     answer:
-      "The cost depends on property size, infestation level, and treatment type. Contact us for a free site inspection and personalized quotation.",
+      "The cost depends on the size of the area, access difficulty, and the type of deterrent used. Contact us for a free site inspection and personalized quotation.",
   },
 ];
 
@@ -342,92 +739,133 @@ export default function page() {
 
       <HeroSection
         image="/Images/services/bird.png"
-        topbadge="BIRD PEST CONTROL SERVICES"
+        topbadge="PROFESSIONAL BIRD CONTROL"
         heading={
           <>
+            {/* H1 #1 (The Only H1) */}
             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
-              Say Goodbye to
+              Professional
               <br />
-              <span className="text-[#1095D9]">Birds</span>
+              <span className="text-[#1095D9]">Bird Control</span>
             </h1>
           </>
         }
         subHeading="Safe. Effective. Long-Lasting Protection."
-        desc="Protect your home from hidden bird damage with Orion Pest Control. Our advanced bird treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and commercial properties. Safe, effective, and trusted since 1970."
-        stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
+        desc={
+          <>
+            Protect your property from nesting issues and corrosive droppings with Orion Pest Control. As a highly trusted{" "}
+            <Link href="https://www.orionpest.com/" className="text-blue-600 hover:underline font-semibold">
+              Pest control company in India
+            </Link>
+            , our humane bird deterrent solutions ensure a safe and clean environment. Established in 1998, we bring over 27+ years of experience and have proudly served 5K+ Businesses.
+          </>
+        }
+        stats={["Humane Methods", "Certified Experts", "Long-Term Protection"]}
         imageStyle="absolute w-[80%] h-[80%] top-[0%] -left-[20%] sm:left-[0%] z-[10px]"
       />
+
       {/* Advanced Control Section */}
       <AdvanceControl
         image="/Images/services/bird2.png"
         heading={
           <>
+            {/* H2 #1 */}
             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
-              Advanced Bird Control for
+              Reliable Bird Control for
               <span className="text-[#1095D9]"> Homes & Businesses</span>
             </h2>
           </>
         }
-        desc="Birds silently weaken wooden structures before visible damage appears. Our experienced technicians use modern detection methods and proven treatment techniques to eliminate birds from the source while preventing future infestations."
+        desc={
+          <>
+            Birds roosting on balconies and roofs can cause hygiene issues and property damage. Our experienced technicians use modern {" "}
+            <Link href="https://www.orionpest.com/" className="text-blue-600 hover:underline font-semibold">
+              Pest control solutions
+            </Link>{" "}
+            and humane deterrent techniques to safely keep birds away and maintain the cleanliness of your property.
+          </>
+        }
         list={list1}
       />
 
       {/* Complete Protection Section */}
       <CompleteProtection
-      heading={
+        heading={
           <>
-            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+            {/* H3 #1 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
               Complete Protection for
-              <span className="text-[#1095D9]"> Every Corner</span>
-            </h2>
+              <span className="text-[#1095D9]"> Your Property</span>
+            </h3>
           </>
         }
-        desc="Our comprehensive bird control process protects every vulnerable area of your property, ensuring complete structural safety and long-lasting defense against birds."
+        desc={
+          <>
+            Our comprehensive bird management process secures the vulnerable areas of your premises. For homeowners, our tailored{" "}
+            <Link href="https://www.orionpest.com/residential-pest-control/" className="text-blue-600 hover:underline font-semibold">
+              Residential pest control services
+            </Link>{" "}
+            ensure structural cleanliness and a reliable defense against recurring nesting problems.
+          </>
+        }
         list={list2}
         image="/Images/services/home.png"
       />
 
       {/* Diagram Features Info Section */}
       <Diagram
-        topbadge="COMPLETE STRUCTURAL PROTECTION"
+        topbadge="OUTDOOR & BALCONY DEFENSE"
         heading={
           <>
-          <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
-            Complete Bird Control
-            <br />
-            <span className="text-[#0094DA]">at Every Place.</span>
-          </h2>
+            {/* H3 #2 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+              Comprehensive Bird Management
+              <br />
+              <span className="text-[#0094DA]">for Every Space.</span>
+            </h3>
           </>
         }
-        desc="Whether it's a home, office, warehouse, hotel, or commercial building, our specialized bird treatment keeps every property protected against hidden bird attacks."
+        desc={
+          <>
+            Whether it's a home balcony, warehouse, hotel roof, or commercial building, our specialized treatments keep every property safe. As an established pioneer of{" "}
+            <Link href="https://www.orionpest.com/" className="text-blue-600 hover:underline font-semibold">
+              Pest Control in India
+            </Link>
+            , we deliver effective bird prevention tailored to your needs.
+          </>
+        }
         leftFeature={leftFeature}
         rightFeature={rightFeature}
       />
 
       {/* Brand Logos / Cards Grid Section */}
-      <BrandSection heading={
-        <>
-        <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-              Preferred by{" "}
-              <span className="text-[#0094DA]">Homes & Businesses</span> Across
-              India
-            </h2>
-        </>
-      } cards={cards} />
+      <BrandSection
+        heading={
+          <>
+            {/* H3 #3 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+              Trusted by{" "}
+              <span className="text-[#0094DA]">Homes & Businesses</span> Across India
+            </h3>
+          </>
+        }
+        cards={cards}
+      />
 
       {/* Testimonials Section Component */}
       <TestimonialsSection
         heading={
           <>
-          <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-            Trusted by Thousands.
-            <br />
-            <span className="text-[#0094DA]">Bird Control,</span>{" "}
-            <span className="text-[#2F3293]">Every Time.</span>
-          </h2>
+            {/* H3 #4 */}
+            <h3 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+              Trusted by Thousands for
+              <br />
+              <span className="text-[#0094DA]">Reliable Bird</span>{" "}
+              <span className="text-[#2F3293]">Protection.</span>
+            </h3>
           </>
         }
-        desc="See why homeowners, businesses, and builders trust Orion Pest Control for dependable bird protection and exceptional service."
+        desc="See why over 5K+ businesses and countless homeowners trust Orion Pest Control for dependable bird management and exceptional service."
       />
 
       {/* Child Safe Environment Highlight Grid */}
@@ -435,11 +873,11 @@ export default function page() {
         image1="/Images/services/bird3.png"
         image2="/Images/services/bird4.png"
         name="Bird"
-        tagline="Safe for your little ones. Tough on birds."
+        tagline="Safe for your family. Humane for birds."
         desc={
           <>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
-              Our eco-friendly bird treatments provide maximum protection while remaining safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety.
+              Our durable bird deterrents provide maximum protection while remaining completely safe for your children and pets. Backed by 27+ years of expertise, enjoy total peace of mind and a cleaner, healthier living environment.
             </p>
             <br />
           </>
@@ -449,8 +887,8 @@ export default function page() {
 
       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
       <section className="bg-[#FCFCFD] pb-16 md:pb-20">
-        <FAQSection image="/Images/services/bird.png" faqs={faqs}/>
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+        <FAQSection image="/Images/services/bird.png" faqs={faqs} />
+        <div className="mt-10 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
           <SupportCard
             icon={<Phone size={26} />}
             title="Need Immediate Assistance?"
@@ -465,8 +903,8 @@ export default function page() {
           />
           <SupportCard
             icon={<ShieldCheck size={26} />}
-            title="Safe. Effective. Reliable."
-            text="Trusted by thousands of homes"
+            title="Safe. Humane. Reliable."
+            text="Trusted by 5K+ Businesses"
             highlight="Across India"
           />
         </div>
@@ -490,6 +928,7 @@ export default function page() {
                 <span className="text-yellow-500">Touch</span>
               </p>
 
+              {/* H2 #2 */}
               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
                 We're Here to
                 <br />
@@ -499,7 +938,7 @@ export default function page() {
               </h2>
 
               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
-                Protect your property before birds cause costly structural damage. Book a professional bird inspection with our certified experts today.
+                Protect your property before birds cause hygiene issues or property damage. Book a professional bird inspection with our certified experts today.
               </p>
 
               {/* Contact Info Row Components Column Base List Block */}
@@ -546,7 +985,7 @@ export default function page() {
             <div className="absolute left-32 top-5 w-52 h-52">
               <Image
                 src="/Images/services/bird.png"
-                alt="Cockroach"
+                alt="Bird"
                 fill
                 className="object-contain"
               />
