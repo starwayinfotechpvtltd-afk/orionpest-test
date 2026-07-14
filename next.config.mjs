@@ -53,6 +53,37 @@ const nextConfig = {
         destination: "/residential-pest-control",
         permanent: true,
       },
+
+      {
+  source: "/services/commercial",
+  destination: "/commercial-pest-control",
+  permanent: true,
+},
+{
+  source: "/services",
+  destination: "/pest-control-services",
+  permanent: true,
+},
+{
+  source: "/termites",
+  destination: "/termite-pest-control",
+  permanent: true,
+},
+{
+  source: "/mosquitoes",
+  destination: "/mosquito-pest-control",
+  permanent: true,
+},
+{
+  source: "/ants",
+  destination: "/ant-pest-control",
+  permanent: true,
+},
+{
+  source: "/our-branches",
+  destination: "/branches",
+  permanent: true,
+},
     ];
   },
 };
