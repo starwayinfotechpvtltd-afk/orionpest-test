@@ -179,7 +179,408 @@
 //   );
 // }
 
+
+
+
+
+
+
+
+
+
+// Debkanta Added This
+
+// import Image from "next/image";
+// import { ShieldCheck, Phone, MapPin, CalendarDays, Mail, Shield, Leaf, House } from "lucide-react";
+// import TestimonialsSection from "@/components/services/ui/Testimonials";
+// import FAQSection from "@/components/ui/FAQ";
+// import Form from "@/components/ui/Form";
+// import { getPageData } from "@/lib/getPageData";
+// import HeroSection from "@/components/services/HeroSection";
+// import SupportCard from "@/components/services/ui/SupportCard";
+// import ContactInfo from "@/components/services/ui/ContactInfo";
+// import AdvanceControl from "@/components/services/AdvanceControl";
+// import CompleteProtection from "@/components/services/CompleteProtection";
+// import Diagram from "@/components/services/Diagram";
+// import BrandSection from "@/components/services/BrandSection";
+// import ChildSafeSection from "@/components/services/ChildSafeSection";
+
+// export async function generateMetadata() {
+//   const page = await getPageData("bedbug-control");
+//   return {
+//     title: page?.metaTitle || "Bedbug Control",
+//     description: page?.metaDescription || "",
+//   };
+// }
+
+// const list1 = [
+//   "Mattress & Furniture Treatment",
+//   "Hotel & Hostel Bed Bug Control",
+//   "Residential Bed Bug Removal",
+//   "Complete Egg Elimination",
+// ];
+
+// const list2 = [
+//   "Thorough Property Inspection",
+//   "Customized Bed Bug Treatment",
+//   "Advanced Heat & Chemical Solutions",
+//   "Follow-Up Monitoring & Prevention",
+// ];
+
+// const leftFeature = [
+//   {
+//     heading: "Find Hidden Infestations",
+//     desc: "Our experts inspect mattresses, furniture, wall cracks, and upholstery to locate even the smallest bed bug colonies.",
+//   },
+//   {
+//     heading: "Prevent Re-Infestation",
+//     desc: "Our advanced treatment methods destroy bed bugs at every life stage, including eggs, preventing future outbreaks.",
+//   },
+// ];
+
+// const rightFeature = [
+//   {
+//     heading: "Safe & Effective Treatment",
+//     desc: "Professional solutions designed to eliminate bed bugs while remaining safe for families and pets.",
+//   },
+//   {
+//     heading: "Long-Lasting Protection",
+//     desc: "Comprehensive treatments that reduce the risk of bed bugs returning.",
+//   },
+// ];
+
+// const cards = [
+//   {
+//     heading: "Complete Bed Bug Elimination",
+//     desc: "Professional treatments that eliminate bed bugs from every hiding place.",
+//     image: "/Images/services/bedbug3.png",
+//     bgColor: "#FFF6DE",
+//   },
+//   {
+//     heading: "Expert Inspection & Treatment",
+//     desc: "Accurate inspection followed by customized treatment plans for complete control.",
+//     image: "/Images/icon/vector2.png",
+//     bgColor: "#EEF4FF",
+//   },
+//   {
+//     heading: "Long-Term Bed Bug Protection",
+//     desc: "Prevent future infestations with professional monitoring and preventive solutions.",
+//     image: "/Images/icon/vector3.png",
+//     bgColor: "#FFF1F2",
+//   },
+// ];
+
+// const childSafeStats = [
+//   {
+//     title: "Non-Toxic Solutions",
+//     desc: "Safe treatment options for indoor living spaces.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon : ShieldCheck
+//   },
+//   {
+//     title: "Deep Crack Treatment",
+//     desc: "Targets hidden bed bugs inside furniture and walls.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Shield
+//   },
+//   {
+//     title: "Long-Lasting Results",
+//     desc: "Extended protection against recurring infestations.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Leaf
+//   },
+//   {
+//     title: "Trusted Since 1998",
+//     desc: "India's trusted pest management experts.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: House
+//   },
+// ];
+
+// const faqs = [
+//   {
+//     id: "01",
+//     question: "How do I know if I have bed bugs?",
+//     answer:
+//       "Common signs include itchy bite marks, blood stains on bedsheets, tiny dark spots on mattresses, and live bed bugs hiding in mattress seams or furniture.",
+//   },
+//   {
+//     id: "02",
+//     question: "How long does bed bug treatment take?",
+//     answer:
+//       "Most treatments are completed within a few hours, depending on the severity of the infestation and property size.",
+//   },
+//   {
+//     id: "03",
+//     question: "Is bed bug treatment safe for children and pets?",
+//     answer:
+//       "Yes. Orion Pest Control uses government-approved products and follows safe application methods suitable for residential environments.",
+//   },
+//   {
+//     id: "04",
+//     question: "Can bed bugs return after treatment?",
+//     answer:
+//       "Professional treatment combined with proper preventive measures greatly reduces the chances of re-infestation. Follow-up inspections may also be recommended.",
+//   },
+//   {
+//     id: "05",
+//     question: "Do you provide treatment for hotels and hostels?",
+//     answer:
+//       "Yes. We provide specialized bed bug control services for hotels, hostels, PG accommodations, hospitals, apartments, and commercial properties.",
+//   },
+//   {
+//     id: "06",
+//     question: "How much does bed bug treatment cost?",
+//     answer:
+//       "Treatment cost depends on the infestation level, property size, and treatment method. Contact us for a free inspection and customized quotation.",
+//   },
+// ];
+
+// export default function page() {
+//   return (
+//     <div className="w-full">
+//       {/* Hero Section */}
+
+//       <HeroSection
+//         image="/Images/services/bedbug.png"
+//         topbadge="BED BUG PEST CONTROL SERVICES"
+//        heading={
+//           <>
+//             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
+//               Say Goodbye to
+//               <br />
+//               <span className="text-[#1095D9]">Bed Bugs</span>
+//             </h1>
+//           </>
+//         }
+//         subHeading="Safe. Effective. Long-Lasting Protection."
+//         desc="Sleep peacefully again with Orion Pest Control's professional bed bug treatment services. We eliminate bed bugs from mattresses, furniture, sofas, hotels, and homes using advanced treatment methods that are safe, effective, and provide long-lasting protection against re-infestation."
+//         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
+//         imageStyle="absolute w-[105%] h-[105%] -top-[16%] -left-[20%] sm:-left-[32%] z-[10px]"
+//       />
+//       {/* Advanced Control Section */}
+//       <AdvanceControl
+//         image="/Images/services/bedbug2.png"
+//         heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Advanced Bed Bugs Control for
+//               <span className="text-[#1095D9]"> Homes & Businesses</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Bed bugs hide deep inside mattresses, furniture, cracks, and upholstery, making them difficult to eliminate without professional treatment. Our expert technicians use advanced inspection and targeted treatment methods to completely remove bed bugs and their eggs."
+//         list={list1}
+//       />
+
+//       {/* Complete Protection Section */}
+//       <CompleteProtection
+//       heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Complete Protection for
+//               <span className="text-[#1095D9]"> Every Corner</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Our comprehensive bed bug treatment targets every hiding place, ensuring complete elimination while preventing future infestations."
+//         list={list2}
+//         image="/Images/services/home.png"
+//       />
+
+//       {/* Diagram Features Info Section */}
+//       <Diagram
+//         topbadge="COMPLETE BED BUG ELIMINATION"
+//         heading={
+//           <>
+//           <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+//             Complete Bed Bug Control
+//             <br />
+//             <span className="text-[#0094DA]">at Every Place.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="Whether it's your home, hotel, hostel, apartment, hospital, or commercial property, our specialized bed bug treatment ensures complete protection and restful sleep."
+//         leftFeature={leftFeature}
+//         rightFeature={rightFeature}
+//       />
+
+//       {/* Brand Logos / Cards Grid Section */}
+//       <BrandSection heading={
+//         <>
+//         <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//               Preferred by{" "}
+//               <span className="text-[#0094DA]">Homes & Businesses</span> Across
+//               India
+//             </h2>
+//         </>
+//       } cards={cards} />
+
+//       {/* Testimonials Section Component */}
+//       <TestimonialsSection
+//         heading={
+//           <>
+//           <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//             Trusted by Thousands.
+//             <br />
+//             <span className="text-[#0094DA]">Bed Bug Control,</span>{" "}
+//             <span className="text-[#2F3293]">Every Time.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="Discover why thousands of families, hotels, and businesses rely on Orion Pest Control for fast, reliable, and effective bed bug treatment."
+//       />
+
+//       {/* Child Safe Environment Highlight Grid */}
+//       <ChildSafeSection
+//         image1="/Images/services/bedbug6.png"
+//         image2="/Images/services/bedbug5.png"
+//         name="Bed Bug"
+//         tagline="Child Safe Bed Bug Control, Peaceful Sleep Guaranteed."
+//         desc={
+//           <>
+//             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
+//               Our professionally applied bed bug treatments eliminate infestations while keeping your family, children, pets, and indoor environment safe. Sleep comfortably knowing your home is protected.
+//             </p>
+//             <br />
+//           </>
+//         }
+//         childSafeStats={childSafeStats}
+//       />
+
+//       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
+//       <section className="bg-[#FCFCFD] pb-16 md:pb-20">
+//         <FAQSection image="/Images/services/bedbug-1.png" faqs={faqs} name="Bed Bug"/>
+//         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+//           <SupportCard
+//             icon={<Phone size={26} />}
+//             title="Need Immediate Assistance?"
+//             text="Call us now for quick support"
+//             highlight="1800 212 696969"
+//           />
+//           <SupportCard
+//             icon={<CalendarDays size={26} />}
+//             title="Schedule an Inspection"
+//             text="Book a professional inspection"
+//             highlight="At your convenience"
+//           />
+//           <SupportCard
+//             icon={<ShieldCheck size={26} />}
+//             title="Safe. Effective. Reliable."
+//             text="Trusted by thousands of homes"
+//             highlight="Across India"
+//           />
+//         </div>
+//       </section>
+
+//       {/* Interactive Contact Form Matrix Content Group Grid Footer Element */}
+//       <section
+//         className="relative overflow-hidden bg-[#FEFEFE] py-10 md:py-24"
+//         style={{
+//           background: "url('/Images/CTA_background.webp')",
+//           backgroundSize: "cover",
+//           backgroundRepeat: "no-repeat",
+//         }}
+//       >
+//         <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 w-full relative z-[2]">
+//           <div className="grid gap-12 lg:grid-cols-2 items-start">
+//             {/* LEFT SIDE CONTENT SECTION */}
+//             <div>
+//               <p className="font-semibold uppercase tracking-widest text-smsm:text-base">
+//                 <span className="text-blue-600">Get In</span>{" "}
+//                 <span className="text-yellow-500">Touch</span>
+//               </p>
+
+//               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
+//                 We're Here to
+//                 <br />
+//                 <span className="text-[#0095DA]">Help You Stay</span>
+//                 <br />
+//                 <span className="text-[#2F3293]">Termite-Free.</span>
+//               </h2>
+
+//               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
+//                 Protect your property before termites cause costly structural
+//                 damage. Book a professional termite inspection with our
+//                 certified experts today.
+//               </p>
+
+//               {/* Contact Info Row Components Column Base List Block */}
+//               <div className="mt-10 space-y-6 sm:space-y-8">
+//                 <ContactInfo
+//                   icon={<Phone size={24} />}
+//                   title="CALL US"
+//                   link="1800 419 8181"
+//                   value="1800 419 8181"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<Mail size={24} />}
+//                   title="EMAIL US"
+//                   link="sales@orionpest.com"
+//                   value="sales@orionpest.com"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<MapPin size={24} />}
+//                   title="OUR HEAD OFFICE"
+//                   value="200W,S P Mukherjee Road, Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
+//                   bg="bg-yellow-400"
+//                 />
+//               </div>
+//             </div>
+
+//             {/* RIGHT SIDE FORM COMPONENT BLOCK */}
+//             <div className="w-full">
+//               <Form />
+//             </div>
+//           </div>
+//         </div>
+//         {/* Bottom Decorative Circle Vector Element Shape Component Mock Container */}
+//         <div className="absolute -bottom-12 -left-32 hidden xl:block overflow-hidden">
+//           <div
+//             className="relative overflow-hidden border-4 border-yellow-400 w-[450px] h-[230px] rounded-t-full"
+//             style={{
+//               background: "url('/Images/bugs/bg.png')",
+//               backgroundSize: "cover",
+//               backgroundRepeat: "no-repeat",
+//             }}
+//           >
+//             <div className="absolute left-32 top-5 w-52 h-52">
+//               <Image
+//                 src="/Images/services/bedbug-1.png"
+//                 alt="Cockroach"
+//                 fill
+//                 className="object-contain"
+//               />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Asad Added These
+
 import Image from "next/image";
+import Link from "next/link";
 import { ShieldCheck, Phone, MapPin, CalendarDays, Mail, Shield, Leaf, House } from "lucide-react";
 import TestimonialsSection from "@/components/services/ui/Testimonials";
 import FAQSection from "@/components/ui/FAQ";
@@ -197,8 +598,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("bedbug-control");
   return {
-    title: page?.metaTitle || "Bedbug Control",
-    description: page?.metaDescription || "",
+    title: page?.metaTitle || "Professional Bed Bug Control Service | Orion Pest",
+    description: page?.metaDescription || "Looking for reliable Bed Bug Control? With 27+ years of experience and 5K+ businesses served, we offer effective and lasting bed bug treatments.",
   };
 }
 
@@ -212,48 +613,48 @@ const list1 = [
 const list2 = [
   "Thorough Property Inspection",
   "Customized Bed Bug Treatment",
-  "Advanced Heat & Chemical Solutions",
+  "Professional Extermination Methods",
   "Follow-Up Monitoring & Prevention",
 ];
 
 const leftFeature = [
   {
     heading: "Find Hidden Infestations",
-    desc: "Our experts inspect mattresses, furniture, wall cracks, and upholstery to locate even the smallest bed bug colonies.",
+    desc: "Our experts inspect mattresses, furniture, wall cracks, and upholstery to locate bed bug colonies.",
   },
   {
     heading: "Prevent Re-Infestation",
-    desc: "Our advanced treatment methods destroy bed bugs at every life stage, including eggs, preventing future outbreaks.",
+    desc: "Our professional treatment methods target bed bugs at every life stage, including eggs, to prevent future outbreaks.",
   },
 ];
 
 const rightFeature = [
   {
     heading: "Safe & Effective Treatment",
-    desc: "Professional solutions designed to eliminate bed bugs while remaining safe for families and pets.",
+    desc: "Targeted solutions designed to eliminate bed bugs while remaining safe for families and pets.",
   },
   {
     heading: "Long-Lasting Protection",
-    desc: "Comprehensive treatments that reduce the risk of bed bugs returning.",
+    desc: "Comprehensive treatments that significantly reduce the risk of bed bugs returning to your space.",
   },
 ];
 
 const cards = [
   {
-    heading: "Complete Bed Bug Elimination",
-    desc: "Professional treatments that eliminate bed bugs from every hiding place.",
+    heading: "Effective Bed Bug Management",
+    desc: "Professional treatments that manage bed bugs from common hiding places.",
     image: "/Images/services/bedbug3.png",
     bgColor: "#FFF6DE",
   },
   {
     heading: "Expert Inspection & Treatment",
-    desc: "Accurate inspection followed by customized treatment plans for complete control.",
+    desc: "Accurate inspection followed by customized treatment plans for reliable control.",
     image: "/Images/icon/vector2.png",
     bgColor: "#EEF4FF",
   },
   {
     heading: "Long-Term Bed Bug Protection",
-    desc: "Prevent future infestations with professional monitoring and preventive solutions.",
+    desc: "Prevent future issues with professional monitoring and preventive solutions.",
     image: "/Images/icon/vector3.png",
     bgColor: "#FFF1F2",
   },
@@ -265,7 +666,7 @@ const childSafeStats = [
     desc: "Safe treatment options for indoor living spaces.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
-    icon : ShieldCheck
+    icon: ShieldCheck
   },
   {
     title: "Deep Crack Treatment",
@@ -275,15 +676,15 @@ const childSafeStats = [
     icon: Shield
   },
   {
-    title: "Long-Lasting Results",
+    title: "Lasting Results",
     desc: "Extended protection against recurring infestations.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Leaf
   },
   {
-    title: "Trusted Since 1998",
-    desc: "India's trusted pest management experts.",
+    title: "27+ Years of Trust",
+    desc: "Serving 5K+ businesses since 1998 with proven success.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: House
@@ -307,7 +708,7 @@ const faqs = [
     id: "03",
     question: "Is bed bug treatment safe for children and pets?",
     answer:
-      "Yes. Orion Pest Control uses government-approved products and follows safe application methods suitable for residential environments.",
+      "Yes. Orion Pest Control uses regulated products and follows safe application methods suitable for residential environments.",
   },
   {
     id: "04",
@@ -336,92 +737,133 @@ export default function page() {
 
       <HeroSection
         image="/Images/services/bedbug.png"
-        topbadge="BED BUG PEST CONTROL SERVICES"
-       heading={
+        topbadge="PROFESSIONAL BED BUG CONTROL"
+        heading={
           <>
+            {/* H1 #1 (The Only H1) */}
             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
-              Say Goodbye to
+              Professional
               <br />
-              <span className="text-[#1095D9]">Bed Bugs</span>
+              <span className="text-[#1095D9]">Bed Bug Control</span>
             </h1>
           </>
         }
         subHeading="Safe. Effective. Long-Lasting Protection."
-        desc="Sleep peacefully again with Orion Pest Control's professional bed bug treatment services. We eliminate bed bugs from mattresses, furniture, sofas, hotels, and homes using advanced treatment methods that are safe, effective, and provide long-lasting protection against re-infestation."
+        desc={
+          <>
+            Sleep peacefully again with Orion Pest Control's professional treatments. As a highly trusted{" "}
+            <Link href="https://www.orionpest.com/" className="text-blue-600 hover:underline font-semibold">
+              Pest control company in India
+            </Link>
+            , we manage bed bugs from mattresses, furniture, hotels, and homes. Started in 1998, we bring over 27+ years of expertise and have successfully served 5K+ Businesses with safe, reliable solutions.
+          </>
+        }
         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
         imageStyle="absolute w-[105%] h-[105%] -top-[16%] -left-[20%] sm:-left-[32%] z-[10px]"
       />
+
       {/* Advanced Control Section */}
       <AdvanceControl
         image="/Images/services/bedbug2.png"
         heading={
           <>
+            {/* H2 #1 */}
             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
-              Advanced Bed Bugs Control for
+              Reliable Bed Bug Control for
               <span className="text-[#1095D9]"> Homes & Businesses</span>
             </h2>
           </>
         }
-        desc="Bed bugs hide deep inside mattresses, furniture, cracks, and upholstery, making them difficult to eliminate without professional treatment. Our expert technicians use advanced inspection and targeted treatment methods to completely remove bed bugs and their eggs."
+        desc={
+          <>
+            Bed bugs hide deep inside mattresses, furniture, cracks, and upholstery, making them difficult to handle without professional help. Our expert technicians use modern{" "}
+            <Link href="https://www.orionpest.com/" className="text-blue-600 hover:underline font-semibold">
+              Pest control solutions
+            </Link>{" "}
+            and targeted inspection methods to safely remove bed bugs and their eggs from your property.
+          </>
+        }
         list={list1}
       />
 
       {/* Complete Protection Section */}
       <CompleteProtection
-      heading={
+        heading={
           <>
-            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+            {/* H3 #1 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
               Complete Protection for
-              <span className="text-[#1095D9]"> Every Corner</span>
-            </h2>
+              <span className="text-[#1095D9]"> Your Property</span>
+            </h3>
           </>
         }
-        desc="Our comprehensive bed bug treatment targets every hiding place, ensuring complete elimination while preventing future infestations."
+        desc={
+          <>
+            Our comprehensive bed bug treatment targets common hiding places to provide a thorough clean. For homeowners, our customized{" "}
+            <Link href="https://www.orionpest.com/residential-pest-control/" className="text-blue-600 hover:underline font-semibold">
+              Residential pest control services
+            </Link>{" "}
+            ensure effective management while helping to prevent future infestations.
+          </>
+        }
         list={list2}
         image="/Images/services/home.png"
       />
 
       {/* Diagram Features Info Section */}
       <Diagram
-        topbadge="COMPLETE BED BUG ELIMINATION"
+        topbadge="THOROUGH INDOOR DEFENSE"
         heading={
           <>
-          <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
-            Complete Bed Bug Control
-            <br />
-            <span className="text-[#0094DA]">at Every Place.</span>
-          </h2>
+            {/* H3 #2 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+              Comprehensive Bed Bug Control
+              <br />
+              <span className="text-[#0094DA]">for Every Space.</span>
+            </h3>
           </>
         }
-        desc="Whether it's your home, hotel, hostel, apartment, hospital, or commercial property, our specialized bed bug treatment ensures complete protection and restful sleep."
+        desc={
+          <>
+            Whether it's your home, hotel, hostel, apartment, or commercial property, our specialized treatments ensure restful sleep. As an established provider of{" "}
+            <Link href="https://www.orionpest.com/" className="text-blue-600 hover:underline font-semibold">
+              Pest Control in India
+            </Link>
+            , we tailor our approach to suit your specific environment.
+          </>
+        }
         leftFeature={leftFeature}
         rightFeature={rightFeature}
       />
 
       {/* Brand Logos / Cards Grid Section */}
-      <BrandSection heading={
-        <>
-        <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-              Preferred by{" "}
-              <span className="text-[#0094DA]">Homes & Businesses</span> Across
-              India
-            </h2>
-        </>
-      } cards={cards} />
+      <BrandSection
+        heading={
+          <>
+            {/* H3 #3 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+              Trusted by{" "}
+              <span className="text-[#0094DA]">Homes & Businesses</span> Across India
+            </h3>
+          </>
+        }
+        cards={cards}
+      />
 
       {/* Testimonials Section Component */}
       <TestimonialsSection
         heading={
           <>
-          <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-            Trusted by Thousands.
-            <br />
-            <span className="text-[#0094DA]">Bed Bug Control,</span>{" "}
-            <span className="text-[#2F3293]">Every Time.</span>
-          </h2>
+            {/* H3 #4 */}
+            <h3 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+              Trusted by Thousands for
+              <br />
+              <span className="text-[#0094DA]">Reliable Bed Bug</span>{" "}
+              <span className="text-[#2F3293]">Protection.</span>
+            </h3>
           </>
         }
-        desc="Discover why thousands of families, hotels, and businesses rely on Orion Pest Control for fast, reliable, and effective bed bug treatment."
+        desc="Discover why over 5K+ businesses and countless families rely on Orion Pest Control for fast, consistent, and effective bed bug treatments."
       />
 
       {/* Child Safe Environment Highlight Grid */}
@@ -429,11 +871,11 @@ export default function page() {
         image1="/Images/services/bedbug6.png"
         image2="/Images/services/bedbug5.png"
         name="Bed Bug"
-        tagline="Child Safe Bed Bug Control, Peaceful Sleep Guaranteed."
+        tagline="Safe for your family, tough on bed bugs."
         desc={
           <>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
-              Our professionally applied bed bug treatments eliminate infestations while keeping your family, children, pets, and indoor environment safe. Sleep comfortably knowing your home is protected.
+              Our professionally applied Bed Bug Control treatments manage infestations while keeping your family, children, pets, and indoor environment safe. Backed by 27+ years of experience, sleep comfortably knowing your home is protected.
             </p>
             <br />
           </>
@@ -443,8 +885,8 @@ export default function page() {
 
       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
       <section className="bg-[#FCFCFD] pb-16 md:pb-20">
-        <FAQSection image="/Images/services/bedbug-1.png" faqs={faqs} name="Bed Bug"/>
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+        <FAQSection image="/Images/services/bedbug-1.png" faqs={faqs} name="Bed Bug" />
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto mt-10">
           <SupportCard
             icon={<Phone size={26} />}
             title="Need Immediate Assistance?"
@@ -460,7 +902,7 @@ export default function page() {
           <SupportCard
             icon={<ShieldCheck size={26} />}
             title="Safe. Effective. Reliable."
-            text="Trusted by thousands of homes"
+            text="Trusted by 5K+ Businesses"
             highlight="Across India"
           />
         </div>
@@ -484,18 +926,17 @@ export default function page() {
                 <span className="text-yellow-500">Touch</span>
               </p>
 
+              {/* H2 #2 */}
               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
                 We're Here to
                 <br />
-                <span className="text-[#0095DA]">Help You Stay</span>
+                <span className="text-[#0095DA]">Help You Sleep</span>
                 <br />
-                <span className="text-[#2F3293]">Termite-Free.</span>
+                <span className="text-[#2F3293]">Bed Bug-Free.</span>
               </h2>
 
               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
-                Protect your property before termites cause costly structural
-                damage. Book a professional termite inspection with our
-                certified experts today.
+                Protect your property before bed bugs disrupt your peace and comfort. Book a professional bed bug inspection with our certified experts today.
               </p>
 
               {/* Contact Info Row Components Column Base List Block */}
@@ -542,7 +983,7 @@ export default function page() {
             <div className="absolute left-32 top-5 w-52 h-52">
               <Image
                 src="/Images/services/bedbug-1.png"
-                alt="Cockroach"
+                alt="Bed Bug"
                 fill
                 className="object-contain"
               />
