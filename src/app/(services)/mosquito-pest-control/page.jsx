@@ -636,8 +636,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("mosquito-control");
   return {
-    title: page?.metaTitle || "Mosquitoes Pest Control Services in Kolkata | Orion Pest",
-    description: page?.metaDescription || "Need reliable Mosquitoes pest control? With 27+ years of expertise and 5K+ businesses served, we offer professional mosquito eradication to keep your family safe.",
+    title: page?.metaTitle || "Mosquito Pest Control Services Near You | Safe Mosquito Solutions",
+    description: page?.metaDescription || "Reduce mosquito problems with effective pest control services near you. Safe mosquito control solutions for homes and outdoor spaces.",
   };
 }
 
