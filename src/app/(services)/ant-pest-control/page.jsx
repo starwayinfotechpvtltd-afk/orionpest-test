@@ -619,8 +619,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("ant-control");
   return {
-    title: page?.metaTitle || "Ant Pest Control Service | Professional Ant Treatment",
-    description: page?.metaDescription || "Looking for a reliable Ant Pest Control Service? With 27+ years of experience and 5K+ businesses served, we offer professional ant control solutions.",
+    title: page?.metaTitle || "Ant Pest Control Services | Effective Ant Control Solutions",
+    description: page?.metaDescription || "Remove ants with professional pest control services. Safe and effective ant control treatments for long-term protection.",
   };
 }
 
