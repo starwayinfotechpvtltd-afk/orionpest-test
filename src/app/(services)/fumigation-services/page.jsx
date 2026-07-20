@@ -606,8 +606,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("fumigation-control");
   return {
-    title: page?.metaTitle || "Expert Pest Control Fumigation Services | Orion Pest",
-    description: page?.metaDescription || "Need professional Fumigation services? With 27+ years of expertise and 5K+ businesses served, we offer zero-residue pest control fumigation services.",
+    title: page?.metaTitle || "Fumigation Services | Professional Pest Control Fumigation Solutions",
+    description: page?.metaDescription || "Get comprehensive fumigation services for complete pest elimination. Ideal for warehouses, industries, and large commercial spaces.",
   };
 }
 
