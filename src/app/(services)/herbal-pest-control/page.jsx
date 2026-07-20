@@ -635,8 +635,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("herbal-control");
   return {
-    title: page?.metaTitle || "Herbal Pest Control Service | Orion Pest",
-    description: page?.metaDescription || "Looking for safe, eco-friendly Herbal Pest Control? With 27+ years of experience and 5K+ businesses served, we offer 100% natural, child-safe pest solutions.",
+    title: page?.metaTitle || "Herbal Pest Control Services | Eco-Friendly & Safe Pest Solutions",
+    description: page?.metaDescription || "Choose herbal pest control services for a safe, chemical-free approach. Eco-friendly pest solutions ideal for homes and workplaces across India.",
   };
 }
 
