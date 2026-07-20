@@ -523,8 +523,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("residential-control");
   return {
-    title: page?.metaTitle || "Expert Residential Pest Control Services | Orion Pest",
-    description: page?.metaDescription || "Keep your home safe and bug-free with our top-rated Residential pest control services. With 27+ years of experience, we offer eco-friendly, family-safe treatments.",
+    title: page?.metaTitle || "Residential Pest Control Services Near You | Safe Home Pest Solutions",
+    description: page?.metaDescription || "Protect your home with reliable residential pest control services near you. Orion Pest provides safe, effective treatments for all common household pests.",
   };
 }
 
