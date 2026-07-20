@@ -598,8 +598,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("bedbug-control");
   return {
-    title: page?.metaTitle || "Professional Bed Bug Control Service | Orion Pest",
-    description: page?.metaDescription || "Looking for reliable Bed Bug Control? With 27+ years of experience and 5K+ businesses served, we offer effective and lasting bed bug treatments.",
+    title: page?.metaTitle || "Bed Bug Pest Control Services | Effective & Safe Bed Bug Treatment",
+    description: page?.metaDescription || "Get rid of bed bugs with expert pest control services. Orion Pest offers safe, advanced bed bug treatments with long-lasting results.",
   };
 }
 
