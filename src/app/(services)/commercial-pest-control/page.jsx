@@ -539,8 +539,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("commercial-control");
   return {
-    title: page?.metaTitle || "Commercial Pest Control Services | Orion Pest",
-    description: page?.metaDescription || "Looking for reliable Commercial pest control? With 27+ years of experience and 5K+ businesses served, we offer professional, compliant pest management for all industries.",
+    title: page?.metaTitle || "Commercial Pest Control Services | Reliable Pest Solutions for Businesses",
+    description: page?.metaDescription || "Get professional commercial pest control services for offices, warehouses, restaurants, and industries. Trusted pest management solutions across India.",
   };
 }
 
