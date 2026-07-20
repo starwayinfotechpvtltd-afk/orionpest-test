@@ -634,8 +634,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("termite-control");
   return {
-    title: page?.metaTitle || "Top Termite Control Services in Kolkata | Orion Pest",
-    description: page?.metaDescription || "Looking for reliable Termite control Kolkata? With 27+ years of experience, we provide the best Termite pest control service for complete structural protection.",
+    title: page?.metaTitle || "Termite Pest Control Services | Advanced Termite Treatment Solutions",
+    description: page?.metaDescription || "Protect your property with professional termite pest control services. Advanced termite treatments for homes and commercial spaces across India.",
   };
 }
 
