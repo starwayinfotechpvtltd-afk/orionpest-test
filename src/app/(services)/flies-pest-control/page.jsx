@@ -622,8 +622,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("flies-control");
   return {
-    title: page?.metaTitle || "Professional Flies Pest Control Service | Orion Pest",
-    description: page?.metaDescription || "Looking for reliable Flies Pest Control? With 27+ years of experience and 5K+ businesses served, we offer professional fly eradication and management.",
+    title: page?.metaTitle || "Fly Pest Control Services | Effective Fly Control Solutions",
+    description: page?.metaDescription || "Control flies with professional pest control services. Orion Pest provides safe and effective fly management solutions for all environments.",
   };
 }
 
