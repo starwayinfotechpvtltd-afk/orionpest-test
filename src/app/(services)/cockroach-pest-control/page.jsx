@@ -619,8 +619,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("cockroach-control");
   return {
-    title: page?.metaTitle || "Professional Cockroach Pest Control Service | Orion Pest",
-    description: page?.metaDescription || "Looking for a reliable Cockroach pest control service? With 27+ years of experience and 5K+ businesses served, we offer permanent cockroach elimination.",
+    title: page?.metaTitle || "Cockroach Pest Control Services Near You | Long-Lasting Protection",
+    description: page?.metaDescription || "Eliminate cockroaches with professional pest control services near you. Safe, effective cockroach treatments for homes and businesses.",
   };
 }
 
