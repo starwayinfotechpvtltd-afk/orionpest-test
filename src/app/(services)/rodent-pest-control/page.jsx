@@ -627,8 +627,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("rodent-control");
   return {
-    title: page?.metaTitle || "Top Rodents Pest Control Service Kolkata | Orion Pest",
-    description: page?.metaDescription || "Looking for a reliable Rodents Pest Control Service Kolkata? With 27+ years of expertise and 5K+ businesses served, we offer permanent rat and mice eradication.",
+    title: page?.metaTitle || "Rodent Pest Control Services | Reliable Rat & Mouse Control",
+    description: page?.metaDescription || "Stop rodent infestations with expert pest control services. Effective rat and mouse control solutions for residential and commercial properties.",
   };
 }
 
