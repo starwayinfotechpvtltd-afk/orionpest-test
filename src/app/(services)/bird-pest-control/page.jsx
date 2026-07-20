@@ -600,8 +600,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("bird-control");
   return {
-    title: page?.metaTitle || "Professional Bird Control Service | Orion Pest",
-    description: page?.metaDescription || "Looking for reliable Bird Control? With 27+ years of experience and 5K+ businesses served, we offer professional, humane bird netting and deterrent solutions.",
+    title: page?.metaTitle || "Bird Pest Control Services | Safe & Humane Bird Control Solutions",
+    description: page?.metaDescription || "Prevent bird problems with humane pest control services. Effective bird control solutions designed for buildings and commercial spaces.",
   };
 }
 
