@@ -21,8 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Orion Pest Solutions",
-  description: "Orion Pest Solutions Pvt. Ltd.",
+  title: "Pest Control Services Near You | Trusted Pest Control Company in India",
+  description: "Looking for reliable pest control services near you? Orion Pest offers safe, effective pest control solutions for homes and businesses across India. Book today.",
   icons: {
     icon: "/logo.png",
   },

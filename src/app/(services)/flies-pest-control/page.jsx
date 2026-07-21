@@ -204,7 +204,407 @@
 
 
 
+
+
+
+
+
+
+// Debkanta added this
+
+
+// import Image from "next/image";
+// import { ShieldCheck, Phone, MapPin, CalendarDays, Mail, Shield, Leaf, House } from "lucide-react";
+// import TestimonialsSection from "@/components/services/ui/Testimonials";
+// import FAQSection from "@/components/ui/FAQ";
+// import Form from "@/components/ui/Form";
+// import { getPageData } from "@/lib/getPageData";
+// import HeroSection from "@/components/services/HeroSection";
+// import SupportCard from "@/components/services/ui/SupportCard";
+// import ContactInfo from "@/components/services/ui/ContactInfo";
+// import AdvanceControl from "@/components/services/AdvanceControl";
+// import CompleteProtection from "@/components/services/CompleteProtection";
+// import Diagram from "@/components/services/Diagram";
+// import BrandSection from "@/components/services/BrandSection";
+// import ChildSafeSection from "@/components/services/ChildSafeSection";
+
+// export async function generateMetadata() {
+//   const page = await getPageData("flies-control");
+//   return {
+//     title: page?.metaTitle || "Flies Control",
+//     description: page?.metaDescription || "",
+//   };
+// }
+
+// const list1 = [
+//   "Indoor & Outdoor Treatment",
+//   "Breeding Source Elimination",
+//   "Fogging & Larvicidal Solutions",
+//   "Long-Term Flies Prevention",
+// ];
+
+// const list2 = [
+//   "Detailed Property Inspection",
+//   "Customized Flies Treatment",
+//   "Advanced Fogging & Spraying",
+//   "Preventive Monitoring & Protection",
+// ];
+
+// const leftFeature = [
+//   {
+//     heading: "Target Flies Breeding",
+//     desc: "Identify and eliminate flies breeding grounds before infestations spread throughout your property.",
+//   },
+//   {
+//     heading: "Prevent Future Infestations",
+//     desc: "Reduce flies populations with long-lasting treatments and effective preventive solutions.",
+//   },
+// ];
+
+// const rightFeature = [
+//   {
+//     heading: "Safe & Eco-Friendly",
+//     desc: "Family-friendly flies control solutions designed for indoor and outdoor environments.",
+//   },
+//   {
+//     heading: "Long-Lasting Protection",
+//     desc: "Professional treatments that provide extended defense against flies and breeding cycles.",
+//   },
+// ];
+
+// const cards = [
+//   {
+//     heading: "Complete Flies Protection",
+//     desc: "Professional flies treatment for healthier indoor and outdoor living spaces.",
+//     image: "/Images/services/flies5.png",
+//     bgColor: "#FFF6DE",
+//   },
+//   {
+//     heading: "Expert Inspection & Treatment",
+//     desc: "Detailed inspection followed by customized flies control solutions.",
+//     image: "/Images/icon/vector2.png",
+//     bgColor: "#EEF4FF",
+//   },
+//   {
+//     heading: "Long-Lasting Flies Prevention",
+//     desc: "Prevent flies breeding with advanced monitoring and professional treatment.",
+//     image: "/Images/icon/vector3.png",
+//     bgColor: "#FFF1F2",
+//   },
+// ];
+
+// const childSafeStats = [
+//   {
+//     title: "Eco-Friendly Treatment",
+//     desc: "Safe solutions for homes, gardens, and workplaces.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon : ShieldCheck
+//   },
+//   {
+//     title: "Stops Flies Breeding",
+//     desc: "Eliminates breeding sources before they become a problem.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Shield
+//   },
+//   {
+//     title: "Long-Lasting Results",
+//     desc: "Extended flies protection throughout the season.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Leaf
+//   },
+//   {
+//     title: "Trusted Since 1998",
+//     desc: "India's trusted flies control specialists.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: House
+//   },
+// ];
+
+// const faqs = [
+//   {
+//     id: "01",
+//     question: "How do I reduce flies around my home?",
+//     answer:
+//       "Remove stagnant water, clean drains regularly, maintain gardens, and schedule professional flies treatment for complete protection.",
+//   },
+//   {
+//     id: "02",
+//     question: "How long does flies treatment take?",
+//     answer:
+//       "Most flies control treatments are completed within a few hours, depending on the size of the property and treatment area.",
+//   },
+//   {
+//     id: "03",
+//     question: "Is flies treatment safe for children and pets?",
+//     answer:
+//       "Yes. Orion Pest Control uses government-approved products that are professionally applied and safe for families and pets.",
+//   },
+//   {
+//     id: "04",
+//     question: "Do you provide flies fogging services?",
+//     answer:
+//       "Yes. We offer fogging, spraying, larvicidal treatment, and customized flies management solutions for residential and commercial properties.",
+//   },
+//   {
+//     id: "05",
+//     question: "How much does flies control cost?",
+//     answer:
+//       "Pricing depends on your property size, flies activity, and treatment requirements. Contact us today for a free inspection and customized quotation.",
+//   },
+//   {
+//     id: "06",
+//     question: "How long does flies protection last?",
+//     answer:
+//       "Treatment effectiveness depends on environmental conditions, but our professional solutions provide long-lasting flies control with regular maintenance.",
+//   },
+// ];
+
+// export default function page() {
+//   return (
+//     <div className="w-full">
+//       {/* Hero Section */}
+
+//       <HeroSection
+//         image="/Images/services/flies.png"
+//         topbadge="TERMITE PEST CONTROL SERVICES"
+//         heading={
+//           <>
+//             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
+//               Say Goodbye to
+//               <br />
+//               <span className="text-[#1095D9]">Files</span>
+//             </h1>
+//           </>
+//         }
+//         subHeading="Safe. Effective. Long-Lasting Protection."
+//         desc="Protect your family from flies and flies-borne diseases with Orion Pest Control's professional flies control services. Our advanced flies treatment solutions eliminate breeding sources, reduce flies populations, and provide long-lasting protection for homes, gardens, offices, and commercial properties."
+//         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
+//         imageStyle="absolute w-[80%] h-[80%] top-[10%] -left-[20%] sm:-left-[10%] z-[10px]"
+//       />
+//       {/* Advanced Control Section */}
+//       <AdvanceControl
+//         image="/Images/services/flies6.png"
+//        heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Advanced Flies Control for
+//               <span className="text-[#1095D9]"> Homes & Businesses</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Flies breed quickly in stagnant water and hidden outdoor areas, increasing the risk of diseases like dengue, malaria, and chikungunya. Our certified professionals use advanced inspection and treatment methods to eliminate flies and prevent future breeding."
+//         list={list1}
+//       />
+
+//       {/* Complete Protection Section */}
+//       <CompleteProtection
+//       heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Complete Protection for
+//               <span className="text-[#1095D9]"> Every Corner</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Our comprehensive flies control program targets breeding sites, resting areas, and outdoor spaces to provide complete protection for your family and property."
+//         list={list2}
+//         image="/Images/services/home.png"
+//       />
+
+//       {/* Diagram Features Info Section */}
+//       <Diagram
+//         topbadge="COMPLETE FLIES PROTECTION"
+//         heading={
+//           <>
+//           <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+//             Complete Flies Control
+//             <br />
+//             <span className="text-[#0094DA]">at Every Place.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="From residential homes to offices, hospitals, hotels, restaurants, schools, and commercial spaces, our flies control solutions keep every environment safer and healthier."
+//         leftFeature={leftFeature}
+//         rightFeature={rightFeature}
+//       />
+
+//       {/* Brand Logos / Cards Grid Section */}
+//       <BrandSection heading={
+//         <>
+//         <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//               Preferred by{" "}
+//               <span className="text-[#0094DA]">Homes & Businesses</span> Across
+//               India
+//             </h2>
+//         </>
+//       } cards={cards} />
+
+//       {/* Testimonials Section Component */}
+//       <TestimonialsSection
+//         heading={
+//           <>
+//           <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//             Trusted by Thousands.
+//             <br />
+//             <span className="text-[#0094DA]">Flies Control,</span>{" "}
+//             <span className="text-[#2F3293]">Every Time.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="See why thousands of families and businesses choose Orion Pest Control for safe, effective, and long-lasting flie control services."
+//       />
+
+//       {/* Child Safe Environment Highlight Grid */}
+//       <ChildSafeSection
+//         image1="/Images/services/flies3.png"
+//         image2="/Images/services/flies4.png"
+//         name="Flies"
+//         tagline="Child Safe Flies Control, Complete Peace of Mind."
+//         desc={
+//           <>
+//             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
+//               Our environmentally responsible flies treatments help protect your family from flies bites while remaining safe for children, pets, and everyday living.
+//             </p>
+//             <br />
+//           </>
+//         }
+//         childSafeStats={childSafeStats}
+//       />
+
+//       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
+//       <section className="bg-[#FCFCFD] pb-16 md:pb-20">
+//         <FAQSection image="/Images/services/flies2.png" faqs={faqs}/>
+//         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+//           <SupportCard
+//             icon={<Phone size={26} />}
+//             title="Need Immediate Assistance?"
+//             text="Call us now for quick support"
+//             highlight="1800 212 696969"
+//           />
+//           <SupportCard
+//             icon={<CalendarDays size={26} />}
+//             title="Schedule an Inspection"
+//             text="Book a professional inspection"
+//             highlight="At your convenience"
+//           />
+//           <SupportCard
+//             icon={<ShieldCheck size={26} />}
+//             title="Safe. Effective. Reliable."
+//             text="Trusted by thousands of homes"
+//             highlight="Across India"
+//           />
+//         </div>
+//       </section>
+
+//       {/* Interactive Contact Form Matrix Content Group Grid Footer Element */}
+//       <section
+//         className="relative overflow-hidden bg-[#FEFEFE] py-10 md:py-24"
+//         style={{
+//           background: "url('/Images/CTA_background.webp')",
+//           backgroundSize: "cover",
+//           backgroundRepeat: "no-repeat",
+//         }}
+//       >
+//         <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 w-full relative z-[2]">
+//           <div className="grid gap-12 lg:grid-cols-2 items-start">
+//             {/* LEFT SIDE CONTENT SECTION */}
+//             <div>
+//               <p className="font-semibold uppercase tracking-widest text-smsm:text-base">
+//                 <span className="text-blue-600">Get In</span>{" "}
+//                 <span className="text-yellow-500">Touch</span>
+//               </p>
+
+//               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
+//                 We're Here to
+//                 <br />
+//                 <span className="text-[#0095DA]">Help You Stay</span>
+//                 <br />
+//                 <span className="text-[#2F3293]">Flies-Free.</span>
+//               </h2>
+
+//               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
+//                 Protect your family from flies bites and flies-borne diseases with professional flies control services from Orion Pest Control.
+//               </p>
+
+//               {/* Contact Info Row Components Column Base List Block */}
+//               <div className="mt-10 space-y-6 sm:space-y-8">
+//                 <ContactInfo
+//                   icon={<Phone size={24} />}
+//                   title="CALL US"
+//                   link="1800 419 8181"
+//                   value="1800 419 8181"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<Mail size={24} />}
+//                   title="EMAIL US"
+//                   link="sales@orionpest.com"
+//                   value="sales@orionpest.com"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<MapPin size={24} />}
+//                   title="OUR HEAD OFFICE"
+//                   value="200W,S P Mukherjee Road, Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
+//                   bg="bg-yellow-400"
+//                 />
+//               </div>
+//             </div>
+
+//             {/* RIGHT SIDE FORM COMPONENT BLOCK */}
+//             <div className="w-full">
+//               <Form />
+//             </div>
+//           </div>
+//         </div>
+//         {/* Bottom Decorative Circle Vector Element Shape Component Mock Container */}
+//         <div className="absolute -bottom-12 -left-32 hidden xl:block overflow-hidden">
+//           <div
+//             className="relative overflow-hidden border-4 border-yellow-400 w-[450px] h-[230px] rounded-t-full"
+//             style={{
+//               background: "url('/Images/bugs/bg.png')",
+//               backgroundSize: "cover",
+//               backgroundRepeat: "no-repeat",
+//             }}
+//           >
+//             <div className="absolute left-32 top-5 w-52 h-52">
+//               <Image
+//                 src="/Images/services/flies2.png"
+//                 alt="Cockroach"
+//                 fill
+//                 className="object-contain"
+//               />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Asad Added These
+
 import Image from "next/image";
+import Link from "next/link";
 import { ShieldCheck, Phone, MapPin, CalendarDays, Mail, Shield, Leaf, House } from "lucide-react";
 import TestimonialsSection from "@/components/services/ui/Testimonials";
 import FAQSection from "@/components/ui/FAQ";
@@ -222,63 +622,63 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("flies-control");
   return {
-    title: page?.metaTitle || "Flies Control",
-    description: page?.metaDescription || "",
+    title: page?.metaTitle || "Fly Pest Control Services | Effective Fly Control Solutions",
+    description: page?.metaDescription || "Control flies with professional pest control services. Orion Pest provides safe and effective fly management solutions for all environments.",
   };
 }
 
 const list1 = [
   "Indoor & Outdoor Treatment",
   "Breeding Source Elimination",
-  "Fogging & Larvicidal Solutions",
+  "Targeted Baiting & Spraying",
   "Long-Term Flies Prevention",
 ];
 
 const list2 = [
   "Detailed Property Inspection",
   "Customized Flies Treatment",
-  "Advanced Fogging & Spraying",
+  "Advanced Sanitation Solutions",
   "Preventive Monitoring & Protection",
 ];
 
 const leftFeature = [
   {
     heading: "Target Flies Breeding",
-    desc: "Identify and eliminate flies breeding grounds before infestations spread throughout your property.",
+    desc: "Identify and eliminate fly breeding grounds, such as drains and waste areas, before infestations spread.",
   },
   {
     heading: "Prevent Future Infestations",
-    desc: "Reduce flies populations with long-lasting treatments and effective preventive solutions.",
+    desc: "Reduce fly populations with long-lasting treatments and highly effective preventive solutions.",
   },
 ];
 
 const rightFeature = [
   {
     heading: "Safe & Eco-Friendly",
-    desc: "Family-friendly flies control solutions designed for indoor and outdoor environments.",
+    desc: "Family-friendly Flies Pest Control solutions designed for both indoor and outdoor environments.",
   },
   {
     heading: "Long-Lasting Protection",
-    desc: "Professional treatments that provide extended defense against flies and breeding cycles.",
+    desc: "Professional treatments that provide extended defense against adult flies and their breeding cycles.",
   },
 ];
 
 const cards = [
   {
     heading: "Complete Flies Protection",
-    desc: "Professional flies treatment for healthier indoor and outdoor living spaces.",
+    desc: "Professional fly treatment for healthier and more hygienic indoor and outdoor living spaces.",
     image: "/Images/services/flies5.png",
     bgColor: "#FFF6DE",
   },
   {
     heading: "Expert Inspection & Treatment",
-    desc: "Detailed inspection followed by customized flies control solutions.",
+    desc: "Detailed inspection followed by customized fly control solutions tailored to your property.",
     image: "/Images/icon/vector2.png",
     bgColor: "#EEF4FF",
   },
   {
     heading: "Long-Lasting Flies Prevention",
-    desc: "Prevent flies breeding with advanced monitoring and professional treatment.",
+    desc: "Prevent fly breeding with advanced monitoring and reliable professional treatments.",
     image: "/Images/icon/vector3.png",
     bgColor: "#FFF1F2",
   },
@@ -287,10 +687,10 @@ const cards = [
 const childSafeStats = [
   {
     title: "Eco-Friendly Treatment",
-    desc: "Safe solutions for homes, gardens, and workplaces.",
+    desc: "Safe solutions for homes, kitchens, and workplaces.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
-    icon : ShieldCheck
+    icon: ShieldCheck
   },
   {
     title: "Stops Flies Breeding",
@@ -301,14 +701,14 @@ const childSafeStats = [
   },
   {
     title: "Long-Lasting Results",
-    desc: "Extended flies protection throughout the season.",
+    desc: "Extended fly protection throughout the season.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Leaf
   },
   {
-    title: "Trusted Since 1998",
-    desc: "India's trusted flies control specialists.",
+    title: "27+ Years of Trust",
+    desc: "Serving 5K+ businesses since 1998 with proven success.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: House
@@ -320,37 +720,37 @@ const faqs = [
     id: "01",
     question: "How do I reduce flies around my home?",
     answer:
-      "Remove stagnant water, clean drains regularly, maintain gardens, and schedule professional flies treatment for complete protection.",
+      "Properly dispose of garbage, clean drains regularly, store food in sealed containers, and schedule a professional Flies Pest Control service for complete protection.",
   },
   {
     id: "02",
     question: "How long does flies treatment take?",
     answer:
-      "Most flies control treatments are completed within a few hours, depending on the size of the property and treatment area.",
+      "Most residential fly control treatments are completed within a few hours, depending on the size of the property and the extent of the infestation.",
   },
   {
     id: "03",
     question: "Is flies treatment safe for children and pets?",
     answer:
-      "Yes. Orion Pest Control uses government-approved products that are professionally applied and safe for families and pets.",
+      "Yes. Orion Pest Control uses government-approved, low-toxicity products that are professionally applied and completely safe for families and pets.",
   },
   {
     id: "04",
-    question: "Do you provide flies fogging services?",
+    question: "Do you provide commercial flies control services?",
     answer:
-      "Yes. We offer fogging, spraying, larvicidal treatment, and customized flies management solutions for residential and commercial properties.",
+      "Yes. We offer customized fly management solutions including baiting, trapping, and spraying for restaurants, food processing units, and commercial properties.",
   },
   {
     id: "05",
     question: "How much does flies control cost?",
     answer:
-      "Pricing depends on your property size, flies activity, and treatment requirements. Contact us today for a free inspection and customized quotation.",
+      "Pricing depends on your property size, fly activity, and treatment requirements. Contact us today for a free site inspection and customized quotation.",
   },
   {
     id: "06",
     question: "How long does flies protection last?",
     answer:
-      "Treatment effectiveness depends on environmental conditions, but our professional solutions provide long-lasting flies control with regular maintenance.",
+      "Treatment effectiveness depends on environmental conditions and sanitation, but our professional solutions provide long-lasting control with regular maintenance.",
   },
 ];
 
@@ -361,47 +761,75 @@ export default function page() {
 
       <HeroSection
         image="/Images/services/flies.png"
-        topbadge="TERMITE PEST CONTROL SERVICES"
+        topbadge="PROFESSIONAL FLIES PEST CONTROL"
         heading={
           <>
+            {/* H1 #1 (The Only H1) */}
             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
-              Say Goodbye to
+              Professional
               <br />
-              <span className="text-[#1095D9]">Files</span>
+              <span className="text-[#1095D9]">Flies Pest Control</span>
             </h1>
           </>
         }
         subHeading="Safe. Effective. Long-Lasting Protection."
-        desc="Protect your family from flies and flies-borne diseases with Orion Pest Control's professional flies control services. Our advanced flies treatment solutions eliminate breeding sources, reduce flies populations, and provide long-lasting protection for homes, gardens, offices, and commercial properties."
+        desc={
+          <>
+            Protect your family and business from disease-carrying flies with Orion Pest Control. As a highly trusted{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              Pest control company in India
+            </Link>
+            , our specialized Flies Pest Control eliminates breeding sources and ensures a hygienic environment. Established in 1998, we bring over 27+ years of expertise and proudly protect 5K+ Businesses.
+          </>
+        }
         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
         imageStyle="absolute w-[80%] h-[80%] top-[10%] -left-[20%] sm:-left-[10%] z-[10px]"
       />
+
       {/* Advanced Control Section */}
       <AdvanceControl
         image="/Images/services/flies6.png"
-       heading={
+        heading={
           <>
+            {/* H2 #1 */}
             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
-              Advanced Flies Control for
+              Advanced Flies Pest Control for
               <span className="text-[#1095D9]"> Homes & Businesses</span>
             </h2>
           </>
         }
-        desc="Flies breed quickly in stagnant water and hidden outdoor areas, increasing the risk of diseases like dengue, malaria, and chikungunya. Our certified professionals use advanced inspection and treatment methods to eliminate flies and prevent future breeding."
+        desc={
+          <>
+            Flies breed quickly in decaying organic matter, garbage, and drains, increasing the risk of diseases like Salmonella and E. coli. Our certified professionals use advanced{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              Pest control solutions
+            </Link>{" "}
+            and targeted treatments to eradicate fly populations and prevent future breeding.
+          </>
+        }
         list={list1}
       />
 
       {/* Complete Protection Section */}
       <CompleteProtection
-      heading={
+        heading={
           <>
-            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+            {/* H3 #1 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
               Complete Protection for
               <span className="text-[#1095D9]"> Every Corner</span>
-            </h2>
+            </h3>
           </>
         }
-        desc="Our comprehensive flies control program targets breeding sites, resting areas, and outdoor spaces to provide complete protection for your family and property."
+        desc={
+          <>
+            Our comprehensive Flies Pest Control program targets breeding sites, resting areas, and drains to provide complete protection. For homeowners, our tailored{" "}
+            <Link href="https://www.orionpest.com/residential-pest-control/" className="text-blue-600 hover:underline font-semibold">
+              Residential pest control services
+            </Link>{" "}
+            ensure your property remains hygienic and fly-free.
+          </>
+        }
         list={list2}
         image="/Images/services/home.png"
       />
@@ -411,42 +839,55 @@ export default function page() {
         topbadge="COMPLETE FLIES PROTECTION"
         heading={
           <>
-          <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
-            Complete Flies Control
-            <br />
-            <span className="text-[#0094DA]">at Every Place.</span>
-          </h2>
+            {/* H3 #2 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+              Comprehensive Flies Management
+              <br />
+              <span className="text-[#0094DA]">for Every Space.</span>
+            </h3>
           </>
         }
-        desc="From residential homes to offices, hospitals, hotels, restaurants, schools, and commercial spaces, our flies control solutions keep every environment safer and healthier."
+        desc={
+          <>
+            From residential homes to hospitals, restaurants, and commercial kitchens, our Flies Pest Control solutions keep every environment safe. As an established provider of{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              Pest Control in India
+            </Link>
+            , we deliver effective strategies for healthier indoor spaces.
+          </>
+        }
         leftFeature={leftFeature}
         rightFeature={rightFeature}
       />
 
       {/* Brand Logos / Cards Grid Section */}
-      <BrandSection heading={
-        <>
-        <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+      <BrandSection
+        heading={
+          <>
+            {/* H3 #3 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
               Preferred by{" "}
-              <span className="text-[#0094DA]">Homes & Businesses</span> Across
-              India
-            </h2>
-        </>
-      } cards={cards} />
+              <span className="text-[#0094DA]">Homes & Businesses</span> Across India
+            </h3>
+          </>
+        }
+        cards={cards}
+      />
 
       {/* Testimonials Section Component */}
       <TestimonialsSection
         heading={
           <>
-          <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-            Trusted by Thousands.
-            <br />
-            <span className="text-[#0094DA]">Flies Control,</span>{" "}
-            <span className="text-[#2F3293]">Every Time.</span>
-          </h2>
+            {/* H3 #4 */}
+            <h3 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+              Trusted by 5K+ Businesses.
+              <br />
+              <span className="text-[#0094DA]">Flies Control,</span>{" "}
+              <span className="text-[#2F3293]">Every Time.</span>
+            </h3>
           </>
         }
-        desc="See why thousands of families and businesses choose Orion Pest Control for safe, effective, and long-lasting flie control services."
+        desc="See why thousands of families and business owners choose Orion Pest Control for safe, effective, and long-lasting fly eradication."
       />
 
       {/* Child Safe Environment Highlight Grid */}
@@ -454,11 +895,11 @@ export default function page() {
         image1="/Images/services/flies3.png"
         image2="/Images/services/flies4.png"
         name="Flies"
-        tagline="Child Safe Flies Control, Complete Peace of Mind."
+        tagline="Safe for your family, tough on flies."
         desc={
           <>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
-              Our environmentally responsible flies treatments help protect your family from flies bites while remaining safe for children, pets, and everyday living.
+              Our environmentally responsible treatments help protect your family from fly-borne diseases while remaining completely safe for children, pets, and everyday living. Backed by 27+ years of experience, enjoy a cleaner home with peace of mind.
             </p>
             <br />
           </>
@@ -468,13 +909,13 @@ export default function page() {
 
       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
       <section className="bg-[#FCFCFD] pb-16 md:pb-20">
-        <FAQSection image="/Images/services/flies2.png" faqs={faqs}/>
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+        <FAQSection image="/Images/services/flies2.png" faqs={faqs} />
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto mt-10">
           <SupportCard
             icon={<Phone size={26} />}
             title="Need Immediate Assistance?"
             text="Call us now for quick support"
-            highlight="1800 212 696969"
+            highlight="1800 419 8181"
           />
           <SupportCard
             icon={<CalendarDays size={26} />}
@@ -485,7 +926,7 @@ export default function page() {
           <SupportCard
             icon={<ShieldCheck size={26} />}
             title="Safe. Effective. Reliable."
-            text="Trusted by thousands of homes"
+            text="Trusted by 5K+ Businesses"
             highlight="Across India"
           />
         </div>
@@ -509,16 +950,17 @@ export default function page() {
                 <span className="text-yellow-500">Touch</span>
               </p>
 
+              {/* H2 #2 */}
               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
                 We're Here to
                 <br />
                 <span className="text-[#0095DA]">Help You Stay</span>
                 <br />
-                <span className="text-[#2F3293]">Flies-Free.</span>
+                <span className="text-[#2F3293]">Fly-Free.</span>
               </h2>
 
               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
-                Protect your family from flies bites and flies-borne diseases with professional flies control services from Orion Pest Control.
+                Protect your property before flies contaminate your food and spread diseases. Book a professional Flies Pest Control service with our certified experts today.
               </p>
 
               {/* Contact Info Row Components Column Base List Block */}
@@ -540,7 +982,7 @@ export default function page() {
                 <ContactInfo
                   icon={<MapPin size={24} />}
                   title="OUR HEAD OFFICE"
-                  value="200W,S P Mukherjee Road, Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
+                  value="200W, S P Mukherjee Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
                   bg="bg-yellow-400"
                 />
               </div>
@@ -565,7 +1007,7 @@ export default function page() {
             <div className="absolute left-32 top-5 w-52 h-52">
               <Image
                 src="/Images/services/flies2.png"
-                alt="Cockroach"
+                alt="Flies Pest Control"
                 fill
                 className="object-contain"
               />

@@ -196,7 +196,419 @@
 
 
 
+
+
+
+// Debkanta Added These
+
+// import Image from "next/image";
+// import {
+//   ShieldCheck,
+//   Phone,
+//   MapPin,
+//   CalendarDays,
+//   Mail,
+//   Shield,
+//   Leaf,
+//   House,
+// } from "lucide-react";
+// import TestimonialsSection from "@/components/services/ui/Testimonials";
+// import FAQSection from "@/components/ui/FAQ";
+// import Form from "@/components/ui/Form";
+// import { getPageData } from "@/lib/getPageData";
+// import HeroSection from "@/components/services/HeroSection";
+// import SupportCard from "@/components/services/ui/SupportCard";
+// import ContactInfo from "@/components/services/ui/ContactInfo";
+// import AdvanceControl from "@/components/services/AdvanceControl";
+// import CompleteProtection from "@/components/services/CompleteProtection";
+// import Diagram from "@/components/services/Diagram";
+// import BrandSection from "@/components/services/BrandSection";
+// import ChildSafeSection from "@/components/services/ChildSafeSection";
+
+// export async function generateMetadata() {
+//   const page = await getPageData("herbal-control");
+//   return {
+//     title: page?.metaTitle || "Herbal Control",
+//     description: page?.metaDescription || "",
+//   };
+// }
+
+// const list1 = [
+//   "Pre-Construction Treatment",
+//   "Post-Construction Treatment",
+//   "Wood Protection Solutions",
+//   "Soil & Foundation Treatment",
+// ];
+
+// const list2 = [
+//   "Detailed Property Inspection",
+//   "Customized Treatment Plan",
+//   "Advanced Anti-  Herbal Solutions",
+//   "Long-Term Monitoring & Warranty",
+// ];
+
+// const leftFeature = [
+//   {
+//     heading: "Target Hidden Colonies",
+//     desc: "Advanced detection identifies   herbal activity before major structural damage occurs.",
+//   },
+//   {
+//     heading: "Prevent Future Damage",
+//     desc: "Protect your investment with long-lasting   herbal prevention treatments.",
+//   },
+// ];
+
+// const rightFeature = [
+//   {
+//     heading: "Safe & Eco-Friendly",
+//     desc: "Environmentally responsible solutions that are safe for families and pets.",
+//   },
+//   {
+//     heading: "Long-Lasting Protection",
+//     desc: "Professional-grade treatments with extended protection against re-infestation.",
+//   },
+// ];
+
+// const cards = [
+//   {
+//     heading: "Comprehensive   Herbal Protection",
+//     desc: "Complete structural protection with advanced anti-ant technology.",
+//     image: "/Images/services/ant2.png",
+//     bgColor: "#FFF6DE",
+//   },
+//   {
+//     heading: "Expert Inspection & Treatment",
+//     desc: "Professional inspection followed by customized treatment solutions.",
+//     image: "/Images/icon/vector2.png",
+//     bgColor: "#EEF4FF",
+//   },
+//   {
+//     heading: "Long-Term Structural Safety",
+//     desc: "Protect your property from costly   herbal damage with preventive care.",
+//     image: "/Images/icon/vector3.png",
+//     bgColor: "#FFF1F2",
+//   },
+// ];
+
+// const childSafeStats = [
+//   {
+//     title: "Non-Toxic Solutions",
+//     desc: "Safe treatment methods for indoor environments.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: ShieldCheck,
+//   },
+//   {
+//     title: "Deep Foundation Protection",
+//     desc: "Stops ants at the source.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Shield,
+//   },
+//   {
+//     title: "Long-Lasting Results",
+//     desc: "Extended protection against future infestations.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Leaf,
+//   },
+//   {
+//     title: "Trusted Since 1998",
+//     desc: "India's trusted   herbal specialists.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: House,
+//   },
+// ];
+
+// const faqs = [
+//   {
+//     id: "01",
+//     question: "How do I know if my home has ants?",
+//     answer:
+//       "Common signs include mud tubes, hollow-sounding wood, discarded wings, damaged wooden furniture, and unexplained cracks. Schedule a professional inspection for confirmation.",
+//   },
+//   {
+//     id: "02",
+//     question: "How long does   herbal treatment take?",
+//     answer:
+//       "Most   herbal   herbal treatments are completed within a few hours, depending on the size of the property and the severity of infestation.",
+//   },
+//   {
+//     id: "03",
+//     question: "Is   herbal treatment safe for children and pets?",
+//     answer:
+//       "Yes. Orion uses government-approved   herbal treatment solutions that are safe when applied by certified professionals.",
+//   },
+//   {
+//     id: "04",
+//     question: "How long does   herbal protection last?",
+//     answer:
+//       "Our treatments provide long-term protection, and preventive maintenance can significantly extend effectiveness.",
+//   },
+//   {
+//     id: "05",
+//     question: "Do you provide   herbal warranties?",
+//     answer:
+//       "Yes. Selected   herbal treatment plans include service warranties for additional peace of mind.",
+//   },
+//   {
+//     id: "06",
+//     question: "How much does   herbal treatment cost?",
+//     answer:
+//       "The cost depends on property size, infestation level, and treatment type. Contact us for a free site inspection and personalized quotation.",
+//   },
+// ];
+
+// export default function page() {
+//   return (
+//     <div className="w-full">
+//       {/* Hero Section */}
+
+//       <HeroSection
+//         image="/Images/services/herbal.png"
+//         topbadge="ANT PEST CONTROL SERVICES"
+//         heading={
+//           <>
+//             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
+//               Say Goodbye to Pests With 
+//               <br />
+//               <span className="text-[#1095D9]">Herbal Pest Control</span>
+//             </h1>
+//           </>
+//         }
+//         subHeading="Safe. Effective. Long-Lasting Protection."
+//         desc="Protect your home from hidden   herbal damage with Orion Pest Control. Our advanced   herbal treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and  herbal properties. Safe, effective, and trusted since 1970."
+//         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
+//         imageStyle="absolute w-[90%] h-[90%] top-10 left-0 z-[10px] rounded-full"
+//       />
+//       {/* Advanced Control Section */}
+//       <AdvanceControl
+//         image="/Images/services/ant5.png"
+//         heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Advanced Herbal Control for
+//               <span className="text-[#1095D9]"> Homes & Businesses</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Birds silently weaken wooden structures before visible damage appears. Our experienced technicians use modern detection methods and proven treatment techniques to eliminate ants from the source while preventing future infestations."
+//         list={list1}
+//       />
+
+//       {/* Complete Protection Section */}
+//       <CompleteProtection
+//       heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Complete Protection for
+//               <span className="text-[#1095D9]"> Every Corner</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Our comprehensive   herbal control process protects every vulnerable area of your property, ensuring complete structural safety and long-lasting defense against ants."
+//         list={list2}
+//         image="/Images/services/home.png"
+//       />
+
+//       {/* Diagram Features Info Section */}
+//       <Diagram
+//         topbadge="COMPLETE STRUCTURAL PROTECTION"
+//         heading={
+//           <>
+//           <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+//             Complete Herbal Control
+//             <br />
+//             <span className="text-[#0094DA]">at Every Place.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="Whether it's a home, office, warehouse, hotel, or  herbal building, our specialized   herbal treatment keeps every property protected against hidden   herbal attacks."
+//         leftFeature={leftFeature}
+//         rightFeature={rightFeature}
+//       />
+
+//       {/* Brand Logos / Cards Grid Section */}
+//       <BrandSection heading={
+//         <>
+//         <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//               Preferred by{" "}
+//               <span className="text-[#0094DA]">Homes & Businesses</span> Across
+//               India
+//             </h2>
+//         </>
+//       } cards={cards} />
+
+//       {/* Testimonials Section Component */}
+//       <TestimonialsSection
+//         heading={
+//           <>
+//           <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//             Trusted by Thousands.
+//             <br />
+//             <span className="text-[#0094DA]">Harbal Free,</span>{" "}
+//             <span className="text-[#2F3293]">Every Time.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="See why homeowners, businesses, and builders trust Orion Pest Control for dependable   herbal protection and exceptional service."
+//       />
+
+//       {/* Child Safe Environment Highlight Grid */}
+//       <ChildSafeSection
+//         image1="/Images/services/herbal2.png"
+//         image2="/Images/services/ant4.png"
+//         name="  Herbal"
+//         tagline="Safe for your little ones. Tough on ants."
+//         desc={
+//           <>
+//             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
+//               Our eco-friendly   herbal treatments provide maximum protection while remaining safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety.
+//             </p>
+//             <br />
+//           </>
+//         }
+//         childSafeStats={childSafeStats}
+//       />
+
+//       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
+//       <section className="bg-[#FCFCFD] pb-16 md:pb-20">
+//         <FAQSection image="/Images/services/cockroach3.png" faqs={faqs} />
+//         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+//           <SupportCard
+//             icon={<Phone size={26} />}
+//             title="Need Immediate Assistance?"
+//             text="Call us now for quick support"
+//             highlight="1800 212 696969"
+//           />
+//           <SupportCard
+//             icon={<CalendarDays size={26} />}
+//             title="Schedule an Inspection"
+//             text="Book a professional inspection"
+//             highlight="At your convenience"
+//           />
+//           <SupportCard
+//             icon={<ShieldCheck size={26} />}
+//             title="Safe. Effective. Reliable."
+//             text="Trusted by thousands of homes"
+//             highlight="Across India"
+//           />
+//         </div>
+//       </section>
+
+//       {/* Interactive Contact Form Matrix Content Group Grid Footer Element */}
+//       <section
+//         className="relative overflow-hidden bg-[#FEFEFE] py-10 md:py-24"
+//         style={{
+//           background: "url('/Images/CTA_background.webp')",
+//           backgroundSize: "cover",
+//           backgroundRepeat: "no-repeat",
+//         }}
+//       >
+//         <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 w-full relative z-[2]">
+//           <div className="grid gap-12 lg:grid-cols-2 items-start">
+//             {/* LEFT SIDE CONTENT SECTION */}
+//             <div>
+//               <p className="font-semibold uppercase tracking-widest text-smsm:text-base">
+//                 <span className="text-blue-600">Get In</span>{" "}
+//                 <span className="text-yellow-500">Touch</span>
+//               </p>
+
+//               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
+//                 We're Here to
+//                 <br />
+//                 <span className="text-[#0095DA]">Help You Stay</span>
+//                 <br />
+//                 <span className="text-[#2F3293]">  Herbal-Free.</span>
+//               </h2>
+
+//               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
+//                 Protect your property before ants cause costly structural
+//                 damage. Book a professional   herbal inspection with our
+//                 certified experts today.
+//               </p>
+
+//               {/* Contact Info Row Components Column Base List Block */}
+//               <div className="mt-10 space-y-6 sm:space-y-8">
+//                 <ContactInfo
+//                   icon={<Phone size={24} />}
+//                   title="CALL US"
+//                   link="1800 419 8181"
+//                   value="1800 419 8181"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<Mail size={24} />}
+//                   title="EMAIL US"
+//                   link="sales@orionpest.com"
+//                   value="sales@orionpest.com"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<MapPin size={24} />}
+//                   title="OUR HEAD OFFICE"
+//                   value="200W,S P Mukherjee Road, Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
+//                   bg="bg-yellow-400"
+//                 />
+//               </div>
+//             </div>
+
+//             {/* RIGHT SIDE FORM COMPONENT BLOCK */}
+//             <div className="w-full">
+//               <Form />
+//             </div>
+//           </div>
+//         </div>
+//         {/* Bottom Decorative Circle Vector Element Shape Component Mock Container */}
+//         <div className="absolute -bottom-12 -left-32 hidden xl:block overflow-hidden">
+//           <div
+//             className="relative overflow-hidden border-4 border-yellow-400 w-[450px] h-[230px] rounded-t-full"
+//             style={{
+//               background: "url('/Images/bugs/bg.png')",
+//               backgroundSize: "cover",
+//               backgroundRepeat: "no-repeat",
+//             }}
+//           >
+//             <div className="absolute left-32 top-5 w-52 h-52">
+//               <Image
+//                 src="/Images/services/ant.png"
+//                 alt="Cockroach"
+//                 fill
+//                 className="object-contain"
+//               />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Asad Added These
 import Image from "next/image";
+import Link from "next/link";
 import {
   ShieldCheck,
   Phone,
@@ -223,63 +635,63 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("herbal-control");
   return {
-    title: page?.metaTitle || "Herbal Control",
-    description: page?.metaDescription || "",
+    title: page?.metaTitle || "Herbal Pest Control Services | Eco-Friendly & Safe Pest Solutions",
+    description: page?.metaDescription || "Choose herbal pest control services for a safe, chemical-free approach. Eco-friendly pest solutions ideal for homes and workplaces across India.",
   };
 }
 
 const list1 = [
-  "Pre-Construction Treatment",
-  "Post-Construction Treatment",
-  "Wood Protection Solutions",
-  "Soil & Foundation Treatment",
+  "100% Plant-Based Extracts",
+  "Chemical-Free Formulations",
+  "Odorless & Stain-Free",
+  "No Need to Vacate Premises",
 ];
 
 const list2 = [
   "Detailed Property Inspection",
-  "Customized Treatment Plan",
-  "Advanced Anti-  Herbal Solutions",
-  "Long-Term Monitoring & Warranty",
+  "Eco-Friendly Treatment Plan",
+  "Targeted Herbal Gel Baiting",
+  "Long-Term Natural Protection",
 ];
 
 const leftFeature = [
   {
-    heading: "Target Hidden Colonies",
-    desc: "Advanced detection identifies   herbal activity before major structural damage occurs.",
+    heading: "Target Hidden Pests Naturally",
+    desc: "Our herbal gels and botanical sprays identify and eliminate roaches, ants, and other pests without harsh chemical fumes.",
   },
   {
-    heading: "Prevent Future Damage",
-    desc: "Protect your investment with long-lasting   herbal prevention treatments.",
+    heading: "Prevent Chemical Exposure",
+    desc: "Protect your family's health and your indoor air quality by choosing natural pest management instead of synthetic pesticides.",
   },
 ];
 
 const rightFeature = [
   {
     heading: "Safe & Eco-Friendly",
-    desc: "Environmentally responsible solutions that are safe for families and pets.",
+    desc: "Environmentally responsible Herbal Pest Control that is completely safe for children, pets, pregnant women, and the elderly.",
   },
   {
     heading: "Long-Lasting Protection",
-    desc: "Professional-grade treatments with extended protection against re-infestation.",
+    desc: "Professional-grade botanical treatments offering extended protection against pest re-infestation.",
   },
 ];
 
 const cards = [
   {
-    heading: "Comprehensive   Herbal Protection",
-    desc: "Complete structural protection with advanced anti-ant technology.",
-    image: "/Images/services/ant2.png",
+    heading: "Kitchens & Dining Areas",
+    desc: "100% safe to apply near food storage, cabinets, and dining areas without emptying your kitchen.",
+    image: "/Images/services/herbal.png",
     bgColor: "#FFF6DE",
   },
   {
-    heading: "Expert Inspection & Treatment",
-    desc: "Professional inspection followed by customized treatment solutions.",
+    heading: "Hospitals & Clinics",
+    desc: "Zero toxic fumes and completely odorless treatments perfect for sensitive healthcare environments.",
     image: "/Images/icon/vector2.png",
     bgColor: "#EEF4FF",
   },
   {
-    heading: "Long-Term Structural Safety",
-    desc: "Protect your property from costly   herbal damage with preventive care.",
+    heading: "Homes with Pets & Kids",
+    desc: "Worry-free natural pest control ensuring your loved ones are safe from chemical hazards.",
     image: "/Images/icon/vector3.png",
     bgColor: "#FFF1F2",
   },
@@ -287,29 +699,29 @@ const cards = [
 
 const childSafeStats = [
   {
-    title: "Non-Toxic Solutions",
-    desc: "Safe treatment methods for indoor environments.",
+    title: "100% Non-Toxic",
+    desc: "Safe treatment methods using natural, plant-derived ingredients.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: ShieldCheck,
   },
   {
-    title: "Deep Foundation Protection",
-    desc: "Stops ants at the source.",
+    title: "Odorless & Fume-Free",
+    desc: "No lingering smells or harmful chemical off-gassing.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Shield,
   },
   {
-    title: "Long-Lasting Results",
-    desc: "Extended protection against future infestations.",
+    title: "Lasting Natural Defense",
+    desc: "Extended protection against recurring household pests.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Leaf,
   },
   {
-    title: "Trusted Since 1998",
-    desc: "India's trusted   herbal specialists.",
+    title: "27+ Years of Trust",
+    desc: "Serving 5K+ businesses since 1998 with proven success.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: House,
@@ -319,39 +731,39 @@ const childSafeStats = [
 const faqs = [
   {
     id: "01",
-    question: "How do I know if my home has ants?",
+    question: "What is Herbal Pest Control?",
     answer:
-      "Common signs include mud tubes, hollow-sounding wood, discarded wings, damaged wooden furniture, and unexplained cracks. Schedule a professional inspection for confirmation.",
+      "Herbal Pest Control uses plant-derived, eco-friendly ingredients and essential oils instead of harsh synthetic chemicals to eliminate pests like cockroaches and ants safely.",
   },
   {
     id: "02",
-    question: "How long does   herbal treatment take?",
+    question: "Do I need to empty my kitchen for the treatment?",
     answer:
-      "Most   herbal   herbal treatments are completed within a few hours, depending on the size of the property and the severity of infestation.",
+      "No! One of the biggest benefits of herbal gel treatments is that you do not need to empty cabinets, cover food items, or leave the house.",
   },
   {
     id: "03",
-    question: "Is   herbal treatment safe for children and pets?",
+    question: "Is Herbal Pest Control safe for children, pets, and pregnant women?",
     answer:
-      "Yes. Orion uses government-approved   herbal treatment solutions that are safe when applied by certified professionals.",
+      "Absolutely. Our treatments are 100% non-toxic, odorless, and fume-free, making them the safest option for sensitive individuals, babies, and pets.",
   },
   {
     id: "04",
-    question: "How long does   herbal protection last?",
+    question: "How long does it take for the herbal treatment to work?",
     answer:
-      "Our treatments provide long-term protection, and preventive maintenance can significantly extend effectiveness.",
+      "You will notice a significant reduction in pest activity within 24 to 48 hours as pests consume the herbal baits and carry it back to their colonies.",
   },
   {
     id: "05",
-    question: "Do you provide   herbal warranties?",
+    question: "Does the herbal treatment leave any bad smell or stains?",
     answer:
-      "Yes. Selected   herbal treatment plans include service warranties for additional peace of mind.",
+      "No. Our herbal gels and sprays are completely odorless (or have a mild pleasant botanical scent) and do not stain walls, floors, or furniture.",
   },
   {
     id: "06",
-    question: "How much does   herbal treatment cost?",
+    question: "How much does Herbal Pest Control cost?",
     answer:
-      "The cost depends on property size, infestation level, and treatment type. Contact us for a free site inspection and personalized quotation.",
+      "The cost depends on the size of your property and the extent of the infestation. Contact us for a free site inspection and a customized quotation.",
   },
 ];
 
@@ -362,9 +774,10 @@ export default function page() {
 
       <HeroSection
         image="/Images/services/herbal.png"
-        topbadge="ANT PEST CONTROL SERVICES"
+        topbadge="ECO-FRIENDLY PEST CONTROL"
         heading={
           <>
+            {/* H1 #1 (The Only H1) */}
             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
               Say Goodbye to Pests With 
               <br />
@@ -372,94 +785,134 @@ export default function page() {
             </h1>
           </>
         }
-        subHeading="Safe. Effective. Long-Lasting Protection."
-        desc="Protect your home from hidden   herbal damage with Orion Pest Control. Our advanced   herbal treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and  herbal properties. Safe, effective, and trusted since 1998."
-        stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
+        subHeading="Safe. Natural. Long-Lasting Protection."
+        desc={
+          <>
+            Protect your home from pests safely with Orion Pest Control. As a trusted{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              Pest control company in India
+            </Link>
+            , our advanced Herbal Pest Control solutions eliminate active infestations using 100% plant-based, non-toxic ingredients. Established in 1998, we bring 27+ years of expertise and have proudly served 5K+ Businesses.
+          </>
+        }
+        stats={["100% Child & Pet Safe", "No Harmful Chemicals", "Odorless Treatment"]}
         imageStyle="absolute w-[90%] h-[90%] top-10 left-0 z-[10px] rounded-full"
       />
+
       {/* Advanced Control Section */}
       <AdvanceControl
-        image="/Images/services/ant5.png"
+        image="/Images/services/herbal2.png"
         heading={
           <>
+            {/* H2 #1 */}
             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
-              Advanced Herbal Control for
+              Advanced Herbal Pest Control for
               <span className="text-[#1095D9]"> Homes & Businesses</span>
             </h2>
           </>
         }
-        desc="Birds silently weaken wooden structures before visible damage appears. Our experienced technicians use modern detection methods and proven treatment techniques to eliminate ants from the source while preventing future infestations."
+        desc={
+          <>
+            Standard chemical sprays can leave toxic residues and harmful fumes. Our experienced technicians use natural, botanical{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              Pest control solutions
+            </Link>{" "}
+            and proven baiting techniques to eliminate pests at their source while keeping your indoor air quality perfectly safe.
+          </>
+        }
         list={list1}
       />
 
       {/* Complete Protection Section */}
       <CompleteProtection
-      heading={
+        heading={
           <>
-            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+            {/* H3 #1 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
               Complete Protection for
               <span className="text-[#1095D9]"> Every Corner</span>
-            </h2>
+            </h3>
           </>
         }
-        desc="Our comprehensive   herbal control process protects every vulnerable area of your property, ensuring complete structural safety and long-lasting defense against ants."
+        desc={
+          <>
+            Our comprehensive herbal control process protects every vulnerable area of your property. For families, our green{" "}
+            <Link href="https://www.orionpest.com/residential-pest-control/" className="text-blue-600 hover:underline font-semibold">
+              Residential pest control services
+            </Link>{" "}
+            ensure complete hygiene and long-lasting defense against common household pests without chemical exposure.
+          </>
+        }
         list={list2}
         image="/Images/services/home.png"
       />
 
       {/* Diagram Features Info Section */}
       <Diagram
-        topbadge="COMPLETE STRUCTURAL PROTECTION"
+        topbadge="CHEMICAL-FREE PROTECTION"
         heading={
           <>
-          <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
-            Complete Herbal Control
-            <br />
-            <span className="text-[#0094DA]">at Every Place.</span>
-          </h2>
+            {/* H3 #2 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+              Complete Natural Control
+              <br />
+              <span className="text-[#0094DA]">at Every Place.</span>
+            </h3>
           </>
         }
-        desc="Whether it's a home, office, warehouse, hotel, or  herbal building, our specialized   herbal treatment keeps every property protected against hidden   herbal attacks."
+        desc={
+          <>
+            Whether it's a home, office, hospital, hotel, or food processing facility, our specialized Herbal Pest Control keeps every property protected. Looking for nationwide coverage or dedicated{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              Pest Control Services Kolkata
+            </Link>
+            ? We deliver safe, sustainable results.
+          </>
+        }
         leftFeature={leftFeature}
         rightFeature={rightFeature}
       />
 
       {/* Brand Logos / Cards Grid Section */}
-      <BrandSection heading={
-        <>
-        <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+      <BrandSection
+        heading={
+          <>
+            {/* H3 #3 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
               Preferred by{" "}
-              <span className="text-[#0094DA]">Homes & Businesses</span> Across
-              India
-            </h2>
-        </>
-      } cards={cards} />
+              <span className="text-[#0094DA]">Homes & Businesses</span> Across India
+            </h3>
+          </>
+        }
+        cards={cards}
+      />
 
       {/* Testimonials Section Component */}
       <TestimonialsSection
         heading={
           <>
-          <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-            Trusted by Thousands.
-            <br />
-            <span className="text-[#0094DA]">Harbal Free,</span>{" "}
-            <span className="text-[#2F3293]">Every Time.</span>
-          </h2>
+            {/* H3 #4 */}
+            <h3 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+              Trusted by 5K+ Businesses.
+              <br />
+              <span className="text-[#0094DA]">Natural Protection,</span>{" "}
+              <span className="text-[#2F3293]">Every Time.</span>
+            </h3>
           </>
         }
-        desc="See why homeowners, businesses, and builders trust Orion Pest Control for dependable   herbal protection and exceptional service."
+        desc="See why homeowners, schools, and hospitals trust Orion Pest Control for dependable herbal protection and exceptional, safe service."
       />
 
       {/* Child Safe Environment Highlight Grid */}
       <ChildSafeSection
         image1="/Images/services/herbal2.png"
-        image2="/Images/services/ant4.png"
-        name="  Herbal"
-        tagline="Safe for your little ones. Tough on ants."
+        image2="/Images/services/herbal.png"
+        name="Herbal"
+        tagline="Safe for your little ones. Tough on pests."
         desc={
           <>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
-              Our eco-friendly   herbal treatments provide maximum protection while remaining safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety.
+              Our eco-friendly Herbal Pest Control treatments provide maximum eradication while remaining completely safe for your children, pets, and the environment. Backed by 27+ years of expertise, enjoy complete peace of mind without compromising your family's health.
             </p>
             <br />
           </>
@@ -468,14 +921,14 @@ export default function page() {
       />
 
       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
-      <section className="bg-[#FCFCFD] pb-16 md:pb-20">
+      <section className="bg-[#FCFCFD] pb-16 md:pb-20 mt-10">
         <FAQSection image="/Images/services/cockroach3.png" faqs={faqs} />
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto mt-10">
           <SupportCard
             icon={<Phone size={26} />}
             title="Need Immediate Assistance?"
             text="Call us now for quick support"
-            highlight="1800 212 696969"
+            highlight="1800 419 8181"
           />
           <SupportCard
             icon={<CalendarDays size={26} />}
@@ -485,8 +938,8 @@ export default function page() {
           />
           <SupportCard
             icon={<ShieldCheck size={26} />}
-            title="Safe. Effective. Reliable."
-            text="Trusted by thousands of homes"
+            title="Safe. Eco-Friendly. Reliable."
+            text="Trusted by 5K+ Businesses"
             highlight="Across India"
           />
         </div>
@@ -510,18 +963,17 @@ export default function page() {
                 <span className="text-yellow-500">Touch</span>
               </p>
 
+              {/* H2 #2 */}
               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
                 We're Here to
                 <br />
                 <span className="text-[#0095DA]">Help You Stay</span>
                 <br />
-                <span className="text-[#2F3293]">  Herbal-Free.</span>
+                <span className="text-[#2F3293]">Pest-Free.</span>
               </h2>
 
               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
-                Protect your property before ants cause costly structural
-                damage. Book a professional   herbal inspection with our
-                certified experts today.
+                Protect your property from pests without exposing your loved ones to toxic chemicals. Book a professional Herbal Pest Control inspection with our certified experts today.
               </p>
 
               {/* Contact Info Row Components Column Base List Block */}
@@ -543,7 +995,7 @@ export default function page() {
                 <ContactInfo
                   icon={<MapPin size={24} />}
                   title="OUR HEAD OFFICE"
-                  value="200W,S P Mukherjee Road, Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
+                  value="200W, S P Mukherjee Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
                   bg="bg-yellow-400"
                 />
               </div>
@@ -567,8 +1019,8 @@ export default function page() {
           >
             <div className="absolute left-32 top-5 w-52 h-52">
               <Image
-                src="/Images/services/ant.png"
-                alt="Cockroach"
+                src="/Images/services/herbal.png"
+                alt="Herbal Pest Control"
                 fill
                 className="object-contain"
               />

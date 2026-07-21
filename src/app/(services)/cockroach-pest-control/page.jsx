@@ -196,7 +196,412 @@
 
 
 
+
+
+
+
+
+
+// Debkanta added this 
+
+// import Image from "next/image";
+// import { ShieldCheck, Phone, MapPin, CalendarDays, Mail, Shield, Leaf, House } from "lucide-react";
+// import TestimonialsSection from "@/components/services/ui/Testimonials";
+// import FAQSection from "@/components/ui/FAQ";
+// import Form from "@/components/ui/Form";
+// import { getPageData } from "@/lib/getPageData";
+// import HeroSection from "@/components/services/HeroSection";
+// import SupportCard from "@/components/services/ui/SupportCard";
+// import ContactInfo from "@/components/services/ui/ContactInfo";
+// import AdvanceControl from "@/components/services/AdvanceControl";
+// import CompleteProtection from "@/components/services/CompleteProtection";
+// import Diagram from "@/components/services/Diagram";
+// import BrandSection from "@/components/services/BrandSection";
+// import ChildSafeSection from "@/components/services/ChildSafeSection";
+
+// export async function generateMetadata() {
+//   const page = await getPageData("cockroach-control");
+//   return {
+//     title: page?.metaTitle || "Cockroach Control",
+//     description: page?.metaDescription || "",
+//   };
+// }
+
+// const list1 = [
+//   "Kills Cockroaches at the Source",
+//   "Safe for Family, Pets & Environment.",
+//   "Long-Lasting Protection",
+// ];
+
+// const list2 = [
+//   "Targets Hidden Breeding Spots.",
+//   "Prevents Re-infection.",
+//   "Ideal for Homes, Offices, Restaurants & Commercial Spaces.",
+// ];
+
+// const leftFeature = [
+//   {
+//     heading: "Target Hidden Breeding Spots",
+//     desc: "We eliminate cockroaches where they hide and breed.",
+//   },
+//   {
+//     heading: "Prevents Re-Infection",
+//     desc: "Advance treatment methods ensure longer protection.",
+//   },
+// ];
+
+// const rightFeature = [
+//   {
+//     heading: "Safe & Eco-Friendly",
+//     desc: "Non-toxic, odorless and safe for your family and pets.",
+//   },
+//   {
+//     heading: "Long-Lasting Protection",
+//     desc: "Our treatment provide residential protection for lasting peace of mind.",
+//   },
+// ];
+
+// const cards = [
+//   {
+//     heading: "Complete Cockroach Control for Every Space",
+//     desc: "Advance treatment to eliminate cockroaches from every corner.",
+//     image: "/Images/services/cockroach5.png",
+//     bgColor: "#FFF6DE",
+//   },
+//   {
+//     heading: "Expert Inspection & Smart Solutions",
+//     desc: "Detailed inspection and targeted methods for lasting results.",
+//     image: "/Images/icon/vector2.png",
+//     bgColor: "#EEF4FF",
+//   },
+//   {
+//     heading: "Long-lasting Protection You Can Rely On",
+//     desc: "Safe, eco-friendly & effective protection for your peace of mind.",
+//     image: "/Images/icon/vector3.png",
+//     bgColor: "#FFF1F2",
+//   },
+// ];
+
+// const childSafeStats = [
+//   {
+//     title: "Non-Toxic & Low Odor",
+//     desc: "Safe treatments for your family and friends.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon : ShieldCheck
+//   },
+//   {
+//     title: "Drop & Trageted Action",
+//     desc: "Reaches hidden areas and eliminates at the source.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Shield
+//   },
+//   {
+//     title: "Long-Lasting Protection",
+//     desc: "Keeps your home protected from re-infection.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Leaf
+//   },
+//   {
+//     title: "Trusted by Thousands",
+//     desc: "Reliable servive for a cleaner, healthier tomorrow.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: House
+//   },
+// ];
+
+// const faqs = [
+//   {
+//     id: "01",
+//     question: "How do you eliminate cockroaches?",
+//     answer:
+//       "We use a combination of advanced, safe, and targeted treatment methods that eliminate cockroaches at the source and prevent future infestations.",
+//   },
+//   {
+//     id: "02",
+//     question: "How long does the treatment take?",
+//     answer:
+//       "Most residential treatments take between 30–90 minutes depending on the infestation level and property size.",
+//   },
+//   {
+//     id: "03",
+//     question: "How long does the protection last?",
+//     answer:
+//       "Our treatments provide long-lasting protection and can remain effective for several months with proper maintenance.",
+//   },
+//   {
+//     id: "04",
+//     question: "Is the treatment safe for my family and pets?",
+//     answer:
+//       "Yes. We use approved, low-toxicity products that are safe when used according to professional guidelines.",
+//   },
+//   {
+//     id: "05",
+//     question: "Do you provide services for commercial spaces?",
+//     answer:
+//       "Absolutely. We serve offices, hotels, warehouses, restaurants, factories and other commercial properties.",
+//   },
+//   {
+//     id: "06",
+//     question: "How can I book a service?",
+//     answer:
+//       "You can call our support team or submit an online inspection request through our website.",
+//   },
+// ];
+
+// export default function page() {
+//   return (
+//     <div className="w-full">
+//       {/* Hero Section */}
+
+//       <HeroSection
+//         image="/Images/services/cockroach.png"
+//         topbadge="COCKROACH PEST CONTROL"
+//         heading={
+//           <>
+//             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
+//               Say Goodbye to
+//               <br />
+//               <span className="text-[#1095D9]">Cockroaches</span>
+//             </h1>
+//           </>
+//         }
+//         subHeading="Safe. Effective. Long-Lasting Protection."
+//         desc="Our five decades expert pest control trusted by millions for home and business accross India. Our proven methods ensure a clean, healthy and cockroach-free environment."
+//         stats={["Safe for Family & Pests", "Odourless Treatment", "Government Approved"]}
+//         imageStyle="absolute w-[105%] h-[105%] -top-[16%] -left-[20%] sm:-left-[32%] z-[10px]"
+//       />
+//       {/* Advanced Control Section */}
+//       <AdvanceControl
+//         image="/Images/services/cockroach2.png"
+//         heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Advanced Cockroach Control for
+//               <span className="text-[#1095D9]"> Homes & Businesses</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Our expert solutions eliminate cockroaches at the source  and keep your space hygienic. Safe & healthy. Long-lasting protection you can trust."
+//         list={list1}
+//       />
+
+//       {/* Complete Protection Section */}
+//       <CompleteProtection
+//       heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Complete Protection for
+//               <span className="text-[#1095D9]"> Every Corner</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Cockroaches hide in places you can't see. Our targeted treatment reaches deep into hiding spots to ensure a cockroach-free environment."
+//         list={list2}
+//         image="/Images/services/home.png"
+//       />
+
+//       {/* Diagram Features Info Section */}
+//       <Diagram  
+//         topbadge="COMPLETE COCKROACH CONTROL"
+//         heading={
+//           <>
+//           <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+//             Complete Cockroach Control
+//             <br />
+//             <span className="text-[#0094DA]">at Every Place.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="We provide end-to-end cockroach control solutions tailored for every environment. Safe, effective and long-lasting protection you can trust."
+//         leftFeature={leftFeature}
+//         rightFeature={rightFeature}
+//       />
+
+//       {/* Brand Logos / Cards Grid Section */}
+//       <BrandSection heading={
+//         <>
+//         <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//               Preferred by{" "}
+//               <span className="text-[#0094DA]">Homes & Businesses</span> Across
+//               India
+//             </h2>
+//         </>
+//       } cards={cards} />
+
+//       {/* Testimonials Section Component */}
+//       <TestimonialsSection
+//         heading={
+//           <>
+//           <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//             Trusted by Thousands.
+//             <br />
+//             <span className="text-[#0094DA]">Cockroch Control,</span>{" "}
+//             <span className="text-[#2F3293]">Every Time.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="See what our satisfied customers have to say about our effective cockroach control services."
+//       />
+
+//       {/* Child Safe Environment Highlight Grid */}
+//       <ChildSafeSection
+//         image1="/Images/services/cockroach6.png"
+//         image2="/Images/services/cockroach7.png"
+//         name="Cockroach"
+//         tagline="Safe for your little ones. Tough on cockroaches."
+//         desc={
+//           <>
+//             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
+//               We use advanced, low-odor and non-toxic treatments that eliminate cockroaches effectively without harming your children, pets or the environment.
+//             </p>
+//             <br />
+//           </>
+//         }
+//         childSafeStats={childSafeStats}
+//       />
+
+//       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
+//       <section className="bg-[#FCFCFD] pb-16 md:pb-20 mt-20">
+//         <FAQSection image="/Images/services/cockroach3.png" faqs={faqs} name={"cockroach"}/>
+//         <div className="mt-10 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+//           <SupportCard
+//             icon={<Phone size={26} />}
+//             title="Need Immediate Assistance?"
+//             text="Call us now for quick support"
+//             highlight="1800 212 696969"
+//           />
+//           <SupportCard
+//             icon={<CalendarDays size={26} />}
+//             title="Schedule an Inspection"
+//             text="Book a professional inspection"
+//             highlight="At your convenience"
+//           />
+//           <SupportCard
+//             icon={<ShieldCheck size={26} />}
+//             title="Safe. Effective. Reliable."
+//             text="Trusted by thousands of homes"
+//             highlight="Across India"
+//           />
+//         </div>
+//       </section>
+
+//       {/* Interactive Contact Form Matrix Content Group Grid Footer Element */}
+//       <section
+//         className="relative overflow-hidden bg-[#FEFEFE] py-10 md:py-24"
+//         style={{
+//           background: "url('/Images/CTA_background.webp')",
+//           backgroundSize: "cover",
+//           backgroundRepeat: "no-repeat",
+//         }}
+//       >
+//         <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 w-full relative z-[2]">
+//           <div className="grid gap-12 lg:grid-cols-2 items-start">
+//             {/* LEFT SIDE CONTENT SECTION */}
+//             <div>
+//               <p className="font-semibold uppercase tracking-widest text-smsm:text-base">
+//                 <span className="text-blue-600">Get In</span>{" "}
+//                 <span className="text-yellow-500">Touch</span>
+//               </p>
+
+//               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
+//                 We're Here to
+//                 <br />
+//                 <span className="text-[#0095DA]">Help You Stay</span>
+//                 <br />
+//                 <span className="text-[#2F3293]">Termite-Free.</span>
+//               </h2>
+
+//               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
+//                 Protect your property before termites cause costly structural damage. Book a professional termite inspection with our certified experts today.
+//               </p>
+
+//               {/* Contact Info Row Components Column Base List Block */}
+//               <div className="mt-10 space-y-6 sm:space-y-8">
+//                 <ContactInfo
+//                   icon={<Phone size={24} />}
+//                   title="CALL US"
+//                   link="1800 419 8181"
+//                   value="1800 419 8181"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<Mail size={24} />}
+//                   title="EMAIL US"
+//                   link="sales@orionpest.com"
+//                   value="sales@orionpest.com"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<MapPin size={24} />}
+//                   title="OUR HEAD OFFICE"
+//                   value="200W,S P Mukherjee Road, Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
+//                   bg="bg-yellow-400"
+//                 />
+//               </div>
+//             </div>
+
+//             {/* RIGHT SIDE FORM COMPONENT BLOCK */}
+//             <div className="w-full">
+//               <Form />
+//             </div>
+//           </div>
+//         </div>
+//         {/* Bottom Decorative Circle Vector Element Shape Component Mock Container */}
+//         <div className="absolute -bottom-12 -left-32 hidden xl:block overflow-hidden">
+//           <div
+//             className="relative overflow-hidden border-4 border-yellow-400 w-[450px] h-[230px] rounded-t-full"
+//             style={{
+//               background: "url('/Images/bugs/bg.png')",
+//               backgroundSize: "cover",
+//               backgroundRepeat: "no-repeat",
+//             }}
+//           >
+//             <div className="absolute left-32 top-5 w-52 h-52">
+//               <Image
+//                 src="/Images/services/cockroach4.png"
+//                 alt="Cockroach"
+//                 fill
+//                 className="object-contain"
+//               />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Asad Added This
+
+
 import Image from "next/image";
+import Link from "next/link";
 import { ShieldCheck, Phone, MapPin, CalendarDays, Mail, Shield, Leaf, House } from "lucide-react";
 import TestimonialsSection from "@/components/services/ui/Testimonials";
 import FAQSection from "@/components/ui/FAQ";
@@ -214,8 +619,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("cockroach-control");
   return {
-    title: page?.metaTitle || "Cockroach Control",
-    description: page?.metaDescription || "",
+    title: page?.metaTitle || "Cockroach Pest Control Services Near You | Long-Lasting Protection",
+    description: page?.metaDescription || "Eliminate cockroaches with professional pest control services near you. Safe, effective cockroach treatments for homes and businesses.",
   };
 }
 
@@ -227,7 +632,7 @@ const list1 = [
 
 const list2 = [
   "Targets Hidden Breeding Spots.",
-  "Prevents Re-infection.",
+  "Prevents Re-infestation.",
   "Ideal for Homes, Offices, Restaurants & Commercial Spaces.",
 ];
 
@@ -237,26 +642,26 @@ const leftFeature = [
     desc: "We eliminate cockroaches where they hide and breed.",
   },
   {
-    heading: "Prevents Re-Infection",
-    desc: "Advance treatment methods ensure longer protection.",
+    heading: "Prevents Re-Infestation",
+    desc: "Advanced treatment methods ensure longer protection.",
   },
 ];
 
 const rightFeature = [
   {
     heading: "Safe & Eco-Friendly",
-    desc: "Non-toxic, odorless and safe for your family and pets.",
+    desc: "Non-toxic, odorless, and safe for your family and pets.",
   },
   {
     heading: "Long-Lasting Protection",
-    desc: "Our treatment provide residential protection for lasting peace of mind.",
+    desc: "Our treatments provide reliable protection for lasting peace of mind.",
   },
 ];
 
 const cards = [
   {
     heading: "Complete Cockroach Control for Every Space",
-    desc: "Advance treatment to eliminate cockroaches from every corner.",
+    desc: "Advanced treatment to eliminate cockroaches from every corner.",
     image: "/Images/services/cockroach5.png",
     bgColor: "#FFF6DE",
   },
@@ -280,10 +685,10 @@ const childSafeStats = [
     desc: "Safe treatments for your family and friends.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
-    icon : ShieldCheck
+    icon: ShieldCheck
   },
   {
-    title: "Drop & Trageted Action",
+    title: "Deep & Targeted Action",
     desc: "Reaches hidden areas and eliminates at the source.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
@@ -291,14 +696,14 @@ const childSafeStats = [
   },
   {
     title: "Long-Lasting Protection",
-    desc: "Keeps your home protected from re-infection.",
+    desc: "Keeps your home protected from re-infestation.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Leaf
   },
   {
-    title: "Trusted by Thousands",
-    desc: "Reliable servive for a cleaner, healthier tomorrow.",
+    title: "27+ Years of Trust",
+    desc: "Serving 5K+ businesses since 1998 with proven success.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: House
@@ -351,9 +756,10 @@ export default function page() {
 
       <HeroSection
         image="/Images/services/cockroach.png"
-        topbadge="COCKROACH PEST CONTROL"
+        topbadge="PROFESSIONAL COCKROACH PEST CONTROL"
         heading={
           <>
+            {/* H1 #1 (The Only H1) */}
             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
               Say Goodbye to
               <br />
@@ -362,81 +768,121 @@ export default function page() {
           </>
         }
         subHeading="Safe. Effective. Long-Lasting Protection."
-        desc="Our five decades expert pest control trusted by millions for home and business accross India. Our proven methods ensure a clean, healthy and cockroach-free environment."
-        stats={["Safe for Family & Pests", "Odourless Treatment", "Government Approved"]}
+        desc={
+          <>
+            With over 27+ years of expertise, our{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              pest control services
+            </Link>{" "}
+            are trusted by millions for homes and businesses across India. Started in 1998, we have proudly served 5K+ Businesses. Our proven Cockroach pest control ensures a clean, healthy, and hygienic environment.
+          </>
+        }
+        stats={["Safe for Family & Pets", "Odourless Treatment", "Government Approved"]}
         imageStyle="absolute w-[105%] h-[105%] -top-[16%] -left-[20%] sm:-left-[32%] z-[10px]"
       />
+
       {/* Advanced Control Section */}
       <AdvanceControl
         image="/Images/services/cockroach2.png"
         heading={
           <>
+            {/* H2 #1 */}
             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
-              Advanced Cockroach Control for
+              Advanced Cockroach Pest Control for
               <span className="text-[#1095D9]"> Homes & Businesses</span>
             </h2>
           </>
         }
-        desc="Our expert solutions eliminate cockroaches at the source  and keep your space hygienic. Safe & healthy. Long-lasting protection you can trust."
+        desc={
+          <>
+            Our expert{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              Pest control solutions
+            </Link>{" "}
+            eliminate cockroaches at the source and keep your space hygienic. Safe, healthy, and long-lasting protection you can rely on.
+          </>
+        }
         list={list1}
       />
 
       {/* Complete Protection Section */}
       <CompleteProtection
-      heading={
+        heading={
           <>
-            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+            {/* H3 #1 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
               Complete Protection for
               <span className="text-[#1095D9]"> Every Corner</span>
-            </h2>
+            </h3>
           </>
         }
-        desc="Cockroaches hide in places you can't see. Our targeted treatment reaches deep into hiding spots to ensure a cockroach-free environment."
+        desc={
+          <>
+            Cockroaches hide in places you can't see. Our targeted{" "}
+            <Link href="https://www.orionpest.com/residential-pest-control/" className="text-blue-600 hover:underline font-semibold">
+              Residential pest control services
+            </Link>{" "}
+            reach deep into hiding spots to ensure a thoroughly cockroach-free environment.
+          </>
+        }
         list={list2}
         image="/Images/services/home.png"
       />
 
       {/* Diagram Features Info Section */}
-      <Diagram  
-        topbadge="COMPLETE COCKROACH CONTROL"
+      <Diagram
+        topbadge="TOTAL INDOOR DEFENSE"
         heading={
           <>
-          <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
-            Complete Cockroach Control
-            <br />
-            <span className="text-[#0094DA]">at Every Place.</span>
-          </h2>
+            {/* H3 #2 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+              Complete Cockroach Control
+              <br />
+              <span className="text-[#0094DA]">at Every Place.</span>
+            </h3>
           </>
         }
-        desc="We provide end-to-end cockroach control solutions tailored for every environment. Safe, effective and long-lasting protection you can trust."
+        desc={
+          <>
+            We provide end-to-end Cockroach pest control service tailored for every environment. Whether you need{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              Pest Control Services Kolkata
+            </Link>{" "}
+            or nationwide support, we deliver safe, effective, and long-lasting protection you can trust.
+          </>
+        }
         leftFeature={leftFeature}
         rightFeature={rightFeature}
       />
 
       {/* Brand Logos / Cards Grid Section */}
-      <BrandSection heading={
-        <>
-        <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+      <BrandSection
+        heading={
+          <>
+            {/* H3 #3 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
               Preferred by{" "}
-              <span className="text-[#0094DA]">Homes & Businesses</span> Across
-              India
-            </h2>
-        </>
-      } cards={cards} />
+              <span className="text-[#0094DA]">Homes & Businesses</span> Across India
+            </h3>
+          </>
+        }
+        cards={cards}
+      />
 
       {/* Testimonials Section Component */}
       <TestimonialsSection
         heading={
           <>
-          <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-            Trusted by Thousands.
-            <br />
-            <span className="text-[#0094DA]">Cockroch Control,</span>{" "}
-            <span className="text-[#2F3293]">Every Time.</span>
-          </h2>
+            {/* H3 #4 */}
+            <h3 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+              Trusted by Thousands.
+              <br />
+              <span className="text-[#0094DA]">Cockroach Control,</span>{" "}
+              <span className="text-[#2F3293]">Every Time.</span>
+            </h3>
           </>
         }
-        desc="See what our satisfied customers have to say about our effective cockroach control services."
+        desc="See what our satisfied customers have to say about our highly effective cockroach pest control services."
       />
 
       {/* Child Safe Environment Highlight Grid */}
@@ -448,7 +894,7 @@ export default function page() {
         desc={
           <>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
-              We use advanced, low-odor and non-toxic treatments that eliminate cockroaches effectively without harming your children, pets or the environment.
+              We use advanced, low-odor, and non-toxic treatments that eliminate cockroaches effectively without harming your children, pets, or the environment. Backed by 27+ years of expertise, enjoy total peace of mind.
             </p>
             <br />
           </>
@@ -458,13 +904,13 @@ export default function page() {
 
       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
       <section className="bg-[#FCFCFD] pb-16 md:pb-20 mt-20">
-        <FAQSection image="/Images/services/cockroach3.png" faqs={faqs} name={"cockroach"}/>
+        <FAQSection image="/Images/services/cockroach3.png" faqs={faqs} name={"cockroach"} />
         <div className="mt-10 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
           <SupportCard
             icon={<Phone size={26} />}
             title="Need Immediate Assistance?"
             text="Call us now for quick support"
-            highlight="1800 212 696969"
+            highlight="1800 419 8181"
           />
           <SupportCard
             icon={<CalendarDays size={26} />}
@@ -475,7 +921,7 @@ export default function page() {
           <SupportCard
             icon={<ShieldCheck size={26} />}
             title="Safe. Effective. Reliable."
-            text="Trusted by thousands of homes"
+            text="Trusted by 5K+ Businesses"
             highlight="Across India"
           />
         </div>
@@ -499,16 +945,17 @@ export default function page() {
                 <span className="text-yellow-500">Touch</span>
               </p>
 
+              {/* H2 #2 */}
               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
                 We're Here to
                 <br />
                 <span className="text-[#0095DA]">Help You Stay</span>
                 <br />
-                <span className="text-[#2F3293]">Termite-Free.</span>
+                <span className="text-[#2F3293]">Cockroach-Free.</span>
               </h2>
 
               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
-                Protect your property before termites cause costly structural damage. Book a professional termite inspection with our certified experts today.
+                Protect your property before cockroaches spread diseases and cause hygiene issues. Book a professional Cockroach pest control service with our certified experts today.
               </p>
 
               {/* Contact Info Row Components Column Base List Block */}
@@ -530,7 +977,7 @@ export default function page() {
                 <ContactInfo
                   icon={<MapPin size={24} />}
                   title="OUR HEAD OFFICE"
-                  value="200W,S P Mukherjee Road, Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
+                  value="200W, S P Mukherjee Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
                   bg="bg-yellow-400"
                 />
               </div>

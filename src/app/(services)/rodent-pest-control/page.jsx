@@ -201,8 +201,416 @@
 
 
 
+
+
+
+
+
+
+// Debkanta Added This
+
+// import Image from "next/image";
+// import { ShieldCheck, Phone, MapPin, CalendarDays, Mail, Shield, Leaf, House } from "lucide-react";
+// import TestimonialsSection from "@/components/services/ui/Testimonials";
+// import FAQSection from "@/components/ui/FAQ";
+// import Form from "@/components/ui/Form";
+// import { getPageData } from "@/lib/getPageData";
+// import HeroSection from "@/components/services/HeroSection";
+// import SupportCard from "@/components/services/ui/SupportCard";
+// import ContactInfo from "@/components/services/ui/ContactInfo";
+// import AdvanceControl from "@/components/services/AdvanceControl";
+// import CompleteProtection from "@/components/services/CompleteProtection";
+// import Diagram from "@/components/services/Diagram";
+// import BrandSection from "@/components/services/BrandSection";
+// import ChildSafeSection from "@/components/services/ChildSafeSection";
+
+// export async function generateMetadata() {
+//   const page = await getPageData("rodent-control");
+//   return {
+//     title: page?.metaTitle || "Rodent Control",
+//     description: page?.metaDescription || "",
+//   };
+// }
+
+// const list1 = [
+//   "Pre-Construction Treatment",
+//   "Post-Construction Treatment",
+//   "Wood Protection Solutions",
+//   "Soil & Foundation Treatment",
+// ];
+
+// const list2 = [
+//   "Detailed Property Inspection",
+//   "Customized Treatment Plan",
+//   "Advanced Anti-Rodent Solutions",
+//   "Long-Term Monitoring & Warranty",
+// ];
+
+// const leftFeature = [
+//   {
+//     heading: "Target Hidden Colonies",
+//     desc: "Advanced detection identifies rodent activity before major structural damage occurs.",
+//   },
+//   {
+//     heading: "Prevent Future Damage",
+//     desc: "Protect your investment with long-lasting rodent prevention treatments.",
+//   },
+// ];
+
+// const rightFeature = [
+//   {
+//     heading: "Safe & Eco-Friendly",
+//     desc: "Environmentally responsible solutions that are safe for families and pets.",
+//   },
+//   {
+//     heading: "Long-Lasting Protection",
+//     desc: "Professional-grade treatments with extended protection against re-infestation.",
+//   },
+// ];
+
+// const cards = [
+//   {
+//     heading: "Comprehensive Rodent Protection",
+//     desc: "Complete structural protection with advanced anti-rodent technology.",
+//     image: "/Images/services/rodent5.png",
+//     bgColor: "#FFF6DE",
+//   },
+//   {
+//     heading: "Expert Inspection & Treatment",
+//     desc: "Professional inspection followed by customized treatment solutions.",
+//     image: "/Images/icon/vector2.png",
+//     bgColor: "#EEF4FF",
+//   },
+//   {
+//     heading: "Long-Term Structural Safety",
+//     desc: "Protect your property from costly rodent damage with preventive care.",
+//     image: "/Images/icon/vector3.png",
+//     bgColor: "#FFF1F2",
+//   },
+// ];
+
+// const childSafeStats = [
+//   {
+//     title: "Non-Toxic Solutions",
+//     desc: "Safe treatment methods for indoor environments.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon : ShieldCheck
+//   },
+//   {
+//     title: "Deep Foundation Protection",
+//     desc: "Stops rodents at the source.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Shield
+//   },
+//   {
+//     title: "Long-Lasting Results",
+//     desc: "Extended protection against future infestations.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Leaf
+//   },
+//   {
+//     title: "Trusted Since 1998",
+//     desc: "India's trusted rodent specialists.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: House
+//   },
+// ];
+
+// const faqs = [
+//   {
+//     id: "01",
+//     question: "How do I know if my home has rodents?",
+//     answer:
+//       "Common signs include mud tubes, hollow-sounding wood, discarded wings, damaged wooden furniture, and unexplained cracks. Schedule a professional inspection for confirmation.",
+//   },
+//   {
+//     id: "02",
+//     question: "How long does rodent treatment take?",
+//     answer:
+//       "Most residential rodent treatments are completed within a few hours, depending on the size of the property and the severity of infestation.",
+//   },
+//   {
+//     id: "03",
+//     question: "Is rodent treatment safe for children and pets?",
+//     answer:
+//       "Yes. Orion uses government-approved rodent treatment solutions that are safe when applied by certified professionals.",
+//   },
+//   {
+//     id: "04",
+//     question: "How long does rodent protection last?",
+//     answer:
+//       "Our treatments provide long-term protection, and preventive maintenance can significantly extend effectiveness.",
+//   },
+//   {
+//     id: "05",
+//     question: "Do you provide rodent warranties?",
+//     answer:
+//       "Yes. Selected rodent treatment plans include service warranties for additional peace of mind.",
+//   },
+//   {
+//     id: "06",
+//     question: "How much does rodent treatment cost?",
+//     answer:
+//       "The cost depends on property size, infestation level, and treatment type. Contact us for a free site inspection and personalized quotation.",
+//   },
+// ];
+
+// export default function page() {
+//   return (
+//     <div className="w-full">
+//       {/* Hero Section */}
+
+//       <HeroSection
+//         image="/Images/services/rodent.png"
+//         topbadge="RODENT PEST CONTROL SERVICES"
+//         heading={
+//           <>
+//             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
+//               Say Goodbye to
+//               <br />
+//               <span className="text-[#1095D9]">Redents</span>
+//             </h1>
+//           </>
+//         }
+//         subHeading="Safe. Effective. Long-Lasting Protection."
+//         desc="Protect your home from hidden rodent damage with Orion Pest Control. Our advanced rodent treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and commercial properties. Safe, effective, and trusted since 1970."
+//         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
+//         imageStyle="absolute w-[90%] h-[90%] -top-[0%] -left-[20%] sm:-left-[10%] z-[10px]"
+//       />
+//       {/* Advanced Control Section */}
+//       <AdvanceControl
+//         image="/Images/services/rodent6.png"
+//         heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Advanced Rodent Control for
+//               <span className="text-[#1095D9]"> Homes & Businesses</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Rodents silently weaken wooden structures before visible damage appears. Our experienced technicians use modern detection methods and proven treatment techniques to eliminate rodents from the source while preventing future infestations."
+//         list={list1}
+//       />
+
+//       {/* Complete Protection Section */}
+//       <CompleteProtection
+//       heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Complete Protection for
+//               <span className="text-[#1095D9]"> Every Corner</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Our comprehensive rodent control process protects every vulnerable area of your property, ensuring complete structural safety and long-lasting defense against rodents."
+//         list={list2}
+//         image="/Images/services/home.png"
+//       />
+
+//       {/* Diagram Features Info Section */}
+//       <Diagram
+//         topbadge="COMPLETE STRUCTURAL PROTECTION"
+//         heading={
+//           <>
+//           <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+//             Complete Rodent Control
+//             <br />
+//             <span className="text-[#0094DA]">at Every Place.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="Whether it's a home, office, warehouse, hotel, or commercial building, our specialized rodent treatment keeps every property protected against hidden rodent attacks."
+//         leftFeature={leftFeature}
+//         rightFeature={rightFeature}
+//       />
+
+//       {/* Brand Logos / Cards Grid Section */}
+//       <BrandSection heading={
+//         <>
+//         <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//               Preferred by{" "}
+//               <span className="text-[#0094DA]">Homes & Businesses</span> Across
+//               India
+//             </h2>
+//         </>
+//       } cards={cards} />
+
+//       {/* Testimonials Section Component */}
+//       <TestimonialsSection
+//         heading={
+//           <>
+//           <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//             Trusted by Thousands.
+//             <br />
+//             <span className="text-[#0094DA]">Rodent Control,</span>{" "}
+//             <span className="text-[#2F3293]">Every Time.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="See why homeowners, businesses, and builders trust Orion Pest Control for dependable rodent protection and exceptional service."
+//       />
+
+//       {/* Child Safe Environment Highlight Grid */}
+//       <ChildSafeSection
+//         image1="/Images/services/rodent4.png"
+//         image2="/Images/services/rodent3.png"
+//         name="Rodent"
+//         tagline="Safe for your little ones. Tough on rodents."
+//         desc={
+//           <>
+//             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
+//               Our eco-friendly rodent treatments provide maximum protection while remaining safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety.
+//             </p>
+//             <br />
+//           </>
+//         }
+//         childSafeStats={childSafeStats}
+//       />
+
+//       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
+//       <section className="bg-[#FCFCFD] pb-16 md:pb-20">
+//         <FAQSection image="/Images/services/rodent2.png" faqs={faqs}/>
+//         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+//           <SupportCard
+//             icon={<Phone size={26} />}
+//             title="Need Immediate Assistance?"
+//             text="Call us now for quick support"
+//             highlight="1800 212 696969"
+//           />
+//           <SupportCard
+//             icon={<CalendarDays size={26} />}
+//             title="Schedule an Inspection"
+//             text="Book a professional inspection"
+//             highlight="At your convenience"
+//           />
+//           <SupportCard
+//             icon={<ShieldCheck size={26} />}
+//             title="Safe. Effective. Reliable."
+//             text="Trusted by thousands of homes"
+//             highlight="Across India"
+//           />
+//         </div>
+//       </section>
+
+//       {/* Interactive Contact Form Matrix Content Group Grid Footer Element */}
+//       <section
+//         className="relative overflow-hidden bg-[#FEFEFE] py-10 md:py-24"
+//         style={{
+//           background: "url('/Images/CTA_background.webp')",
+//           backgroundSize: "cover",
+//           backgroundRepeat: "no-repeat",
+//         }}
+//       >
+//         <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 w-full relative z-[2]">
+//           <div className="grid gap-12 lg:grid-cols-2 items-start">
+//             {/* LEFT SIDE CONTENT SECTION */}
+//             <div>
+//               <p className="font-semibold uppercase tracking-widest text-smsm:text-base">
+//                 <span className="text-blue-600">Get In</span>{" "}
+//                 <span className="text-yellow-500">Touch</span>
+//               </p>
+
+//               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
+//                 We're Here to
+//                 <br />
+//                 <span className="text-[#0095DA]">Help You Stay</span>
+//                 <br />
+//                 <span className="text-[#2F3293]">Rodent-Free.</span>
+//               </h2>
+
+//               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
+//                 Protect your property before rodents cause costly structural damage. Book a professional rodent inspection with our certified experts today.
+//               </p>
+
+//               {/* Contact Info Row Components Column Base List Block */}
+//               <div className="mt-10 space-y-6 sm:space-y-8">
+//                 <ContactInfo
+//                   icon={<Phone size={24} />}
+//                   title="CALL US"
+//                   link="1800 419 8181"
+//                   value="1800 419 8181"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<Mail size={24} />}
+//                   title="EMAIL US"
+//                   link="sales@orionpest.com"
+//                   value="sales@orionpest.com"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<MapPin size={24} />}
+//                   title="OUR HEAD OFFICE"
+//                   value="200W,S P Mukherjee Road, Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
+//                   bg="bg-yellow-400"
+//                 />
+//               </div>
+//             </div>
+
+//             {/* RIGHT SIDE FORM COMPONENT BLOCK */}
+//             <div className="w-full">
+//               <Form />
+//             </div>
+//           </div>
+//         </div>
+//         {/* Bottom Decorative Circle Vector Element Shape Component Mock Container */}
+//         <div className="absolute -bottom-12 -left-32 hidden xl:block overflow-hidden">
+//           <div
+//             className="relative overflow-hidden border-4 border-yellow-400 w-[450px] h-[230px] rounded-t-full"
+//             style={{
+//               background: "url('/Images/bugs/bg.png')",
+//               backgroundSize: "cover",
+//               backgroundRepeat: "no-repeat",
+//             }}
+//           >
+//             <div className="absolute left-32 top-5 w-52 h-52">
+//               <Image
+//                 src="/Images/services/rodent2.png"
+//                 alt="Cockroach"
+//                 fill
+//                 className="object-contain"
+//               />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Asad Added This
+
 import Image from "next/image";
-import { ShieldCheck, Phone, MapPin, CalendarDays, Mail, Shield, Leaf, House } from "lucide-react";
+import Link from "next/link";
+import {
+  ShieldCheck,
+  Phone,
+  MapPin,
+  CalendarDays,
+  Mail,
+  Shield,
+  Leaf,
+  House,
+} from "lucide-react";
 import TestimonialsSection from "@/components/services/ui/Testimonials";
 import FAQSection from "@/components/ui/FAQ";
 import Form from "@/components/ui/Form";
@@ -219,63 +627,63 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("rodent-control");
   return {
-    title: page?.metaTitle || "Rodent Control",
-    description: page?.metaDescription || "",
+    title: page?.metaTitle || "Rodent Pest Control Services | Reliable Rat & Mouse Control",
+    description: page?.metaDescription || "Stop rodent infestations with expert pest control services. Effective rat and mouse control solutions for residential and commercial properties.",
   };
 }
 
 const list1 = [
-  "Pre-Construction Treatment",
-  "Post-Construction Treatment",
-  "Wood Protection Solutions",
-  "Soil & Foundation Treatment",
+  "Advanced Baiting & Trapping",
+  "Burrow & Nest Eradication",
+  "Rodent Proofing & Exclusion",
+  "Dead Rodent Removal & Odor Control",
 ];
 
 const list2 = [
   "Detailed Property Inspection",
-  "Customized Treatment Plan",
-  "Advanced Anti-Rodent Solutions",
-  "Long-Term Monitoring & Warranty",
+  "Customized Eradication Plan",
+  "Tamper-Proof Bait Stations",
+  "Long-Term Monitoring & Maintenance",
 ];
 
 const leftFeature = [
   {
     heading: "Target Hidden Colonies",
-    desc: "Advanced detection identifies rodent activity before major structural damage occurs.",
+    desc: "Advanced detection identifies rodent activity in attics, basements, and behind walls before they multiply.",
   },
   {
-    heading: "Prevent Future Damage",
-    desc: "Protect your investment with long-lasting rodent prevention treatments.",
+    heading: "Prevent Property Damage",
+    desc: "Protect your home from chewed electrical wires, damaged insulation, and contaminated food supplies.",
   },
 ];
 
 const rightFeature = [
   {
     heading: "Safe & Eco-Friendly",
-    desc: "Environmentally responsible solutions that are safe for families and pets.",
+    desc: "We utilize highly secure, tamper-proof bait stations that are completely safe for children and pets.",
   },
   {
     heading: "Long-Lasting Protection",
-    desc: "Professional-grade treatments with extended protection against re-infestation.",
+    desc: "Professional-grade treatments combined with structural exclusion strategies prevent future re-infestation.",
   },
 ];
 
 const cards = [
   {
     heading: "Comprehensive Rodent Protection",
-    desc: "Complete structural protection with advanced anti-rodent technology.",
+    desc: "Complete structural defense using advanced trapping and anti-rodent technology.",
     image: "/Images/services/rodent5.png",
     bgColor: "#FFF6DE",
   },
   {
     heading: "Expert Inspection & Treatment",
-    desc: "Professional inspection followed by customized treatment solutions.",
+    desc: "Professional assessment followed by highly customized trapping and baiting solutions.",
     image: "/Images/icon/vector2.png",
     bgColor: "#EEF4FF",
   },
   {
     heading: "Long-Term Structural Safety",
-    desc: "Protect your property from costly rodent damage with preventive care.",
+    desc: "Protect your property from costly wire and structural damage with preventive rodent care.",
     image: "/Images/icon/vector3.png",
     bgColor: "#FFF1F2",
   },
@@ -283,29 +691,29 @@ const cards = [
 
 const childSafeStats = [
   {
-    title: "Non-Toxic Solutions",
-    desc: "Safe treatment methods for indoor environments.",
+    title: "Tamper-Proof Baiting",
+    desc: "Secure bait stations keep hazardous materials away from children.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
-    icon : ShieldCheck
+    icon: ShieldCheck
   },
   {
-    title: "Deep Foundation Protection",
-    desc: "Stops rodents at the source.",
+    title: "Deep Eradication",
+    desc: "Stops rats and mice at their nesting source.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Shield
   },
   {
     title: "Long-Lasting Results",
-    desc: "Extended protection against future infestations.",
+    desc: "Extended protection through structural proofing and sealing.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Leaf
   },
   {
-    title: "Trusted Since 1998",
-    desc: "India's trusted rodent specialists.",
+    title: "27+ Years of Trust",
+    desc: "Serving 5K+ businesses since 1998 with proven success.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: House
@@ -317,37 +725,37 @@ const faqs = [
     id: "01",
     question: "How do I know if my home has rodents?",
     answer:
-      "Common signs include mud tubes, hollow-sounding wood, discarded wings, damaged wooden furniture, and unexplained cracks. Schedule a professional inspection for confirmation.",
+      "Common signs include rodent droppings, gnaw marks on wood or wires, scratching noises in walls or ceilings, and damaged food packaging. Schedule an inspection for confirmation.",
   },
   {
     id: "02",
     question: "How long does rodent treatment take?",
     answer:
-      "Most residential rodent treatments are completed within a few hours, depending on the size of the property and the severity of infestation.",
+      "Setting up traps, baits, and exclusion zones usually takes a few hours. Complete eradication may take a few days to weeks depending on the severity of the infestation.",
   },
   {
     id: "03",
     question: "Is rodent treatment safe for children and pets?",
     answer:
-      "Yes. Orion uses government-approved rodent treatment solutions that are safe when applied by certified professionals.",
+      "Yes. Orion Pest Control uses lockable, tamper-proof bait stations and safe trapping methods to ensure no harm comes to your family or pets.",
   },
   {
     id: "04",
-    question: "How long does rodent protection last?",
+    question: "How do you prevent rodents from coming back?",
     answer:
-      "Our treatments provide long-term protection, and preventive maintenance can significantly extend effectiveness.",
+      "We provide structural exclusion (sealing entry points) and long-term monitoring as part of our comprehensive pest management strategy to ensure they don't return.",
   },
   {
     id: "05",
-    question: "Do you provide rodent warranties?",
+    question: "Do you remove dead rodents after treatment?",
     answer:
-      "Yes. Selected rodent treatment plans include service warranties for additional peace of mind.",
+      "Yes. Our service includes the safe removal of dead rodents, along with deodorizing and sanitizing the affected areas to maintain hygiene.",
   },
   {
     id: "06",
     question: "How much does rodent treatment cost?",
     answer:
-      "The cost depends on property size, infestation level, and treatment type. Contact us for a free site inspection and personalized quotation.",
+      "The cost depends on property size, infestation level, and the exclusion work required. Contact us for a free site inspection and personalized quotation.",
   },
 ];
 
@@ -358,47 +766,75 @@ export default function page() {
 
       <HeroSection
         image="/Images/services/rodent.png"
-        topbadge="RODENT PEST CONTROL SERVICES"
+        topbadge="EXPERT RODENT CONTROL SERVICES"
         heading={
           <>
+            {/* H1 #1 (The Only H1) */}
             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
-              Say Goodbye to
+              Top-Rated
               <br />
-              <span className="text-[#1095D9]">Redents</span>
+              <span className="text-[#1095D9]">Rodents Pest Control Service Kolkata</span>
             </h1>
           </>
         }
         subHeading="Safe. Effective. Long-Lasting Protection."
-        desc="Protect your home from hidden rodent damage with Orion Pest Control. Our advanced rodent treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and commercial properties. Safe, effective, and trusted since 1998."
+        desc={
+          <>
+            Protect your property from disease-carrying rats and mice with Orion Pest Control. As a leading provider of{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              pest control services
+            </Link>
+            , our advanced rodent treatments eliminate active infestations and provide structural defense. Established in 1998, we bring 27+ years of expertise and have proudly served 5K+ Businesses.
+          </>
+        }
         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
         imageStyle="absolute w-[90%] h-[90%] -top-[0%] -left-[20%] sm:-left-[10%] z-[10px]"
       />
+
       {/* Advanced Control Section */}
       <AdvanceControl
         image="/Images/services/rodent6.png"
         heading={
           <>
+            {/* H2 #1 */}
             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
               Advanced Rodent Control for
               <span className="text-[#1095D9]"> Homes & Businesses</span>
             </h2>
           </>
         }
-        desc="Rodents silently weaken wooden structures before visible damage appears. Our experienced technicians use modern detection methods and proven treatment techniques to eliminate rodents from the source while preventing future infestations."
+        desc={
+          <>
+            Rodents silently chew through electrical wires, contaminate food, and spread dangerous diseases. Our experienced technicians use modern{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              Pest control solutions
+            </Link>{" "}
+            and proven trapping techniques to eliminate rats and mice from the source while preventing future entry.
+          </>
+        }
         list={list1}
       />
 
       {/* Complete Protection Section */}
       <CompleteProtection
-      heading={
+        heading={
           <>
-            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+            {/* H3 #1 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
               Complete Protection for
               <span className="text-[#1095D9]"> Every Corner</span>
-            </h2>
+            </h3>
           </>
         }
-        desc="Our comprehensive rodent control process protects every vulnerable area of your property, ensuring complete structural safety and long-lasting defense against rodents."
+        desc={
+          <>
+            Our comprehensive rodent control process secures every vulnerable area of your property. If you need dedicated{" "}
+            <Link href="https://www.orionpest.com/residential-pest-control/" className="text-blue-600 hover:underline font-semibold">
+              Residential pest control services
+            </Link>
+            , we ensure complete structural safety and long-lasting defense against recurring rat and mice infestations.
+          </>
+        }
         list={list2}
         image="/Images/services/home.png"
       />
@@ -408,42 +844,55 @@ export default function page() {
         topbadge="COMPLETE STRUCTURAL PROTECTION"
         heading={
           <>
-          <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
-            Complete Rodent Control
-            <br />
-            <span className="text-[#0094DA]">at Every Place.</span>
-          </h2>
+            {/* H3 #2 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+              Total Rodent Control
+              <br />
+              <span className="text-[#0094DA]">at Every Place.</span>
+            </h3>
           </>
         }
-        desc="Whether it's a home, office, warehouse, hotel, or commercial building, our specialized rodent treatment keeps every property protected against hidden rodent attacks."
+        desc={
+          <>
+            Whether it's a home, warehouse, hotel, or commercial building, our specialized treatments keep your property safe. When looking for the best{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              Pest Control Services Kolkata
+            </Link>
+            , our Rodents Pest Control Service Kolkata guarantees exceptional results and complete peace of mind.
+          </>
+        }
         leftFeature={leftFeature}
         rightFeature={rightFeature}
       />
 
       {/* Brand Logos / Cards Grid Section */}
-      <BrandSection heading={
-        <>
-        <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+      <BrandSection
+        heading={
+          <>
+            {/* H3 #3 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
               Preferred by{" "}
-              <span className="text-[#0094DA]">Homes & Businesses</span> Across
-              India
-            </h2>
-        </>
-      } cards={cards} />
+              <span className="text-[#0094DA]">Homes & Businesses</span> Across India
+            </h3>
+          </>
+        }
+        cards={cards}
+      />
 
       {/* Testimonials Section Component */}
       <TestimonialsSection
         heading={
           <>
-          <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-            Trusted by Thousands.
-            <br />
-            <span className="text-[#0094DA]">Rodent Control,</span>{" "}
-            <span className="text-[#2F3293]">Every Time.</span>
-          </h2>
+            {/* H3 #4 */}
+            <h3 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+              Trusted by 5K+ Businesses.
+              <br />
+              <span className="text-[#0094DA]">Rodent-Free,</span>{" "}
+              <span className="text-[#2F3293]">Every Time.</span>
+            </h3>
           </>
         }
-        desc="See why homeowners, businesses, and builders trust Orion Pest Control for dependable rodent protection and exceptional service."
+        desc="See why homeowners, businesses, and warehouse managers trust Orion Pest Control for dependable rat and mice eradication and exceptional service."
       />
 
       {/* Child Safe Environment Highlight Grid */}
@@ -455,7 +904,7 @@ export default function page() {
         desc={
           <>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
-              Our eco-friendly rodent treatments provide maximum protection while remaining safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety.
+              Our eco-friendly rodent treatments provide maximum eradication while remaining incredibly safe for your children, pets, and the environment. Backed by 27+ years of experience, enjoy complete peace of mind without compromising your family's safety.
             </p>
             <br />
           </>
@@ -464,14 +913,14 @@ export default function page() {
       />
 
       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
-      <section className="bg-[#FCFCFD] pb-16 md:pb-20">
-        <FAQSection image="/Images/services/rodent2.png" faqs={faqs}/>
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+      <section className="bg-[#FCFCFD] pb-16 md:pb-20 mt-10">
+        <FAQSection image="/Images/services/rodent2.png" faqs={faqs} />
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto mt-10">
           <SupportCard
             icon={<Phone size={26} />}
             title="Need Immediate Assistance?"
             text="Call us now for quick support"
-            highlight="1800 212 696969"
+            highlight="1800 419 8181"
           />
           <SupportCard
             icon={<CalendarDays size={26} />}
@@ -482,7 +931,7 @@ export default function page() {
           <SupportCard
             icon={<ShieldCheck size={26} />}
             title="Safe. Effective. Reliable."
-            text="Trusted by thousands of homes"
+            text="Trusted by 5K+ Businesses"
             highlight="Across India"
           />
         </div>
@@ -506,6 +955,7 @@ export default function page() {
                 <span className="text-yellow-500">Touch</span>
               </p>
 
+              {/* H2 #2 */}
               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
                 We're Here to
                 <br />
@@ -515,7 +965,7 @@ export default function page() {
               </h2>
 
               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
-                Protect your property before rodents cause costly structural damage. Book a professional rodent inspection with our certified experts today.
+                Protect your property before rodents chew through wires and cause costly structural damage. Book our highly-rated Rodents Pest Control Service Kolkata with our certified experts today.
               </p>
 
               {/* Contact Info Row Components Column Base List Block */}
@@ -537,7 +987,7 @@ export default function page() {
                 <ContactInfo
                   icon={<MapPin size={24} />}
                   title="OUR HEAD OFFICE"
-                  value="200W,S P Mukherjee Road, Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
+                  value="200W, S P Mukherjee Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
                   bg="bg-yellow-400"
                 />
               </div>
@@ -562,7 +1012,7 @@ export default function page() {
             <div className="absolute left-32 top-5 w-52 h-52">
               <Image
                 src="/Images/services/rodent2.png"
-                alt="Cockroach"
+                alt="Rodents Pest Control Service Kolkata"
                 fill
                 className="object-contain"
               />

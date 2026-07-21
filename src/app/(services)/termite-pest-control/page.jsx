@@ -184,7 +184,430 @@
 //   );
 // }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Debkanta Added This
+
+// import Image from "next/image";
+// import {
+//   ShieldCheck,
+//   Phone,
+//   MapPin,
+//   CalendarDays,
+//   Mail,
+//   Shield,
+//   Leaf,
+//   House,
+// } from "lucide-react";
+// import TestimonialsSection from "@/components/services/ui/Testimonials";
+// import FAQSection from "@/components/ui/FAQ";
+// import Form from "@/components/ui/Form";
+// import { getPageData } from "@/lib/getPageData";
+// import HeroSection from "@/components/services/HeroSection";
+// import SupportCard from "@/components/services/ui/SupportCard";
+// import ContactInfo from "@/components/services/ui/ContactInfo";
+// import AdvanceControl from "@/components/services/AdvanceControl";
+// import CompleteProtection from "@/components/services/CompleteProtection";
+// import Diagram from "@/components/services/Diagram";
+// import BrandSection from "@/components/services/BrandSection";
+// import ChildSafeSection from "@/components/services/ChildSafeSection";
+
+// export async function generateMetadata() {
+//   const page = await getPageData("termite-control");
+//   return {
+//     title: page?.metaTitle || "Termite Control",
+//     description: page?.metaDescription || "",
+//   };
+// }
+
+// const list1 = [
+//   "Pre-Construction Treatment",
+//   "Post-Construction Treatment",
+//   "Wood Protection Solutions",
+//   "Soil & Foundation Treatment",
+// ];
+
+// const list2 = [
+//   "Detailed Property Inspection",
+//   "Customized Treatment Plan",
+//   "Advanced Anti-Termite Solutions",
+//   "Long-Term Monitoring & Warranty",
+// ];
+
+// const leftFeature = [
+//   {
+//     heading: "Target Hidden Colonies",
+//     desc: "Advanced detection identifies termite activity before major structural damage occurs.",
+//   },
+//   {
+//     heading: "Prevent Future Damage",
+//     desc: "Protect your investment with long-lasting termite prevention treatments.",
+//   },
+// ];
+
+// const rightFeature = [
+//   {
+//     heading: "Safe & Eco-Friendly",
+//     desc: "Environmentally responsible solutions that are safe for families and pets.",
+//   },
+//   {
+//     heading: "Long-Lasting Protection",
+//     desc: "Professional-grade treatments with extended protection against re-infestation.",
+//   },
+// ];
+
+// const cards = [
+//   {
+//     heading: "Comprehensive Termite Protection",
+//     desc: "Complete structural protection with advanced anti-termite technology.",
+//     image: "/Images/services/termite3.png",
+//     bgColor: "#FFF6DE",
+//   },
+//   {
+//     heading: "Expert Inspection & Treatment",
+//     desc: "Professional inspection followed by customized treatment solutions.",
+//     image: "/Images/icon/vector2.png",
+//     bgColor: "#EEF4FF",
+//   },
+//   {
+//     heading: "Long-Term Structural Safety",
+//     desc: "Protect your property from costly termite damage with preventive care.",
+//     image: "/Images/icon/vector3.png",
+//     bgColor: "#FFF1F2",
+//   },
+// ];
+
+// const childSafeStats = [
+//   {
+//     title: "Non-Toxic Solutions",
+//     desc: "Safe treatment methods for indoor environments.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: ShieldCheck,
+//   },
+//   {
+//     title: "Deep Foundation Protection",
+//     desc: "Stops termites at the source.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Shield,
+//   },
+//   {
+//     title: "Long-Lasting Results",
+//     desc: "Extended protection against future infestations.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: Leaf,
+//   },
+//   {
+//     title: "Trusted Since 1998",
+//     desc: "India's trusted termite specialists.",
+//     bgColor: "#DEE9FC",
+//     color: "#2F3293",
+//     icon: House,
+//   },
+// ];
+
+// const faqs = [
+//   {
+//     id: "01",
+//     question: "How do I know if my home has termites?",
+//     answer:
+//       "Common signs include mud tubes, hollow-sounding wood, discarded wings, damaged wooden furniture, and unexplained cracks. Schedule a professional inspection for confirmation.",
+//   },
+//   {
+//     id: "02",
+//     question: "How long does termite treatment take?",
+//     answer:
+//       "Most residential termite treatments are completed within a few hours, depending on the size of the property and the severity of infestation.",
+//   },
+//   {
+//     id: "03",
+//     question: "Is termite treatment safe for children and pets?",
+//     answer:
+//       "Yes. Orion uses government-approved termite treatment solutions that are safe when applied by certified professionals.",
+//   },
+//   {
+//     id: "04",
+//     question: "How long does termite protection last?",
+//     answer:
+//       "Our treatments provide long-term protection, and preventive maintenance can significantly extend effectiveness.",
+//   },
+//   {
+//     id: "05",
+//     question: "Do you provide termite warranties?",
+//     answer:
+//       "Yes. Selected termite treatment plans include service warranties for additional peace of mind.",
+//   },
+//   {
+//     id: "06",
+//     question: "How much does termite treatment cost?",
+//     answer:
+//       "The cost depends on property size, infestation level, and treatment type. Contact us for a free site inspection and personalized quotation.",
+//   },
+// ];
+
+// export default function page() {
+//   return (
+//     <div className="w-full">
+//       {/* Hero Section */}
+
+//       <HeroSection
+//         image="/Images/services/termite.png"
+//         topbadge="TERMITE PEST CONTROL SERVICES"
+//         heading={
+//           <>
+//             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
+//               Say Goodbye to
+//               <br />
+//               <span className="text-[#1095D9]">Termites</span>
+//             </h1>
+//           </>
+//         }
+//         subHeading="Safe. Effective. Long-Lasting Protection."
+//         desc="Protect your home from hidden termite damage with Orion Pest Control. Our advanced termite treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and commercial properties. Safe, effective, and trusted since 1970."
+//         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
+//         imageStyle="absolute w-[105%] h-[105%] -top-[16%] -left-[20%] sm:-left-[32%] z-[10px]"
+//       />
+//       {/* Advanced Control Section */}
+//       <AdvanceControl
+//         image="/Images/services/termite2.png"
+//         heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Advanced Termite Control for
+//               <span className="text-[#1095D9]"> Homes & Businesses</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Termites silently weaken wooden structures before visible damage appears. Our experienced technicians use modern detection methods and proven treatment techniques to eliminate termites from the source while preventing future infestations."
+//         list={list1}
+//       />
+
+//       {/* Complete Protection Section */}
+//       <CompleteProtection
+//         heading={
+//           <>
+//             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+//               Complete Protection for
+//               <span className="text-[#1095D9]"> Every Corner</span>
+//             </h2>
+//           </>
+//         }
+//         desc="Our comprehensive termite control process protects every vulnerable area of your property, ensuring complete structural safety and long-lasting defense against termites."
+//         list={list2}
+//         image="/Images/services/home.png"
+//       />
+
+//       {/* Diagram Features Info Section */}
+//       <Diagram
+//         topbadge="COMPLETE STRUCTURAL PROTECTION"
+//         heading={
+//           <>
+//           <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+//             Complete Termite Control
+//             <br />
+//             <span className="text-[#0094DA]">at Every Place.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="Whether it's a home, office, warehouse, hotel, or commercial building, our specialized termite treatment keeps every property protected against hidden termite attacks."
+//         leftFeature={leftFeature}
+//         rightFeature={rightFeature}
+//       />
+
+//       {/* Brand Logos / Cards Grid Section */}
+//       <BrandSection heading={
+//         <>
+//         <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//               Preferred by{" "}
+//               <span className="text-[#0094DA]">Homes & Businesses</span> Across
+//               India
+//             </h2>
+//         </>
+//       } cards={cards} />
+
+//       {/* Testimonials Section Component */}
+//       <TestimonialsSection
+//         heading={
+//           <>
+//           <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+//             Trusted by Thousands.
+//             <br />
+//             <span className="text-[#0094DA]">Termite Control,</span>{" "}
+//             <span className="text-[#2F3293]">Every Time.</span>
+//           </h2>
+//           </>
+//         }
+//         desc="See why homeowners, businesses, and builders trust Orion Pest Control for dependable termite protection and exceptional service."
+//       />
+
+//       {/* Child Safe Environment Highlight Grid */}
+//       <ChildSafeSection
+//         image1="/Images/services/termite7.png"
+//         image2="/Images/services/termite4.png"
+//         name="Termite"
+//         tagline="Safe for your little ones. Tough on termites."
+//         desc={
+//           <>
+//             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
+//               Our eco-friendly termite treatments provide maximum protection while remaining safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety.
+//             </p>
+//             <br />
+//           </>
+//         }
+//         childSafeStats={childSafeStats}
+//       />
+
+//       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
+//       <section className="bg-[#FCFCFD] pb-16 md:pb-20">
+//         <FAQSection image="/Images/services/termite5.png" faqs={faqs} />
+//         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+//           <SupportCard
+//             icon={<Phone size={26} />}
+//             title="Need Immediate Assistance?"
+//             text="Call us now for quick support"
+//             highlight="1800 212 696969"
+//           />
+//           <SupportCard
+//             icon={<CalendarDays size={26} />}
+//             title="Schedule an Inspection"
+//             text="Book a professional inspection"
+//             highlight="At your convenience"
+//           />
+//           <SupportCard
+//             icon={<ShieldCheck size={26} />}
+//             title="Safe. Effective. Reliable."
+//             text="Trusted by thousands of homes"
+//             highlight="Across India"
+//           />
+//         </div>
+//       </section>
+
+//       {/* Interactive Contact Form Matrix Content Group Grid Footer Element */}
+//       <section
+//         className="relative overflow-hidden bg-[#FEFEFE] py-10 md:py-24"
+//         style={{
+//           background: "url('/Images/CTA_background.webp')",
+//           backgroundSize: "cover",
+//           backgroundRepeat: "no-repeat",
+//         }}
+//       >
+//         <div className="mx-auto max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] px-4 sm:px-6 w-full relative z-[2]">
+//           <div className="grid gap-12 lg:grid-cols-2 items-start">
+//             {/* LEFT SIDE CONTENT SECTION */}
+//             <div>
+//               <p className="font-semibold uppercase tracking-widest text-smsm:text-base">
+//                 <span className="text-blue-600">Get In</span>{" "}
+//                 <span className="text-yellow-500">Touch</span>
+//               </p>
+
+//               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
+//                 We're Here to
+//                 <br />
+//                 <span className="text-[#0095DA]">Help You Stay</span>
+//                 <br />
+//                 <span className="text-[#2F3293]">Termite-Free.</span>
+//               </h2>
+
+//               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
+//                 Protect your property before termites cause costly structural
+//                 damage. Book a professional termite inspection with our
+//                 certified experts today.
+//               </p>
+
+//               {/* Contact Info Row Components Column Base List Block */}
+//               <div className="mt-10 space-y-6 sm:space-y-8">
+//                 <ContactInfo
+//                   icon={<Phone size={24} />}
+//                   title="CALL US"
+//                   link="1800 419 8181"
+//                   value="1800 419 8181"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<Mail size={24} />}
+//                   title="EMAIL US"
+//                   link="sales@orionpest.com"
+//                   value="sales@orionpest.com"
+//                   bg="bg-yellow-400"
+//                 />
+//                 <ContactInfo
+//                   icon={<MapPin size={24} />}
+//                   title="OUR HEAD OFFICE"
+//                   value="200W,S P Mukherjee Road, Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
+//                   bg="bg-yellow-400"
+//                 />
+//               </div>
+//             </div>
+
+//             {/* RIGHT SIDE FORM COMPONENT BLOCK */}
+//             <div className="w-full">
+//               <Form />
+//             </div>
+//           </div>
+//         </div>
+//         {/* Bottom Decorative Circle Vector Element Shape Component Mock Container */}
+//         <div className="absolute -bottom-12 -left-32 hidden xl:block overflow-hidden">
+//           <div
+//             className="relative overflow-hidden border-4 border-yellow-400 w-[450px] h-[230px] rounded-t-full"
+//             style={{
+//               background: "url('/Images/bugs/bg.png')",
+//               backgroundSize: "cover",
+//               backgroundRepeat: "no-repeat",
+//             }}
+//           >
+//             <div className="absolute left-32 top-5 w-52 h-52">
+//               <Image
+//                 src="/Images/services/termite5.png"
+//                 alt="Cockroach"
+//                 fill
+//                 className="object-contain"
+//               />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Asad Added These
+
 import Image from "next/image";
+import Link from "next/link";
 import {
   ShieldCheck,
   Phone,
@@ -211,8 +634,8 @@ import ChildSafeSection from "@/components/services/ChildSafeSection";
 export async function generateMetadata() {
   const page = await getPageData("termite-control");
   return {
-    title: page?.metaTitle || "Termite Control",
-    description: page?.metaDescription || "",
+    title: page?.metaTitle || "Termite Pest Control Services | Advanced Termite Treatment Solutions",
+    description: page?.metaDescription || "Protect your property with professional termite pest control services. Advanced termite treatments for homes and commercial spaces across India.",
   };
 }
 
@@ -233,41 +656,41 @@ const list2 = [
 const leftFeature = [
   {
     heading: "Target Hidden Colonies",
-    desc: "Advanced detection identifies termite activity before major structural damage occurs.",
+    desc: "Advanced detection identifies termite activity inside walls and foundations before major structural damage occurs.",
   },
   {
     heading: "Prevent Future Damage",
-    desc: "Protect your investment with long-lasting termite prevention treatments.",
+    desc: "Protect your property investment with long-lasting Termite Control and prevention treatments.",
   },
 ];
 
 const rightFeature = [
   {
     heading: "Safe & Eco-Friendly",
-    desc: "Environmentally responsible solutions that are safe for families and pets.",
+    desc: "Environmentally responsible termite solutions that are highly effective yet completely safe for families and pets.",
   },
   {
     heading: "Long-Lasting Protection",
-    desc: "Professional-grade treatments with extended protection against re-infestation.",
+    desc: "Professional-grade treatments providing an extended chemical barrier against costly re-infestations.",
   },
 ];
 
 const cards = [
   {
     heading: "Comprehensive Termite Protection",
-    desc: "Complete structural protection with advanced anti-termite technology.",
+    desc: "Complete structural defense using advanced anti-termite drill-fill-seal technology.",
     image: "/Images/services/termite3.png",
     bgColor: "#FFF6DE",
   },
   {
     heading: "Expert Inspection & Treatment",
-    desc: "Professional inspection followed by customized treatment solutions.",
+    desc: "Professional inspection followed by highly customized termite eradication solutions.",
     image: "/Images/icon/vector2.png",
     bgColor: "#EEF4FF",
   },
   {
     heading: "Long-Term Structural Safety",
-    desc: "Protect your property from costly termite damage with preventive care.",
+    desc: "Protect your property from devastating termite damage with guaranteed preventive care.",
     image: "/Images/icon/vector3.png",
     bgColor: "#FFF1F2",
   },
@@ -276,28 +699,28 @@ const cards = [
 const childSafeStats = [
   {
     title: "Non-Toxic Solutions",
-    desc: "Safe treatment methods for indoor environments.",
+    desc: "Safe, government-approved treatment methods for indoor environments.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: ShieldCheck,
   },
   {
     title: "Deep Foundation Protection",
-    desc: "Stops termites at the source.",
+    desc: "Stops subterranean termites entirely at the source.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Shield,
   },
   {
     title: "Long-Lasting Results",
-    desc: "Extended protection against future infestations.",
+    desc: "Extended soil and wood protection against future infestations.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: Leaf,
   },
   {
-    title: "Trusted Since 1998",
-    desc: "India's trusted termite specialists.",
+    title: "27+ Years of Trust",
+    desc: "Serving 5K+ businesses since 1998 with proven success.",
     bgColor: "#DEE9FC",
     color: "#2F3293",
     icon: House,
@@ -309,37 +732,37 @@ const faqs = [
     id: "01",
     question: "How do I know if my home has termites?",
     answer:
-      "Common signs include mud tubes, hollow-sounding wood, discarded wings, damaged wooden furniture, and unexplained cracks. Schedule a professional inspection for confirmation.",
+      "Common signs include mud tubes on walls, hollow-sounding wood, discarded wings, damaged wooden furniture, and unexplained cracks. Schedule a professional inspection for exact confirmation.",
   },
   {
     id: "02",
-    question: "How long does termite treatment take?",
+    question: "How long does a termite treatment take?",
     answer:
-      "Most residential termite treatments are completed within a few hours, depending on the size of the property and the severity of infestation.",
+      "Most residential termite treatments are completed within a few hours to a full day, depending on the size of the property and the severity of the infestation.",
   },
   {
     id: "03",
     question: "Is termite treatment safe for children and pets?",
     answer:
-      "Yes. Orion uses government-approved termite treatment solutions that are safe when applied by certified professionals.",
+      "Yes. Orion Pest Control uses government-approved termite treatment solutions that are completely safe when applied by our certified professionals.",
   },
   {
     id: "04",
     question: "How long does termite protection last?",
     answer:
-      "Our treatments provide long-term protection, and preventive maintenance can significantly extend effectiveness.",
+      "Our treatments provide long-term protection, often lasting several years. Regular preventive maintenance can significantly extend this effectiveness.",
   },
   {
     id: "05",
-    question: "Do you provide termite warranties?",
+    question: "Do you provide termite service warranties?",
     answer:
-      "Yes. Selected termite treatment plans include service warranties for additional peace of mind.",
+      "Yes. Our comprehensive termite treatment plans include dedicated service warranties for your absolute peace of mind.",
   },
   {
     id: "06",
-    question: "How much does termite treatment cost?",
+    question: "How much does a Termite pest control service cost?",
     answer:
-      "The cost depends on property size, infestation level, and treatment type. Contact us for a free site inspection and personalized quotation.",
+      "The cost depends on property size, infestation level, and whether it's a pre or post-construction treatment. Contact us for a free site inspection and personalized quotation.",
   },
 ];
 
@@ -350,9 +773,10 @@ export default function page() {
 
       <HeroSection
         image="/Images/services/termite.png"
-        topbadge="TERMITE PEST CONTROL SERVICES"
+        topbadge="EXPERT TERMITE PEST CONTROL"
         heading={
           <>
+            {/* H1 #1 (The Only H1) */}
             <h1 className="text-4xl sm:text-5xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.5rem]">
               Say Goodbye to
               <br />
@@ -361,22 +785,40 @@ export default function page() {
           </>
         }
         subHeading="Safe. Effective. Long-Lasting Protection."
-        desc="Protect your home from hidden termite damage with Orion Pest Control. Our advanced termite treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and commercial properties. Safe, effective, and trusted since 1998."
+        desc={
+          <>
+            Protect your property from hidden structural damage with Orion Pest Control. As a highly trusted{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              Pest control company in India
+            </Link>
+            , our specialized Termite pest control service eliminates active infestations from the root. Established in 1998, we bring 27+ years of expertise and have safely served 5K+ Businesses.
+          </>
+        }
         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
         imageStyle="absolute w-[105%] h-[105%] -top-[16%] -left-[20%] sm:-left-[32%] z-[10px]"
       />
+
       {/* Advanced Control Section */}
       <AdvanceControl
         image="/Images/services/termite2.png"
         heading={
           <>
+            {/* H2 #1 */}
             <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
               Advanced Termite Control for
               <span className="text-[#1095D9]"> Homes & Businesses</span>
             </h2>
           </>
         }
-        desc="Termites silently weaken wooden structures before visible damage appears. Our experienced technicians use modern detection methods and proven treatment techniques to eliminate termites from the source while preventing future infestations."
+        desc={
+          <>
+            Termites silently weaken wooden structures from the inside out before visible damage appears. For reliable{" "}
+            <Link href="https://www.orionpest.com" className="text-blue-600 hover:underline font-semibold">
+              Termite control Kolkata
+            </Link>
+            , our experienced technicians use modern detection methods and proven pest control solutions to eliminate colonies at their source.
+          </>
+        }
         list={list1}
       />
 
@@ -384,13 +826,22 @@ export default function page() {
       <CompleteProtection
         heading={
           <>
-            <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
+            {/* H3 #1 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#36388D] w-full leading-tight">
               Complete Protection for
               <span className="text-[#1095D9]"> Every Corner</span>
-            </h2>
+            </h3>
           </>
         }
-        desc="Our comprehensive termite control process protects every vulnerable area of your property, ensuring complete structural safety and long-lasting defense against termites."
+        desc={
+          <>
+            Our comprehensive termite control process protects every vulnerable area of your property. For homeowners, our customized{" "}
+            <Link href="https://www.orionpest.com/residential-pest-control/" className="text-blue-600 hover:underline font-semibold">
+              Residential pest control services
+            </Link>{" "}
+            ensure complete structural safety and long-lasting defense against destructive termites.
+          </>
+        }
         list={list2}
         image="/Images/services/home.png"
       />
@@ -400,42 +851,51 @@ export default function page() {
         topbadge="COMPLETE STRUCTURAL PROTECTION"
         heading={
           <>
-          <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
-            Complete Termite Control
-            <br />
-            <span className="text-[#0094DA]">at Every Place.</span>
-          </h2>
+            {/* H3 #2 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight lg:!leading-[3.9rem] mt-10">
+              Complete Termite Control
+              <br />
+              <span className="text-[#0094DA]">at Every Place.</span>
+            </h3>
           </>
         }
-        desc="Whether it's a home, office, warehouse, hotel, or commercial building, our specialized termite treatment keeps every property protected against hidden termite attacks."
+        desc={
+          <>
+            Whether it's a home, office, warehouse, or commercial building, we offer the most effective Termite Control Services in Kolkata. Our specialized treatments keep your property thoroughly protected against hidden termite attacks.
+          </>
+        }
         leftFeature={leftFeature}
         rightFeature={rightFeature}
       />
 
       {/* Brand Logos / Cards Grid Section */}
-      <BrandSection heading={
-        <>
-        <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+      <BrandSection
+        heading={
+          <>
+            {/* H3 #3 */}
+            <h3 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
               Preferred by{" "}
-              <span className="text-[#0094DA]">Homes & Businesses</span> Across
-              India
-            </h2>
-        </>
-      } cards={cards} />
+              <span className="text-[#0094DA]">Homes & Businesses</span> Across India
+            </h3>
+          </>
+        }
+        cards={cards}
+      />
 
       {/* Testimonials Section Component */}
       <TestimonialsSection
         heading={
           <>
-          <h2 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
-            Trusted by Thousands.
-            <br />
-            <span className="text-[#0094DA]">Termite Control,</span>{" "}
-            <span className="text-[#2F3293]">Every Time.</span>
-          </h2>
+            {/* H3 #4 */}
+            <h3 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-bold text-[#2F3293] leading-tight">
+              Trusted by 5K+ Businesses.
+              <br />
+              <span className="text-[#0094DA]">Termite Control,</span>{" "}
+              <span className="text-[#2F3293]">Every Time.</span>
+            </h3>
           </>
         }
-        desc="See why homeowners, businesses, and builders trust Orion Pest Control for dependable termite protection and exceptional service."
+        desc="See why homeowners, builders, and facility managers trust Orion Pest Control for dependable termite protection and exceptional service."
       />
 
       {/* Child Safe Environment Highlight Grid */}
@@ -447,7 +907,7 @@ export default function page() {
         desc={
           <>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 mt-4">
-              Our eco-friendly termite treatments provide maximum protection while remaining safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety.
+              Our eco-friendly termite treatments provide maximum protection while remaining completely safe for your children, pets, and the environment. Enjoy complete peace of mind without compromising your family's safety.
             </p>
             <br />
           </>
@@ -456,14 +916,14 @@ export default function page() {
       />
 
       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
-      <section className="bg-[#FCFCFD] pb-16 md:pb-20">
+      <section className="bg-[#FCFCFD] pb-16 md:pb-20 mt-10">
         <FAQSection image="/Images/services/termite5.png" faqs={faqs} />
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto mt-10">
           <SupportCard
             icon={<Phone size={26} />}
             title="Need Immediate Assistance?"
             text="Call us now for quick support"
-            highlight="1800 212 696969"
+            highlight="1800 419 8181"
           />
           <SupportCard
             icon={<CalendarDays size={26} />}
@@ -474,7 +934,7 @@ export default function page() {
           <SupportCard
             icon={<ShieldCheck size={26} />}
             title="Safe. Effective. Reliable."
-            text="Trusted by thousands of homes"
+            text="Trusted by 5K+ Businesses"
             highlight="Across India"
           />
         </div>
@@ -498,6 +958,7 @@ export default function page() {
                 <span className="text-yellow-500">Touch</span>
               </p>
 
+              {/* H2 #2 */}
               <h2 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#2F3293]">
                 We're Here to
                 <br />
@@ -507,9 +968,7 @@ export default function page() {
               </h2>
 
               <p className="mt-4 max-w-lg text-base sm:text-lg leading-relaxed text-gray-600">
-                Protect your property before termites cause costly structural
-                damage. Book a professional termite inspection with our
-                certified experts today.
+                Protect your property before termites cause costly structural damage. Book a professional Termite pest control service with our certified experts today.
               </p>
 
               {/* Contact Info Row Components Column Base List Block */}
@@ -531,7 +990,7 @@ export default function page() {
                 <ContactInfo
                   icon={<MapPin size={24} />}
                   title="OUR HEAD OFFICE"
-                  value="200W,S P Mukherjee Road, Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
+                  value="200W, S P Mukherjee Road, beside Bank of Baroda, Tollygunge, Kolkata, West Bengal 700026"
                   bg="bg-yellow-400"
                 />
               </div>
@@ -556,7 +1015,7 @@ export default function page() {
             <div className="absolute left-32 top-5 w-52 h-52">
               <Image
                 src="/Images/services/termite5.png"
-                alt="Cockroach"
+                alt="Termite Control Services in Kolkata"
                 fill
                 className="object-contain"
               />
