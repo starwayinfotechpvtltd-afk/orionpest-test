@@ -369,7 +369,7 @@ export default function page() {
           </>
         }
         subHeading="Safe. Effective. Long-Lasting Protection."
-        desc="Protect your home from hidden rodent damage with Orion Pest Control. Our advanced rodent treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and commercial properties. Safe, effective, and trusted since 1970."
+        desc="Protect your home from hidden rodent damage with Orion Pest Control. Our advanced rodent treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and commercial properties. Safe, effective, and trusted since 1998."
         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
         imageStyle="absolute w-[90%] h-[90%] -top-[0%] -left-[20%] sm:-left-[10%] z-[10px]"
       />

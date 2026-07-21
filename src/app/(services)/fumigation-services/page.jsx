@@ -339,7 +339,7 @@ export default function page() {
           </>
         }
         subHeading="Safe. Effective. Long-Lasting Protection."
-        desc="Protect your home from hidden    fumigation damage with Orion Pest Control. Our advanced    fumigation treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and   fumigation properties. Safe, effective, and trusted since 1970."
+        desc="Protect your home from hidden    fumigation damage with Orion Pest Control. Our advanced    fumigation treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and   fumigation properties. Safe, effective, and trusted since 1998."
         stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
         imageStyle="absolute w-[90%] h-[90%] top-10 left-0 z-[10px] rounded-full"
       />
