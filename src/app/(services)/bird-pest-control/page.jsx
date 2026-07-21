@@ -751,8 +751,16 @@ export default function page() {
           </>
         }
         subHeading="Safe. Effective. Long-Lasting Protection."
-        desc="Protect your home from hidden bird damage with Orion Pest Control. Our advanced bird treatment solutions eliminate active infestations and provide long-lasting protection for homes, offices, and commercial properties. Safe, effective, and trusted since 1970."
-        stats={["Safe for Family", "Certified Experts", "Long-Term Protection"]}
+        desc={
+          <>
+            Protect your property from nesting issues and corrosive droppings with Orion Pest Control. As a highly trusted{" "}
+            <Link href="https://www.orionpest.com/" className="text-blue-600 hover:underline font-semibold">
+              Pest control company in India
+            </Link>
+            , our humane bird deterrent solutions ensure a safe and clean environment. Established in 1998, we bring over 27+ years of experience and have proudly served 5K+ Businesses.
+          </>
+        }
+        stats={["Humane Methods", "Certified Experts", "Long-Term Protection"]}
         imageStyle="absolute w-[80%] h-[80%] top-[0%] -left-[20%] sm:left-[0%] z-[10px]"
       />
 
