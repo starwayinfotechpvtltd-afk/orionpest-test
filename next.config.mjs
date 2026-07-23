@@ -84,6 +84,16 @@ const nextConfig = {
   destination: "/branches",
   permanent: true,
 },
+      {
+  source: "/commercial-pest-control-services",
+  destination: "/commercial-pest-control",
+  permanent: true,
+},
+      {
+  source: "/termite-control-services",
+  destination: "/termite-pest-control",
+  permanent: true,
+},
     ];
   },
 };
