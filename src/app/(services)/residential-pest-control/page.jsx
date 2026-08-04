@@ -794,7 +794,7 @@ export default function page() {
       {/* Child Safe Environment Highlight Grid */}
       <ChildSafeSection
         image1="/Images/services/residential1.png"
-        image2="/Images/services/residential3.png"
+        image2="/Images/services/residential.png"
         name="Residential"
         tagline="Safe for your family. Tough on pests."
         desc={
