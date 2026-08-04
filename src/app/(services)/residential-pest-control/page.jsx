@@ -689,7 +689,7 @@ export default function page() {
 
       {/* Advanced Control Section */}
       <AdvanceControl
-        image="/Images/services/residential2.png"
+        image="/Images/services/residential.png"
         heading={
           <>
             {/* H2 #1 */}
