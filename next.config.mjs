@@ -71,12 +71,12 @@ const nextConfig = {
 },
 {
   source: "/mosquitoes",
-  destination: "/mosquito-pest-control",
+  destination: "/mosquito-control",
   permanent: true,
 },
 {
   source: "/ants",
-  destination: "/ant-pest-control",
+  destination: "/ant-control",
   permanent: true,
 },
 {

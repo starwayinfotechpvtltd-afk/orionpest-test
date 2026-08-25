@@ -1628,27 +1628,27 @@ export default function page() {
     {
       title: "Rodent\nControl",
       image: "/Images/services/rodent.png",
-      link: "/rodent-pest-control",
+      link: "/rodent-control",
     },
     {
       title: "Mosquito\nControl",
       image: "/Images/services/mosquito.png",
-      link: "/mosquito-pest-control",
+      link: "/mosquito-control",
     },
     {
       title: "Ant\nControl",
       image: "/Images/services/ant.png",
-      link: "/ant-pest-control",
+      link: "/ant-control",
     },
     {
       title: "Bird\nControl",
       image: "/Images/services/bird.png",
-      link: "/bird-pest-control",
+      link: "/bird-control",
     },
     {
       title: "Flies\nControl",
       image: "/Images/services/flies.png",
-      link: "/flies-pest-control",
+      link: "/flies-control",
     },
     {
       title: "Fumigation \nControl",

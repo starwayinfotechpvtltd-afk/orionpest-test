@@ -745,10 +745,10 @@ export default function page() {
               Residential pest control services
             </Link>{" "}
             for your staff quarters, we ensure complete structural safety and an uncompromised defense against pests.
-          </>
+          </> 
         }
         list={list2}
-        image="/Images/services/commercial3.png"
+        image="/Images/services/home.png"
       />
 
       {/* Diagram Features Info Section */}

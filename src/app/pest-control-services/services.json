@@ -19,31 +19,31 @@
     },
     {
         "service": "Mosquito Control",
-        "link": "/mosquito-pest-control",
+        "link": "/mosquito-control",
         "image": "/Images/services/mosquito.jpg",
         "text": "Keep your surroundings mosquito-free with our eco-friendly fogging and larvicidal treatments. We help reduce disease risk while maintaining environmental safety."
     },
     {
         "service": "Flies Control",
-        "link": "/flies-pest-control",
+        "link": "/flies-control",
         "image": "/Images/services/flies.jpg",
         "text": "Eliminate houseflies and fruit flies with our hygienic fly management program. We focus on sanitation, breeding control, and quick removal techniques."
     },
     {
         "service": "Rodent Control",
-        "link": "/rodent-pest-control",
+        "link": "/rodent-control",
         "image": "/Images/services/rodent.jpg",
         "text": "Stop rodents from invading your space with our humane and effective solutions. We block entry points, remove infestations, and prevent future recurrence."
     },
     {
         "service": "Bird Control",
-        "link": "/bird-pest-control",
+        "link": "/bird-control",
         "image": "/Images/services/bird.jpg",
         "text": "Prevent bird-related damage with our safe and ethical bird-proofing systems. We install nets and spikes to protect your property without harming wildlife."
     },
     {
         "service": "Ant Control",
-        "link": "/ant-pest-control",
+        "link": "/ant-control",
         "image": "/Images/services/ant.jpg",
         "text": "Keep ants away from your kitchen and workspace with our targeted gel and spray treatments. We remove colonies from the root to stop them from coming back."
     },

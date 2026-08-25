@@ -118,7 +118,7 @@ export default function Footer() {
     { name: "Cockroach Control", href: "/cockroach-pest-control" },
     { name: "Termite Control", href: "/termite-pest-control" },
     { name: "Bed Bug Control", href: "/bedbug-pest-control" },
-    { name: "Bird Control", href: "/bird-pest-control/" },
+    { name: "Bird Control", href: "/bird-control/" },
     { name: "All Pest Control Services", href: "/pest-control-services/" },
   ];
 
