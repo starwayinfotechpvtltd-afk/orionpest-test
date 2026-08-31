@@ -680,7 +680,7 @@ const cards = [
   {
     heading: "Kitchens & Dining Areas",
     desc: "100% safe to apply near food storage, cabinets, and dining areas without emptying your kitchen.",
-    image: "/Images/services/herbal.png",
+    image: "/Images/services/flies5.png",
     bgColor: "#FFF6DE",
   },
   {
@@ -906,7 +906,7 @@ export default function page() {
       {/* Child Safe Environment Highlight Grid */}
       <ChildSafeSection
         image1="/Images/services/herbal2.png"
-        image2="/Images/services/herbal.png"
+        image2="/Images/services/termite4.png"
         name="Herbal"
         tagline="Safe for your little ones. Tough on pests."
         desc={
@@ -1019,7 +1019,7 @@ export default function page() {
           >
             <div className="absolute left-32 top-5 w-52 h-52">
               <Image
-                src="/Images/services/herbal.png"
+                src="/Images/services/termite.png"
                 alt="Herbal Pest Control"
                 fill
                 className="object-contain"

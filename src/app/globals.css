@@ -104,3 +104,27 @@ h3,p, li{
 .animate-logo-slider {
   animation: logo-slider 40s linear infinite;
 }
+
+
+
+/* Branches page */
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-right {
+  animation: marquee-right 25s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-right {
+    animation-play-state: paused;
+  }
+}

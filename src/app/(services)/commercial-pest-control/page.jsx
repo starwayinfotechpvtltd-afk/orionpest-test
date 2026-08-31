@@ -584,7 +584,7 @@ const cards = [
   {
     heading: "Warehouses & Factories",
     desc: "Robust pest control solutions to protect your supply chain and raw materials.",
-    image: "/Images/services/commercial.png",
+    image: "/Images/services/mosquito4.png",
     bgColor: "#FFF6DE",
   },
   {
@@ -705,7 +705,7 @@ export default function page() {
 
       {/* Advanced Control Section */}
       <AdvanceControl
-        image="/Images/services/commercial2.png"
+        image="/Images/services/termite2.png"
         heading={
           <>
             {/* H2 #1 */}
@@ -808,8 +808,8 @@ export default function page() {
       />
 
       {/* Child Safe / Employee Safe Environment Highlight Grid */}
-      <ChildSafeSection
-        image1="/Images/services/commercial.png"
+      {/* <ChildSafeSection
+        image1="/Images/services/protection.png"
         image2="/Images/services/commercial2.png"
         name="Commercial"
         tagline="Safe for your workforce. Tough on pests."
@@ -822,11 +822,11 @@ export default function page() {
           </>
         }
         childSafeStats={childSafeStats}
-      />
+      /> */}
 
       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
       <section className="bg-[#FCFCFD] pb-16 md:pb-20 mt-10">
-        <FAQSection image="/Images/services/commercial3.png" faqs={faqs} />
+        <FAQSection image="/Images/services/flies.png" faqs={faqs} />
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto mt-10">
           <SupportCard
             icon={<Phone size={26} />}
@@ -923,7 +923,7 @@ export default function page() {
           >
             <div className="absolute left-32 top-5 w-52 h-52">
               <Image
-                src="/Images/services/commercial.png"
+                src="/Images/services/ant.png"
                 alt="Commercial Pest Control Services"
                 fill
                 className="object-contain"

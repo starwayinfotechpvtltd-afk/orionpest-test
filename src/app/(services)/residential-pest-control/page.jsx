@@ -568,7 +568,7 @@ const cards = [
   {
     heading: "Kitchens & Dining Areas",
     desc: "Safe, odorless treatments to eliminate cockroaches and ants without contaminating food storage.",
-    image: "/Images/services/residential.png",
+    image: "/Images/services/flies5.png",
     bgColor: "#FFF6DE",
   },
   {
@@ -689,7 +689,7 @@ export default function page() {
 
       {/* Advanced Control Section */}
       <AdvanceControl
-        image="/Images/services/residential.png"
+        image="/Images/services/bedbug2.png"
         heading={
           <>
             {/* H2 #1 */}
@@ -793,8 +793,8 @@ export default function page() {
 
       {/* Child Safe Environment Highlight Grid */}
       <ChildSafeSection
-        image1="/Images/services/residential1.png"
-        image2="/Images/services/residential.png"
+        image1="/Images/services/home.png"
+        image2="/Images/services/ant4.png"
         name="Residential"
         tagline="Safe for your family. Tough on pests."
         desc={
@@ -907,7 +907,7 @@ export default function page() {
           >
             <div className="absolute left-32 top-5 w-52 h-52">
               <Image
-                src="/Images/services/residential1.png"
+                src="/Images/services/rodent.png"
                 alt="Residential Pest Control Services"
                 fill
                 className="object-contain"

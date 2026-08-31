@@ -651,7 +651,7 @@ const cards = [
   {
     heading: "Cargo & Shipping",
     desc: "Reliable container fumigation ensuring your international shipments meet global phytosanitary standards.",
-    image: "/Images/services/fumigation.png",
+    image: "/Images/services/flies5.png",
     bgColor: "#FFF6DE",
   },
   {
@@ -772,7 +772,7 @@ export default function page() {
 
       {/* Advanced Control Section */}
       <AdvanceControl
-        image="/Images/services/fumigation.png"
+        image="/Images/services/mosquito6.png"
         heading={
           <>
             {/* H2 #1 */}
@@ -877,7 +877,7 @@ export default function page() {
       {/* Child Safe Environment Highlight Grid */}
       <ChildSafeSection
         image1="/Images/services/home.png"
-        image2="/Images/services/fumigation.png"
+        image2="/Images/services/mosquito5.png"
         name="Fumigation"
         tagline="Strict safety protocols. Zero residue."
         desc={
@@ -893,7 +893,7 @@ export default function page() {
 
       {/* FAQ Accordion Grid Framework Group Section Wrapper */}
       <section className="bg-[#FCFCFD] pb-16 md:pb-20">
-        <FAQSection image="/Images/services/fumigation.png" faqs={faqs} />
+        <FAQSection image="/Images/services/bedbug.png" faqs={faqs} />
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-3xl border border-slate-100 bg-[#F9FAFE] p-6 sm:p-8 shadow-lg max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] mx-auto mt-10">
           <SupportCard
             icon={<Phone size={26} />}
@@ -990,7 +990,7 @@ export default function page() {
           >
             <div className="absolute left-32 top-5 w-52 h-52">
               <Image
-                src="/Images/services/fumigation.png"
+                src="/Images/services/ant.png"
                 alt="Fumigation Services"
                 fill
                 className="object-contain"

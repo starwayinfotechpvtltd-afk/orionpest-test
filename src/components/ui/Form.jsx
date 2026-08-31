@@ -316,8 +316,50 @@
 
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Script from "next/script";
+
+const SERVICES = [
+  "General Pest Control",
+  "Cockroach Control",
+  "Bed bugs Control",
+  "Termite Control",
+  "Mosquito Control",
+  "Flies Control",
+  "Rodent Control",
+  "Bird Control",
+  "Ant Control",
+  "Residential Control",
+  "Commercial Control",
+  "Herbal Pest Control",
+  "Fumigation",
+  "Sterilization",
+  "Others",
+];
+
+const CUSTOMER_TYPES = [
+  "RESIDENTIAL",
+  "COMMERCIAL",
+  "RAILWAY",
+  "SOCIETY",
+  "HOTEL",
+  "FINANCIAL INSTITUTION",
+  "SHOPPING MALL",
+  "RETAIL BRAND",
+  "EDUCATIONAL INSTITUTION",
+  "HOSPITAL",
+  "INDUSTRIAL",
+  "WARE HOUSE",
+  "GUEST HOUSE",
+  "MULTIPLEX",
+  "GOVERNMENT CONTRACT",
+  "CONTAINERS",
+  "THIRD PARTY",
+  "LOCAL",
+  "SCHOOL",
+  "FOOD COUNTER",
+  "OTHERS",
+];
 
 export default function ZohoForm() {
   const initialCaptchaUrl =
@@ -325,61 +367,149 @@ export default function ZohoForm() {
 
   const [captchaSrc, setCaptchaSrc] = useState(initialCaptchaUrl);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedServices, setSelectedServices] = useState([]);
+  const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
+  const serviceDropdownRef = useRef(null);
 
   const reloadCaptcha = () => {
-    setCaptchaSrc(`${initialCaptchaUrl}&d=${new Date().getTime()}`);
+    setCaptchaSrc(`${initialCaptchaUrl}&d=${Date.now()}`);
   };
 
   const validateEmail = (email) => {
-    if (!email || email.trim() === "") return true;
+    if (!email || email.trim() === "") return false;
+
     const atpos = email.indexOf("@");
     const dotpos = email.lastIndexOf(".");
+
     return !(atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length);
   };
 
+  // Handle multiple service selection
+  const handleServiceChange = (e) => {
+    const values = Array.from(e.target.selectedOptions).map(
+      (option) => option.value,
+    );
+
+    setSelectedServices(values);
+  };
+
   const handleSubmit = (e) => {
-    const form = e.target;
-    const mandatoryFields = [
-      { name: "Last Name", label: "Full Name" },
-      { name: "Email", label: "Email" },
-      { name: "Phone", label: "Phone" },
-      { name: "City", label: "City" },
-      { name: "Zip Code", label: "Zip Code" },
-      { name: "LEADCF6", label: "Interested Services" },
-      { name: "LEADCF5", label: "Customer Type" },
-      { name: "enterdigest", label: "Captcha" },
-    ];
+    const form = e.currentTarget;
 
-    for (let field of mandatoryFields) {
-      const fieldObj = form.elements[field.name];
-      if (fieldObj) {
-        const val = fieldObj.value ? fieldObj.value.trim() : "";
+    const fullName = form.elements["Last Name"];
+    const email = form.elements["Email"];
+    const phone = form.elements["Phone"];
+    const city = form.elements["City"];
+    const zipCode = form.elements["Zip Code"];
+    const customerType = form.elements["LEADCF5"];
+    const captcha = form.elements["enterdigest"];
 
-        if (!val) {
-          alert(`${field.label} cannot be empty.`);
-          fieldObj.focus();
-          e.preventDefault();
-          return false;
-        } else if (fieldObj.nodeName === "SELECT" && val === "-None-") {
-          alert(`Please select a valid ${field.label}.`);
-          fieldObj.focus();
-          e.preventDefault();
-          return false;
-        }
-      }
-    }
-
-    const emailField = form.elements["Email"];
-    if (emailField && !validateEmail(emailField.value)) {
-      alert("Please enter a valid email address.");
-      emailField.focus();
+    // Full Name
+    if (!fullName?.value.trim()) {
       e.preventDefault();
+      alert("Full Name cannot be empty.");
+      fullName?.focus();
       return false;
     }
 
+    // Email
+    if (!email?.value.trim()) {
+      e.preventDefault();
+      alert("Email cannot be empty.");
+      email?.focus();
+      return false;
+    }
+
+    if (!validateEmail(email.value)) {
+      e.preventDefault();
+      alert("Please enter a valid email address.");
+      email?.focus();
+      return false;
+    }
+
+    // Phone
+    if (!phone?.value.trim()) {
+      e.preventDefault();
+      alert("Phone cannot be empty.");
+      phone?.focus();
+      return false;
+    }
+
+    // Interested Services
+    if (selectedServices.length === 0) {
+      e.preventDefault();
+      alert("Please select at least one Interested Service.");
+      serviceSelect?.focus();
+      return false;
+    }
+
+    // Make sure all selected services are marked
+    // as selected in the native multiple select
+    if (serviceSelect) {
+      Array.from(serviceSelect.options).forEach((option) => {
+        option.selected = selectedServices.includes(option.value);
+      });
+    }
+
+    // Customer Type
+    if (!customerType?.value || customerType.value === "-None-") {
+      e.preventDefault();
+      alert("Customer Type cannot be empty.");
+      customerType?.focus();
+      return false;
+    }
+
+    // City
+    if (!city?.value.trim()) {
+      e.preventDefault();
+      alert("City cannot be empty.");
+      city?.focus();
+      return false;
+    }
+
+    // Zip Code
+    if (!zipCode?.value.trim()) {
+      e.preventDefault();
+      alert("Zip Code cannot be empty.");
+      zipCode?.focus();
+      return false;
+    }
+
+    // CAPTCHA
+    if (!captcha?.value.trim()) {
+      e.preventDefault();
+      alert("Captcha cannot be empty.");
+      captcha?.focus();
+      return false;
+    }
+
+    const serviceSelect = form.elements["LEADCF6"];
+
+    Array.from(serviceSelect.options).forEach((option) => {
+      option.selected = selectedServices.includes(option.value);
+    });
+
     setIsSubmitting(true);
+
     return true;
   };
+
+  useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      serviceDropdownRef.current &&
+      !serviceDropdownRef.current.contains(event.target)
+    ) {
+      setIsServiceDropdownOpen(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
 
   return (
     <div className="relative mx-auto my-8 w-full max-w-2xl rounded-3xl border border-slate-100 bg-white p-6 shadow-2xl shadow-slate-200/60 sm:p-10">
@@ -388,6 +518,7 @@ export default function ZohoForm() {
         <h2 className="text-2xl font-bold tracking-tight text-[#0b1c3d] sm:text-3xl">
           Send Us a Message
         </h2>
+
         <div className="mt-2 h-1 w-24 rounded-full bg-amber-400" />
       </div>
 
@@ -400,7 +531,11 @@ export default function ZohoForm() {
         acceptCharset="UTF-8"
         className="space-y-4"
       >
-        {/* Hidden Zoho Token Inputs */}
+        {/* =========================================================
+            REQUIRED ZOHO HIDDEN FIELDS
+            Do not remove these fields.
+        ========================================================== */}
+
         <input
           type="text"
           className="hidden"
@@ -408,18 +543,22 @@ export default function ZohoForm() {
           defaultValue="7a4a79531870e3055b3169027236a05be00b7a642be35037febb07397bedb0ef"
         />
 
+        <input type="hidden" name="zc_gad" id="zc_gad" defaultValue="" />
+
         <input
           type="text"
           className="hidden"
           name="xmIwtLD"
           defaultValue="70caa390a7cd642b6e47f3372541edb8791f0e8224eabac83c3cb4623780869a4ff97aaade2d68cbb9d3698783b620e4"
         />
+
         <input
           type="text"
           className="hidden"
           name="actionType"
           defaultValue="TGVhZHM="
         />
+
         <input
           type="text"
           className="hidden"
@@ -427,7 +566,11 @@ export default function ZohoForm() {
           defaultValue="null"
         />
 
-        {/* Row 1: Full Name & Email */}
+        {/* =========================================================
+            ROW 1
+            Full Name + Email
+        ========================================================== */}
+
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {/* Full Name */}
           <div>
@@ -437,10 +580,12 @@ export default function ZohoForm() {
             >
               Full Name <span className="text-red-500">*</span>
             </label>
+
             <div className="relative mt-1.5">
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                 <UserIcon className="h-4 w-4" />
               </div>
+
               <input
                 type="text"
                 id="Last_Name"
@@ -461,10 +606,12 @@ export default function ZohoForm() {
             >
               Email Address <span className="text-red-500">*</span>
             </label>
+
             <div className="relative mt-1.5">
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                 <MailIcon className="h-4 w-4" />
               </div>
+
               <input
                 type="email"
                 id="Email"
@@ -479,7 +626,11 @@ export default function ZohoForm() {
           </div>
         </div>
 
-        {/* Row 2: Phone Number & Service */}
+        {/* =========================================================
+            ROW 2
+            Phone + Interested Services
+        ========================================================== */}
+
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {/* Phone */}
           <div>
@@ -489,10 +640,12 @@ export default function ZohoForm() {
             >
               Phone Number <span className="text-red-500">*</span>
             </label>
+
             <div className="relative mt-1.5">
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                 <PhoneIcon className="h-4 w-4" />
               </div>
+
               <input
                 type="text"
                 id="Phone"
@@ -505,56 +658,224 @@ export default function ZohoForm() {
             </div>
           </div>
 
-          {/* Select Your Service (LEADCF6) */}
+          {/* Interested Services */}
           <div>
             <label
               htmlFor="LEADCF6"
               className="block text-xs font-semibold text-[#0b1c3d] sm:text-sm"
             >
-              Select Your Service <span className="text-red-500">*</span>
+              Interested Services <span className="text-red-500">*</span>
             </label>
+
             <div className="relative mt-1.5">
-              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
+              {/* Left icon */}
+              <div className="pointer-events-none absolute inset-y-0 left-0 z-20 flex items-center pl-3.5 text-slate-400">
                 <WrenchIcon className="h-4 w-4" />
               </div>
+
+              {/* Hidden native Zoho multiple-select */}
               <select
                 id="LEADCF6"
                 name="LEADCF6"
-                defaultValue="-None-"
+                multiple
                 required
-                className="w-full appearance-none rounded-xl border border-slate-200 bg-white py-2.5 pl-10 pr-8 text-xs text-slate-800 transition duration-150 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/20 sm:text-sm"
+                value={selectedServices}
+                onChange={handleServiceChange}
+                tabIndex={-1}
+                aria-hidden="true"
+                className="sr-only"
               >
-                <option value="-None-" disabled>
-                  Select Service
-                </option>
-                <option value="General Pest Control">
-                  General Pest Control
-                </option>
-                <option value="Cockroach Control">Cockroach Control</option>
-                <option value="Bed bugs Control">Bed bugs Control</option>
-                <option value="Termite Control">Termite Control</option>
-                <option value="Mosquito Control">Mosquito Control</option>
-                <option value="Flies Control">Flies Control</option>
-                <option value="Rodent Control">Rodent Control</option>
-                <option value="Bird Control">Bird Control</option>
-                <option value="Ant Control">Ant Control</option>
-                <option value="Residential Control">Residential Control</option>
-                <option value="Commercial Control">Commercial Control</option>
-                <option value="Herbal Pest Control">Herbal Pest Control</option>
-                <option value="Fumigation">Fumigation</option>
-                <option value="Sterilization">Sterilization</option>
-                <option value="Others">Others</option>
+                {SERVICES.map((service) => (
+                  <option key={service} value={service}>
+                    {service}
+                  </option>
+                ))}
               </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3.5 text-slate-400">
-                <ChevronDownIcon className="h-4 w-4" />
+
+              {/* Dropdown */}
+              <div ref={serviceDropdownRef} className="relative">
+                <button
+                  type="button"
+                  onClick={() => setIsServiceDropdownOpen((prev) => !prev)}
+                  className="flex h-[44px] w-full items-center justify-between rounded-xl border border-slate-200 bg-white py-2.5 pl-10 pr-3.5 text-left text-xs text-slate-800 transition duration-150 hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-400/20 sm:text-sm"
+                  aria-haspopup="listbox"
+                  aria-expanded={isServiceDropdownOpen}
+                >
+                  <span
+                    className={
+                      selectedServices.length > 0
+                        ? "truncate text-slate-800"
+                        : "text-slate-400"
+                    }
+                  >
+                    {selectedServices.length === 0
+                      ? "Select Services"
+                      : `${selectedServices.length} service${
+                          selectedServices.length > 1 ? "s" : ""
+                        } selected`}
+                  </span>
+
+                  <ChevronDownIcon
+                    className={`h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200 ${
+                      isServiceDropdownOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {/* Dropdown options */}
+                {isServiceDropdownOpen && (
+                  <div
+                    className="absolute left-0 right-0 top-[calc(100%+6px)] z-50 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl shadow-slate-200/50"
+                    role="listbox"
+                    aria-multiselectable="true"
+                  >
+                    <div className="max-h-60 overflow-y-auto p-1.5">
+                      {SERVICES.map((service) => {
+                        const isSelected = selectedServices.includes(service);
+
+                        return (
+                          <button
+                            key={service}
+                            type="button"
+                            role="option"
+                            aria-selected={isSelected}
+                            onClick={() => {
+                              const updatedServices = isSelected
+                                ? selectedServices.filter(
+                                    (item) => item !== service,
+                                  )
+                                : [...selectedServices, service];
+
+                              setSelectedServices(updatedServices);
+
+                              // Keep the actual Zoho select synchronized
+                              const serviceSelect =
+                                document.getElementById("LEADCF6");
+
+                              if (serviceSelect) {
+                                Array.from(serviceSelect.options).forEach(
+                                  (option) => {
+                                    option.selected = updatedServices.includes(
+                                      option.value,
+                                    );
+                                  },
+                                );
+                              }
+                            }}
+                            className={`flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-left text-xs transition sm:text-sm ${
+                              isSelected
+                                ? "bg-amber-50 text-amber-700"
+                                : "text-slate-700 hover:bg-slate-50"
+                            }`}
+                          >
+                            {/* Checkbox */}
+                            <span
+                              className={`flex h-4 w-4 shrink-0 items-center justify-center rounded border text-[10px] ${
+                                isSelected
+                                  ? "border-amber-400 bg-amber-400 text-white"
+                                  : "border-slate-300 bg-white"
+                              }`}
+                            >
+                              {isSelected && "✓"}
+                            </span>
+
+                            <span className="truncate">{service}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {/* Dropdown footer */}
+                    <div className="flex items-center justify-between border-t border-slate-100 px-3 py-2">
+                      <span className="text-[10px] text-slate-400">
+                        {selectedServices.length > 0
+                          ? `${selectedServices.length} selected`
+                          : "Select one or more"}
+                      </span>
+
+                      {selectedServices.length > 0 && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setSelectedServices([]);
+
+                            const serviceSelect =
+                              document.getElementById("LEADCF6");
+
+                            if (serviceSelect) {
+                              Array.from(serviceSelect.options).forEach(
+                                (option) => {
+                                  option.selected = false;
+                                },
+                              );
+                            }
+                          }}
+                          className="text-[10px] font-semibold text-amber-600 hover:text-amber-700"
+                        >
+                          Clear all
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
+
+            {/* Selected services */}
+            {selectedServices.length > 0 && (
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {selectedServices.map((service) => (
+                  <span
+                    key={service}
+                    className="inline-flex items-center gap-1 rounded-lg bg-amber-50 px-2 py-1 text-[10px] font-medium text-amber-700"
+                  >
+                    {service}
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const updatedServices = selectedServices.filter(
+                          (item) => item !== service,
+                        );
+
+                        setSelectedServices(updatedServices);
+
+                        const serviceSelect =
+                          document.getElementById("LEADCF6");
+
+                        if (serviceSelect) {
+                          Array.from(serviceSelect.options).forEach(
+                            (option) => {
+                              option.selected = updatedServices.includes(
+                                option.value,
+                              );
+                            },
+                          );
+                        }
+                      }}
+                      className="ml-0.5 text-amber-500 hover:text-amber-800"
+                      aria-label={`Remove ${service}`}
+                    >
+                      ×
+                    </button>
+                  </span>
+                ))}
+              </div>
+            )}
+
+            <p className="mt-1 text-[10px] text-slate-400">
+              Select one or more services.
+            </p>
           </div>
         </div>
 
-        {/* Row 3: Customer Type & City */}
+        {/* =========================================================
+            ROW 3
+            Customer Type + City
+        ========================================================== */}
+
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {/* Customer Type (LEADCF5) */}
+          {/* Customer Type */}
           <div>
             <label
               htmlFor="LEADCF5"
@@ -562,10 +883,12 @@ export default function ZohoForm() {
             >
               Customer Type <span className="text-red-500">*</span>
             </label>
+
             <div className="relative mt-1.5">
-              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
+              <div className="pointer-events-none absolute inset-y-0 left-0 z-10 flex items-center pl-3.5 text-slate-400">
                 <BuildingIcon className="h-4 w-4" />
               </div>
+
               <select
                 id="LEADCF5"
                 name="LEADCF5"
@@ -576,32 +899,14 @@ export default function ZohoForm() {
                 <option value="-None-" disabled>
                   Select Customer Type
                 </option>
-                <option value="RESIDENTIAL">RESIDENTIAL</option>
-                <option value="COMMERCIAL">COMMERCIAL</option>
-                <option value="RAILWAY">RAILWAY</option>
-                <option value="SOCIETY">SOCIETY</option>
-                <option value="HOTEL">HOTEL</option>
-                <option value="FINANCIAL INSTITUTION">
-                  FINANCIAL INSTITUTION
-                </option>
-                <option value="SHOPPING MALL">SHOPPING MALL</option>
-                <option value="RETAIL BRAND">RETAIL BRAND</option>
-                <option value="EDUCATIONAL INSTITUTION">
-                  EDUCATIONAL INSTITUTION
-                </option>
-                <option value="HOSPITAL">HOSPITAL</option>
-                <option value="INDUSTRIAL">INDUSTRIAL</option>
-                <option value="WARE HOUSE">WARE HOUSE</option>
-                <option value="GUEST HOUSE">GUEST HOUSE</option>
-                <option value="MULTIPLEX">MULTIPLEX</option>
-                <option value="GOVERNMENT CONTRACT">GOVERNMENT CONTRACT</option>
-                <option value="CONTAINERS">CONTAINERS</option>
-                <option value="THIRD PARTY">THIRD PARTY</option>
-                <option value="LOCAL">LOCAL</option>
-                <option value="SCHOOL">SCHOOL</option>
-                <option value="FOOD COUNTER">FOOD COUNTER</option>
-                <option value="OTHERS">OTHERS</option>
+
+                {CUSTOMER_TYPES.map((type) => (
+                  <option key={type} value={type}>
+                    {type}
+                  </option>
+                ))}
               </select>
+
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3.5 text-slate-400">
                 <ChevronDownIcon className="h-4 w-4" />
               </div>
@@ -616,10 +921,12 @@ export default function ZohoForm() {
             >
               City <span className="text-red-500">*</span>
             </label>
+
             <div className="relative mt-1.5">
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                 <MapPinIcon className="h-4 w-4" />
               </div>
+
               <input
                 type="text"
                 id="City"
@@ -633,7 +940,11 @@ export default function ZohoForm() {
           </div>
         </div>
 
-        {/* Row 4: Zip Code & Captcha Code */}
+        {/* =========================================================
+            ROW 4
+            Zip Code + Captcha
+        ========================================================== */}
+
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {/* Zip Code */}
           <div>
@@ -643,10 +954,12 @@ export default function ZohoForm() {
             >
               Zip Code <span className="text-red-500">*</span>
             </label>
+
             <div className="relative mt-1.5">
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                 <HashtagIcon className="h-4 w-4" />
               </div>
+
               <input
                 type="text"
                 id="Zip_Code"
@@ -659,7 +972,7 @@ export default function ZohoForm() {
             </div>
           </div>
 
-          {/* Captcha Input & Image */}
+          {/* CAPTCHA */}
           <div>
             <div className="flex items-center justify-between">
               <label
@@ -668,6 +981,7 @@ export default function ZohoForm() {
               >
                 Captcha <span className="text-red-500">*</span>
               </label>
+
               <button
                 type="button"
                 onClick={reloadCaptcha}
@@ -676,6 +990,7 @@ export default function ZohoForm() {
                 Reload Image
               </button>
             </div>
+
             <div className="mt-1.5 flex items-center gap-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -684,6 +999,7 @@ export default function ZohoForm() {
                 alt="Captcha"
                 className="h-10 w-28 rounded-xl border border-slate-200 bg-slate-50 object-contain p-1"
               />
+
               <input
                 type="text"
                 id="captchaField853538000001144029"
@@ -697,7 +1013,10 @@ export default function ZohoForm() {
           </div>
         </div>
 
-        {/* Message */}
+        {/* =========================================================
+            MESSAGE
+        ========================================================== */}
+
         <div>
           <label
             htmlFor="Description"
@@ -705,10 +1024,12 @@ export default function ZohoForm() {
           >
             Message
           </label>
+
           <div className="relative mt-1.5">
             <div className="pointer-events-none absolute left-3.5 top-3 text-slate-400">
               <MessageIcon className="h-4 w-4" />
             </div>
+
             <textarea
               id="Description"
               name="Description"
@@ -719,50 +1040,94 @@ export default function ZohoForm() {
           </div>
         </div>
 
-        <input type="hidden" name="zc_gad" id="zc_gad" value="" />
-        {/* Hidden Lead Source Field */}
+        {/* =========================================================
+            LEAD SOURCE
+        ========================================================== */}
+
         <div className="hidden">
           <label htmlFor="Lead_Source">Lead Source</label>
+
           <select
             id="Lead_Source"
             name="Lead Source"
             defaultValue="Web Research"
           >
             <option value="-None-">-None-</option>
+
+            <option value="Advertisement">Advertisement</option>
+            <option value="Cold Call">Cold Call</option>
+            <option value="Employee Referral">Employee Referral</option>
+            <option value="External Referral">External Referral</option>
+            <option value="Online Store">Online Store</option>
+            <option value="Partner">Partner</option>
+            <option value="Public Relations">Public Relations</option>
+            <option value="Sales Email Alias">Sales Email Alias</option>
+            <option value="Seminar Partner">Seminar Partner</option>
+            <option value="Internal Seminar">Internal Seminar</option>
+            <option value="Trade Show">Trade Show</option>
+            <option value="Web Download">Web Download</option>
+
             <option value="Web Research">Web Research</option>
+
+            <option value="Chat">Chat</option>
+            <option value="X (Twitter)">X (Twitter)</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Customer Care">Customer Care</option>
+            <option value="Third Party">Third Party</option>
           </select>
         </div>
 
-        {/* Honeypot Field */}
-        <input type="hidden" name="aG9uZXlwb3Q" defaultValue="" />
+        {/* =========================================================
+            HONEYPOT
+        ========================================================== */}
 
-        {/* Yellow Submit Button matching image */}
+        <input
+          // type="text"
+          type="hidden"
+          name="aG9uZXlwb3Q"
+          defaultValue=""
+          style={{ display: "none" }}
+        />
+
+        {/* =========================================================
+            SUBMIT
+        ========================================================== */}
+
         <div className="pt-2">
           <button
             type="submit"
             disabled={isSubmitting}
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#ffc700] py-3.5 px-6 text-sm font-bold tracking-wider text-white shadow-md shadow-amber-400/20 transition duration-200 hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/40 active:scale-[0.99] disabled:opacity-50"
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#ffc700] px-6 py-3.5 text-sm font-bold tracking-wider text-white shadow-md shadow-amber-400/20 transition duration-200 hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/40 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50"
           >
             <span>{isSubmitting ? "SUBMITTING..." : "SUBMIT ENQUIRY"}</span>
+
             <ArrowRightIcon className="h-4 w-4 stroke-[3]" />
           </button>
         </div>
 
-        {/* Privacy Footer */}
+        {/* =========================================================
+            PRIVACY FOOTER
+        ========================================================== */}
+
         <div className="mt-4 flex items-center justify-center gap-1.5 pt-1 text-center text-xs text-slate-500">
           <ShieldCheckIcon className="h-4 w-4 text-slate-600" />
+
           <span>
             Your information is safe with us. We respect your privacy.
           </span>
         </div>
       </form>
 
-      {/* Zoho Tracking & Analytics Scripts */}
+      {/* =========================================================
+          ZOHO ANALYTICS
+      ========================================================== */}
+
       <Script
         id="wf_anal"
-        src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=65cdcd589f71aac8a9f6be78b4d0b5a6dbb52201f6b4812702d5ece0d593623cc9bcd97416cf5df579a432edecf203dbgid716787006f571baa3662ca7c718ee4d64e890da1844d2de61223004f5365bb0agidfe91908875fa650d22fb5d559da0560a94449584690c0fb9e6c5fd8d0c32d1cdgid1eb9ba092620b69558d9a039a32e99c2004962bb37a6dff433e21f63d8040631&tw=de542bce45198574d44a820878f85e7a0a313eaf5a9f500981661d925f2d99c2&version=v2"
+        src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=0217ad234965af95ea50c2c67ec8fe0519f70b97b95447253b17fb713a38b4a4e484df0f99be20368b86ab2b03cdff68gid60ac76b2daf9d62e7f71a593547e9c4952119bea45df7d5d7553ff3172b47f72gid2b6d81b1738404f81427065e23101a8482d3eb6601d9c0cabc9f0fbab3928176gida0d0cfbf4288683d89fba7ce36b8737c0ce92277ade0c9b6b5eaf82a1ed86213&tw=265322299371eadfdde07b88de79067d427248698595b32db274e0f32e25d1bd&version=v2"
         strategy="lazyOnload"
       />
+
       <Script
         id="zcga"
         src="https://crm.zoho.in/crm/javascript/zcga.js"
@@ -772,7 +1137,10 @@ export default function ZohoForm() {
   );
 }
 
-// Inline SVGs for design parity without external icon library dependencies
+/* ================================================================
+   ICONS
+================================================================ */
+
 function UserIcon(props) {
   return (
     <svg
@@ -785,7 +1153,7 @@ function UserIcon(props) {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7-7 7 7 0 0014 0"
       />
     </svg>
   );
@@ -839,8 +1207,9 @@ function WrenchIcon(props) {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31.826-2.37-2.37a1.724 1.724 0 001.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543-.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
       />
+
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -882,6 +1251,7 @@ function MapPinIcon(props) {
         strokeLinejoin="round"
         d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
       />
+
       <path
         strokeLinecap="round"
         strokeLinejoin="round"

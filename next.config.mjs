@@ -25,7 +25,7 @@ const nextConfig = {
         destination: "/contact",
         permanent: true,
       },
-      
+
       // Contact
       {
         source: "/about-us",
@@ -55,45 +55,60 @@ const nextConfig = {
       },
 
       {
-  source: "/services/commercial",
-  destination: "/commercial-pest-control",
-  permanent: true,
-},
-{
-  source: "/services",
-  destination: "/pest-control-services",
-  permanent: true,
-},
-{
-  source: "/termites",
-  destination: "/termite-pest-control",
-  permanent: true,
-},
-{
-  source: "/mosquitoes",
-  destination: "/mosquito-control",
-  permanent: true,
-},
-{
-  source: "/ants",
-  destination: "/ant-control",
-  permanent: true,
-},
-{
-  source: "/our-branches",
-  destination: "/branches",
-  permanent: true,
-},
+        source: "/services/commercial",
+        destination: "/commercial-pest-control",
+        permanent: true,
+      },
       {
-  source: "/commercial-pest-control-services",
-  destination: "/commercial-pest-control",
-  permanent: true,
-},
+        source: "/services",
+        destination: "/pest-control-services",
+        permanent: true,
+      },
       {
-  source: "/termite-control-services",
-  destination: "/termite-pest-control",
-  permanent: true,
-},
+        source: "/termites",
+        destination: "/termite-pest-control",
+        permanent: true,
+      },
+      {
+        source: "/mosquitoes",
+        destination: "/mosquito-control",
+        permanent: true,
+      },
+      {
+        source: "/ant-pest-control",
+        destination: "/ant-control",
+        permanent: true,
+      },
+      {
+        source: "/flies-pest-control",
+        destination: "/flies-control",
+        permanent: true,
+      },
+      {
+        source: "/rodent-pest-control",
+        destination: "/rodent-control",
+        permanent: true,
+      },
+      {
+        source: "/bird-pest-control",
+        destination: "/bird-control",
+        permanent: true,
+      },
+      {
+        source: "/our-branches",
+        destination: "/branches",
+        permanent: true,
+      },
+      {
+        source: "/commercial-pest-control-services",
+        destination: "/commercial-pest-control",
+        permanent: true,
+      },
+      {
+        source: "/termite-control-services",
+        destination: "/termite-pest-control",
+        permanent: true,
+      },
     ];
   },
 };
