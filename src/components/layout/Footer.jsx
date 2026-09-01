@@ -1,307 +1,310 @@
-// "use client";
-// import React from "react";
-// import Image from "next/image";
-// import { usePathname } from "next/navigation";
-// import Link from "next/link";
-// import Newsletter from "../ui/Newsletter";
-
-// export default function Footer({ color }) {
-//   const pathname = usePathname();
-//   const isContact = pathname.startsWith("/contact");
-//   // ${!isContact ? "bg-linear-to-br from-[#ffd900] to-[#ff9900]":"white"}
-//   return (
-//     <div className="w-full relative bg-[#2F3293] pb-16 md:pb-0 md:py-24">
-//       {/* background image */}
-//       <Image
-//         src="/Images/footer.png"
-//         alt="footer"
-//         fill
-//         className="absolute inset-0 w-full h-auto object-cover sm:object-fill"
-//         style={{ top: "-250px" }}
-//         priority
-//       />
-
-//       {/* content wrapper */}
-//       <div className="relative w-[90%] md:w-[60%] mx-auto flex flex-col items-center sm:-top-[100px] px-3">
-//         {/* heading */}
-//         <h2 className="text-[#FEF200] text-2xl md:text-4xl font-bold text-center">
-//           HAVE ANY QUESTIONS?
-//         </h2>
-//         <p className="text-center text-white mt-2 text-sm md:text-base">
-//           We’re here to help—get in touch with us today.
-//         </p>
-//         {/* input */}
-//         <Newsletter />
-//         {/* <div className="flex flex-col  justify-center items-center gap-3 w-full mt-6 relative"> */}
-
-//         {/* Social icons */}
-//         <div className="flex flex-row items-center gap-2">
-//           <Link href={"https://www.facebook.com/Orionpestsolution/"}>
-//             <Image
-//               src={"/Images/facebook.png"}
-//               width={43}
-//               height={43}
-//               alt="facebook"
-//               className="rounded-xl"
-//             />
-//           </Link>
-//           <Link
-//             href={
-//               "https://in.linkedin.com/in/orion-pest-solutions-pvt-ltd-3ba200a"
-//             }
-//           >
-//             <Image
-//               src={"/Images/linkedin.png"}
-//               width={43}
-//               height={43}
-//               alt="linkedin"
-//               className="rounded-xl"
-//             />
-//           </Link>
-//           <Link href={"https://www.instagram.com/orionpestindia"}>
-//             <Image
-//               src={"/Images/instagram.png"}
-//               width={43}
-//               height={43}
-//               alt="instagram"
-//             />
-//           </Link>
-//         </div>
-//         {/* </div> */}
-//         {/* contact info */}
-//         <div className="flex flex-col md:flex-row items-center md:items-start justify-between mt-6 gap-6 w-full text-center">
-//           {/* address */}
-//           <div className="fleX flex-col text-center md:text-left">
-//             <p className="text-white">Orion Pest Solutions Pvt. Ltd.</p>
-//             <p className="text-white">200W, S.P. Mukherjee Road</p>
-//             <p className="text-white">Kolkata - 700026, West Bengal, India.</p>
-//           </div>
-
-//           {/* email */}
-//           <Link className="flex-1 text-white lg:mr-24 xl:mr-40" href={"mailto:sales@orionpest.com"}>sales@orionpest.com</Link>
-
-//           {/* phone */}
-//           <div className="flex flex-col text-center md:text-right">
-//             <Link className="text-white text-nowrap" href={"tel:1800 419 8181"}>1800 419 8181</Link>
-//             <Link className="text-white" href={"tel:9800123456"}>9800123456</Link>
-//           </div>
-//         </div>
-//         {/* copyright */}
-//         <p className="text-white text-center mt-10 text-sm md:text-base">
-//           Copyright © 2026 Orion Pest Solutions. All Rights Reserved. Site
-//           Designed & Maintained by Starway Web Digital.
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// components/Footer.jsx
-
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { MdOutlinePhone, MdEmail } from "react-icons/md";
-import { FiArrowRight } from "react-icons/fi";
-import { HiOutlineLocationMarker } from "react-icons/hi";
 import Link from "next/link";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  ChevronRight,
+  PhoneCall,
+} from "lucide-react";
 
 export default function Footer() {
   const quickLinks = [
-    { name: "About Us", href: "/about-us" },
-    { name: "Our Services", href: "/services" },
-    { name: "Locations", href: "/branches" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact Us", href: "/contact-us" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "All Services", href: "/pest-control-services" },
+    { name: "Residential Pest Control", href: "/residential-pest-control" },
+    { name: "Commercial Pest Control", href: "/commercial-pest-control" },
+    { name: "Herbal Pest Control", href: "/herbal-pest-control" },
+    { name: "Clients", href: "/clients" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   const services = [
     { name: "Cockroach Control", href: "/cockroach-pest-control" },
-    { name: "Termite Control", href: "/termite-pest-control" },
+    { name: "Termite Treatment", href: "/termite-pest-control" },
     { name: "Bed Bug Control", href: "/bedbug-pest-control" },
-    { name: "Bird Control", href: "/bird-control/" },
-    { name: "All Pest Control Services", href: "/pest-control-services/" },
+    { name: "Rodent Control", href: "/rodent-control" },
+    { name: "Mosquito Management", href: "/mosquito-control" },
+    { name: "Bird Netting & Spikes", href: "/bird-control" },
+    { name: "Commercial Fumigation", href: "/fumigation-services" },
+    { name: "Flies Control", href: "/flies-control" },
   ];
 
-  const locations = [
-    { name: "Delhi", href: "/branches/delhi" },
+  const popularBranches = [
+    { name: "Delhi NCR", href: "/branches/delhi" },
     { name: "Mumbai", href: "/branches/mumbai" },
     { name: "Bangalore", href: "/branches/bangalore" },
+    { name: "Kolkata", href: "/branches/kolkata" },
     { name: "Hyderabad", href: "/branches/hyderabad" },
-    { name: "Bhubaneswar", href: "/branches/bhubaneswar" },
     { name: "Chennai", href: "/branches/chennai" },
     { name: "Pune", href: "/branches/pune" },
+    { name: "Ahmedabad", href: "/branches/ahmedabad" },
+    { name: "Bhubaneswar", href: "/branches/bhubaneswar" },
     { name: "Guwahati", href: "/branches/guwahati" },
-    { name: "Puducherry", href: "/branches/puducherry" },
-    { name: "All Locations", href: "/branches" },
+    { name: "Bhutan", href: "/branches/bhutan" },
+    { name: "Nepal", href: "/branches/nepal" },
   ];
-  return (
-    <footer>
-      {/* CTA Section */}
-      <div className="bg-[#042990] text-white">
-        <div className="max-w-[85%] mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center p-5">
-              <span className="text-[#042990] text-2xl">🎧</span>
-            </div>
 
-            <div>
-              <h3 className="font-bold text-2xl">
-                Get Rid of Cockroaches Today!
-              </h3>
-              <p className="text-sm text-gray-200">
-                Book a free inspection now & enjoy a pest-free home.
-              </p>
-            </div>
+  return (
+    <footer className="w-full bg-[#0D2391] text-white">
+      {/* Top CTA Banner - Clean Yellow & Deep Blue */}
+      <div className="bg-[#FECE18] text-[#0D2391]">
+        <div className="max-w-[85%] mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-center md:text-left">
+            <h3 className="text-2xl md:text-3xl font-semibold text-[#0D2391]">
+              Need Immediate Pest Control Assistance?
+            </h3>
+            <p className="text-sm md:text-base font-medium text-gray-800 mt-1">
+              Over 27 years of trusted, government-approved pest solutions for homes and businesses.
+            </p>
           </div>
 
-          <Link className="bg-[#FFD400] text-[#042990] text-md text-nowrap font-bold px-8 py-3 rounded-md flex items-center gap-2 hover:bg-yellow-400 transition" 
-          href={"/contact"}>
-            BOOK FREE INSPECTION
-            <FiArrowRight size={20} />
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto bg-[#0D2391] hover:bg-[#07165c] text-white font-bold px-6 py-3.5 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+            >
+              BOOK FREE INSPECTION
+              <ArrowRight size={18} />
+            </Link>
+
+            <a
+              href="tel:18004198181"
+              className="w-full sm:w-auto bg-white hover:bg-gray-100 text-[#0D2391] font-bold px-6 py-3.5 rounded-lg border border-[#0D2391]/20 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+            >
+              <PhoneCall size={18} className="text-[#0D2391]" />
+              1800 419 8181
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="bg-[#FFD400]">
-        <div className="max-w-[85%] mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-5 gap-8">
-          {/* Logo Section */}
-          <div>
-            <Image src="/logo.png" alt="Orion Pest" width={120} height={80} />
+      {/* Main Footer Content */}
+      <div className="max-w-[85%] mx-auto px-4 py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
+          {/* Column 1: Brand & Summary (4 cols) */}
+          <div className="lg:col-span-4 space-y-5">
+            <Link href="/" className="inline-block">
+              <div className="bg-white p-2 rounded-lg inline-block">
+                <Image
+                  src="/logo.png"
+                  alt="Orion Pest Solutions"
+                  width={130}
+                  height={50}
+                  className="object-contain h-10 w-auto"
+                />
+              </div>
+            </Link>
 
-            <div className="flex gap-3 mt-4">
+            <p className="text-sm text-gray-200 leading-relaxed">
+              Orion Pest Solutions is India&apos;s premier pest management company with <strong>27+ years of experience</strong> providing safe, eco-friendly, and government-approved solutions across India, Bhutan, and Nepal.
+            </p>
+
+            <div className="pt-1">
+              <div className="h-[2px] w-14 bg-[#FECE18] mb-3"></div>
+              <p className="text-xs font-semibold text-yellow-300 uppercase tracking-wider">
+                ISO 9001:2008 • ISO 14001 • IPCA & NPMA Member
+              </p>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-2.5 pt-2">
               <a
                 href="https://www.facebook.com/Orionpestsolution/"
-                className="w-8 h-8 rounded-full bg-[#042990] text-white flex items-center justify-center"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="w-8 h-8 rounded bg-white/10 hover:bg-[#FECE18] hover:text-[#0D2391] text-white flex items-center justify-center transition-colors"
               >
                 <FaFacebookF size={14} />
               </a>
-
               <a
                 href="https://www.instagram.com/orionpestindia"
-                className="w-8 h-8 rounded-full bg-[#042990] text-white flex items-center justify-center"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="w-8 h-8 rounded bg-white/10 hover:bg-[#FECE18] hover:text-[#0D2391] text-white flex items-center justify-center transition-colors"
               >
                 <FaInstagram size={14} />
               </a>
-
               <a
-                href="https://in.linkedin.com/in/orion-pest-solutions-pvt-ltd-3ba200a"
-                className="w-8 h-8 rounded-full bg-[#042990] text-white flex items-center justify-center"
+                href="https://in.linkedin.com/company/orion-pest-solutions-pvt-ltd"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="w-8 h-8 rounded bg-white/10 hover:bg-[#FECE18] hover:text-[#0D2391] text-white flex items-center justify-center transition-colors"
               >
                 <FaLinkedinIn size={14} />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-bold text-[#042990] mb-3 uppercase text-sm">
+          {/* Column 2: Quick Links (2 cols) */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-base font-bold text-white uppercase tracking-wider border-b-2 border-[#FECE18] pb-1.5 inline-block">
               Quick Links
             </h4>
-
             <ul className="space-y-2 text-sm">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-[#042990] hover:underline transition"
+                    className="text-gray-200 hover:text-[#FECE18] transition-colors flex items-center gap-1"
                   >
-                    {link.name}
+                    <ChevronRight size={14} className="text-[#FECE18]" />
+                    <span>{link.name}</span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-bold text-[#042990] mb-3 uppercase text-sm">
+          {/* Column 3: Services (2 cols) */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-base font-bold text-white uppercase tracking-wider border-b-2 border-[#FECE18] pb-1.5 inline-block">
               Our Services
             </h4>
-
             <ul className="space-y-2 text-sm">
               {services.map((service) => (
                 <li key={service.href}>
                   <Link
                     href={service.href}
-                    className="hover:text-[#042990] hover:underline transition"
+                    className="text-gray-200 hover:text-[#FECE18] transition-colors flex items-center gap-1"
                   >
-                    {service.name}
+                    <ChevronRight size={14} className="text-[#FECE18]" />
+                    <span>{service.name}</span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Locations */}
-          <div>
-            <h4 className="font-bold text-[#042990] mb-3 uppercase text-sm">
-              Locations
+          {/* Column 4: Top Locations (2 cols) */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-base font-bold text-white uppercase tracking-wider border-b-2 border-[#FECE18] pb-1.5 inline-block">
+              Top Branches
             </h4>
-
-            <ul className="space-y-2 text-sm grid grid-cols-1 xl:grid-cols-2">
-              {locations.map((location) => (
+            <ul className="space-y-2 text-sm">
+              {popularBranches.slice(0, 7).map((location) => (
                 <li key={location.href}>
                   <Link
                     href={location.href}
-                    className="hover:text-[#042990] hover:underline transition"
+                    className="text-gray-200 hover:text-[#FECE18] transition-colors flex items-center gap-1"
                   >
-                    {location.name}
+                    <ChevronRight size={14} className="text-[#FECE18]" />
+                    <span>{location.name}</span>
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-bold text-[#042990] mb-3 uppercase text-sm">
-              Contact Us
-            </h4>
-
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a
-                  href="tel:18004198181"
-                  className="flex items-center gap-2 hover:text-[#042990]"
+              <li className="pt-1">
+                <Link
+                  href="/branches"
+                  className="text-[#FECE18] hover:underline font-semibold text-xs inline-flex items-center gap-1"
                 >
-                  <MdOutlinePhone className="text-[#042990]" />
-                  1800 419 8181
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="mailto:sales@orionpest.com"
-                  className="flex items-center gap-2 hover:text-[#042990]"
-                >
-                  <MdEmail className="text-[#042990]" />
-                  sales@orionpest.com
-                </a>
-              </li>
-
-              <li>
-                <Link href={"/branches"}
-                  className="flex items-center gap-2 hover:text-[#042990]"
-                >
-                  <HiOutlineLocationMarker className="text-[#042990]" />
-                  72+ Locations Across India
+                  View All Branches <ArrowRight size={12} />
                 </Link>
               </li>
             </ul>
           </div>
-        </div>
 
-        {/* Bottom Bar */}
-        <div className="bg-[#042990] text-white text-xs">
-          <div className="max-w-[85%] mx-auto px-6 py-3 flex flex-col md:flex-row justify-between items-center gap-2">
-            <p>© 2026 Orion Pest Solutions Pvt. Ltd. All Rights Reserved.</p>
+          {/* Column 5: Contact Info (2 cols) */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-base font-bold text-white uppercase tracking-wider border-b-2 border-[#FECE18] pb-1.5 inline-block">
+              Contact Us
+            </h4>
 
-            <div className="flex gap-4">
-              <a href="/privacy-policy">Privacy Policy</a>
-              {/* <span>|</span>
-              <a href="#">Terms & Conditions</a> */}
+            <div className="space-y-3 text-sm">
+              {/* Phone */}
+              <div className="flex items-start gap-2">
+                <div className="text-[#FECE18] shrink-0 mt-0.5">
+                  <Phone size={16} />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-300">Toll Free Support</p>
+                  <a
+                    href="tel:18004198181"
+                    className="text-white hover:text-[#FECE18] font-bold transition text-nowrap"
+                  >
+                    1800 419 8181
+                  </a>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-start gap-2">
+                <div className="text-[#FECE18] shrink-0 mt-0.5">
+                  <Mail size={16} />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-300">Email</p>
+                  <a
+                    href="mailto:sales@orionpest.com"
+                    className="text-gray-200 hover:text-[#FECE18] transition text-xs break-all"
+                  >
+                    sales@orionpest.com
+                  </a>
+                </div>
+              </div>
+
+              {/* Head Office */}
+              <div className="flex items-start gap-2">
+                <div className="text-[#FECE18] shrink-0 mt-0.5">
+                  <MapPin size={16} />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-300">Head Office</p>
+                  <p className="text-xs text-gray-200 leading-snug">
+                    200W, S.P. Mukherjee Road, Tollygunge, Kolkata - 700026
+                  </p>
+                </div>
+              </div>
+
+              {/* Presence */}
+              <div className="flex items-start gap-2 pt-1">
+                <div className="text-[#FECE18] shrink-0 mt-0.5">
+                  <MapPin size={16} />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-300">Pan India Presence</p>
+                  <Link
+                    href="/branches"
+                    className="text-xs text-gray-200 hover:text-[#FECE18] transition-colors"
+                  >
+                    72+ Locations Across India
+                  </Link>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-white/15 bg-[#081861] text-xs text-gray-300 py-4">
+        <div className="max-w-[85%] mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-center md:text-left">
+            © {new Date().getFullYear()} Orion Pest Solutions Pvt. Ltd. All Rights Reserved.
+          </p>
+
+          <div className="flex items-center gap-5">
+            <Link href="/privacy-policy" className="hover:text-[#FECE18] transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-white/30">•</span>
+            <Link href="/contact" className="hover:text-[#FECE18] transition-colors">
+              Contact Us
+            </Link>
+            <span className="text-white/30">•</span>
+            <Link href="/branches" className="hover:text-[#FECE18] transition-colors">
+              All Branches
+            </Link>
           </div>
         </div>
       </div>

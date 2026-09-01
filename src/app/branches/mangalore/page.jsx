@@ -30,164 +30,172 @@ import BrandSection from "@/components/services/BrandSection";
 import FAQSection from "@/components/ui/FAQ";
 import ContactInfo from "@/components/services/ui/ContactInfo";
 
+export const metadata = {
+  title: "Pest Control Company in Mangalore | 27+ Years of Trusted Pest Services - Orion Pest",
+  description:
+    "Looking for the top pest control company in Mangalore? Orion Pest Solutions provides safe, odorless pest control services, termite control, cockroach removal & rodent defense across Mangalore. 27+ years of trust. Book a free inspection today!",
+};
 
 const stats = [
-    {
-      icon: <Calendar />,
-      heading: "Safe Treatments",
-      subHeading: "Family & Pet Friendly",
-    },
-    {
-      icon: <UsersRound />,
-      heading: "Expert Technicians",
-      subHeading: "Trained & Verified",
-    },
-    {
-      icon: <MapPin />,
-      heading: "Fast Response",
-      subHeading: "On-time. Every time.",
-    },
-  ];
+  {
+    icon: <Calendar />,
+    heading: "Safe Treatments",
+    subHeading: "Family & Pet Friendly",
+  },
+  {
+    icon: <UsersRound />,
+    heading: "Expert Technicians",
+    subHeading: "Trained & Verified",
+  },
+  {
+    icon: <MapPin />,
+    heading: "Fast Local Response",
+    subHeading: "Across Mangalore & Coastal Karnataka",
+  },
+];
 
-  const servicesName = [
-    "Ant Control",
-    "Termite Control",
-    "Cockroach Control",
-    "Bed Bug Control",
-    "Rodent Control",
-    "Mosquito Control",
-    "Bird Control",
-    "Fly Control",
-    "Fumigation Services",
-  ];
+const servicesName = [
+  "Ant Control",
+  "Termite Control",
+  "Cockroach Control",
+  "Bed Bug Control",
+  "Rodent Control",
+  "Mosquito Control",
+  "Bird Control",
+  "Fly Control",
+  "Fumigation Services",
+];
 
-  const stats2 = [
-    {
-      icon: <Calendar />,
-      heading: "Safe Treatments",
-      subHeading: "Family & Pet Friendly",
-    },
-    {
-      icon: <UsersRound />,
-      heading: "Expert Technicians",
-      subHeading: "Trained & Verified",
-    },
-    {
-      icon: <MapPin />,
-      heading: "Fast Response",
-      subHeading: "On-time. Every time.",
-    },
-  ];
+const stats2 = [
+  {
+    icon: <Calendar />,
+    heading: "Safe Treatments",
+    subHeading: "Family & Pet Friendly",
+  },
+  {
+    icon: <UsersRound />,
+    heading: "Expert Technicians",
+    subHeading: "Trained & Verified",
+  },
+  {
+    icon: <MapPin />,
+    heading: "Fast Response",
+    subHeading: "On-time. Every time.",
+  },
+];
 
-  const stats3 = [
-    {
-      icon: <Calendar />,
-      heading: "5+ Years",
-      subHeading: "Of Experience",
-    },
-    {
-      icon: <UsersRound />,
-      heading: "Kolkata Based",
-      subHeading: "Trusted Locally",
-    },
-    {
-      icon: <MapPin />,
-      heading: "Eco-Friendly Solutions",
-      subHeading: "Safe for You & Environment",
-    },
-    {
-      icon: <MapPin />,
-      heading: "Affordable Pricing",
-      subHeading: "No Hidden Charges",
-    },
-  ];
+const stats3 = [
+  {
+    icon: <Calendar />,
+    heading: "27+ Years",
+    subHeading: "Of Industry Experience",
+  },
+  {
+    icon: <UsersRound />,
+    heading: "Mangalore Operations",
+    subHeading: "Local Certified Team",
+  },
+  {
+    icon: <MapPin />,
+    heading: "Eco-Friendly Solutions",
+    subHeading: "Safe for Family & Pets",
+  },
+  {
+    icon: <MapPin />,
+    heading: "Transparent Pricing",
+    subHeading: "No Hidden Charges",
+  },
+];
 
-  const stats4 = [
-    {
-      value: "90%",
-      title: "Pest Elimination",
-      description: "Effective & Long Lasting Results",
-      icon: Bug,
-    },
-    {
-      value: "90%",
-      title: "Happy Customers",
-      description: "Trusted by Homes & Businesses",
-      icon: FaHome,
-    },
-    {
-      value: "50%",
-      title: "Repeat Customers",
-      description: "Choose Us Again for Our Service",
-      icon: IoShieldCheckmark,
-    },
-  ];
+const stats4 = [
+  {
+    value: "99%",
+    percentage: 99,
+    title: "Pest Elimination",
+    description: "Effective & Long Lasting Results",
+    icon: Bug,
+  },
+  {
+    value: "10k+",
+    percentage: 98,
+    title: "Happy Customers",
+    description: "Trusted by Homes & Businesses",
+    icon: FaHome,
+  },
+  {
+    value: "95%",
+    percentage: 95,
+    title: "Repeat & Referral",
+    description: "Chosen for Consistent Quality",
+    icon: IoShieldCheckmark,
+  },
+];
 
-  const services = [
-    {
-      title: "Cockroach Control",
-      description: "Eliminate cockroaches and prevent re-infestation.",
-      image: "/Images/services/cockroach.png",
-      icon: Bug,
-      href: "/cockroach-pest-control",
-    },
-    {
-      title: "Termite Control",
-      description: "Protect your property from silent termite damage.",
-      image: "/Images/services/termite.png",
-      icon: Bug,
-      href: "/termite-pest-control",
-    },
-    {
-      title: "Bed Bug Control",
-      description: "Get rid of bed bugs and sleep peacefully.",
-      image: "/Images/services/bedbug.png",
-      icon: Bug,
-      href: "/bedbug-pest-control",
-    },
-    {
-      title: "Rodent Control",
-      description: "Keep rats and mice away from your space.",
-      image: "/Images/services/rodent.png",
-      icon: Bug,
-      href: "/rodent-control",
-    },
-    {
-      title: "Mosquito Control",
-      description: "Reduce mosquito breeding and enjoy a bite-free life.",
-      image: "/Images/services/mosquito.png",
-      icon: Bug,
-      href: "/mosquito-control",
-    },
-    {
-      title: "Ant Control",
-      description: "Eliminate ant colonies and stop them from coming back.",
-      image: "/Images/services/ant.png",
-      icon: Bug,
-      href: "/ant-control",
-    },
-    {
-      title: "Bird Control",
-      description: "Safe and humane bird control solutions.",
-      image: "/Images/services/bird.png",
-      icon: Bird,
-      href: "/bird-control",
-    },
-    {
-      title: "Fly Control",
-      description: "Control flies and keep your surroundings hygienic.",
-      image: "/Images/services/flies.png",
-      icon: Bug,
-      href: "/flies-control",
-    },
-    {
-      title: "Fumigation Services",
-      description: "Deep treatment for severe pest infestations.",
-      image: "/Images/services/fumigation9.png",
-      icon: SprayCan,
-      href: "/fumigation-services",
-    },
-  ];
+const services = [
+  {
+    title: "Cockroach Control",
+    description: "Specialized cockroach control in Mangalore with odorless gel baits and targeted sprays for modular kitchens and commercial pantries.",
+    image: "/Images/services/cockroach.png",
+    icon: Bug,
+    href: "/cockroach-pest-control",
+  },
+  {
+    title: "Termite Control",
+    description: "Advanced pre & post-construction termite control in Mangalore safeguarding wooden interiors, door frames, and flooring.",
+    image: "/Images/services/termite.png",
+    icon: Bug,
+    href: "/termite-pest-control",
+  },
+  {
+    title: "Bed Bug Control",
+    description: "Comprehensive multi-step treatments to eliminate bed bugs, nymphs, and eggs permanently.",
+    image: "/Images/services/bedbug.png",
+    icon: Bug,
+    href: "/bedbug-pest-control",
+  },
+  {
+    title: "Rodent Control",
+    description: "Safe baiting, trapping, and entry-point sealing to keep rats and mice away from your property.",
+    image: "/Images/services/rodent.png",
+    icon: Bug,
+    href: "/rodent-control",
+  },
+  {
+    title: "Mosquito Control",
+    description: "Targeted larvicide and misting solutions to destroy mosquito breeding spots safely.",
+    image: "/Images/services/mosquito.png",
+    icon: Bug,
+    href: "/mosquito-control",
+  },
+  {
+    title: "Ant Control",
+    description: "Fast-acting colony elimination that stops ant trails in kitchens, pantries, and gardens.",
+    image: "/Images/services/ant.png",
+    icon: Bug,
+    href: "/ant-control",
+  },
+  {
+    title: "Bird Control",
+    description: "Durable, humane bird netting and spikes for balconies, windows, and commercial buildings.",
+    image: "/Images/services/bird.png",
+    icon: Bird,
+    href: "/bird-control",
+  },
+  {
+    title: "Fly Control",
+    description: "Hygienic fly management for restaurants, cloud kitchens, food processing units, and homes.",
+    image: "/Images/services/flies.png",
+    icon: Bug,
+    href: "/flies-control",
+  },
+  {
+    title: "Fumigation Services",
+    description: "Deep gas and mist fumigation for export containers, warehouses, godowns, and severe infestations.",
+    image: "/Images/services/fumigation9.png",
+    icon: SprayCan,
+    href: "/fumigation-services",
+  },
+];
 
 const certifications = [
   {
@@ -224,62 +232,62 @@ const processSteps = [
     number: "01",
     title: "Contact Us",
     description:
-      "Reach out to us via call, form, or WhatsApp. We’re ready to assist you.",
+      "Call or fill out our quick form to tell us about your pest issue and schedule a convenient visit.",
     icon: PhoneCall,
   },
   {
     number: "02",
     title: "Inspection",
     description:
-      "Our experts inspect your property to identify the pest problem and its source.",
+      "Our certified technicians inspect your property to identify pest species, entry routes, and nesting areas.",
     icon: ClipboardList,
   },
   {
     number: "03",
     title: "Customized Plan",
     description:
-      "We design a customized treatment plan tailored to your specific needs.",
+      "We design a targeted, non-disruptive treatment plan suited specifically to your space and requirements.",
     icon: Crosshair,
   },
   {
     number: "04",
-    title: "Treatment",
+    title: "Safe Treatment",
     description:
-      "Our trained professionals carry out the treatment using safe and effective methods.",
+      "We apply government-approved, low-toxicity formulations with precision and utmost care for your safety.",
     icon: ShieldCheck,
   },
   {
     number: "05",
     title: "Follow-Up & Protection",
     description:
-      "We ensure long-term protection with follow-ups and preventive measures.",
+      "We provide prevention tips and scheduled follow-ups to ensure your space stays pest-free long term.",
     icon: House,
   },
 ];
 
 const protectionFeatures = [
   {
-    title: "Safe & Non-Toxic",
+    title: "Safe & Eco-Friendly",
     description:
-      "We use eco-friendly products that are safe for your family, pets, and the environment.",
+      "We use approved, low-toxicity formulations that are completely safe for your family, children, and pets.",
     icon: Leaf,
   },
   {
     title: "Guaranteed Results",
     description:
-      "Our treatments are effective and backed by a service quality guarantee.",
+      "Every treatment is backed by proven protocols and a commitment to prompt warranty re-service if needed.",
     icon: Award,
   },
   {
     title: "Trained Professionals",
     description:
-      "Our team is highly trained, certified, and experienced in handling all pest problems.",
+      "Our technicians in Mangalore are certified, background-verified, and trained in modern pest management.",
     icon: UserCheck,
   },
   {
-    title: "Long-Term Protection",
+    title: "Long-Term Prevention",
     description:
-      "We focus on prevention and provide solutions that keep pests away for the long run.",
+      "We eliminate root breeding colonies and provide actionable proofing advice to stop pests from returning.",
     icon: Shield,
   },
 ];
@@ -287,44 +295,43 @@ const protectionFeatures = [
 const faq = [
   {
     id: "01",
-    question: "Do I need to leave my home during the treatment?",
+    question: "Why should I choose Orion Pest Solutions in Mangalore?",
     answer:
-      "It depends on the type of treatment. Some services allow you to stay home, while others may require you to leave for a few hours. Your technician will explain everything before work begins.",
+      "Orion Pest Solutions is an established pest control company in Mangalore with over two decades of industry experience. We offer government-approved, low-toxicity treatments, certified local technicians, and guaranteed results tailored to Mangalore's climate conditions.",
   },
   {
     id: "02",
-    question: "Is your treatment safe for children, elderly family members, and pets?",
+    question: "How does your cockroach control in Mangalore work?",
     answer:
-      "We use approved pest control products and follow application guidelines carefully. Before treatment, we'll let you know any temporary precautions that should be followed for maximum safety.",
+      "We use advanced odorless gel baits placed in hidden corners, cabinet hinges, and kitchen crevices where roaches breed, along with targeted sprays where necessary. It requires minimal preparation, so you don't have to empty all your kitchen utensils.",
   },
   {
     id: "03",
-    question: "Will my kitchen utensils and food need to be covered?",
+    question: "When is the right time to get termite control in Mangalore?",
     answer:
-      "For certain treatments, yes. We provide simple preparation instructions before your appointment so your food and kitchen items remain protected.",
+      "Subterranean termites are active throughout the year in Mangalore. If you notice mud tubes along walls, hollow-sounding wooden doors, or fine wood dust, you should book a termite inspection immediately.",
   },
   {
     id: "04",
-    question: "How long does it take to completely eliminate the infestation?",
+    question: "Are your pest control treatments safe for children, seniors, and pets?",
     answer:
-      "The timeline depends on the pest. Cockroaches may reduce significantly within days, while termites and bed bugs often require multiple visits or monitoring for complete control.",
+      "Yes. We prioritize human and pet safety by using Central Insecticides Board (CIB) approved, eco-friendly formulations. Our technicians will also advise on any brief precautions if specific spray treatments are being conducted.",
   },
   {
     id: "05",
-    question: "Do restaurants and food businesses require more frequent pest control?",
+    question: "How long does a typical pest control treatment take?",
     answer:
-      "Yes. Businesses that handle food generally benefit from scheduled preventive treatments because even a minor infestation can affect hygiene, customer trust, and compliance.",
+      "A standard residential treatment for a 2BHK or 3BHK flat usually takes between 45 to 90 minutes. Specialized treatments like comprehensive termite drilling or deep fumigation can take longer depending on property size.",
   },
   {
     id: "06",
-    question: "How quickly can someone come for an inspection?",
+    question: "Which areas in Mangalore do you serve?",
     answer:
-      "We understand that pest issues can't always wait. Depending on your location and availability, we aim to schedule inspections as quickly as possible.",
+      "We serve all major localities across Mangalore, including Kadri, Bejai, Urwa, Falnir, Hampankatta, Kankanady, Surathkal, Derlakatte, and Mangaladevi.",
   },
 ];
 
 export default async function page() {
-  
   return (
     <div className="w-full">
       {/* Hero section */}
@@ -340,33 +347,26 @@ export default async function page() {
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 lg:gap-8 items-center justify-between">
             {/* Left Content */}
             <div className="w-full space-y-8">
-              {/* Logo */}
+              {/* Tag */}
               <div className="mb-6 md:mb-8">
-                {/* <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center shrink-0">
-                  <ShieldCheck className="w-4 h-4 text-white" />
-                </div> */}
                 <span className="font-semibold text-gray-700 tracking-wide text-sm sm:text-base">
                   PROFESSIONAL. RELIABLE. EFFECTIVE
                 </span>
                 <div className="h-[2px] w-28 bg-amber-300 mt-2"></div>
               </div>
 
+              {/* H1 Headline */}
               <div className="space-y-2">
-                <h1 className="text-[34px] sm:text-5xl w-full md:w-xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[3.8rem]">
-                  Pest Control Services in <br />
-                  <span className="text-[#1095D9]"> Kolkata </span>
+                <h1 className="text-[34px] sm:text-5xl w-full md:w-2xl xl:text-7xl font-bold text-[#36388D] leading-tight lg:!leading-[4.8rem]">
+                  The Best Pest Control Company in 
+                  <span className="text-[#1095D9]"> Mangalore </span>
                 </h1>
                 <div className="h-[2px] w-28 bg-amber-300"></div>
               </div>
 
-              <p className="text-lg sm:text-xl text-gray-700 font-medium">
-                Established in 1998, we are constantly pushing the envelope with
-                innovations in the niche industry. Today, we take pride in
-                identifying ourselves as the pioneers of the pest management
-                industry.
+              <p className="text-lg sm:text-xl text-gray-700 font-medium leading-relaxed">
+                Looking for a trusted pest control company in Mangalore? Orion Pest Solutions delivers safe, fast, and eco-friendly pest control services across Mangalore. From coastal residences and apartments in Kadri and Bejai to port warehouses and commercial complexes, we keep your property pest-free.
               </p>
-
-              <p className="mt-4 text-gray-500 max-w-xl leading-relaxed text-base sm:text-lg md:text-xl"></p>
 
               {/* Features */}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-between gap-6 md:gap-10 2xl:divide-x-1 divide-amber-400">
@@ -420,12 +420,13 @@ export default async function page() {
 
       <ServiceMarquee />
 
+      {/* Services Overview / Local Information Section */}
       <section className="w-full grid grid-cols-1 lg:grid-cols-2">
         <div className="w-full bg-[#FDC82A] p-10 flex flex-col justify-center items-center space-y-10">
           <div className="w-[400px] md:w-[500px] h-[400px] xl:w-[600px] xl:h-[500px] relative">
             <Image
               src={"/Images/branches/img1.png"}
-              alt=""
+              alt="Pest control company in Mangalore"
               fill
               className="object-contain"
             />
@@ -472,52 +473,33 @@ export default async function page() {
           </div>
         </div>
 
-        <div className="w-full space-y-5 py-20 px-10 md:px-20">
+        <div className="w-full space-y-5 py-12 md:py-20 px-6 sm:px-10 md:px-16 lg:px-20">
           <div className="bg-[#FECE18] h-[5px] w-28 rounded"></div>
-          <div className="space-y-5">
-            <p className="text-2xl md:text-3xl font-bold text-black">WELCOME TO</p>
-            <h3 className="text-3xl md:text-6xl text-[#0D2391] font-bold">
-              24X7 PEST CONTROL <br />
-              <span className="text-[#FECE18]">IN CHENNAI</span>
-            </h3>
+          <div className="space-y-3">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#0D2391] font-bold leading-tight">
+              Pest Control Services <br />
+              <span className="text-[#FECE18]">in Mangalore</span>
+            </h2>
           </div>
           <div className="bg-[#0D2391] h-[5px] w-28 rounded"></div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quasi
-            beatae, ipsa ad obcaecati magnam quaerat pariatur voluptatem officia
-            suscipit cum accusamus asperiores. Ad laborum dicta nostrum ut
-            voluptatem minima enim, facilis nulla molestias iure repudiandae
-            accusamus porro odit incidunt praesentium culpa dolores natus vel.
-            Odio corrupti doloremque, sequi dolorum explicabo voluptates
-            cupiditate quo deserunt consectetur fugiat nostrum numquam dolores
-            enim ex magnam est deleniti ratione officia obcaecati. Tempora
-            quibusdam ad perferendis odio vitae libero ab repellat sapiente
-            ducimus quae ipsam ratione non excepturi delectus obcaecati,
-            accusamus tempore, debitis fugit in! Vitae dolore dolores quibusdam
-            nesciunt voluptatum tempore, rerum cupiditate.
+          <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+            Mangalore's warm coastal climate, high humidity, and heavy monsoon rains accelerate the breeding of stubborn pests. Subterranean termites pose severe threats to wooden door frames, wardrobes, and structural woodwork, while cockroaches and rodents often infest kitchens, food processing units, and port storage facilities.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-            quidem eaque eius! Dolorem eius necessitatibus exercitationem maxime
-            placeat aliquam hic, sed sequi vel. Reprehenderit excepturi facere
-            aut eum, maxime tempora laborum quibusdam accusamus corporis vitae
-            obcaecati dolores harum, molestiae aliquid explicabo exercitationem
-            maiores! Ab, voluptate! Esse iste vel, commodi exercitationem
-            eveniet ad ut consectetur ipsa iure voluptate vero tempore quod aut.
-            Vero, voluptates! Enim quas corrupti magnam eum ipsa deleniti,
-            perspiciatis cumque, odio sunt esse sint eligendi amet itaque vero
-            maxime nostrum ab omnis iste facere sapiente excepturi ut minima.
-            Rem inventore totam illum facilis fugit, laborum non! Tempora,
-            itaque.
+          <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+            As a leading pest control company in Mangalore, Orion Pest Solutions brings over 27 years of proven pest management experience to your doorstep. We don't just spray surface chemicals; our certified technicians locate root nesting colonies, apply odorless, government-approved formulations, and establish deep chemical barriers. Whether you require prompt cockroach control in Mangalore or specialized termite control in Mangalore, our team ensures long-lasting results.
+          </p>
+          <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+            Our customized pest control services in Mangalore protect apartments, independent villas, seafood processing units, hospitals, and educational institutions with transparent pricing and full service warranties.
           </p>
           <Link
             href={"/about"}
-            className="bg-[#0D2391] rounded-2xl px-10 py-4 font-semibold flex items-center gap-2 text-white mt-10 w-fit"
+            className="bg-[#0D2391] rounded-2xl px-10 py-4 font-semibold flex items-center gap-2 text-white mt-8 w-fit"
           >
             LEARN MORE <ArrowRight />
           </Link>
         </div>
       </section>
+
       <section className="w-full bg-[#0D2391]">
         <div className="grid grid-cols-2 lg:grid-cols-4 w-[95%] xl:w-[80%] mx-auto justify-center items-center gap-2 2xl:gap-10 xl:divide-x-1 divide-amber-400 p-5 gap-y-6">
           {stats3.map((item, index) => (
@@ -548,9 +530,7 @@ export default async function page() {
       >
         <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-10">
           <div className="grid overflow-hidden rounded-[28px] lg:grid-cols-[1fr_1fr]">
-            {/* =====================================================
-              LEFT CONTENT
-          ====================================================== */}
+            {/* LEFT CONTENT */}
             <div className="relative z-10 bg-white py-8 pr-0 sm:py-10 lg:py-12 lg:pr-10 xl:py-14">
               {/* Brand */}
               <div className="mb-6 flex items-center gap-3">
@@ -584,37 +564,30 @@ export default async function page() {
 
               {/* Description */}
               <p className="max-w-2xl leading-[1.65] text-gray-700">
-                Orion Pest Control, based in Chennai, delivers high-quality pest
-                control services for homes and businesses. Our skilled team uses
-                safe methods, advanced technology, and premium producree
-                environment you can rely on.ts to eliminate pests and ensure a
-                clean, healthy and pest-f
+                Orion Pest Solutions is an established pest control company in Mangalore dedicated to keeping homes, housing societies, and commercial premises pest-free. Our certified technicians combine scientific pest management, eco-friendly formulations, and precision treatment methods to ensure clean, protected spaces.
               </p>
 
-              {/* =================================================
-                STAT CARDS
-            ================================================== */}
-              <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-3 lg:gap-3">
+              {/* STAT CARDS */}
+              <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-3 lg:gap-3">
                 {stats4.map((stat) => {
                   const Icon = stat.icon;
-                  // Convert "90%" / "50%" into a number
-    const percentage = parseFloat(stat.value);
-
-    // Circle configuration
-    const radius = 39;
-    const circumference = 2 * Math.PI * radius-60;
-
-    // Calculate progress based on percentage
-    const progress = (percentage / 100) * circumference;
+                  const percentage = stat.percentage || 95;
+                  const radius = 38;
+                  const circumference = 2 * Math.PI * radius;
+                  const strokeDashoffset =
+                    circumference - (percentage / 100) * circumference;
 
                   return (
-                    <div key={stat.title} className="rounded-2xl text-center">
+                    <div
+                      key={stat.title}
+                      className="rounded-2xl text-center flex flex-col items-center"
+                    >
                       {/* Circular progress */}
-                      <div className="relative mx-auto mb-3 h-[150px] w-[150px]">
+                      <div className="relative mb-3 h-[130px] w-[130px] flex items-center justify-center">
                         <svg
                           viewBox="0 0 100 100"
-                          className="h-full w-full -rotate-45"
-                         >
+                          className="h-full w-full -rotate-90"
+                        >
                           <circle
                             cx="50"
                             cy="50"
@@ -622,8 +595,6 @@ export default async function page() {
                             fill="none"
                             stroke="#fff0b1"
                             strokeWidth="7"
-                            strokeDasharray={`${circumference} ${circumference}`}
-                            strokeLinecap="round"
                           />
 
                           <circle
@@ -633,30 +604,30 @@ export default async function page() {
                             fill="none"
                             stroke="#ffd000"
                             strokeWidth="7"
-                             strokeDasharray={`${progress} ${circumference}`}
+                            strokeDasharray={circumference}
+                            strokeDashoffset={strokeDashoffset}
                             strokeLinecap="round"
                           />
                         </svg>
 
-                        <div className="absolute top-2 inset-0 flex flex-col items-center justify-cente">
+                        {/* Centered content with icon stacked cleanly on top of value */}
+                        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                           <Icon
-                            size={25}
-                            strokeWidth={2.5}
-                            className="mb-1 text-[#0d2c68]"
+                            size={22}
+                            strokeWidth={2.2}
+                            className="text-[#0d2c68] mb-1"
                           />
-                        </div>
-                        <div className="absolute inset-0 flex flex-col items-center justify-center">
-                          <span className="text-xl font-extrabold leading-none text-[#10265c]">
+                          <span className="text-lg font-extrabold leading-none text-[#10265c]">
                             {stat.value}
                           </span>
                         </div>
                       </div>
 
-                      <h3 className="font-bold text-[#0c2860] text-md">
+                      <h3 className="font-bold text-[#0c2860] text-base">
                         {stat.title}
                       </h3>
 
-                      <p className="mx-auto mt-1 max-w-[120px] text-sm leading-[1.45] text-gray-600">
+                      <p className="mx-auto mt-1 max-w-[140px] text-xs sm:text-sm leading-[1.45] text-gray-600">
                         {stat.description}
                       </p>
                     </div>
@@ -664,9 +635,7 @@ export default async function page() {
                 })}
               </div>
 
-              {/* =================================================
-                PROMISE BAR
-            ================================================== */}
+              {/* PROMISE BAR */}
               <div className="mt-6 flex flex-col gap-4 rounded-2xl bg-[#fff9df] p-4 sm:flex-row sm:items-center sm:justify-between sm:gap-3 lg:px-4">
                 <div className="flex flex-col xl:flex-row items-center gap-3">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#ffd000] text-[#0c2860]">
@@ -680,8 +649,7 @@ export default async function page() {
                   </div>
 
                   <p className="max-w-2xl text-md leading-[1.45] text-gray-600 text-center md:text-start">
-                    Safe methods, expert team, and complete customer
-                    satisfaction.
+                    Safe methods, certified local team, and complete customer satisfaction.
                   </p>
                 </div>
 
@@ -698,9 +666,7 @@ export default async function page() {
               </div>
             </div>
 
-            {/* =====================================================
-              RIGHT EXPERIENCE SECTION
-          ====================================================== */}
+            {/* RIGHT EXPERIENCE SECTION */}
             <div className="relative min-h-[530px] overflow-hidden bg-[#fffaf0] sm:min-h-[620px] lg:min-h-[680px]">
               {/* Decorative dots */}
               <div className="absolute right-8 top-8 grid grid-cols-5 gap-3 opacity-70">
@@ -729,7 +695,7 @@ export default async function page() {
                   <div className="absolute left-1/2 top-3 h-[390px] w-[90%] md:w-[78%] -translate-x-1/2 overflow-hidden sm:h-[450px] sm:w-[82%] lg:h-[440px] xl:h-[480px]">
                     <Image
                       src="/Images/branches/img2.png"
-                      alt="Modern home"
+                      alt="Pest control services in Mangalore"
                       fill
                       priority
                       className="object-contain md:object-cover"
@@ -746,9 +712,11 @@ export default async function page() {
           </div>
         </div>
       </section>
-        <ServicesSection />
-        <TestimonialsSection />
-        <MembershipCertification />
+
+      <ServicesSection />
+      <TestimonialsSection />
+      <MembershipCertification />
+
       <section className="max-w-[80%] mx-auto bg-[#0D2391] rounded-2xl">
         <div className="grid grid-cols-2 xl:grid-cols-4 w-[95%] xl:w-[80%] mx-auto justify-center items-center gap-6 xl:divide-x-1 divide-amber-400 p-5">
           {stats3.map((item, index) => (
@@ -766,6 +734,7 @@ export default async function page() {
           ))}
         </div>
       </section>
+
       <BrandSection
         heading={
           <>
@@ -779,7 +748,8 @@ export default async function page() {
       />
       <ProcessSection />
       <ProtectionSection />
-      <FAQSection faqs={faq}/>
+      <FAQSection faqs={faq} />
+
       <section
         className="relative overflow-hidden bg-[#FEFEFE] py-0 pb-10 md:py-16"
         style={{
@@ -798,17 +768,15 @@ export default async function page() {
               </p>
 
               <h2 className="mt-3 sm:mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#2F3293] break-words">
-                We're Here to
+                We&apos;re Here to
                 <br />
                 <span className="text-[#0095DA]">Help You Stay</span>
                 <br />
-                <span className="text-[#2F3293]">Extermination-Free.</span>
+                <span className="text-[#2F3293]">Pest-Free.</span>
               </h2>
 
               <p className="mt-4 sm:mt-5 max-w-lg text-lg leading-relaxed text-gray-600">
-                Protect your property before ants cause costly structural
-                damage. Book a professional extermination inspection with our
-                certified experts today.
+                Don&apos;t let pests compromise your family&apos;s health or business reputation. Book a professional inspection with our certified Mangalore pest control experts today.
               </p>
 
               {/* Contact Info Row Components Column Base List Block */}
@@ -816,14 +784,14 @@ export default async function page() {
                 <ContactInfo
                   icon={<Phone size={20} className="sm:w-6 sm:h-6" />}
                   title="CALL US"
-                  link="1800 419 8181"
+                  link="tel:1800 419 8181"
                   value="1800 419 8181"
                   bg="bg-yellow-400"
                 />
                 <ContactInfo
                   icon={<Mail size={20} className="sm:w-6 sm:h-6" />}
                   title="EMAIL US"
-                  link="sales@orionpest.com"
+                  link="mailto:sales@orionpest.com"
                   value="sales@orionpest.com"
                   bg="bg-yellow-400"
                 />
@@ -958,10 +926,9 @@ function ServiceCard({ service }) {
         <h3 className="mt-4 sm:mt-5 text-[#102B83] font-bold text-lg sm:text-xl leading-snug sm:leading-7 text-nowrap">
           {service.title}
         </h3>
-        <p className="text-sm">{service.description}</p>
-        {/* <div className="mt-2 w-16 sm:w-20 h-1 rounded bg-yellow-400 mx-auto"></div> */}
-        <p className="text-sm text-center mt-2 font-semibold flex items-center gap-1">
-          Learn More <ChevronRight />
+        <p className="text-sm text-gray-600">{service.description}</p>
+        <p className="text-sm text-center mt-2 font-semibold flex items-center gap-1 text-[#0D2391]">
+          Learn More <ChevronRight size={16} />
         </p>
       </div>
     </Link>
@@ -1020,10 +987,7 @@ function ServicesSection() {
           lg:px-8
         "
       >
-        {/* ============================================
-            HEADER
-        ============================================= */}
-
+        {/* HEADER */}
         <div className="mx-auto max-w-[720px] text-center">
           {/* Eyebrow */}
           <div className="flex items-center justify-center gap-3">
@@ -1060,7 +1024,7 @@ function ServicesSection() {
           >
             Complete Pest Solutions
             <br />
-            <span className="text-[#f4bd00]">for Every Space</span>
+            <span className="text-[#f4bd00]">in Mangalore</span>
           </h2>
 
           {/* Yellow underline */}
@@ -1075,15 +1039,11 @@ function ServicesSection() {
               text-gray-600
             "
           >
-            From common household pests to complex infestations, we provide
-            safe, effective, and long-lasting pest control solutions.
+            From destructive termites to cockroaches, rodents, and bed bugs, explore our specialized pest control services in Mangalore designed for residences, commercial buildings, and coastal industrial units.
           </p>
         </div>
 
-        {/* ============================================
-            SERVICES GRID
-        ============================================= */}
-
+        {/* SERVICES GRID */}
         <div
           className="
             mt-10
@@ -1108,64 +1068,20 @@ function ServicesSection() {
             <h3 className="mt-4 sm:mt-5 font-bold text-lg sm:text-xl leading-snug sm:leading-7 text-nowrap text-[#0c2860]">
               All Pest Solutions
             </h3>
-            <p className="text-sm text-center mt-3">
-              Comprehensive pest control for homes and business
+            <p className="text-sm text-center mt-3 text-gray-600">
+              Comprehensive pest control for homes and commercial establishments.
             </p>
-            <p className="text-sm text-center mt-4 font-semibold flex items-center gap-1">
-              Learn More <ChevronRight />
+            <p className="text-sm text-center mt-4 font-semibold flex items-center gap-1 text-[#0D2391]">
+              Learn More <ChevronRight size={16} />
             </p>
           </Link>
         </div>
-
-        {/* ============================================
-            VIEW ALL SERVICES BUTTON
-        ============================================= */}
-
-        {/* <div className="mt-8 flex justify-center">
-          <Link
-            href="/pest-control-services"
-            className="
-              group
-              inline-flex
-              items-center
-              justify-center
-              gap-4
-              rounded-md
-              bg-[#ffc400]
-              px-7
-              py-2.5
-              text-md
-              font-bold
-              text-[#111111]
-              shadow-sm
-              transition-all
-              duration-300
-              hover:bg-[#f2b900]
-              hover:shadow-md
-            "
-          >
-            View All Services
-            <ArrowRight
-              size={20}
-              strokeWidth={2.5}
-              className="
-                transition-transform
-                duration-300
-                group-hover:translate-x-1
-              "
-            />
-          </Link>
-        </div> */}
       </div>
     </section>
   );
 }
 
-
-
-
-function CertificationCard(certification) {
-
+function CertificationCard({ certification }) {
   return (
     <div
       className="
@@ -1185,10 +1101,7 @@ function CertificationCard(certification) {
         border border-gray-200
       "
     >
-      {/* =========================================
-          TOP CONTENT
-      ========================================== */}
-
+      {/* TOP CONTENT */}
       <div
         className="
           relative
@@ -1230,8 +1143,8 @@ function CertificationCard(certification) {
           />
 
           <Image
-            src={`${certification.certification.logo}`}
-            alt={certification.certification.title}
+            src={`${certification.logo}`}
+            alt={certification.title}
             width={112}
             height={112}
             className="
@@ -1257,28 +1170,24 @@ function CertificationCard(certification) {
             text-md
           "
         >
-          {certification.certification.title}
+          {certification.title}
         </h3>
 
         {/* Subtitle */}
         <p
           className="
             mt-2
-            
             text-sm
             font-medium
             leading-[1.45]
             text-[#30343d]
           "
         >
-          {certification.certification.subtitle}
+          {certification.subtitle}
         </p>
       </div>
 
-      {/* =========================================
-          BLUE BOTTOM PANEL
-      ========================================== */}
-
+      {/* BLUE BOTTOM PANEL */}
       <div
         className="
           absolute
@@ -1352,7 +1261,7 @@ function CertificationCard(certification) {
             text-white/95
           "
         >
-          {certification.certification.description}
+          {certification.description}
         </p>
       </div>
     </div>
@@ -1371,11 +1280,7 @@ function MembershipCertification() {
         lg:py-24
       "
     >
-      {/* =========================================
-          BACKGROUND DECORATION
-      ========================================== */}
-
-      {/* Left dots */}
+      {/* Left dots decoration */}
       <div
         className="
           pointer-events-none
@@ -1418,10 +1323,6 @@ function MembershipCertification() {
         <ShieldCheck size={170} strokeWidth={1.3} className="text-[#17368f]" />
       </div>
 
-      {/* =========================================
-          CONTENT
-      ========================================== */}
-
       <div
         className="
           relative
@@ -1433,10 +1334,6 @@ function MembershipCertification() {
           lg:px-8
         "
       >
-        {/* =========================================
-            HEADER
-        ========================================== */}
-
         <header className="mx-auto max-w-[750px] text-center">
           {/* Eyebrow */}
           <div className="flex items-center justify-center gap-3">
@@ -1488,15 +1385,11 @@ function MembershipCertification() {
               text-[#3c4250]
             "
           >
-            Our memberships and certifications reflect our commitment to quality
-            service, safety standards, and environmental care.
+            Our industry accreditations reflect our ongoing commitment to international safety standards, eco-conscious pest control, and quality service.
           </p>
         </header>
 
-        {/* =========================================
-            CERTIFICATION GRID
-        ========================================== */}
-
+        {/* CERTIFICATION GRID */}
         <div
           className="
             mt-10
@@ -1519,10 +1412,7 @@ function MembershipCertification() {
   );
 }
 
-
-
-
-function ProcessCard({step}) {
+function ProcessCard({ step }) {
   const Icon = step.icon;
 
   return (
@@ -1629,43 +1519,6 @@ function ProcessSection() {
         lg:py-20
       "
     >
-      {/* =========================================
-          BACKGROUND DECORATION
-      ========================================== */}
-
-      {/* <div
-        className="
-          pointer-events-none
-          absolute
-          left-[-180px]
-          top-1/2
-          h-[350px]
-          w-[350px]
-          -translate-y-1/2
-          rounded-full
-          border
-          border-[#f1f4fb]
-        "
-      /> */}
-
-      {/* <div
-        className="
-          pointer-events-none
-          absolute
-          right-[-180px]
-          bottom-[-100px]
-          h-[350px]
-          w-[350px]
-          rounded-full
-          border
-          border-[#f1f4fb]
-        "
-      /> */}
-
-      {/* =========================================
-          MAIN CONTAINER
-      ========================================== */}
-
       <div
         className="
           relative
@@ -1679,10 +1532,6 @@ function ProcessSection() {
           lg:px-8
         "
       >
-        {/* =========================================
-            HEADER
-        ========================================== */}
-
         <header
           className="
             mx-auto
@@ -1692,7 +1541,6 @@ function ProcessSection() {
           "
         >
           {/* Eyebrow */}
-
           <div
             className="
               flex
@@ -1729,7 +1577,6 @@ function ProcessSection() {
           </div>
 
           {/* Heading */}
-
           <h2
             className="
               text-3xl sm:text-5xl font-bold text-[#2F3293] leading-tight mt-6
@@ -1739,7 +1586,6 @@ function ProcessSection() {
           </h2>
 
           {/* Description */}
-
           <p
             className="
               mx-auto
@@ -1749,14 +1595,9 @@ function ProcessSection() {
               text-[#555c6d]
             "
           >
-            A systematic approach to pest control that ensures effective
-            results, safety, and long-term protection for your home or business.
+            A systematic, hassle-free approach designed to solve pest problems quickly and keep Mangalore properties protected year-round.
           </p>
         </header>
-
-        {/* =========================================
-            PROCESS
-        ========================================== */}
 
         <div
           className="
@@ -1765,10 +1606,7 @@ function ProcessSection() {
             sm:mt-12
           "
         >
-          {/* =======================================
-              DESKTOP CONNECTING LINE
-          ======================================== */}
-
+          {/* DESKTOP CONNECTING LINE */}
           <div
             className="
               pointer-events-none
@@ -1784,10 +1622,7 @@ function ProcessSection() {
             "
           />
 
-          {/* =======================================
-              DESKTOP ARROWS
-          ======================================== */}
-
+          {/* DESKTOP ARROWS */}
           <div
             className="
               pointer-events-none
@@ -1823,10 +1658,7 @@ function ProcessSection() {
             ))}
           </div>
 
-          {/* =======================================
-              MOBILE VERTICAL LINE
-          ======================================== */}
-
+          {/* MOBILE VERTICAL LINE */}
           <div
             className="
               pointer-events-none
@@ -1842,10 +1674,7 @@ function ProcessSection() {
             "
           />
 
-          {/* =======================================
-              CARDS
-          ======================================== */}
-
+          {/* CARDS */}
           <div
             className="
               relative
@@ -1870,20 +1699,12 @@ function ProcessSection() {
   );
 }
 
-
-function ProtectionFeature({feature, index}) {
+function ProtectionFeature({ feature }) {
   const Icon = feature.icon;
 
   return (
-    <div
-      className={`
-        group
-        min-w-0
-        text-center
-      `}
-    >
+    <div className="group min-w-0 text-center">
       {/* Icon */}
-
       <div
         className="
           mx-auto
@@ -1905,7 +1726,6 @@ function ProtectionFeature({feature, index}) {
       </div>
 
       {/* Title */}
-
       <h3
         className="
           mt-4
@@ -1919,12 +1739,10 @@ function ProtectionFeature({feature, index}) {
       </h3>
 
       {/* Description */}
-
       <p
         className="
           mx-auto
           mt-3
-          
           text-sm
           leading-[1.65]
           text-[#535a69]
@@ -1951,10 +1769,6 @@ function ProtectionSection() {
         lg:py-12
       "
     >
-      {/* ==========================================
-          MAIN CARD
-      =========================================== */}
-
       <div
         className="
           mx-auto
@@ -1976,10 +1790,7 @@ function ProtectionSection() {
             shadow-[0_5px_25px_rgba(20,40,90,0.08)]
           "
         >
-          {/* ======================================
-              TOP CONTENT
-          ======================================= */}
-
+          {/* TOP CONTENT */}
           <div
             className="
               grid
@@ -1988,10 +1799,7 @@ function ProtectionSection() {
               lg:grid-cols-[38%_62%]
             "
           >
-            {/* ====================================
-                LEFT IMAGE
-            ===================================== */}
-
+            {/* LEFT IMAGE */}
             <div
               className="
                 relative
@@ -2003,7 +1811,7 @@ function ProtectionSection() {
             >
               <Image
                 src="/Images/branches/img4.png"
-                alt="Professional pest control service"
+                alt="Pest control company in Mangalore"
                 fill
                 priority
                 className="
@@ -2016,8 +1824,6 @@ function ProtectionSection() {
                 "
               />
 
-              {/* Image overlay */}
-
               <div
                 className="
                   absolute
@@ -2029,50 +1835,9 @@ function ProtectionSection() {
                   lg:hidden
                 "
               />
-
-              {/* =================================
-                  DIAGONAL DIVIDER
-              ================================== */}
-
-              {/* <div
-                className="
-                  pointer-events-none
-                  absolute
-                  right-[-1px]
-                  top-0
-                  hidden
-                  h-full
-                  w-[70px]
-                  bg-white
-                  lg:block
-                "
-                style={{
-                  clipPath: "polygon(100% 0, 100% 100%, 0 100%)",
-                }}
-              /> */}
-
-              {/* <div
-                className="
-                  pointer-events-none
-                  absolute
-                  right-[36px]
-                  top-0
-                  hidden
-                  h-full
-                  w-[5px]
-                  bg-[#123b98]
-                  lg:block
-                "
-                style={{
-                  clipPath: "polygon(100% 0, 100% 100%, 0 100%)",
-                }}
-              /> */}
             </div>
 
-            {/* ====================================
-                RIGHT CONTENT
-            ===================================== */}
-
+            {/* RIGHT CONTENT */}
             <div
               className="
                 relative
@@ -2080,13 +1845,9 @@ function ProtectionSection() {
                 px-5
                 pb-8
                 pt-7
-                
               "
             >
-              {/* =================================
-                  HEADING
-              ================================== */}
-
+              {/* HEADING */}
               <div
                 className="
                   flex
@@ -2094,8 +1855,6 @@ function ProtectionSection() {
                   gap-4
                 "
               >
-                {/* Shield */}
-
                 <div
                   className="
                     flex
@@ -2103,8 +1862,9 @@ function ProtectionSection() {
                     w-[62px]
                     shrink-0
                     justify-center
+                    items-center
                     rounded-full
-                    bg-[#f1f4fc]    
+                    bg-[#f1f4fc]
                     text-[#123b98]
                   "
                 >
@@ -2123,8 +1883,6 @@ function ProtectionSection() {
                   >
                     Protection You Can Rely On
                   </h2>
-
-                  {/* Heading underline */}
 
                   <div
                     className="
@@ -2161,17 +1919,12 @@ function ProtectionSection() {
                       text-[#444b59]
                     "
                   >
-                    We use advanced techniques and high-quality products to
-                    ensure a pest-free environment for your loved ones and your
-                    property.
+                    We protect Mangalore homes and commercial facilities with proactive pest management, using safe chemicals that keep your family, pets, and workspace secure.
                   </p>
                 </div>
               </div>
 
-              {/* =================================
-                  FEATURES
-              ================================== */}
-
+              {/* FEATURES */}
               <div
                 className="
                   mt-7
@@ -2182,21 +1935,17 @@ function ProtectionSection() {
                   xl:grid-cols-4
                 "
               >
-                {protectionFeatures.map((feature, index) => (
+                {protectionFeatures.map((feature) => (
                   <ProtectionFeature
                     key={feature.title}
                     feature={feature}
-                    index={index}
                   />
                 ))}
               </div>
             </div>
           </div>
 
-          {/* ======================================
-              CTA BAR
-          ======================================= */}
-
+          {/* CTA BAR */}
           <div
             className="
               relative
@@ -2214,8 +1963,6 @@ function ProtectionSection() {
               lg:px-8
             "
           >
-            {/* Left */}
-
             <div
               className="
                 flex
@@ -2224,8 +1971,6 @@ function ProtectionSection() {
                 gap-3
               "
             >
-              {/* Phone Icon */}
-
               <div
                 className="
                   flex
@@ -2260,7 +2005,7 @@ function ProtectionSection() {
                     text-white
                   "
                 >
-                  Need Immediate Assistance?
+                  Need Immediate Assistance in Mangalore?
                 </span>
 
                 <span
@@ -2269,12 +2014,10 @@ function ProtectionSection() {
                     text-white/90
                   "
                 >
-                  Our team is just a call away!
+                  Our local experts are just a call away!
                 </span>
               </div>
             </div>
-
-            {/* Button */}
 
             <Link
               href="/contact"
