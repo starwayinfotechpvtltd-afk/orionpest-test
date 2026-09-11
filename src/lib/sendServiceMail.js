@@ -68,11 +68,6 @@ export const sendMail = async ({
 
     await transporter.verify();
 
-    console.log("SMTP VERIFIED");
-    console.log("Host:", process.env.SMTP_HOST);
-    console.log("Port:", process.env.SMTP_PORT);
-    console.log("User:", process.env.EMAIL_USER);
-    console.log("Owner:", process.env.OWNER_EMAIL);
 
     const mailOptions = {
       from: `"Orion Pest Control" <${process.env.EMAIL_USER}>`,
@@ -234,7 +229,6 @@ export const sendMail = async ({
   `,
     };
 
-    console.log(JSON.stringify(mailOptions, null, 2));
 
     const info = await transporter.sendMail(mailOptions);
 
@@ -243,7 +237,6 @@ export const sendMail = async ({
       info,
     };
   } catch (error) {
-    console.error(error);
 
     return {
       success: false,

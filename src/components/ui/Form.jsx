@@ -91,7 +91,6 @@ export default function Form({
         alert(data.error || "Submission failed. Please try again.");
       }
     } catch (error) {
-      console.error("Submission error", error);
       alert("Something went wrong. Please try again.");
     } finally {
       // 3. Reset reCAPTCHA and loading state
