@@ -66,13 +66,11 @@ export async function POST(req) {
       email,
       phone,
       service,
-      message
+      location,
+      message,
+      pageUrl
     } = body;
 
-    console.log("\n==============================");
-    console.log("NEW LEAD RECEIVED");
-    console.log("==============================");
-    console.log(body);
 
     if (!fullName || !phone || !email) {
       return NextResponse.json(
@@ -99,35 +97,23 @@ export async function POST(req) {
       );
     }
 
-    console.log("\n==============================");
-    console.log("VALIDATION PASSED");
-    console.log("==============================");
 
     const mailResult = await sendMail({
       fullName,
       email,
       phone: cleanedPhone,
       service,
+      location,
       message,
+      pageUrl
     });
 
-    console.log("\n==============================");
-    console.log("MAIL RESULT");
-    console.log("==============================");
-    console.log(
-      JSON.stringify(mailResult, null, 2)
-    );
 
     return NextResponse.json({
       success: mailResult.success,
       mailResult,
     });
   } catch (error) {
-    console.log("\n==============================");
-    console.log("ROUTE ERROR");
-    console.log("==============================");
-
-    console.error(error);
 
     return NextResponse.json(
       {

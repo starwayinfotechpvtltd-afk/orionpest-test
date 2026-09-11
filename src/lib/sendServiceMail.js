@@ -48,7 +48,9 @@ export const sendMail = async ({
   email,
   phone,
   service,
+  location,
   message,
+  pageUrl,
 }) => {
   try {
     const transporter = nodemailer.createTransport({
@@ -165,11 +167,32 @@ export const sendMail = async ({
 
                   <tr>
                     <td style="padding:12px;border-bottom:1px solid #eee;">
+                      <strong>Location</strong>
+                    </td>
+
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      ${location}
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
                       <strong>Message</strong>
                     </td>
 
                     <td style="padding:12px;border-bottom:1px solid #eee;">
                       ${message}
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding:12px;border-bottom:1px solid #eee;width:180px;">
+                      <strong>Submitted From Page</strong>
+                    </td>
+                    <td style="padding:12px;border-bottom:1px solid #eee;">
+                      <a href="${pageUrl}" target="_blank" style="color:#0f766e;text-decoration:underline;">
+                        ${pageUrl || "Unknown"}
+                      </a>
                     </td>
                   </tr>
 
