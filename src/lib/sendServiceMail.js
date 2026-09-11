@@ -72,7 +72,7 @@ export const sendMail = async ({
     const mailOptions = {
       from: `"Orion Pest Control" <${process.env.EMAIL_USER}>`,
 
-      to: process.env.OWNER_EMAIL,
+      to: email,
       cc: process.env.BACKUP_EMAIL,
 
       replyTo: process.env.EMAIL_USER,
