@@ -68,36 +68,47 @@ export async function POST(req) {
       service,
       location,
       message,
-      pageUrl
+      pageUrl,
+      captchaToken, // <-- 1. Receive token
     } = body;
 
+    // 2. Validate token presence
+    if (!captchaToken) {
+      return NextResponse.json(
+        { success: false, error: "reCAPTCHA verification is required" },
+        { status: 400 }
+      );
+    }
 
+    // 3. Verify token with Google's verification API
+    const recaptchaRes = await fetch(
+      "https://www.google.com/recaptcha/api/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`,
+      }
+    );
+    const recaptchaData = await recaptchaRes.json();
+
+    if (!recaptchaData.success) {
+      return NextResponse.json(
+        { success: false, error: "reCAPTCHA verification failed. Bot suspected." },
+        { status: 403 }
+      );
+    }
+
+    // 4. Validate form fields
     if (!fullName || !phone || !email) {
       return NextResponse.json(
-        {
-          success: false,
-          error: "Name, email and phone are required",
-        },
+        { success: false, error: "Name, email, and phone are required" },
         { status: 400 }
       );
     }
 
     const cleanedPhone = phone.toString().trim();
 
-    if (
-      cleanedPhone.length < 7 ||
-      cleanedPhone.length > 15
-    ) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: "Invalid phone number",
-        },
-        { status: 400 }
-      );
-    }
-
-
+    // 5. Send Mail
     const mailResult = await sendMail({
       fullName,
       email,
@@ -105,24 +116,18 @@ export async function POST(req) {
       service,
       location,
       message,
-      pageUrl
+      pageUrl,
     });
-
 
     return NextResponse.json({
       success: mailResult.success,
       mailResult,
     });
   } catch (error) {
-
     return NextResponse.json(
       {
         success: false,
         error: error.message,
-        stack:
-          process.env.NODE_ENV === "development"
-            ? error.stack
-            : undefined,
       },
       { status: 500 }
     );

@@ -48,7 +48,6 @@ export const sendMail = async ({
   email,
   phone,
   service,
-  location,
   message,
   pageUrl,
 }) => {
@@ -162,16 +161,6 @@ export const sendMail = async ({
 
                     <td style="padding:12px;border-bottom:1px solid #eee;">
                       ${service}
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td style="padding:12px;border-bottom:1px solid #eee;">
-                      <strong>Location</strong>
-                    </td>
-
-                    <td style="padding:12px;border-bottom:1px solid #eee;">
-                      ${location}
                     </td>
                   </tr>
 

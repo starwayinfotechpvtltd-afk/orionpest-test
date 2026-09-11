@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
+import ReCAPTCHA from "react-google-recaptcha";
 import {
   Phone,
   Mail,
@@ -11,6 +12,7 @@ import {
   ChevronDown,
   ArrowRight,
 } from "lucide-react";
+
 export default function Form({
   bgColor = "#fff",
   header = "Send Us a Message",
@@ -21,10 +23,12 @@ export default function Form({
     email: "",
     phone: "",
     service: "",
-    location: "",
     message: "",
   });
+  const [captchaToken, setCaptchaToken] = useState(null);
   const [isLoading, setLoading] = useState(false);
+
+  const recaptchaRef = useRef(null);
   const pathname = usePathname();
 
   const handleChange = (e) => {
@@ -41,49 +45,62 @@ export default function Form({
     }));
   };
 
+  const handleCaptchaChange = (token) => {
+    setCaptchaToken(token);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(formData);
+    // 1. Ensure user checked the reCAPTCHA box
+    if (!captchaToken) {
+      alert("Please complete the reCAPTCHA verification.");
+      return;
+    }
 
     try {
       setLoading(true);
 
-      // Get full URL (including domain and UTM query params) if in browser, otherwise fallback to pathname
       const currentUrl =
         typeof window !== "undefined" ? window.location.href : pathname;
 
-        const payload = {
+      const payload = {
         ...formData,
-        pageUrl: currentUrl, // <-- 3. Attach the page URL to the request body
+        pageUrl: currentUrl,
+        captchaToken, // 2. Send token to the backend
       };
 
-      
       const response = await fetch("/api/service-form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
+
       const data = await response.json();
-      console.log(data);
 
       if (data.success) {
-        console.log("Data saved successfully");
+        alert("Enquiry submitted successfully!");
         setFormData({
           fullName: "",
           email: "",
           phone: "",
           service: "",
-          location: "",
           message: "",
         });
-        setLoading(false);
+      } else {
+        alert(data.error || "Submission failed. Please try again.");
       }
     } catch (error) {
+      console.error("Submission error", error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      // 3. Reset reCAPTCHA and loading state
       setLoading(false);
-      console.log("Something error", error);
+      setCaptchaToken(null);
+      recaptchaRef.current?.reset();
     }
   };
+
   return (
     <div
       className="rounded-[32px] border border-slate-100 p-8 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.08)] z-[2]"
@@ -139,18 +156,7 @@ export default function Form({
             onChange={handleChange}
           />
         </div>
-        <div className="mt-5">
-          <InputField
-            label="Location"
-            color={color}
-            required
-            icon={<User size={18} />}
-            placeholder="Enter Your Address"
-            name="location"
-            value={formData.location}
-            onChange={handleChange}
-          />
-        </div>
+
         {/* Message */}
         <div className="mt-6">
           <label className="mb-3 block font-medium" style={{ color: color }}>
@@ -170,12 +176,22 @@ export default function Form({
               onChange={handleChange}
               placeholder="Tell us about your requirement..."
               className={`w-full rounded-xl border border-slate-200 pl-12 pr-4 pt-4 text-gray-700 outline-none transition focus:border-blue-500 ${
-                color == "#fff"
+                color === "#fff"
                   ? "placeholder:text-white"
                   : "placeholder:text-gray-500"
-              } ${color == "#fff" ? "text-white" : "text-[#132C98]"}`}
+              } ${color === "#fff" ? "text-white" : "text-[#132C98]"}`}
             />
           </div>
+        </div>
+
+        {/* Google reCAPTCHA */}
+        <div className="mt-6 flex justify-start">
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            onChange={handleCaptchaChange}
+            theme={bgColor === "#102B83" ? "dark" : "light"}
+          />
         </div>
 
         {/* Submit */}
@@ -226,7 +242,7 @@ export default function Form({
         {/* Security Note */}
         <div className="mt-6 flex items-center gap-3 text-sm">
           <ShieldCheck size={18} color={color} />
-          <p style={{ color: bgColor == "#102B83" ? "white" : "#102B83" }}>
+          <p style={{ color: bgColor === "#102B83" ? "white" : "#102B83" }}>
             Your information is safe with us. We respect your privacy.
           </p>
         </div>
@@ -234,8 +250,8 @@ export default function Form({
     </div>
   );
 }
-/* Input */
 
+/* Input */
 function InputField({
   label,
   color,
@@ -269,10 +285,10 @@ function InputField({
           maxLength={name === "phone" ? 10 : undefined}
           inputMode={name === "phone" ? "numeric" : undefined}
           className={`h-14 w-full rounded-xl border border-slate-200 pl-12 pr-4 outline-none transition focus:border-blue-500 ${
-            color == "#fff"
+            color === "#fff"
               ? "placeholder:text-white"
               : "placeholder:text-gray-500"
-          } ${color == "#fff" ? "text-white" : "text-[#132C98]"}`}
+          } ${color === "#fff" ? "text-white" : "text-[#132C98]"}`}
         />
       </div>
     </div>
@@ -280,7 +296,6 @@ function InputField({
 }
 
 /* Select */
-
 function SelectField({ name, color, value, onChange, required }) {
   const services = [
     "Cockroach Control",
@@ -315,14 +330,14 @@ function SelectField({ name, color, value, onChange, required }) {
         >
           <option
             value=""
-            style={{ color: color == "#fff" ? "#132C98" : color }}
+            style={{ color: color === "#fff" ? "#132C98" : color }}
           >
             Select Service
           </option>
           {services.map((service, index) => (
             <option
               value={service}
-              style={{ color: color == "#fff" ? "#132C98" : color }}
+              style={{ color: color === "#fff" ? "#132C98" : color }}
               key={index}
             >
               {service}
