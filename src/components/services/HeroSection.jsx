@@ -26,7 +26,7 @@ export default function HeroSection({
   const stat = [
     {
       icon: Users,
-      title: "26+ Years",
+      title: "27+ Years",
       subtitle: "of Expertise",
       bgColor: "#FCF8EC",
       color: "#FDC700",

@@ -13,7 +13,7 @@ const badges = [
   {
     id: 2,
     image: "/Images/about2.png",
-    text: "26+",
+    text: "27+",
   },
   {
     id: 3,
