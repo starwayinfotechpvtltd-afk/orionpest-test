@@ -12,6 +12,7 @@ import {
   ChevronDown,
   ArrowRight,
 } from "lucide-react";
+import router from "next/router";
 
 export default function Form({
   bgColor = "#fff",
@@ -87,6 +88,7 @@ export default function Form({
           service: "",
           message: "",
         });
+        router.push("/thankyou");
       } else {
         alert(data.error || "Submission failed. Please try again.");
       }
