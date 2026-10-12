@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
 import {
   Phone,
@@ -12,7 +12,6 @@ import {
   ChevronDown,
   ArrowRight,
 } from "lucide-react";
-import router from "next/router";
 
 export default function Form({
   bgColor = "#fff",
@@ -31,6 +30,7 @@ export default function Form({
 
   const recaptchaRef = useRef(null);
   const pathname = usePathname();
+  const router = useRouter();
 
   const handleChange = (e) => {
     const { name } = e.target;
@@ -80,7 +80,6 @@ export default function Form({
       const data = await response.json();
 
       if (data.success) {
-        alert("Enquiry submitted successfully!");
         setFormData({
           fullName: "",
           email: "",
