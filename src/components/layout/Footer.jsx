@@ -66,10 +66,10 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-3 w-full md:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto bg-[#0D2391] hover:bg-[#07165c] text-white font-bold px-6 py-3.5 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+              className="w-full sm:w-auto bg-[#0D2391] hover:bg-[#07165c] text-white font-bold px-6 py-3.5 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm sm:text-base text-nowrap"
             >
               BOOK FREE INSPECTION
               <ArrowRight size={18} />
@@ -77,7 +77,7 @@ export default function Footer() {
 
             <a
               href="tel:18004198181"
-              className="w-full sm:w-auto bg-white hover:bg-gray-100 text-[#0D2391] font-bold px-6 py-3.5 rounded-lg border border-[#0D2391]/20 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+              className="w-full lg:w-auto bg-white hover:bg-gray-100 text-[#0D2391] font-bold px-6 py-3.5 rounded-lg border border-[#0D2391]/20 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base text-nowrap"
             >
               <PhoneCall size={18} className="text-[#0D2391]" />
               1800 419 8181

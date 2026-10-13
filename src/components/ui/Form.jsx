@@ -80,6 +80,7 @@ export default function Form({
       const data = await response.json();
 
       if (data.success) {
+        router.push("/thank-you");
         setFormData({
           fullName: "",
           email: "",
@@ -87,7 +88,6 @@ export default function Form({
           service: "",
           message: "",
         });
-        router.push("/thankyou");
       } else {
         alert(data.error || "Submission failed. Please try again.");
       }
