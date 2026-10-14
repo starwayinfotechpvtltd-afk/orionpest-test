@@ -99,9 +99,9 @@ export async function POST(req) {
     }
 
     // 4. Validate form fields
-    if (!fullName || !phone || !email) {
+    if (!fullName || !phone) {
       return NextResponse.json(
-        { success: false, error: "Name, email, and phone are required" },
+        { success: false, error: "Name and phone are required" },
         { status: 400 }
       );
     }
