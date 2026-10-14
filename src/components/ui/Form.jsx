@@ -28,6 +28,8 @@ export default function Form({
   const [captchaToken, setCaptchaToken] = useState(null);
   const [isLoading, setLoading] = useState(false);
 
+  const [status, setStatus] = useState({ type: "", text: "" });
+
   const recaptchaRef = useRef(null);
   const pathname = usePathname();
   const router = useRouter();
@@ -55,7 +57,7 @@ export default function Form({
 
     // 1. Ensure user checked the reCAPTCHA box
     if (!captchaToken) {
-      alert("Please complete the reCAPTCHA verification.");
+      setStatus({ type: "error", text: "Please complete the reCAPTCHA verification." });
       return;
     }
 
@@ -89,10 +91,16 @@ export default function Form({
           message: "",
         });
       } else {
-        alert(data.error || "Submission failed. Please try again.");
+        setStatus({
+          type: "error",
+          text: data.error || "Submission failed. Please try again.",
+        });
       }
     } catch (error) {
-      alert("Something went wrong. Please try again.");
+      setStatus({
+        type: "error",
+        text: "Something went wrong. Please try again.",
+      });
     } finally {
       // 3. Reset reCAPTCHA and loading state
       setLoading(false);
@@ -238,6 +246,19 @@ export default function Form({
             </>
           )}
         </button>
+
+        {/* Status Message Display */}
+        {status.text && (
+          <div
+            className={`mt-6 rounded-xl p-4 text-center text-sm font-medium ${
+              status.type === "error"
+                ? "bg-red-50 text-red-600 border border-red-200"
+                : "bg-green-50 text-green-600 border border-green-200"
+            }`}
+          >
+            {status.text}
+          </div>
+        )}
 
         {/* Security Note */}
         <div className="mt-6 flex items-center gap-3 text-sm">
